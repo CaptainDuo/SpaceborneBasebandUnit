@@ -15,4 +15,6 @@
 
 
 u8 SPI1_ReadWriteByte(SPI_HandleTypeDef *SPI_Handler , u8 TxData);
+u8 SPI2_ReadWriteByte(SPI_HandleTypeDef *SPI_Handler , u8 *TxData , u8 *RxData);
+
 #endif

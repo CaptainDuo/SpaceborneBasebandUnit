@@ -44,6 +44,7 @@
 /******************************************************************************/
 #include <stdint.h>
 #include "no_os_spi.h"
+#include "stm32f4xx_hal_spi.h"
 
 /******************************************************************************/
 /****************************** AD9517 ****************************************/
@@ -393,7 +394,7 @@ struct ad9517_state {
 
 struct ad9517_dev {
 	/* SPI */
-	struct no_os_spi_desc	    *spi_desc;
+	struct SPI_HandleTypeDef	 *spi_desc;  //使用STM32F4系列SPI结构体
 	/* Device Settings */
 	struct ad9517_state ad9517_st;
 	enum ad9517_type	ad9517_type;
@@ -401,7 +402,7 @@ struct ad9517_dev {
 
 struct ad9517_init_param {
 	/* SPI */
-	struct no_os_spi_init_param    spi_init;
+//	struct no_os_spi_init_param    spi_init;
 	/* Device Settings */
 	struct ad9517_state ad9517_st;
 	enum ad9517_type	ad9517_type;

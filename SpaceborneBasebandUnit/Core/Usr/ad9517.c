@@ -79,9 +79,9 @@ int32_t ad9517_setup(struct ad9517_dev **device,
 	dev->ad9517_type = init_param.ad9517_type;
 
 	/* Initializes the SPI peripheral */
-	ret = no_os_spi_init(&dev->spi_desc, &init_param.spi_init);
-	if (ret)
-		return ret;
+//	ret = no_os_spi_init(&dev->spi_desc, &init_param.spi_init);
+//	if (ret)
+//		return ret;
 
 	ret = ad9517_read(dev, AD9517_REG_PART_ID, &reg_value);
 	if (ret)
@@ -285,8 +285,10 @@ int32_t ad9517_read(struct ad9517_dev *dev,
 		    uint32_t *reg_value)
 {
 	uint32_t reg_address = 0;
-	int32_t ret = 0;
+
+	uint8_t ret = 0;
 	uint8_t tx_buffer[3] = {0, 0, 0};
+	uint8_t rx_buffer[2] = {0, 0};
 	uint8_t i = 0;
 	*reg_value = 0;
 
@@ -296,10 +298,10 @@ int32_t ad9517_read(struct ad9517_dev *dev,
 		tx_buffer[1] = reg_address & 0x00FF;
 		tx_buffer[2] = 0;
 
-		ret = no_os_spi_write_and_read(dev->spi_desc, tx_buffer, 3);
-
+//		ret = no_os_spi_write_and_read(dev->spi_desc, tx_buffer, 3);
+		ret = SPI2_ReadWriteByte(dev->spi_desc, tx_buffer, rx_buffer);
 		reg_address--;
-
+		
 		*reg_value <<= 8;
 
 		*reg_value |= tx_buffer[2];
