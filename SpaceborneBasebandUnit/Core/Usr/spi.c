@@ -22,7 +22,9 @@ u8 SPI1_ReadWriteByte(SPI_HandleTypeDef *SPI_Handler , u8 TxData)
     HAL_SPI_TransmitReceive(SPI_Handler,&TxData,&Rxdata,1, 1000);       
  	return Rxdata;          		    //返回收到的数据		
 }
-
+/** 
+  * @brief  16位，1字节数据传输
+  */
 u8 SPI2_ReadWriteByte(SPI_HandleTypeDef *SPI_Handler , u8 *TxData , u8 *RxData )
 {
     u8 status;

@@ -74,11 +74,12 @@ int32_t ad9517_setup(struct ad9517_dev **device,
 	dev = (struct ad9517_dev *)no_os_malloc(sizeof(*dev));
 	if (!dev)
 		return -1;
-
+	
 	dev->ad9517_st = init_param.ad9517_st;
 	dev->ad9517_type = init_param.ad9517_type;
 
 	/* Initializes the SPI peripheral */
+	dev->spi_desc = init_param.spi_init;    //将SPI结构体指针参数从init_param传递给dev的spi_desc
 //	ret = no_os_spi_init(&dev->spi_desc, &init_param.spi_init);
 //	if (ret)
 //		return ret;
@@ -261,7 +262,9 @@ int32_t ad9517_write(struct ad9517_dev *dev,
 		tx_buffer[1] = reg_address & 0x00FF;
 		tx_buffer[2] = reg_value;
 
-		ret = no_os_spi_write_and_read(dev->spi_desc, tx_buffer, 3);
+		//ret = no_os_spi_write_and_read(dev->spi_desc, tx_buffer, 3);
+
+		ret = HAL_SPI_Transmit(dev, tx_buffer, 3, 1000)
 
 		if(ret < 0)
 			return ret;
@@ -299,12 +302,12 @@ int32_t ad9517_read(struct ad9517_dev *dev,
 		tx_buffer[2] = 0;
 
 //		ret = no_os_spi_write_and_read(dev->spi_desc, tx_buffer, 3);
+		//替换为STM32F4的SPI库函数
 		ret = SPI2_ReadWriteByte(dev->spi_desc, tx_buffer, rx_buffer);
 		reg_address--;
-		
+		//将MSB向右移位
 		*reg_value <<= 8;
-
-		*reg_value |= tx_buffer[2];
+		*reg_value |= rx_buffer[0];
 	}
 
 	return ret;

@@ -348,7 +348,9 @@ enum ad9517_type {
 	AD9517_1 = 0x51,
 	AD9517_2 = 0x91,
 	AD9517_3 = 0x53,
-	AD9517_4 = 0xd3
+	AD9517_4 = 0xd3,
+	AD9516_0 = 0x01,
+	AD9516_1 = 0x41,
 };
 
 enum out_diff_voltage_options {
@@ -402,7 +404,7 @@ struct ad9517_dev {
 
 struct ad9517_init_param {
 	/* SPI */
-//	struct no_os_spi_init_param    spi_init;
+	struct SPI_HandleTypeDef    *spi_init;
 	/* Device Settings */
 	struct ad9517_state ad9517_st;
 	enum ad9517_type	ad9517_type;
@@ -411,6 +413,7 @@ struct ad9517_init_param {
 /******************************************************************************/
 /************************ Functions Declarations ******************************/
 /******************************************************************************/
+
 /*! Initializes the AD9517. */
 int32_t ad9517_setup(struct ad9517_dev **device,
 		     struct ad9517_init_param init_param);

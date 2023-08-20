@@ -24,6 +24,7 @@
 #include "can.h"
 #include "cs25wq256.h"
 #include "spi.h"
+#include "ad9517.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -61,6 +62,7 @@ u8	CAN1TxData[8];    //CAN1发送的数据
 u8	CAN2TxData[8];    //CAN2发送的数据
 u8	CAN1RxData[8];    //CAN1接收的数据
 u8	CAN2RxData[8];    //CAN2接收的数据
+ad9517_init_param ad9516_param;
 
 //要写入到CS25WQXX的字符串数组
 const u8 TEXT_Buffer[]={"Explorer STM32F4 SPI TEST"};
@@ -80,6 +82,8 @@ static void MX_SPI1_Init(void);
 static void MX_SPI2_Init(void);
 static void MX_NVIC_Init(void);
 /* USER CODE BEGIN PFP */
+/*! AD9516 paramters initialization */
+int8_t ad9156_parameter_initialize(struct ad9517_init_param *init_param, SPI_HandleTypeDef *hspi);
 
 /* USER CODE END PFP */
 
@@ -468,6 +472,20 @@ static void MX_FSMC_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
+/***************************************************************************//**
+ * @brief AD9156_1 Parameters Initialization
+ *
+ * @param init_param - The structure that contains the device initial
+ * 		       parameters.
+ * @return Returns 0 in case of success or negative error code.
+*******************************************************************************/
+int8_t ad9156_parameter_initialize(struct ad9517_init_param *init_param, SPI_HandleTypeDef *hspi)
+{
+	init_param->spi_init = hspi;  //传递SPI通道结构体
+	init_param->ad9517_type = AD9516_1;  //芯片类型位AD9516_1
+	init_param->ad9517_st.a_counter = 
+
+}
 
 /* USER CODE END 4 */
 
