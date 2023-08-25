@@ -42,8 +42,10 @@
 /******************************************************************************/
 #include <stdlib.h>
 #include <errno.h>
-#include "no_os_delay.h"
-#include "no_os_alloc.h"
+//#include "no_os_delay.h"
+//#include "no_os_alloc.h"
+#include "spi.h"
+#include "delay.h"
 #include "ad9517.h"
 
 /***************************************************************************//**
@@ -55,23 +57,29 @@
  *
  * @return Returns 0 in case of success or negative error code.
 *******************************************************************************/
-int32_t ad9517_setup(struct ad9517_dev **device,
-		     struct ad9517_init_param init_param)
+int32_t ad9517_setup( ad9517_dev **device,
+		      ad9517_init_param init_param)
 {
 	int32_t		    ret = 0;
 	int8_t		    index = 0;
 	uint16_t	    reg_address = 0;
 	uint32_t	    reg_value = 0;
-	struct ad9517_dev   *dev;
+	ad9517_dev   *dev;
 
-	static uint32_t lvepcl_out_ch[4] = {
-		AD9517_REG_LVPECL_OUT0,
-		AD9517_REG_LVPECL_OUT1,
-		AD9517_REG_LVPECL_OUT2,
-		AD9517_REG_LVPECL_OUT3
+	static uint32_t lvepcl_out_ch[6] = {
+//		AD9517_REG_LVPECL_OUT0,
+//		AD9517_REG_LVPECL_OUT1,
+//		AD9517_REG_LVPECL_OUT2,
+//		AD9517_REG_LVPECL_OUT3
+		AD9516_REG_LVPECL_OUT0,
+		AD9516_REG_LVPECL_OUT1,
+		AD9516_REG_LVPECL_OUT2,
+		AD9516_REG_LVPECL_OUT3,
+		AD9516_REG_LVPECL_OUT4,
+		AD9516_REG_LVPECL_OUT5
 	};
 
-	dev = (struct ad9517_dev *)no_os_malloc(sizeof(*dev));
+	dev = (ad9517_dev *)malloc(sizeof(*dev));
 	if (!dev)
 		return -1;
 	
@@ -88,7 +96,7 @@ int32_t ad9517_setup(struct ad9517_dev **device,
 	if (ret)
 		return ret;
 	if (reg_value != dev->ad9517_type)
-		return -EFAULT;
+		return -1;
 
 	/* Configure serial port for long instructions and reset the serial
 	 * interface. */
@@ -134,14 +142,14 @@ int32_t ad9517_setup(struct ad9517_dev **device,
 		return ret;
 	/* Update the device with user settings for the LVPECL output
 	 * channels. */
-	for(index = 0; index < 4; index++) {
+//	for(index = 0; index < 4; index++) {
+	for(index = 0; index < 6; index++) {
+
 		reg_address = lvepcl_out_ch[index];
 
-		reg_value = dev->
-			    ad9517_st.lvpecl_channels[index].out_invert_en *
+		reg_value = dev->ad9517_st.lvpecl_channels[index].out_invert_en *
 			    AD9517_OUT_LVPECL_INVERT |
-			    AD9517_OUT_LVPECL_DIFF_VOLTAGE(dev->ad9517_st.
-					    lvpecl_channels[index].out_diff_voltage);
+			    AD9517_OUT_LVPECL_DIFF_VOLTAGE(dev->ad9517_st.lvpecl_channels[index].out_diff_voltage);
 		ret = ad9517_write(dev,
 				   reg_address,
 				   reg_value);
@@ -151,17 +159,15 @@ int32_t ad9517_setup(struct ad9517_dev **device,
 	/* Update the device with user settings for the LVDS/CMOS output
 	 * channels. */
 	for(index = 0; index < 4; index++) {
-		reg_address = AD9517_REG_LVDS_CMOS_OUT4 + index;
+//		reg_address = AD9517_REG_LVDS_CMOS_OUT4 + index;
+		reg_address = AD9516_REG_LVDS_CMOS_OUT6 + index;
 		reg_value = AD9517_OUT_LVDS_CMOS_INVERT(
-				    dev->
-				    ad9517_st.lvds_cmos_channels[index].out_invert) |
-			    dev->
-			    ad9517_st.lvds_cmos_channels[index].logic_level *
+				    dev->ad9517_st.lvds_cmos_channels[index].out_invert) |
+			    dev->ad9517_st.lvds_cmos_channels[index].logic_level *
 			    AD9517_OUT_LVDS_CMOS |
 			    dev->ad9517_st.lvds_cmos_channels[index].cmos_b_en *
 			    AD9517_OUT_CMOS_B |
-			    AD9517_OUT_LVDS_OUTPUT_CURRENT(dev->ad9517_st.
-					    lvds_cmos_channels[index].out_lvds_current);
+			    AD9517_OUT_LVDS_OUTPUT_CURRENT(dev->ad9517_st.lvds_cmos_channels[index].out_lvds_current);
 		ret = ad9517_write(dev,
 				   reg_address,
 				   reg_value);
@@ -209,7 +215,7 @@ int32_t ad9517_setup(struct ad9517_dev **device,
 			return ret;
 
 		/* Time to complete a VCO calibration (Table 29, datasheet). */
-		no_os_mdelay(88);
+		delay_us(88);
 	}
 
 	*device = dev;
@@ -224,7 +230,8 @@ int32_t ad9517_setup(struct ad9517_dev **device,
  *
  * @return 0 in case of success, negative error code otherwise.
 *******************************************************************************/
-int32_t ad9517_remove(struct ad9517_dev *dev)
+/*
+int32_t ad9517_remove( ad9517_dev *dev)
 {
 	int32_t ret;
 
@@ -234,7 +241,7 @@ int32_t ad9517_remove(struct ad9517_dev *dev)
 
 	return ret;
 }
-
+*/
 /***************************************************************************//**
 * @brief Writes data into a register.
 *
@@ -244,7 +251,7 @@ int32_t ad9517_remove(struct ad9517_dev *dev)
 *
 * @return Returns 0 in case of success or negative error code.
 *******************************************************************************/
-int32_t ad9517_write(struct ad9517_dev *dev,
+int32_t ad9517_write( ad9517_dev *dev,
 		     uint32_t reg_addr,
 		     uint16_t reg_val)
 {
@@ -264,7 +271,7 @@ int32_t ad9517_write(struct ad9517_dev *dev,
 
 		//ret = no_os_spi_write_and_read(dev->spi_desc, tx_buffer, 3);
 
-		ret = HAL_SPI_Transmit(dev, tx_buffer, 3, 1000)
+		ret = HAL_SPI_Transmit(dev->spi_desc , tx_buffer, 3, 1000);
 
 		if(ret < 0)
 			return ret;
@@ -283,7 +290,7 @@ int32_t ad9517_write(struct ad9517_dev *dev,
 *
 * @return Returns the read data or negative error code.
 *******************************************************************************/
-int32_t ad9517_read(struct ad9517_dev *dev,
+int32_t ad9517_read( ad9517_dev *dev,
 		    uint32_t reg_addr,
 		    uint32_t *reg_value)
 {
@@ -321,7 +328,7 @@ int32_t ad9517_read(struct ad9517_dev *dev,
  *
  * @return Returns 0 in case of success or negative error code.
 *******************************************************************************/
-int32_t ad9517_update(struct ad9517_dev *dev)
+int32_t ad9517_update( ad9517_dev *dev)
 {
 	return ad9517_write(dev,
 			    AD9517_REG_UPDATE_ALL_REGS,
@@ -337,7 +344,7 @@ int32_t ad9517_update(struct ad9517_dev *dev)
  *
  * @return vco_freq - The actual frequency value that was set.
 *******************************************************************************/
-int64_t ad9517_vco_frequency(struct ad9517_dev *dev,
+int64_t ad9517_vco_frequency( ad9517_dev *dev,
 			     int64_t frequency)
 {
 	uint32_t ref_freq = 0;
@@ -374,20 +381,27 @@ int64_t ad9517_vco_frequency(struct ad9517_dev *dev,
 		    (frequency > AD9517_4_MAX_VCO_FREQ))
 			return -1;
 		break;
+	case AD9516_1:
+		if((frequency < AD9516_1_MIN_VCO_FREQ) ||
+		    (frequency > AD9516_1_MAX_VCO_FREQ))
+			return -1;
+		break;
+
 	default:
 		return -1;
 	}
 	if(dev->ad9517_st.pdata->ref_sel_pin_en)
-		/* Reference selection is made using REF_SEL pin. */
+		{/* Reference selection is made using REF_SEL pin. */
 		ref_freq = dev->ad9517_st.pdata->ref_sel_pin ?
-			   dev->ad9517_st.pdata->ref_2_freq : dev->
-			   ad9517_st.pdata->ref_1_freq;
+			   dev->ad9517_st.pdata->ref_2_freq : dev->ad9517_st.pdata->ref_1_freq;
+		}
 	else
+		{
 		/* Reference selection is made using bit AD9517_SELECT_REF2 from
 		 * AD9517_REG_PLL_CTRL_7. */
 		ref_freq = dev->ad9517_st.pdata->ref_2_en ?
-			   dev->ad9517_st.pdata->ref_2_freq : dev->
-			   ad9517_st.pdata->ref_1_freq;
+			   dev->ad9517_st.pdata->ref_2_freq : dev->ad9517_st.pdata->ref_1_freq;
+		}
 	dev->ad9517_st.r_counter = 1;
 	pfd_freq = ref_freq / dev->ad9517_st.r_counter;
 	while(pfd_freq > AD9517_MAX_PFD_FREQ) {
@@ -399,8 +413,7 @@ int64_t ad9517_vco_frequency(struct ad9517_dev *dev,
 		for(index = 0; index < 5; index++) {
 			if(frequency <= prescaler_limit[index]) {
 				n_divider = (int32_t)(frequency / pfd_freq);
-				dev->
-				ad9517_st.prescaler_p = prescaler_value[index];
+				dev->ad9517_st.prescaler_p = prescaler_value[index];
 				prescaler = index + 2;
 				dev->ad9517_st.b_counter = n_divider /
 							   dev->ad9517_st.prescaler_p;
@@ -484,7 +497,7 @@ int8_t dividers_checker(int32_t number)
  *
  * @return set_freq - The actual frequency value that was set.
 *******************************************************************************/
-int64_t ad9517_frequency(struct ad9517_dev *dev,
+int64_t ad9517_frequency( ad9517_dev *dev,
 			 int32_t channel,
 			 int64_t frequency)
 {
@@ -503,8 +516,10 @@ int64_t ad9517_frequency(struct ad9517_dev *dev,
 	uint32_t reg_value = 0;
 	int32_t reg_address = 0;
 	int32_t ret = 0;
+	int32_t channel_div = 0;
 
-	if(dev->ad9517_st.pdata->vco_clk_sel) {
+	if(dev->ad9517_st.pdata->vco_clk_sel) 
+		{
 		/* VCO is selected as input. */
 		freq_to_chan_div = dev->ad9517_st.pdata->int_vco_freq;
 		freq_to_chan_div_backup = freq_to_chan_div;
@@ -512,7 +527,9 @@ int64_t ad9517_frequency(struct ad9517_dev *dev,
 		 * input. */
 		dev->ad9517_st.vco_divider = 2;
 		freq_to_chan_div >>= 1;
-	} else {
+	}
+	else
+		{
 		/* External Clock is selected as input. */
 		freq_to_chan_div = dev->ad9517_st.pdata->ext_clk_freq;
 		freq_to_chan_div_backup = freq_to_chan_div;
@@ -520,36 +537,44 @@ int64_t ad9517_frequency(struct ad9517_dev *dev,
 	}
 	/* The maximum frequency that can be applied to the channel dividers
 	 * is 1600 MHz. */
-	while(freq_to_chan_div > 1600000000) {
+	while(freq_to_chan_div > 1600000000) 
+	{
 		dev->ad9517_st.vco_divider++;
 		freq_to_chan_div = freq_to_chan_div_backup /
 				   dev->ad9517_st.vco_divider;
 	}
 	/* The range of division for the LVPECL outputs is 1 to 32. */
-	if((channel >= 0) && (channel <= 3))
+	if((channel >= 0) && (channel <= 5))
 		divider_max = 32;
 	/* The LVDS/CMOS outputs allow a range of divisions up to a maximum
 	 * of 1024. */
-	if((channel >= 4) && (channel <= 7))
+	if((channel >= 6) && (channel <= 9))
 		divider_max = 1024;
 	/* Increase vco_divider if the divider is greater than divider_max. */
-	while(dev->ad9517_st.vco_divider < 6) {
+	while(dev->ad9517_st.vco_divider < 6) 
+	{
 		divider = freq_to_chan_div / frequency;
-		if(divider > divider_max) {
+		if(divider > divider_max) 
+		{
 			dev->ad9517_st.vco_divider++;
 			freq_to_chan_div = freq_to_chan_div_backup /
 					   dev->ad9517_st.vco_divider;
-		} else {
+		}
+		else
+		{
 			break;
 		}
 	}
 	divider = freq_to_chan_div / frequency;
 	/* If the divider is still greater than divider_max assign it the
 	 * divider_max value.  */
-	if(divider > divider_max) {
+	if(divider > divider_max) 
+	{
 		divider = divider_max;
 		set_freq = freq_to_chan_div / divider;
-	} else {
+	} 
+	else
+	{
 		divider = 0;
 	}
 	/* Write the VCO divider value. */
@@ -557,39 +582,49 @@ int64_t ad9517_frequency(struct ad9517_dev *dev,
 	if((int32_t)reg_value < 0)
 		return reg_value;
 	if((dev->ad9517_st.vco_divider == 1) &&
-	    ((reg_value & AD9517_SEL_VCO_CLK) == 0)) {
+	    ((reg_value & AD9517_SEL_VCO_CLK) == 0)) 
+	{
 		reg_value |= AD9517_BYPASS_VCO_DIVIDER;
 		ret = ad9517_write(dev, AD9517_REG_INPUT_CLKS, reg_value);
 		if(ret < 0) {
 			return ret;
 		}
-	} else {
+	} 
+	else 
+	{
 		ret = ad9517_write(dev,
 				   AD9517_REG_VCO_DIVIDER,
-				   AD9517_VCO_DIVIDER((dev->
-						       ad9517_st.vco_divider - 2)));
+				   AD9517_VCO_DIVIDER((dev->ad9517_st.vco_divider - 2)));
 		if(ret < 0) {
 			return ret;
 		}
 	}
 	freq_to_chan_div_backup = freq_to_chan_div;
-	if((channel >= 0) && (channel <= 7)) {
-		if(divider == 0) {
+	if((channel >= 0) && (channel <= 9)) 
+	{
+		if(divider == 0) 
+		{
 			divider = 1;
 			freq_0_divider = divider;
 			freq_0_value = freq_to_chan_div_backup;
-			while(freq_to_chan_div >= frequency) {
+			//通道0-5,输出62MHz,freq_0_divider = 20,freq_0_value = 62
+			while(freq_to_chan_div >= frequency) 
+				{
 				freq_0_value = freq_to_chan_div;
 				freq_0_divider = divider;
-				if(divider < 32) {
+				if(divider < 32) 
+				{
 					divider++;
 					freq_to_chan_div =
 						freq_to_chan_div_backup / divider;
-				} else {
+				} 
+				else
+					{
 					divider++;
 					freq_to_chan_div =
 						freq_to_chan_div_backup / divider;
-					while(dividers_checker(divider)) {
+					while(dividers_checker(divider)) 
+						{
 						divider++;
 						freq_to_chan_div =
 							freq_to_chan_div_backup /
@@ -601,32 +636,93 @@ int64_t ad9517_frequency(struct ad9517_dev *dev,
 			freq_1_divider = divider;
 			/* Choose the frequency closer to desired frequency */
 			if((frequency - freq_1_value) >
-			    (freq_0_value - frequency)) {
+			    (freq_0_value - frequency)) 
+			{
 				divider = freq_0_divider;
 				set_freq = freq_0_value;
-			} else {
+			}
+			else 
+			{
 				divider = freq_1_divider;
 				set_freq = freq_1_value;
 			}
 		}
-		if((channel >= 0) && (channel <= 3)) {
+		if((channel >= 0) && (channel <= 5)) 
+		{
 			/* LVPECL Channels. */
-			if(divider == 1) {
-				if(channel / 2) {
+			if(divider == 1) 
+				{
+				switch (channel)
+					{
+					case 0:
+					case 1:
+						reg_address = AD9516_REG_DIVIDER_0_1;
+						break;
+					case 2:
+					case 3:
+						reg_address = AD9516_REG_DIVIDER_1_1;
+						break;
+					case 4:
+					case 5:
+						reg_address = AD9516_REG_DIVIDER_2_1;
+						break;
+					default:
+						return -1;
+					}
+
+/*				if(channel / 2) 
+					{
 					reg_address = AD9517_REG_DIVIDER_1_1;
-				} else {
+				} 
+				else
+					{
 					reg_address = AD9517_REG_DIVIDER_0_1;
-				}
+				} */
+
 				ad9517_read(dev, reg_address, &reg_value);
-				if((int32_t)reg_value < 0) {
+				if((int32_t)reg_value < 0) 
+					{
 					return reg_value;
 				}
 				reg_value |= AD9517_DIVIDER_BYPASS;
-			} else {
-				if(channel / 2) {
-					reg_address = AD9517_REG_DIVIDER_1_0;
-				} else {
-					reg_address = AD9517_REG_DIVIDER_0_0;
+			} 
+			else
+				{
+				switch (channel)
+					{
+					case 0:
+					case 1:
+						reg_address = AD9516_REG_DIVIDER_0_0;
+						ret = ad9517_read(dev, AD9516_REG_DIVIDER_0_1, &reg_value);
+						if (ret < 0)
+							return ret;
+						
+						reg_value &= ~AD9517_DIVIDER_BYPASS;
+						ret = ad9517_write(dev, AD9516_REG_DIVIDER_0_1, reg_value);
+						if (ret < 0)
+							return ret;
+
+						break;
+					case 2:
+					case 3:
+						reg_address = AD9516_REG_DIVIDER_1_0;
+						break;
+					case 4:
+					case 5:
+						reg_address = AD9516_REG_DIVIDER_2_0;
+						break;
+					default:
+						return -1;
+					}
+/*
+				if(channel / 2) 
+				{
+					
+					//reg_address = AD9517_REG_DIVIDER_1_0;
+				}
+				else 
+				{
+					//reg_address = AD9517_REG_DIVIDER_0_0;
 
 					ret = ad9517_read(dev, AD9517_REG_DIVIDER_0_1, &reg_value);
 					if (ret < 0)
@@ -637,6 +733,7 @@ int64_t ad9517_frequency(struct ad9517_dev *dev,
 					if (ret < 0)
 						return ret;
 				}
+*/
 				/* The duty cycle closest to 50% is selected. */
 				reg_value =
 					AD9517_DIVIDER_LOW_CYCLES(((divider / 2) - 1)) |
@@ -644,46 +741,84 @@ int64_t ad9517_frequency(struct ad9517_dev *dev,
 								    (divider % 2) - 1));
 			}
 			ret = ad9517_write(dev, reg_address, reg_value);
-			if(ret < 0) {
+			if(ret < 0) 
+				{
 				return ret;
 			}
-		} else {
+		} 
+		else 
+		{
 			/* LVDS/CMOS Channels. */
-			if(divider == 1) {
+			if(divider == 1) 
+			{
 				/* Bypass the dividers. */
-				if(channel / 6) {
+				if(channel / 8) 
+				{
+					reg_address =
+						AD9516_REG_LVDS_CMOS_DIVIDER_4_3;
+				}
+				else
+				{
+					reg_address =
+						AD9516_REG_LVDS_CMOS_DIVIDER_3_3;
+				}
+/*				if(channel / 6) 
+				{
 					reg_address =
 						AD9517_REG_LVDS_CMOS_DIVIDER_3_3;
-				} else {
+				}
+				else
+				{
 					reg_address =
 						AD9517_REG_LVDS_CMOS_DIVIDER_2_3;
 				}
+*/
 				ad9517_read(dev, reg_address, &reg_value);
-				if((int32_t)reg_value < 0) {
+				if((int32_t)reg_value < 0) 
+				{
 					return reg_value;
 				}
 				reg_value |= (AD9517_BYPASS_DIVIDER_2 |
 					      AD9517_BYPASS_DIVIDER_1);
 				ret = ad9517_write(dev, reg_address, reg_value);
-				if(ret < 0) {
+				if(ret < 0) 
+				{
 					return ret;
 				}
-			} else {
+			} 
+			else
+			{
+				//如果小于32,则divider只需要一个,另一个bypass
 				if(divider <= 32) {
 					/* Bypass the divider 2. */
+					if(channel / 8) {
+						reg_address =
+							AD9516_REG_LVDS_CMOS_DIVIDER_4_3;
+					} 
+					else 
+					{
+						reg_address =
+							AD9516_REG_LVDS_CMOS_DIVIDER_3_3;
+					} 
+
+/*
 					if(channel / 6) {
 						reg_address =
 							AD9517_REG_LVDS_CMOS_DIVIDER_3_3;
-					} else {
+					} 
+					else 
+					{
 						reg_address =
 							AD9517_REG_LVDS_CMOS_DIVIDER_2_3;
 					}
+*/
 					ad9517_read(dev,
 						    reg_address,
 						    &reg_value);
 					if((int32_t)reg_value < 0) {
 						return reg_value;
 					}
+					//因为小于32,只需要开一个就可以
 					reg_value |= AD9517_BYPASS_DIVIDER_2;
 					ret = ad9517_write(dev,
 							   reg_address,
@@ -691,6 +826,17 @@ int64_t ad9517_frequency(struct ad9517_dev *dev,
 					if(ret < 0) {
 						return ret;
 					}
+					if(channel / 8) 
+						{
+						reg_address =
+							AD9516_REG_LVDS_CMOS_DIVIDER_4_0;
+					}
+					else
+						{
+						reg_address =
+							AD9516_REG_LVDS_CMOS_DIVIDER_3_0;
+					}
+/*
 					if(channel / 6) {
 						reg_address =
 							AD9517_REG_LVDS_CMOS_DIVIDER_3_0;
@@ -698,6 +844,7 @@ int64_t ad9517_frequency(struct ad9517_dev *dev,
 						reg_address =
 							AD9517_REG_LVDS_CMOS_DIVIDER_2_0;
 					}
+*/
 					/* The duty cycle closest to 50% is selected. */
 					reg_value =
 						AD9517_LOW_CYCLES_DIVIDER_1(((divider /
@@ -712,7 +859,9 @@ int64_t ad9517_frequency(struct ad9517_dev *dev,
 					if(ret < 0) {
 						return ret;
 					}
-				} else {
+				}
+				else 
+				{
 					/* Find a good value smaller or equal to 32 for divider_2. */
 					divider_2 = 32;
 					do {
@@ -723,13 +872,21 @@ int64_t ad9517_frequency(struct ad9517_dev *dev,
 							divider_1 /= divider_2;
 						}
 					} while(divider_1 > 32);
-					if(channel / 6) {
+					if(channel / 8) {
+						reg_address =
+							AD9516_REG_LVDS_CMOS_DIVIDER_4_0;
+					} else {
+						reg_address =
+							AD9516_REG_LVDS_CMOS_DIVIDER_3_0;
+					}
+/*					if(channel / 6) {
 						reg_address =
 							AD9517_REG_LVDS_CMOS_DIVIDER_3_0;
 					} else {
 						reg_address =
 							AD9517_REG_LVDS_CMOS_DIVIDER_2_0;
 					}
+*/
 					/* The duty cycle closest to 50% is selected. */
 					reg_value =
 						AD9517_LOW_CYCLES_DIVIDER_1(((divider_1 /
@@ -744,13 +901,21 @@ int64_t ad9517_frequency(struct ad9517_dev *dev,
 					if(ret < 0) {
 						return ret;
 					}
-					if(channel / 6) {
+					if(channel / 8) {
+						reg_address =
+							AD9516_REG_LVDS_CMOS_DIVIDER_4_2;
+					} else {
+						reg_address =
+							AD9516_REG_LVDS_CMOS_DIVIDER_3_2;
+					}
+/*					if(channel / 6) {
 						reg_address =
 							AD9517_REG_LVDS_CMOS_DIVIDER_3_2;
 					} else {
 						reg_address =
 							AD9517_REG_LVDS_CMOS_DIVIDER_2_2;
 					}
+*/
 					/* The duty cycle closest to 50% is selected. */
 					reg_value =
 						AD9517_LOW_CYCLES_DIVIDER_2(((divider_2 /
@@ -768,7 +933,9 @@ int64_t ad9517_frequency(struct ad9517_dev *dev,
 				}
 			}
 		}
-	} else {
+	} 
+	else 
+	{
 		/* Invalid channel number. */
 		return -1;
 	}
@@ -785,38 +952,77 @@ int64_t ad9517_frequency(struct ad9517_dev *dev,
  *
  * @return Returns the phase or negative error code.
 *******************************************************************************/
-int32_t ad9517_phase(struct ad9517_dev *dev, int32_t channel, int32_t phase)
+int32_t ad9517_phase( ad9517_dev *dev, int32_t channel, int32_t phase)
 {
 	uint32_t reg_value = 0;
 	int32_t reg_address = 0;
 	int32_t ret = 0;
 
-	if((channel >= 0) && (channel <= 7)) {
-		if((channel >= 0) && (channel <= 3)) {
-			if(channel / 2) {
-				reg_address = AD9517_REG_DIVIDER_1_1;
-			} else {
-				reg_address = AD9517_REG_DIVIDER_0_1;
+	if((channel >= 0) && (channel <= 9)) 
+	{
+		if((channel >= 0) && (channel <= 5)) 
+		{
+		switch (channel)
+			{
+			case 0:
+			case 1:
+				reg_address = AD9516_REG_DIVIDER_0_1;
+				break;
+			case 2:
+			case 3:
+				reg_address = AD9516_REG_DIVIDER_1_1;
+				break;
+			case 4:
+			case 5:
+				reg_address = AD9516_REG_DIVIDER_2_1;
+				break;
+			default:
+				return -1;
 			}
 
+/*			if(channel / 2) 
+				{
+				reg_address = AD9517_REG_DIVIDER_1_1;
+			} 
+			else 
+				{
+				reg_address = AD9517_REG_DIVIDER_0_1;
+			} */
+
 			ad9517_read(dev, reg_address, &reg_value);
-			if((int32_t)reg_value < 0) {
+			if((int32_t)reg_value < 0) 
+				{
 				return reg_value;
 			}
-			reg_value &= ~AD9517_DIVIDER_PHASE_OFFSET(0xF);
+			reg_value &= ~ AD9517_DIVIDER_PHASE_OFFSET(0xF);
 			reg_value |= AD9517_DIVIDER_PHASE_OFFSET(phase);
-		} else {
-			if(channel / 6) {
-				reg_address = AD9517_REG_LVDS_CMOS_DIVIDER_3_1;
-			} else {
-				reg_address = AD9517_REG_LVDS_CMOS_DIVIDER_2_1;
+		}
+		else 
+			{
+			if(channel / 8) 
+				{
+				reg_address = AD9516_REG_LVDS_CMOS_DIVIDER_4_1;
+			} 
+			else
+				{
+				reg_address = AD9516_REG_LVDS_CMOS_DIVIDER_3_1;
 			}
+
+/*			if(channel / 6) 
+				{
+				reg_address = AD9517_REG_LVDS_CMOS_DIVIDER_3_1;
+			} 
+			else
+				{
+				reg_address = AD9517_REG_LVDS_CMOS_DIVIDER_2_1;
+			}  */
 			reg_value = AD9517_PHASE_OFFSET_DIVIDER_2(((phase / 2) +
 					(phase % 2))) |
 				    AD9517_PHASE_OFFSET_DIVIDER_1(phase / 2);
 		}
 		ret = ad9517_write(dev, reg_address, reg_value);
-		if(ret < 0) {
+		if(ret < 0) 
+			{
 			return ret;
 		}
 	}
@@ -826,95 +1032,122 @@ int32_t ad9517_phase(struct ad9517_dev *dev, int32_t channel, int32_t phase)
 
 /***************************************************************************//**
  * @brief Sets the power mode of the specified channel.
- *
+ *        20230823修改，增加ad9516寄存器
  * @param dev     - The device structure.
  * @param channel - The channel.
  * @param mode    - Power mode.
  *
  * @return Returns the mode or negative error code.
 *******************************************************************************/
-int32_t ad9517_power_mode(struct ad9517_dev *dev, int32_t channel, int32_t mode)
+int32_t ad9517_power_mode( ad9517_dev *dev, int32_t channel, int32_t mode)
 {
-	struct ad9517_lvpecl_channel_spec *lvpecl_channel;
-	struct ad9517_lvds_cmos_channel_spec *lvds_cmos_channel;
+	ad9517_lvpecl_channel_spec *lvpecl_channel;
+	ad9517_lvds_cmos_channel_spec *lvds_cmos_channel;
 	uint8_t reg_value = 0;
 	int32_t reg_address = 0;
 	uint32_t ret = 0;
 
-	if((channel >= 0) && (channel <= 3)) {
+	//if((channel >= 0) && (channel <= 3)) {
+	if((channel >= 0) && (channel <= 5)) {
 		lvpecl_channel = &dev->ad9517_st.lvpecl_channels[channel];
 		switch(channel) {
 		case 0:
-			reg_address = AD9517_REG_LVPECL_OUT0;
+			//reg_address = AD9517_REG_LVPECL_OUT0;
+			reg_address = AD9516_REG_LVPECL_OUT0;
 			break;
 		case 1:
-			reg_address = AD9517_REG_LVPECL_OUT1;
+			//reg_address = AD9517_REG_LVPECL_OUT1;
+			reg_address = AD9516_REG_LVPECL_OUT1;
 			break;
 		case 2:
-			reg_address = AD9517_REG_LVPECL_OUT2;
+			//reg_address = AD9517_REG_LVPECL_OUT2;
+			reg_address = AD9516_REG_LVPECL_OUT2;
+			break;
+		case 3:
+			reg_address = AD9516_REG_LVPECL_OUT3;
+			break;
+		case 4:
+			reg_address = AD9516_REG_LVPECL_OUT4;
+			break;
+		case 5:
+			reg_address = AD9516_REG_LVPECL_OUT5;
 			break;
 		default:
-			reg_address = AD9517_REG_LVPECL_OUT3;
+			//reg_address = AD9517_REG_LVPECL_OUT3;
+			reg_address = AD9516_REG_LVPECL_OUT0;
 		}
-		if((mode >= 0) && (mode <= 3)) {
+		if((mode >= 0) && (mode <= 3))
+			{
 			reg_value = lvpecl_channel->out_invert_en *
 				    AD9517_OUT_LVPECL_INVERT |
-				    AD9517_OUT_LVPECL_DIFF_VOLTAGE(lvpecl_channel->
-						    out_diff_voltage) |
+				    AD9517_OUT_LVPECL_DIFF_VOLTAGE(lvpecl_channel->out_diff_voltage) |
 				    AD9517_OUT_LVPECL_POWER_DOWN(mode);
 			ret = ad9517_write(dev, reg_address, reg_value);
-			if((int32_t)ret < 0) {
+			if((int32_t)ret < 0)
+				{
 				return ret;
 			}
 			return mode;
-		} else {
+		} 
+		else 
+			{
 			ad9517_read(dev, reg_address, &ret);
-			if((int32_t)ret < 0) {
+			if((int32_t)ret < 0)
+				{
 				return ret;
 			}
 			return (ret & AD9517_OUT_LVPECL_POWER_DOWN(0x3));
 		}
-	} else {
-		if((channel >= 4) && (channel <= 7)) {
-			lvds_cmos_channel = &dev->
-					    ad9517_st.lvds_cmos_channels[0];
-			switch(channel) {
-			case 4:
-				reg_address = AD9517_REG_LVDS_CMOS_OUT4;
-				break;
-			case 5:
-				reg_address = AD9517_REG_LVDS_CMOS_OUT5;
-				break;
+	} 
+	else
+		{
+//		if((channel >= 4) && (channel <= 7)) 
+		if((channel >= 6) && (channel <= 9)) 
+			{
+			lvds_cmos_channel = &dev->ad9517_st.lvds_cmos_channels[0];
+			switch(channel) 
+				{
 			case 6:
-				reg_address = AD9517_REG_LVDS_CMOS_OUT6;
+				reg_address = AD9516_REG_LVDS_CMOS_OUT6;
+				break;
+			case 7:
+				reg_address = AD9516_REG_LVDS_CMOS_OUT7;
+				break;
+			case 8:
+				reg_address = AD9516_REG_LVDS_CMOS_OUT8;
 				break;
 			default:
-				reg_address = AD9517_REG_LVDS_CMOS_OUT7;
+				reg_address = AD9516_REG_LVDS_CMOS_OUT9;
 			}
-			if((mode >= 0) && (mode <= 1)) {
+			if((mode >= 0) && (mode <= 1)) 
+				{
 				reg_value =
-					AD9517_OUT_LVDS_CMOS_INVERT(lvds_cmos_channel->
-								    out_invert) |
+					AD9517_OUT_LVDS_CMOS_INVERT(lvds_cmos_channel->out_invert) |
 					lvds_cmos_channel->cmos_b_en *
 					AD9517_OUT_CMOS_B |
 					lvds_cmos_channel->logic_level *
 					AD9517_OUT_LVDS_CMOS |
-					AD9517_OUT_LVDS_OUTPUT_CURRENT(lvds_cmos_channel
-								       ->out_lvds_current) |
+					AD9517_OUT_LVDS_OUTPUT_CURRENT(lvds_cmos_channel->out_lvds_current) |
 					mode * AD9517_OUT_LVDS_CMOS_POWER_DOWN;
 				ret = ad9517_write(dev, reg_address, reg_value);
-				if((int32_t)ret < 0) {
+				if((int32_t)ret < 0) 
+					{
 					return ret;
 				}
 				return mode;
-			} else {
+			} 
+			else
+				{
 				ad9517_read(dev, reg_address, &ret);
-				if((int32_t)ret < 0) {
+				if((int32_t)ret < 0)
+					{
 					return ret;
 				}
 				return (ret & AD9517_OUT_LVDS_CMOS_POWER_DOWN);
 			}
-		} else {
+		}
+		else
+			{
 			/* Invalid channel number. */
 			return -1;
 		}

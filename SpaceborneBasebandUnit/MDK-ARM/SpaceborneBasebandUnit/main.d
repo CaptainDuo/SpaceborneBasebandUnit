@@ -35,4 +35,6 @@ spacebornebasebandunit\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal
 spacebornebasebandunit\main.o: ../Core/Usr/can.h
 spacebornebasebandunit\main.o: ../Core/Usr/sys.h
 spacebornebasebandunit\main.o: ../Core/Usr/cs25wq256.h
+spacebornebasebandunit\main.o: ../Core/Usr/delay.h
 spacebornebasebandunit\main.o: ../Core/Usr/spi.h
+spacebornebasebandunit\main.o: ../Core/Usr/ad9517.h

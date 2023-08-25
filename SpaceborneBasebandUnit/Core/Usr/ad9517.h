@@ -43,8 +43,10 @@
 /***************************** Include Files **********************************/
 /******************************************************************************/
 #include <stdint.h>
-#include "no_os_spi.h"
+//#include "no_os_spi.h"
 #include "stm32f4xx_hal_spi.h"
+//#include "stm32f4xx_hal.h"
+
 
 /******************************************************************************/
 /****************************** AD9517 ****************************************/
@@ -57,7 +59,12 @@
 #define AD9517_T1B				(1 << 16)
 #define AD9517_T2B				(2 << 16)
 #define AD9517_T3B				(3 << 16)
+#define AD9516_T1B				(1 << 16)
+#define AD9516_T2B				(2 << 16)
+#define AD9516_T3B				(3 << 16)
 #define AD9517_TRANSF_LEN(x)			((uint32_t)x >> 16)
+
+
 
 /* SPI Register Map */
 
@@ -101,11 +108,26 @@
 #define AD9517_REG_LVPECL_OUT2			(AD9517_T1B | 0x0F4)
 #define AD9517_REG_LVPECL_OUT3			(AD9517_T1B | 0x0F5)
 
+#define AD9516_REG_LVPECL_OUT0			(AD9517_T1B | 0x0F0)
+#define AD9516_REG_LVPECL_OUT1			(AD9517_T1B | 0x0F1)
+#define AD9516_REG_LVPECL_OUT2			(AD9517_T1B | 0x0F2)
+#define AD9516_REG_LVPECL_OUT3			(AD9517_T1B | 0x0F3)
+#define AD9516_REG_LVPECL_OUT4			(AD9517_T1B | 0x0F4)
+#define AD9516_REG_LVPECL_OUT5			(AD9517_T1B | 0x0F5)
+
+
+
 /* LVDS/CMOS Outputs */
 #define AD9517_REG_LVDS_CMOS_OUT4		(AD9517_T1B | 0x140)
 #define AD9517_REG_LVDS_CMOS_OUT5		(AD9517_T1B | 0x141)
 #define AD9517_REG_LVDS_CMOS_OUT6		(AD9517_T1B | 0x142)
 #define AD9517_REG_LVDS_CMOS_OUT7		(AD9517_T1B | 0x143)
+
+#define AD9516_REG_LVDS_CMOS_OUT6		(AD9516_T1B | 0x140)
+#define AD9516_REG_LVDS_CMOS_OUT7		(AD9516_T1B | 0x141)
+#define AD9516_REG_LVDS_CMOS_OUT8		(AD9516_T1B | 0x142)
+#define AD9516_REG_LVDS_CMOS_OUT9		(AD9516_T1B | 0x143)
+
 
 /* LVPECL Channel Dividers */
 #define AD9517_REG_DIVIDER_0_0			(AD9517_T1B | 0x190)
@@ -114,6 +136,16 @@
 #define AD9517_REG_DIVIDER_1_0			(AD9517_T1B | 0x196)
 #define AD9517_REG_DIVIDER_1_1			(AD9517_T1B | 0x197)
 #define AD9517_REG_DIVIDER_1_2			(AD9517_T1B | 0x198)
+
+#define AD9516_REG_DIVIDER_0_0			(AD9516_T1B | 0x190)
+#define AD9516_REG_DIVIDER_0_1			(AD9516_T1B | 0x191)
+#define AD9516_REG_DIVIDER_0_2			(AD9516_T1B | 0x192)
+#define AD9516_REG_DIVIDER_1_0			(AD9516_T1B | 0x193)
+#define AD9516_REG_DIVIDER_1_1			(AD9516_T1B | 0x194)
+#define AD9516_REG_DIVIDER_1_2			(AD9516_T1B | 0x195)
+#define AD9516_REG_DIVIDER_2_0			(AD9516_T1B | 0x196)
+#define AD9516_REG_DIVIDER_2_1			(AD9516_T1B | 0x197)
+#define AD9516_REG_DIVIDER_2_2			(AD9516_T1B | 0x198)
 
 /* LVDS/CMOS Channel Dividers */
 #define AD9517_REG_LVDS_CMOS_DIVIDER_2_0	(AD9517_T1B | 0x199)
@@ -126,6 +158,18 @@
 #define AD9517_REG_LVDS_CMOS_DIVIDER_3_2	(AD9517_T1B | 0x1A0)
 #define AD9517_REG_LVDS_CMOS_DIVIDER_3_3	(AD9517_T1B | 0x1A1)
 #define AD9517_REG_LVDS_CMOS_DIVIDER_3_4	(AD9517_T1B | 0x1A2)
+
+#define AD9516_REG_LVDS_CMOS_DIVIDER_3_0	(AD9516_T1B | 0x199)
+#define AD9516_REG_LVDS_CMOS_DIVIDER_3_1	(AD9516_T1B | 0x19A)
+#define AD9516_REG_LVDS_CMOS_DIVIDER_3_2	(AD9516_T1B | 0x19B)
+#define AD9516_REG_LVDS_CMOS_DIVIDER_3_3	(AD9516_T1B | 0x19C)
+#define AD9516_REG_LVDS_CMOS_DIVIDER_3_4	(AD9516_T1B | 0x19D)
+#define AD9516_REG_LVDS_CMOS_DIVIDER_4_0	(AD9516_T1B | 0x19E)
+#define AD9516_REG_LVDS_CMOS_DIVIDER_4_1	(AD9516_T1B | 0x19F)
+#define AD9516_REG_LVDS_CMOS_DIVIDER_4_2	(AD9516_T1B | 0x1A0)
+#define AD9516_REG_LVDS_CMOS_DIVIDER_4_3	(AD9516_T1B | 0x1A1)
+#define AD9516_REG_LVDS_CMOS_DIVIDER_4_4	(AD9516_T1B | 0x1A2)
+
 
 /* VCO Divider and CLK Input */
 #define AD9517_REG_VCO_DIVIDER			(AD9517_T1B | 0x1E0)
@@ -295,6 +339,8 @@
 
 /* AD9517_REG_UPDATE_ALL_REGS Definition */
 #define AD9517_UPDATE_ALL_REGS			(1 << 0)
+#define AD9516_1_MIN_VCO_FREQ			2300000000
+#define AD9516_1_MAX_VCO_FREQ			2650000000
 
 #define AD9517_1_MIN_VCO_FREQ			2300000000
 #define AD9517_1_MAX_VCO_FREQ			2650000000
@@ -312,7 +358,8 @@
 /******************************************************************************/
 
 /* Platform specific information */
-struct ad9517_platform_data {
+typedef struct  
+{
 	/* PLL Reference */
 	int32_t ref_1_freq;	// Frequency of the Reference 1.
 	int32_t ref_2_freq;	// Frequency of the Reference 2.
@@ -334,15 +381,41 @@ struct ad9517_platform_data {
 
 	uint8_t power_down_vco_clk;
 	uint8_t name[16];
-};
+}ad9517_platform_data;
 
 /* LVPECL output channel configuration. */
-struct ad9517_lvpecl_channel_spec {
+typedef struct  {
 	uint8_t channel_num;	  // Output channel number.
 	uint8_t out_invert_en;	  // Invert the polarity of the output clock.
 	uint8_t out_diff_voltage; // LVPECL output differential voltage.
 	uint8_t name[16];	  // Optional descriptive channel name.
+}ad9517_lvpecl_channel_spec;
+enum ad9516_channel {
+	AD9516_channel_0 = 0,
+	AD9516_channel_1 = 1,
+	AD9516_channel_2 = 2,
+	AD9516_channel_3 = 3,
+	AD9516_channel_4 = 4,
+	AD9516_channel_5 = 5,
+	AD9516_channel_6 = 6,
+	AD9516_channel_7 = 7,
+	AD9516_channel_8 = 8,
+	AD9516_channel_9 = 9,
 };
+
+enum ad9516_lvpecl_mode {
+	Normal_operation = 0,
+	Partial_power_down,
+	Safe_LVPECL_power_down,
+	Total_power_down,
+};
+	
+enum ad9516_lvds_mode {
+	Power_on = 0,
+	Power_off,
+};
+
+
 
 enum ad9517_type {
 	AD9517_1 = 0x51,
@@ -360,15 +433,21 @@ enum out_diff_voltage_options {
 	LVPECL_960mV,
 };
 
+enum out_invert_en_options {
+	noninverting = 0,
+	inverting,
+};
+
+
 /* LVDS/CMOS output channel configuration. */
-struct ad9517_lvds_cmos_channel_spec {
+typedef struct  {
 	uint8_t channel_num;	  // Output channel number.
 	uint8_t out_invert;	  // Invert the polarity of the output clock.
 	uint8_t logic_level;	  // Select LVDS or CMOS logic levels.
 	uint8_t cmos_b_en;	  // In CMOS mode, turn on/off the CMOS B output
 	uint8_t out_lvds_current; // LVDS output current level.
 	uint8_t name[16];	  // Optional descriptive channel name.
-};
+}ad9517_lvds_cmos_channel_spec;
 
 enum logic_level_options {
 	LVDS,
@@ -382,66 +461,69 @@ enum out_lvds_current_options {
 	LVDS_7mA,
 };
 
-struct ad9517_state {
-	struct ad9517_platform_data	     *pdata;
-	struct ad9517_lvpecl_channel_spec    *lvpecl_channels;
-	struct ad9517_lvds_cmos_channel_spec *lvds_cmos_channels;
+typedef struct 
+{
+	ad9517_platform_data	     *pdata;
+	ad9517_lvpecl_channel_spec    *lvpecl_channels;
+	ad9517_lvds_cmos_channel_spec *lvds_cmos_channels;
 	uint32_t			     r_counter;
 	uint8_t 			     a_counter;
 	uint16_t			     b_counter;
 	uint8_t				     vco_divider;
 	uint8_t				     prescaler_p;
 	uint8_t				     antibacklash_pulse_width;
-};
+}ad9517_state;
 
-struct ad9517_dev {
+typedef struct 
+{
 	/* SPI */
-	struct SPI_HandleTypeDef	 *spi_desc;  //使用STM32F4系列SPI结构体
+	SPI_HandleTypeDef	 *spi_desc;  //使用STM32F4系列SPI结构体
 	/* Device Settings */
-	struct ad9517_state ad9517_st;
+	ad9517_state ad9517_st;
 	enum ad9517_type	ad9517_type;
-};
+}ad9517_dev;
 
-struct ad9517_init_param {
+typedef struct  
+{
 	/* SPI */
-	struct SPI_HandleTypeDef    *spi_init;
+	SPI_HandleTypeDef    *spi_init;
 	/* Device Settings */
-	struct ad9517_state ad9517_st;
+	ad9517_state ad9517_st;
 	enum ad9517_type	ad9517_type;
-};
+}ad9517_init_param;
 
 /******************************************************************************/
 /************************ Functions Declarations ******************************/
 /******************************************************************************/
 
 /*! Initializes the AD9517. */
-int32_t ad9517_setup(struct ad9517_dev **device,
-		     struct ad9517_init_param init_param);
+int32_t ad9517_setup( ad9517_dev **device,
+		      ad9517_init_param init_param);
 /*! Free the resources allocated by ad9517_setup(). */
-int32_t ad9517_remove(struct ad9517_dev *dev);
+//int32_t ad9517_remove( ad9517_dev *dev);
 /*!  Writes data into a register. */
-int32_t ad9517_write(struct ad9517_dev *dev,
+int32_t ad9517_write( ad9517_dev *dev,
 		     uint32_t reg_addr,
 		     uint16_t reg_val);
 /*! Reads data from a register. */
-int32_t ad9517_read(struct ad9517_dev *dev,
+int32_t ad9517_read( ad9517_dev *dev,
 		    uint32_t reg_addr,
 		    uint32_t *reg_value);
 /*! Transfers the contents of the buffer registers into the active registers. */
-int32_t ad9517_update(struct ad9517_dev *dev);
+int32_t ad9517_update( ad9517_dev *dev);
 /*! Sets the VCO frequency. */
-int64_t ad9517_vco_frequency(struct ad9517_dev *dev,
+int64_t ad9517_vco_frequency( ad9517_dev *dev,
 			     int64_t frequency);
 /*! Sets the frequency on the specified channel. */
-int64_t ad9517_frequency(struct ad9517_dev *dev,
+int64_t ad9517_frequency( ad9517_dev *dev,
 			 int32_t channel,
 			 int64_t frequency);
 /*! Sets the phase on the specified channel. */
-int32_t ad9517_phase(struct ad9517_dev *dev,
+int32_t ad9517_phase( ad9517_dev *dev,
 		     int32_t channel,
 		     int32_t phase);
 /*! Sets the power mode of the specified channel. */
-int32_t ad9517_power_mode(struct ad9517_dev *dev,
+int32_t ad9517_power_mode( ad9517_dev *dev,
 			  int32_t channel,
 			  int32_t mode);
 

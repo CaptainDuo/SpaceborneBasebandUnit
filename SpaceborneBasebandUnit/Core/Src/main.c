@@ -62,7 +62,19 @@ u8	CAN1TxData[8];    //CAN1发送的数据
 u8	CAN2TxData[8];    //CAN2发送的数据
 u8	CAN1RxData[8];    //CAN1接收的数据
 u8	CAN2RxData[8];    //CAN2接收的数据
+
+ad9517_dev *AD9516_1_DEV;
+
 ad9517_init_param ad9516_param;
+
+ad9517_platform_data ad9516_pdata;  //用于给ad9516_param结构体传递地址
+
+/* 创建ad9516的6个lvpecl通道结构体数组 */
+ad9517_lvpecl_channel_spec ad9516_lvpecl_channel[6];
+
+/* 创建ad9516的4个lvds通道结构体数组 */
+ad9517_lvds_cmos_channel_spec ad9516_lvds_channel[4];
+
 
 //要写入到CS25WQXX的字符串数组
 const u8 TEXT_Buffer[]={"Explorer STM32F4 SPI TEST"};
@@ -83,7 +95,11 @@ static void MX_SPI2_Init(void);
 static void MX_NVIC_Init(void);
 /* USER CODE BEGIN PFP */
 /*! AD9516 paramters initialization */
-int8_t ad9156_parameter_initialize(struct ad9517_init_param *init_param, SPI_HandleTypeDef *hspi);
+int8_t ad9156_parameter_initialize(SPI_HandleTypeDef *hspi,
+								 ad9517_init_param *init_param,
+								 ad9517_platform_data *init_pdata,
+								 ad9517_lvpecl_channel_spec *init_lvpecl, 
+								 ad9517_lvds_cmos_channel_spec *init_lvds);
 
 /* USER CODE END PFP */
 
@@ -99,7 +115,7 @@ int8_t ad9156_parameter_initialize(struct ad9517_init_param *init_param, SPI_Han
 int main(void)
 {
   /* USER CODE BEGIN 1 */
-  u8 res;
+  u32 res;
   u16 id = 0;
   u32 FLASH_SIZE;
   u8 datatemp[Buffer_SIZE];
@@ -136,6 +152,28 @@ int main(void)
   CAN_Config(&hcan1,&CAN1TxHeader);
   CAN_Config(&hcan2,&CAN2TxHeader);
   FLASH_SIZE=32*1024*1024;	  //FLASH 大小为32M字节
+
+
+  /* AD9516_1初始化 */
+  	//1.参数初始化
+	res = ad9156_parameter_initialize(&hspi2, &ad9516_param, &ad9516_pdata, ad9516_lvpecl_channel, ad9516_lvds_channel);
+	//2.传递参数
+	res = ad9517_setup( &AD9516_1_DEV, ad9516_param);
+	//3.配置VCO
+	res = ad9517_frequency(AD9516_1_DEV, AD9516_channel_0, 62000000);
+	res = ad9517_frequency(AD9516_1_DEV, AD9516_channel_2, 62000000);
+	res = ad9517_frequency(AD9516_1_DEV, AD9516_channel_6, 248000000);
+	//4.配置通道输出
+	res = ad9517_power_mode(AD9516_1_DEV, AD9516_channel_0, Safe_LVPECL_power_down);
+	res = ad9517_power_mode(AD9516_1_DEV, AD9516_channel_1, Safe_LVPECL_power_down);
+	res = ad9517_power_mode(AD9516_1_DEV, AD9516_channel_2, Safe_LVPECL_power_down);
+	res = ad9517_power_mode(AD9516_1_DEV, AD9516_channel_3, Safe_LVPECL_power_down);
+	res = ad9517_power_mode(AD9516_1_DEV, AD9516_channel_4, Safe_LVPECL_power_down);
+	res = ad9517_power_mode(AD9516_1_DEV, AD9516_channel_5, Safe_LVPECL_power_down);
+	res = ad9517_power_mode(AD9516_1_DEV, AD9516_channel_6, Power_off);
+	res = ad9517_power_mode(AD9516_1_DEV, AD9516_channel_7, Power_off);
+	res = ad9517_power_mode(AD9516_1_DEV, AD9516_channel_8, Power_off);
+	res = ad9517_power_mode(AD9516_1_DEV, AD9516_channel_9, Power_off);
 
   /* USER CODE END 2 */
 
@@ -475,16 +513,110 @@ static void MX_FSMC_Init(void)
 /***************************************************************************//**
  * @brief AD9156_1 Parameters Initialization
  *
+ * @param hspi - STM32F4系列SPI参数结构体
  * @param init_param - The structure that contains the device initial
  * 		       parameters.
+ * @param init_pdata - ad9517_platform_data结构体的地址
+ * @param init_lvpecl - ad9517_lvpecl_channel_spec结构体数组的地址，
+ *  			存放lvpecl所有通道的初始化值
+ * @param init_lvds - ad9517_lvds_cmos_channel_spec结构体数组的地址，
+ * 				存放lvds所有通道的初始化值
  * @return Returns 0 in case of success or negative error code.
 *******************************************************************************/
-int8_t ad9156_parameter_initialize(struct ad9517_init_param *init_param, SPI_HandleTypeDef *hspi)
+int8_t ad9156_parameter_initialize(SPI_HandleTypeDef *hspi,
+								 ad9517_init_param *init_param,
+								 ad9517_platform_data *init_pdata,
+								 ad9517_lvpecl_channel_spec *init_lvpecl, 
+								 ad9517_lvds_cmos_channel_spec *init_lvds)
 {
+	uint8_t i=0;
+	uint8_t j=0;
+	uint8_t name[16] = {'a', 'd', '9', '5', '1', '6', '_', '1'};
+	uint8_t channel_name[16] = {'a', 'd', '9', '5', '1', '6', '_', 'c', 'h', 'a', 'n', 'n', 'e', 'l', '_', '1'};
+	int8_t res;
 	init_param->spi_init = hspi;  //传递SPI通道结构体
 	init_param->ad9517_type = AD9516_1;  //芯片类型位AD9516_1
-	init_param->ad9517_st.a_counter = 
+	/* ad9517_st结构体基本参数初始化 */
+	init_param->ad9517_st.antibacklash_pulse_width = 0;  //reg0x17[1:0]
+		/***
+		* 以下参数无需手动写入，ad9517_frequency函数会自动计算并初始化
+		* init_param->ad9517_st.a_counter = 16;
+		* init_param->ad9517_st.b_counter = 77;
+		* init_param->ad9517_st.r_counter
+		* init_param->ad9517_st.vco_divider
+		* init_param->ad9517_st.prescaler_p = 
+		*/
 
+	/* ad9517_platform_data结构体参数初始化 */
+
+	init_pdata->diff_ref_en = 0;   			//reg0x1c[0]
+	init_pdata->ext_clk_freq = 0;   		//不使用外部clk
+	init_pdata->int_vco_freq = 2480000000;	//内部VCO频率2480MHz
+//	init_pdata->name = name;
+	for (i = 0; i < 16; ++i)
+		{
+		init_pdata->name[i] = name[i];
+		}
+	init_pdata->power_down_vco_clk = 0;  	//reg0x1e1[2]
+	init_pdata->ref_1_freq = 100000000;  	//REF1输入时钟为100MHz
+	init_pdata->ref_1_power_on = 1;  		//reg0x1c[1]
+	init_pdata->ref_2_en = 0;  				//reg0x1c[6]
+	init_pdata->ref_2_freq = 100000000;    	//不使用REF2
+	init_pdata->ref_2_power_on = 0;  		//reg0x1c[2]
+	init_pdata->ref_sel_pin = 100000000;	//不使用外部参考引脚
+	init_pdata->ref_sel_pin_en = 0;  		//reg0x1c[5]
+	init_pdata->vco_clk_sel = 1;    		//reg0x1e1[1]
+	init_param->ad9517_st.pdata = init_pdata;
+
+/*
+	init_param->ad9517_st.pdata.diff_ref_en = 0;   			//reg0x1c[0]
+	init_param->ad9517_st.pdata.ext_clk_freq = 0;   		//不使用外部clk
+	init_param->ad9517_st.pdata.int_vco_freq = 2480000000;	//内部VCO频率2480MHz
+	init_param->ad9517_st.pdata.name = 0x01;
+	init_param->ad9517_st.pdata.power_down_vco_clk = 0;  	//reg0x1e1[2]
+	init_param->ad9517_st.pdata.ref_1_freq = 100000000;  	//REF1输入时钟为100MHz
+	init_param->ad9517_st.pdata.ref_1_power_on = 1;  		//reg0x1c[1]
+	init_param->ad9517_st.pdata.ref_2_en = 0;  				//reg0x1c[6]
+	init_param->ad9517_st.pdata.ref_2_freq = 100000000;    	//不使用REF2
+	init_param->ad9517_st.pdata.ref_2_power_on = 0;  		//reg0x1c[2]
+	init_param->ad9517_st.pdata.ref_sel_pin = 100000000;	//不使用外部参考引脚
+	init_param->ad9517_st.pdata.ref_sel_pin_en = 0;  		//reg0x1c[5]
+	init_param->ad9517_st.pdata.vco_clk_sel = 1;    		//reg0x1e1[1]
+*/
+	/* ad9517_lvpecl_channel_spec结构体参数初始化 */
+	for (i = 0; i < 6; i++)
+		{
+		init_lvpecl[i].channel_num = i;
+		channel_name[15] = i;
+//		init_lvpecl[i].name = i;
+		for (j = 0; j < 16; ++i)
+			{
+			init_lvpecl[i].name[j] = channel_name[j];
+			}
+		init_lvpecl[i].out_diff_voltage = LVPECL_780mV; //reg0xF0~0xF5[3:2],电流大小
+		init_lvpecl[i].out_invert_en = noninverting;  		//reg0xF0~0xF5[4],输出极性控制
+		}
+	init_param->ad9517_st.lvpecl_channels = init_lvpecl; //将通道结构体传递给上层结构体
+	
+	/* ad9517_lvds_cmos_channel_spec结构体参数初始化 */
+	for (i = 0; i < 4; i++)
+		{
+		init_lvds[i].channel_num = i + 6;
+		init_lvds[i].cmos_b_en = 0;					//reg0x140~0x143[4]
+		init_lvds[i].logic_level = 0;  				//reg0x140~0x143[3],Selects LVDS or CMOS logic levels.
+		channel_name[15] = i + 6;
+		for (j = 0; j < 16; ++i)
+			{
+			init_lvds[i].name[j] = channel_name[j];
+			}
+
+//		init_lvds[i].name = i + 6;
+		init_lvds[i].out_invert = 2; 				//reg0x140~0x143[7:5],output polarity,全部不反转默认值
+		init_lvds[i].out_lvds_current = LVDS_3_5mA;	//reg0x140~0x143[2:1],LVDS output current
+		}
+		init_param->ad9517_st.lvds_cmos_channels = init_lvds; //将地址传递给上层结构体
+	res = 0;
+	return res;
 }
 
 /* USER CODE END 4 */

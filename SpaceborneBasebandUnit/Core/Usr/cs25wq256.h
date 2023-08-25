@@ -11,6 +11,7 @@
 
 #define __W25QXX_H
 #include "sys.h"
+#include "delay.h"
 
 //W25X系列/Q系列芯片列表	   
 #define CS25WQ256 0XEF18
@@ -44,7 +45,7 @@ extern u16 CS25WQXX_TYPE;					//定义CS25WQXX芯片型号
 #define CS25WQX_Enable4ByteAddr		0xB7
 #define CS25WQX_Exit4ByteAddr		0xE9
 
-void delay_us(u32 nus);
+void Delay_us(u32 nus);
 void CS25WQXX_Init(SPI_HandleTypeDef *SPI_Handler);
 u16  CS25WQXX_ReadID(SPI_HandleTypeDef *SPI_Handler);  	    		//读取FLASH ID
 u8   CS25WQXX_ReadSR(SPI_HandleTypeDef *SPI_Handler,u8 regno);             //读取状态寄存器 

@@ -12,19 +12,19 @@
 #include "spi.h"
 #include "stm32f4xx_hal_gpio.h"
 
-static u32 fac_us=0;							//us延时倍乘数
 u16 CS25WQXX_TYPE=CS25WQ256;	//默认是CS25WQ256
 
+static u32 Fac_us=0;							//us延时倍乘数
 
 //延时nus
 //nus为要延时的us数.	
 //nus:0~190887435(最大值即2^32/fac_us@fac_us=22.5)	 
-void delay_us(u32 nus)
+void Delay_us(u32 nus)
 {		
 	u32 ticks;
 	u32 told,tnow,tcnt=0;
 	u32 reload=SysTick->LOAD;				//LOAD的值	    	 
-	ticks=nus*fac_us; 						//需要的节拍数 
+	ticks=nus*Fac_us; 						//需要的节拍数 
 	told=SysTick->VAL;        				//刚进入时的计数器值
 	while(1)
 	{
@@ -38,6 +38,7 @@ void delay_us(u32 nus)
 		}  
 	};
 }
+
 
 //4Kbytes为一个Sector
 //16个扇区为1个Block
@@ -327,7 +328,7 @@ void CS25WQXX_PowerDown(SPI_HandleTypeDef *SPI_Handler)
   	cs25wqxx_CS(GPIO_PIN_RESET);                            //使能器件   
     SPI1_ReadWriteByte(SPI_Handler , CS25WQX_PowerDown);     //发送掉电命令  
 	cs25wqxx_CS(GPIO_PIN_SET);                            //取消片选     	      
-    delay_us(3);                            //等待TPD  
+	Delay_us(3);                            //等待TPD  
 }   
 //唤醒
 void CS25WQXX_WAKEUP(SPI_HandleTypeDef *SPI_Handler)   
@@ -335,5 +336,5 @@ void CS25WQXX_WAKEUP(SPI_HandleTypeDef *SPI_Handler)
   	cs25wqxx_CS(GPIO_PIN_RESET);                                //使能器件   
     SPI1_ReadWriteByte(SPI_Handler,CS25WQX_ReleasePowerDown);  //  send W25X_PowerDown command 0xAB    
 	cs25wqxx_CS(GPIO_PIN_SET);                                //取消片选     	      
-    delay_us(3);                                //等待TRES1
+    Delay_us(3);                                //等待TRES1
 }   
