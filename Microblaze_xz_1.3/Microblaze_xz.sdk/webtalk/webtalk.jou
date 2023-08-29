@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# 
+# Start of session at: Tue Aug 29 16:30:03 2023
+# Process ID: 84456
+# Current directory: E:/FPGA_workspace/Microblaze_xz_1.3/Microblaze_xz.sdk/webtalk
+# Command line: wbtcv.exe -mode batch -source sdk_webtalk.tcl
+# Log file: E:/FPGA_workspace/Microblaze_xz_1.3/Microblaze_xz.sdk/webtalk/webtalk.log
+# Journal file: E:/FPGA_workspace/Microblaze_xz_1.3/Microblaze_xz.sdk/webtalk\webtalk.jou
+#-----------------------------------------------------------
+source sdk_webtalk.tcl

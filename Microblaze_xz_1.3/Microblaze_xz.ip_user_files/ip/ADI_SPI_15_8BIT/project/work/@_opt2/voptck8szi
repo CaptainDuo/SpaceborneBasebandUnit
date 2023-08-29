@@ -1,0 +1,117 @@
+m255
+K3
+13
+cModel Technology
+Z0 dF:\Project\DBF_multichannel\FPGA\module_test\spi_driver_common\project
+T_opt
+Z1 VcX917dOC5BbRaCk`XI<5[1
+Z2 04 22 4 work spi_driver_common_test fast 0
+Z3 04 4 4 work glbl fast 0
+Z4 =1-e0d55e9a2d89-60e26a9c-121-2700
+Z5 o-quiet -auto_acc_if_foreign -work work -L xilinxcorelib_ver -L unisims_ver -L unimacro_ver -L secureip +acc
+Z6 n@_opt
+Z7 OL;O;10.0c;49
+Z8 dF:\Project\DBF_multichannel\FPGA\module_test\spi_driver_common\project
+T_opt1
+Z9 V8ab0Q92P7F@0I7PB`=bc[3
+R2
+R3
+Z10 =1-e0d55e9a2d89-62304079-332-3be8
+R5
+Z11 n@_opt1
+R7
+R8
+T_opt2
+Z12 V7WcM0z:W7hcfRimd<IQM72
+R2
+R3
+Z13 =1-e0d55e9a2d89-6341325c-2de-35fc
+R5
+Z14 n@_opt2
+R7
+R8
+vadi_spi_driver_14_8bit
+Z15 IP^RBj4nL?cXHWH?49CHOc2
+Z16 V@YhLlajMCf3<eg;SeaFQ>2
+R8
+Z17 w1625451105
+Z18 8../AXI4_ADI_SPI_DRIVER_14_8BIT_1.0/src/adi_spi_driver_14_8bit.v
+Z19 F../AXI4_ADI_SPI_DRIVER_14_8BIT_1.0/src/adi_spi_driver_14_8bit.v
+L0 23
+Z20 OL;L;10.0c;49
+r1
+31
+Z21 o-L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+Z22 !s90 -reportprogress|300|../AXI4_ADI_SPI_DRIVER_14_8BIT_1.0/src/adi_spi_driver_14_8bit.v|
+Z23 !s100 YlB`8l0OD;SobN1CTVbzh3
+Z24 !s108 1625451161.482000
+Z25 !s107 ../AXI4_ADI_SPI_DRIVER_14_8BIT_1.0/src/adi_spi_driver_14_8bit.v|
+!s85 0
+vadi_spi_driver_15_8bit
+Z26 IbI<0m[N:0>mB46N02FU5g2
+Z27 VZ6XMEU`UL1o50WCDC;CnX2
+Z28 dC:\Users\zhouys\Desktop\ADI_SPI_15_8BIT\project
+Z29 w1647328912
+Z30 8../AXI4_ADI_SPI_15_8BIT_1.0/src/adi_spi_driver_15_8bit.v
+Z31 F../AXI4_ADI_SPI_15_8BIT_1.0/src/adi_spi_driver_15_8bit.v
+L0 23
+R20
+r1
+31
+R21
+Z32 !s100 lSkNg[iBWaR]E_?SD=obO0
+Z33 !s108 1665217112.948000
+Z34 !s107 ../AXI4_ADI_SPI_15_8BIT_1.0/src/adi_spi_driver_15_8bit.v|
+Z35 !s90 -reportprogress|300|../AXI4_ADI_SPI_15_8BIT_1.0/src/adi_spi_driver_15_8bit.v|
+!s85 0
+vglbl
+Z36 IFO;UBj`VnzY[Ym4SWVVm;3
+Z37 VM[9mS]S:KA1i4VeCMX35[3
+R28
+Z38 w1381681120
+Z39 8D:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v
+Z40 FD:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v
+L0 5
+R20
+r1
+31
+R21
+Z41 !s100 V<`KW`8LXe32mQ2Gdj1MB2
+Z42 !s90 -reportprogress|300|D:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v|
+!s85 0
+Z43 !s108 1665217113.405000
+Z44 !s107 D:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v|
+vspi_driver_common
+Z45 IID=FdATEgf[a;?]<OC7<X1
+Z46 VCOeKMz9e>W89L>=kGLEW>3
+R8
+Z47 w1624091757
+Z48 8../AXI4_SPI_DRIVER_COMMON_1.0/src/spi_driver_common.v
+Z49 F../AXI4_SPI_DRIVER_COMMON_1.0/src/spi_driver_common.v
+L0 18
+R20
+r1
+31
+R21
+Z50 !s100 8XnK44[aTKP;dE5bJ6zh83
+Z51 !s108 1624253205.828000
+Z52 !s107 ../AXI4_SPI_DRIVER_COMMON_1.0/src/spi_driver_common.v|
+Z53 !s90 -reportprogress|300|../AXI4_SPI_DRIVER_COMMON_1.0/src/spi_driver_common.v|
+!s85 0
+vspi_driver_common_test
+Z54 Ig7Q?FNe0ZjOdR?;@I2?le1
+Z55 VM>SJ4VkYUWKZZQ@P==CBz0
+R28
+Z56 w1647329608
+Z57 8spi_driver_common_test.v
+Z58 Fspi_driver_common_test.v
+L0 3
+R20
+r1
+31
+R21
+Z59 !s100 ]jFCL82@M:<X?g:zPRTA80
+Z60 !s90 -reportprogress|300|spi_driver_common_test.v|
+Z61 !s108 1665217113.213000
+Z62 !s107 spi_driver_common_test.v|
+!s85 0

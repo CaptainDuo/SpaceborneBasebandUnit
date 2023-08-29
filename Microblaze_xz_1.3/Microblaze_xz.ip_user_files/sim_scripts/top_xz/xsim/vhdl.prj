@@ -1,0 +1,11 @@
+vhdl xil_defaultlib  \
+"../../../bd/top_xz/ip/top_xz_microblaze_0_0/sim/top_xz_microblaze_0_0.vhd" \
+"../../../bd/top_xz/ip/top_xz_mdm_1_0/sim/top_xz_mdm_1_0.vhd" \
+"../../../bd/top_xz/ip/top_xz_rst_clk_wiz_1_100M_0/sim/top_xz_rst_clk_wiz_1_100M_0.vhd" \
+"../../../bd/top_xz/ip/top_xz_dlmb_v10_0/sim/top_xz_dlmb_v10_0.vhd" \
+"../../../bd/top_xz/ip/top_xz_ilmb_v10_0/sim/top_xz_ilmb_v10_0.vhd" \
+"../../../bd/top_xz/ip/top_xz_dlmb_bram_if_cntlr_0/sim/top_xz_dlmb_bram_if_cntlr_0.vhd" \
+"../../../bd/top_xz/ip/top_xz_ilmb_bram_if_cntlr_0/sim/top_xz_ilmb_bram_if_cntlr_0.vhd" \
+"../../../bd/top_xz/ip/top_xz_axi_gpio_0_0/sim/top_xz_axi_gpio_0_0.vhd" \
+
+nosort

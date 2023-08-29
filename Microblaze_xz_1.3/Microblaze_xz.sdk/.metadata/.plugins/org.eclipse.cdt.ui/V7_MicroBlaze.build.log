@@ -1,0 +1,25 @@
+16:29:51 **** Auto Build of configuration Debug for project V7_MicroBlaze ****
+make all 
+'Building file: ../src/testperiph.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../V7_MicroBlaze_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
+../src/testperiph.c: In function 'main':
+../src/testperiph.c:58:11: warning: variable 'status' set but not used [-Wunused-but-set-variable]
+       int status;
+           ^~~~~~
+'Finished building: ../src/testperiph.c'
+' '
+'Building target: V7_MicroBlaze.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../V7_MicroBlaze_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "V7_MicroBlaze.elf"  ./src/testperiph.o ./src/xgpio_tapp_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: V7_MicroBlaze.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size V7_MicroBlaze.elf  |tee "V7_MicroBlaze.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3928	    288	   3144	   7360	   1cc0	V7_MicroBlaze.elf
+'Finished building: V7_MicroBlaze.elf.size'
+' '
+
+16:30:04 Build Finished (took 12s.81ms)
+

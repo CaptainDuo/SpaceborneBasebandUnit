@@ -1,0 +1,50 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Mon Aug 28 10:31:16 2023
+# Process ID: 2148
+# Current directory: C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8380 C:\Users\86183\Desktop\Microblaze_xzjddy\Microblaze_xz_1.1\Microblaze_xz.xpr
+# Log file: C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.1/vivado.log
+# Journal file: C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.1/Microblaze_xz.xpr
+update_compile_order -fileset sources_1
+open_bd_design {C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.1/Microblaze_xz.srcs/sources_1/bd/top_xz/top_xz.bd}
+delete_bd_objs [get_bd_nets reset_rtl_0_0_1]
+delete_bd_objs [get_bd_ports reset_rtl_0_0]
+apply_bd_automation -rule xilinx.com:bd_rule:board -config { Manual_Source {Auto} rst_polarity {ACTIVE_LOW}}  [get_bd_pins rst_clk_wiz_1_100M/ext_reset_in]
+delete_bd_objs [get_bd_nets reset_rtl_0_1]
+delete_bd_objs [get_bd_ports reset_rtl_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_0
+endgroup
+set_property location {4 1244 -710} [get_bd_cells axi_gpio_0]
+set_property -dict [list CONFIG.C_GPIO_WIDTH {2} CONFIG.C_ALL_INPUTS {0} CONFIG.C_ALL_OUTPUTS {1}] [get_bd_cells axi_gpio_0]
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/dcm_clock_0 (100 MHz)} Clk_slave {Auto} Clk_xbar {/dcm_clock_0 (100 MHz)} Master {/microblaze_0 (Periph)} Slave {/axi_gpio_0/S_AXI} intc_ip {/microblaze_0_axi_periph} master_apm {0}}  [get_bd_intf_pins axi_gpio_0/S_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:board -config { Manual_Source {Auto}}  [get_bd_intf_pins axi_gpio_0/GPIO]
+endgroup
+save_bd_design
+set_property name gpio_0 [get_bd_intf_ports gpio_rtl_0]
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+save_bd_design
+reset_run synth_1
+launch_runs synth_1 -jobs 16
+wait_on_run synth_1
+reset_run top_xz_dlmb_bram_if_cntlr_0_synth_1
+reset_run top_xz_xbar_0_synth_1
+reset_run top_xz_axi_gpio_0_0_synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 16
+wait_on_run synth_1
+open_bd_design {C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.1/Microblaze_xz.srcs/sources_1/bd/top_xz/top_xz.bd}
+set_property name gpio [get_bd_intf_ports gpio_0]
+save_bd_design
+reset_run synth_1
+launch_runs synth_1 -jobs 16
+wait_on_run synth_1

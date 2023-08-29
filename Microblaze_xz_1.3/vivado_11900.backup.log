@@ -1,0 +1,1648 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Mon Aug 28 11:10:25 2023
+# Process ID: 11900
+# Current directory: C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent2444 C:\Users\86183\Desktop\Microblaze_xzjddy\Microblaze_xz_1.2\Microblaze_xz.xpr
+# Log file: C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/vivado.log
+# Journal file: C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.xpr
+INFO: [Project 1-313] Project file moved from 'C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.1' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.ip_user_files/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
+open_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:07 . Memory (MB): peak = 915.496 ; gain = 192.922
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/imports/hdl/top_xz_wrapper.v] -no_script -reset -force -quiet
+remove_files  C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/imports/hdl/top_xz_wrapper.v
+file delete -force C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/imports/hdl/top_xz_wrapper.v
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+open_bd_design {C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/top_xz.bd}
+Adding cell -- xilinx.com:ip:microblaze:10.0 - microblaze_0
+Adding cell -- CETC58:user:AXI4_ADI_SPI_15_8BIT:1.0 - Driver_ad9649
+Adding cell -- CETC58:user:AXI4_ADI_SPI_15_8BIT:1.0 - Driver_ad9781
+Adding cell -- xilinx.com:ip:mdm:3.2 - mdm_1
+Adding cell -- xilinx.com:ip:proc_sys_reset:5.0 - rst_clk_wiz_1_100M
+Adding cell -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_0
+Adding cell -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding cell -- xilinx.com:ip:lmb_v10:3.0 - dlmb_v10
+Adding cell -- xilinx.com:ip:lmb_v10:3.0 - ilmb_v10
+Adding cell -- xilinx.com:ip:lmb_bram_if_cntlr:4.0 - dlmb_bram_if_cntlr
+Adding cell -- xilinx.com:ip:lmb_bram_if_cntlr:4.0 - ilmb_bram_if_cntlr
+Adding cell -- xilinx.com:ip:blk_mem_gen:8.4 - lmb_bram
+Successfully read diagram <top_xz> from BD file <C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/top_xz.bd>
+make_wrapper -files [get_files C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/top_xz.bd] -top
+add_files -norecurse C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/hdl/top_xz_wrapper.v
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+validate_bd_design -force
+WARNING: [xilinx.com:ip:proc_sys_reset:5.0-1] /rst_clk_wiz_1_100M Input reset pins ext_reset_in and aux_reset_in are unconnected. Core will generate resets only on POWER ON.
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.
+Please check your design and connect them as needed: 
+/rst_clk_wiz_1_100M/ext_reset_in
+
+connect_bd_net [get_bd_ports dcm_locked_0] [get_bd_pins rst_clk_wiz_1_100M/ext_reset_in]
+validate_bd_design
+save_bd_design
+Wrote  : <C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/top_xz.bd> 
+Wrote  : <C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ui/bd_b4380a2c.ui> 
+delete_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/top_xz.bd]
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.runs/top_xz_microblaze_0_0_synth_1
+
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.runs/top_xz_AXI4_ADI_SPI_15_8BIT_0_0_synth_1
+
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.runs/top_xz_AXI4_ADI_SPI_15_8BIT_0_1_synth_1
+
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.runs/top_xz_mdm_1_0_synth_1
+
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.runs/top_xz_rst_clk_wiz_1_100M_0_synth_1
+
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.runs/top_xz_xbar_0_synth_1
+
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.runs/top_xz_dlmb_v10_0_synth_1
+
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.runs/top_xz_ilmb_v10_0_synth_1
+
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.runs/top_xz_dlmb_bram_if_cntlr_0_synth_1
+
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.runs/top_xz_ilmb_bram_if_cntlr_0_synth_1
+
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.runs/top_xz_lmb_bram_0_synth_1
+
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.runs/top_xz_axi_gpio_0_0_synth_1
+
+set_property synth_checkpoint_mode None [get_files  C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/top_xz.bd]
+generate_target all [get_files  C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/top_xz.bd]
+INFO: [BD 41-1662] The design 'top_xz.bd' is already validated. Therefore parameter propagation will not be re-run.
+VHDL Output written to : C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/synth/top_xz.v
+VHDL Output written to : C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/sim/top_xz.v
+VHDL Output written to : C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/hdl/top_xz_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Driver_ad9649 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Driver_ad9781 .
+INFO: [Device 21-403] Loading part xc7vx690tffg1927-3
+INFO: [BD 41-1029] Generation completed for the IP Integrator block mdm_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_clk_wiz_1_100M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/dlmb_v10 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/ilmb_v10 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/dlmb_bram_if_cntlr .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/ilmb_bram_if_cntlr .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block microblaze_0_local_memory/lmb_bram .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_0 .
+Exporting to file C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/hw_handoff/top_xz.hwh
+Generated Block Design Tcl file C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/hw_handoff/top_xz_bd.tcl
+Generated Hardware Definition File C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/synth/top_xz.hwdef
+generate_target: Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 1430.602 ; gain = 390.031
+export_ip_user_files -of_objects [get_files C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/top_xz.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/top_xz.bd] -directory C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.ip_user_files -ipstatic_source_dir C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.cache/compile_simlib/modelsim} {questa=C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.cache/compile_simlib/questa} {riviera=C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.cache/compile_simlib/riviera} {activehdl=C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+open_bd_design {C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/top_xz.bd}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_ip_catalog
+reset_run synth_1
+launch_runs synth_1 -jobs 16
+[Mon Aug 28 14:19:15 2023] Launched synth_1...
+Run output will be captured here: C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.runs/synth_1/runme.log
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7vx690tffg1927-3
+Top: top_xz_wrapper
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1732.820 ; gain = 119.098
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top_xz_wrapper' [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/hdl/top_xz_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.v:70]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0_clk_wiz' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v:68]
+INFO: [Synth 8-6157] synthesizing module 'IBUF' [C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:19473]
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter IBUF_DELAY_VALUE bound to: 0 - type: string 
+	Parameter IBUF_LOW_PWR bound to: TRUE - type: string 
+	Parameter IFD_DELAY_VALUE bound to: AUTO - type: string 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'IBUF' (1#1) [C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:19473]
+INFO: [Synth 8-6157] synthesizing module 'MMCME2_ADV' [C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:25762]
+	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
+	Parameter CLKFBOUT_MULT_F bound to: 10.000000 - type: float 
+	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKFBOUT_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKIN1_PERIOD bound to: 10.000000 - type: float 
+	Parameter CLKIN2_PERIOD bound to: 0.000000 - type: float 
+	Parameter CLKOUT0_DIVIDE_F bound to: 10.000000 - type: float 
+	Parameter CLKOUT0_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT0_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT0_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT1_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT1_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT1_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT1_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT2_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT2_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT2_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT2_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT3_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT3_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT3_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT3_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT4_CASCADE bound to: FALSE - type: string 
+	Parameter CLKOUT4_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT4_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT4_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT4_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT5_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT5_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT5_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT5_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT6_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT6_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT6_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT6_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter COMPENSATION bound to: ZHOLD - type: string 
+	Parameter DIVCLK_DIVIDE bound to: 1 - type: integer 
+	Parameter IS_CLKINSEL_INVERTED bound to: 1'b0 
+	Parameter IS_PSEN_INVERTED bound to: 1'b0 
+	Parameter IS_PSINCDEC_INVERTED bound to: 1'b0 
+	Parameter IS_PWRDWN_INVERTED bound to: 1'b0 
+	Parameter IS_RST_INVERTED bound to: 1'b0 
+	Parameter REF_JITTER1 bound to: 0.010000 - type: float 
+	Parameter REF_JITTER2 bound to: 0.010000 - type: float 
+	Parameter SS_EN bound to: FALSE - type: string 
+	Parameter SS_MODE bound to: CENTER_HIGH - type: string 
+	Parameter SS_MOD_PERIOD bound to: 10000 - type: integer 
+	Parameter STARTUP_WAIT bound to: FALSE - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'MMCME2_ADV' (2#1) [C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:25762]
+INFO: [Synth 8-6157] synthesizing module 'BUFG' [C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:609]
+INFO: [Synth 8-6155] done synthesizing module 'BUFG' (3#1) [C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:609]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0_clk_wiz' (4#1) [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v:68]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (5#1) [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.v:70]
+INFO: [Synth 8-6157] synthesizing module 'top_xz' [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/synth/top_xz.v:817]
+INFO: [Synth 8-6157] synthesizing module 'top_xz_AXI4_ADI_SPI_15_8BIT_0_0' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ip/top_xz_AXI4_ADI_SPI_15_8BIT_0_0/synth/top_xz_AXI4_ADI_SPI_15_8BIT_0_0.v:56]
+INFO: [Synth 8-6157] synthesizing module 'AXI4_ADI_SPI_15_8BIT_v1_0' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/f680/hdl/AXI4_ADI_SPI_15_8BIT_v1_0.v:4]
+	Parameter CLK_FRE bound to: 100000000 - type: integer 
+	Parameter SCLK_FRE bound to: 1000000 - type: integer 
+	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S00_AXI_ADDR_WIDTH bound to: 5 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'AXI4_ADI_SPI_15_8BIT_v1_0_S00_AXI' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/f680/hdl/AXI4_ADI_SPI_15_8BIT_v1_0_S00_AXI.v:4]
+	Parameter CLK_FRE bound to: 100000000 - type: integer 
+	Parameter SCLK_FRE bound to: 1000000 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 5 - type: integer 
+	Parameter ADDR_LSB bound to: 2 - type: integer 
+	Parameter OPT_MEM_ADDR_BITS bound to: 2 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'adi_spi_driver_15_8bit' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/f680/src/adi_spi_driver_15_8bit.v:25]
+	Parameter CLK_FRE bound to: 100000000 - type: integer 
+	Parameter SCLK_FRE bound to: 1000000 - type: integer 
+	Parameter SCLK_FRE_PARAM bound to: 100 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'adi_spi_driver_15_8bit' (6#1) [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/f680/src/adi_spi_driver_15_8bit.v:25]
+INFO: [Synth 8-6155] done synthesizing module 'AXI4_ADI_SPI_15_8BIT_v1_0_S00_AXI' (7#1) [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/f680/hdl/AXI4_ADI_SPI_15_8BIT_v1_0_S00_AXI.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'AXI4_ADI_SPI_15_8BIT_v1_0' (8#1) [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/f680/hdl/AXI4_ADI_SPI_15_8BIT_v1_0.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'top_xz_AXI4_ADI_SPI_15_8BIT_0_0' (9#1) [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ip/top_xz_AXI4_ADI_SPI_15_8BIT_0_0/synth/top_xz_AXI4_ADI_SPI_15_8BIT_0_0.v:56]
+INFO: [Synth 8-6157] synthesizing module 'top_xz_AXI4_ADI_SPI_15_8BIT_0_1' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ip/top_xz_AXI4_ADI_SPI_15_8BIT_0_1/synth/top_xz_AXI4_ADI_SPI_15_8BIT_0_1.v:56]
+INFO: [Synth 8-6155] done synthesizing module 'top_xz_AXI4_ADI_SPI_15_8BIT_0_1' (10#1) [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ip/top_xz_AXI4_ADI_SPI_15_8BIT_0_1/synth/top_xz_AXI4_ADI_SPI_15_8BIT_0_1.v:56]
+INFO: [Synth 8-638] synthesizing module 'top_xz_axi_gpio_0_0' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ip/top_xz_axi_gpio_0_0/synth/top_xz_axi_gpio_0_0.vhd:84]
+	Parameter C_FAMILY bound to: virtex7 - type: string 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 9 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_GPIO_WIDTH bound to: 2 - type: integer 
+	Parameter C_GPIO2_WIDTH bound to: 32 - type: integer 
+	Parameter C_ALL_INPUTS bound to: 0 - type: integer 
+	Parameter C_ALL_INPUTS_2 bound to: 0 - type: integer 
+	Parameter C_ALL_OUTPUTS bound to: 1 - type: integer 
+	Parameter C_ALL_OUTPUTS_2 bound to: 0 - type: integer 
+	Parameter C_INTERRUPT_PRESENT bound to: 0 - type: integer 
+	Parameter C_DOUT_DEFAULT bound to: 32'b00000000000000000000000000000000 
+	Parameter C_TRI_DEFAULT bound to: 32'b11111111111111111111111111111111 
+	Parameter C_IS_DUAL bound to: 0 - type: integer 
+	Parameter C_DOUT_DEFAULT_2 bound to: 32'b00000000000000000000000000000000 
+	Parameter C_TRI_DEFAULT_2 bound to: 32'b11111111111111111111111111111111 
+INFO: [Synth 8-3491] module 'axi_gpio' declared at 'c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/c193/hdl/axi_gpio_v2_0_vh_rfs.vhd:1265' bound to instance 'U0' of component 'axi_gpio' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ip/top_xz_axi_gpio_0_0/synth/top_xz_axi_gpio_0_0.vhd:168]
+INFO: [Synth 8-638] synthesizing module 'axi_gpio' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/c193/hdl/axi_gpio_v2_0_vh_rfs.vhd:1358]
+	Parameter C_FAMILY bound to: virtex7 - type: string 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 9 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_GPIO_WIDTH bound to: 2 - type: integer 
+	Parameter C_GPIO2_WIDTH bound to: 32 - type: integer 
+	Parameter C_ALL_INPUTS bound to: 0 - type: integer 
+	Parameter C_ALL_INPUTS_2 bound to: 0 - type: integer 
+	Parameter C_ALL_OUTPUTS bound to: 1 - type: integer 
+	Parameter C_ALL_OUTPUTS_2 bound to: 0 - type: integer 
+	Parameter C_INTERRUPT_PRESENT bound to: 0 - type: integer 
+	Parameter C_DOUT_DEFAULT bound to: 0 - type: integer 
+	Parameter C_TRI_DEFAULT bound to: -1 - type: integer 
+	Parameter C_IS_DUAL bound to: 0 - type: integer 
+	Parameter C_DOUT_DEFAULT_2 bound to: 0 - type: integer 
+	Parameter C_TRI_DEFAULT_2 bound to: -1 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* max_fanout = "10000" *) [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/c193/hdl/axi_gpio_v2_0_vh_rfs.vhd:1295]
+INFO: [Synth 8-5534] Detected attribute (* max_fanout = "10000" *) [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/c193/hdl/axi_gpio_v2_0_vh_rfs.vhd:1296]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2948]
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 9 - type: integer 
+	Parameter C_S_AXI_MIN_SIZE bound to: 32'b00000000000000000000000111111111 
+	Parameter C_USE_WSTRB bound to: 0 - type: integer 
+	Parameter C_DPHASE_TIMEOUT bound to: 8 - type: integer 
+	Parameter C_ARD_ADDR_RANGE_ARRAY bound to: 128'b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001111 
+	Parameter C_ARD_NUM_CE_ARRAY bound to: 32'b00000000000000000000000000000100 
+	Parameter C_FAMILY bound to: virtex7 - type: string 
+INFO: [Synth 8-638] synthesizing module 'slave_attachment' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2341]
+	Parameter C_ARD_ADDR_RANGE_ARRAY bound to: 128'b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001111 
+	Parameter C_ARD_NUM_CE_ARRAY bound to: 32'b00000000000000000000000000000100 
+	Parameter C_IPIF_ABUS_WIDTH bound to: 9 - type: integer 
+	Parameter C_IPIF_DBUS_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_MIN_SIZE bound to: 511 - type: integer 
+	Parameter C_USE_WSTRB bound to: 0 - type: integer 
+	Parameter C_DPHASE_TIMEOUT bound to: 8 - type: integer 
+	Parameter C_FAMILY bound to: virtex7 - type: string 
+INFO: [Synth 8-638] synthesizing module 'address_decoder' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1775]
+	Parameter C_BUS_AWIDTH bound to: 9 - type: integer 
+	Parameter C_S_AXI_MIN_SIZE bound to: 511 - type: integer 
+	Parameter C_ARD_ADDR_RANGE_ARRAY bound to: 128'b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001111 
+	Parameter C_ARD_NUM_CE_ARRAY bound to: 32'b00000000000000000000000000000100 
+	Parameter C_FAMILY bound to: nofamily - type: string 
+INFO: [Synth 8-638] synthesizing module 'pselect_f' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+	Parameter C_AB bound to: 2 - type: integer 
+	Parameter C_AW bound to: 2 - type: integer 
+	Parameter C_BAR bound to: 2'b00 
+	Parameter C_FAMILY bound to: nofamily - type: string 
+INFO: [Synth 8-256] done synthesizing module 'pselect_f' (11#1) [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized0' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+	Parameter C_AB bound to: 2 - type: integer 
+	Parameter C_AW bound to: 2 - type: integer 
+	Parameter C_BAR bound to: 2'b01 
+	Parameter C_FAMILY bound to: nofamily - type: string 
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized0' (11#1) [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized1' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+	Parameter C_AB bound to: 2 - type: integer 
+	Parameter C_AW bound to: 2 - type: integer 
+	Parameter C_BAR bound to: 2'b10 
+	Parameter C_FAMILY bound to: nofamily - type: string 
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized1' (11#1) [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized2' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+	Parameter C_AB bound to: 2 - type: integer 
+	Parameter C_AW bound to: 2 - type: integer 
+	Parameter C_BAR bound to: 2'b11 
+	Parameter C_FAMILY bound to: nofamily - type: string 
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized2' (11#1) [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'address_decoder' (12#1) [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1775]
+INFO: [Synth 8-226] default block is never used [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2550]
+INFO: [Synth 8-256] done synthesizing module 'slave_attachment' (13#1) [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2341]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif' (14#1) [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2948]
+INFO: [Synth 8-638] synthesizing module 'GPIO_Core' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/c193/hdl/axi_gpio_v2_0_vh_rfs.vhd:178]
+	Parameter C_DW bound to: 32 - type: integer 
+	Parameter C_AW bound to: 9 - type: integer 
+	Parameter C_GPIO_WIDTH bound to: 2 - type: integer 
+	Parameter C_GPIO2_WIDTH bound to: 32 - type: integer 
+	Parameter C_MAX_GPIO_WIDTH bound to: 2 - type: integer 
+	Parameter C_INTERRUPT_PRESENT bound to: 0 - type: integer 
+	Parameter C_DOUT_DEFAULT bound to: 0 - type: integer 
+	Parameter C_TRI_DEFAULT bound to: -1 - type: integer 
+	Parameter C_IS_DUAL bound to: 0 - type: integer 
+	Parameter C_ALL_OUTPUTS bound to: 1 - type: integer 
+	Parameter C_ALL_OUTPUTS_2 bound to: 0 - type: integer 
+	Parameter C_ALL_INPUTS bound to: 0 - type: integer 
+	Parameter C_ALL_INPUTS_2 bound to: 0 - type: integer 
+	Parameter C_DOUT_DEFAULT_2 bound to: 0 - type: integer 
+	Parameter C_TRI_DEFAULT_2 bound to: -1 - type: integer 
+	Parameter C_FAMILY bound to: virtex7 - type: string 
+INFO: [Synth 8-226] default block is never used [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/c193/hdl/axi_gpio_v2_0_vh_rfs.vhd:443]
+INFO: [Synth 8-638] synthesizing module 'cdc_sync' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
+	Parameter C_CDC_TYPE bound to: 1 - type: integer 
+	Parameter C_RESET_STATE bound to: 0 - type: integer 
+	Parameter C_SINGLE_BIT bound to: 0 - type: integer 
+	Parameter C_FLOP_INPUT bound to: 0 - type: integer 
+	Parameter C_VECTOR_WIDTH bound to: 2 - type: integer 
+	Parameter C_MTBF_STAGES bound to: 4 - type: integer 
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:736]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:736]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:772]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2' to cell 'FDR' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:772]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:788]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3' to cell 'FDR' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:788]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4' to cell 'FDR' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:804]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4' to cell 'FDR' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:804]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5' to cell 'FDR' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:821]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d5' to cell 'FDR' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:821]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6' to cell 'FDR' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:837]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d6' to cell 'FDR' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:837]
+INFO: [Synth 8-256] done synthesizing module 'cdc_sync' (15#1) [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
+WARNING: [Synth 8-6014] Unused sequential element Not_Dual.ALLOUT_ND.READ_REG_GEN[0].GPIO_DBus_i_reg was removed.  [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/c193/hdl/axi_gpio_v2_0_vh_rfs.vhd:319]
+WARNING: [Synth 8-6014] Unused sequential element Not_Dual.ALLOUT_ND.READ_REG_GEN[1].GPIO_DBus_i_reg was removed.  [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/c193/hdl/axi_gpio_v2_0_vh_rfs.vhd:319]
+WARNING: [Synth 8-6014] Unused sequential element Not_Dual.gpio_Data_In_reg was removed.  [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/c193/hdl/axi_gpio_v2_0_vh_rfs.vhd:486]
+INFO: [Synth 8-256] done synthesizing module 'GPIO_Core' (16#1) [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/c193/hdl/axi_gpio_v2_0_vh_rfs.vhd:178]
+INFO: [Synth 8-256] done synthesizing module 'axi_gpio' (17#1) [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/c193/hdl/axi_gpio_v2_0_vh_rfs.vhd:1358]
+INFO: [Synth 8-256] done synthesizing module 'top_xz_axi_gpio_0_0' (18#1) [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ip/top_xz_axi_gpio_0_0/synth/top_xz_axi_gpio_0_0.vhd:84]
+INFO: [Synth 8-638] synthesizing module 'top_xz_mdm_1_0' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ip/top_xz_mdm_1_0/synth/top_xz_mdm_1_0.vhd:74]
+	Parameter C_FAMILY bound to: virtex7 - type: string 
+	Parameter C_JTAG_CHAIN bound to: 2 - type: integer 
+	Parameter C_USE_BSCAN bound to: 0 - type: integer 
+	Parameter C_BSCANID bound to: 76547328 - type: integer 
+	Parameter C_DEBUG_INTERFACE bound to: 0 - type: integer 
+	Parameter C_USE_CONFIG_RESET bound to: 0 - type: integer 
+	Parameter C_AVOID_PRIMITIVES bound to: 0 - type: integer 
+	Parameter C_INTERCONNECT bound to: 2 - type: integer 
+	Parameter C_MB_DBG_PORTS bound to: 1 - type: integer 
+	Parameter C_USE_UART bound to: 0 - type: integer 
+	Parameter C_DBG_REG_ACCESS bound to: 0 - type: integer 
+	Parameter C_DBG_MEM_ACCESS bound to: 0 - type: integer 
+	Parameter C_USE_CROSS_TRIGGER bound to: 0 - type: integer 
+	Parameter C_EXT_TRIG_RESET_VALUE bound to: 20'b11110001001000110100 
+	Parameter C_TRACE_OUTPUT bound to: 0 - type: integer 
+	Parameter C_TRACE_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_TRACE_CLK_FREQ_HZ bound to: 200000000 - type: integer 
+	Parameter C_TRACE_CLK_OUT_PHASE bound to: 90 - type: integer 
+	Parameter C_TRACE_ASYNC_RESET bound to: 0 - type: integer 
+	Parameter C_TRACE_PROTOCOL bound to: 1 - type: integer 
+	Parameter C_TRACE_ID bound to: 110 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ACLK_FREQ_HZ bound to: 100000000 - type: integer 
+	Parameter C_M_AXI_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_THREAD_ID_WIDTH bound to: 1 - type: integer 
+	Parameter C_DATA_SIZE bound to: 32 - type: integer 
+	Parameter C_M_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXIS_ID_WIDTH bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'MDM' declared at 'c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:12404' bound to instance 'U0' of component 'MDM' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ip/top_xz_mdm_1_0/synth/top_xz_mdm_1_0.vhd:1652]
+INFO: [Synth 8-638] synthesizing module 'MDM' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:14056]
+	Parameter C_FAMILY bound to: virtex7 - type: string 
+	Parameter C_JTAG_CHAIN bound to: 2 - type: integer 
+	Parameter C_USE_BSCAN bound to: 0 - type: integer 
+	Parameter C_BSCANID bound to: 76547328 - type: integer 
+	Parameter C_USE_CONFIG_RESET bound to: 0 - type: integer 
+	Parameter C_AVOID_PRIMITIVES bound to: 0 - type: integer 
+	Parameter C_INTERCONNECT bound to: 2 - type: integer 
+	Parameter C_DEBUG_INTERFACE bound to: 0 - type: integer 
+	Parameter C_MB_DBG_PORTS bound to: 1 - type: integer 
+	Parameter C_DBG_REG_ACCESS bound to: 0 - type: integer 
+	Parameter C_DBG_MEM_ACCESS bound to: 0 - type: integer 
+	Parameter C_USE_UART bound to: 0 - type: integer 
+	Parameter C_USE_CROSS_TRIGGER bound to: 0 - type: integer 
+	Parameter C_EXT_TRIG_RESET_VALUE bound to: 20'b11110001001000110100 
+	Parameter C_TRACE_OUTPUT bound to: 0 - type: integer 
+	Parameter C_TRACE_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_TRACE_ASYNC_RESET bound to: 0 - type: integer 
+	Parameter C_TRACE_CLK_FREQ_HZ bound to: 200000000 - type: integer 
+	Parameter C_TRACE_CLK_OUT_PHASE bound to: 90 - type: integer 
+	Parameter C_TRACE_PROTOCOL bound to: 1 - type: integer 
+	Parameter C_TRACE_ID bound to: 110 - type: integer 
+	Parameter C_S_AXI_ACLK_FREQ_HZ bound to: 100000000 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_THREAD_ID_WIDTH bound to: 1 - type: integer 
+	Parameter C_DATA_SIZE bound to: 32 - type: integer 
+	Parameter C_M_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXIS_ID_WIDTH bound to: 7 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* buffer_type = "none" *) [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:15561]
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter DISABLE_JTAG bound to: FALSE - type: string 
+	Parameter JTAG_CHAIN bound to: 2 - type: integer 
+INFO: [Synth 8-3491] module 'MB_BSCANE2' declared at 'c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:253' bound to instance 'BSCAN_I' of component 'MB_BSCANE2' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:15628]
+INFO: [Synth 8-638] synthesizing module 'MB_BSCANE2' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:277]
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter DISABLE_JTAG bound to: FALSE - type: string 
+	Parameter JTAG_CHAIN bound to: 2 - type: integer 
+	Parameter DISABLE_JTAG bound to: FALSE - type: string 
+	Parameter JTAG_CHAIN bound to: 2 - type: integer 
+INFO: [Synth 8-113] binding component instance 'BSCANE2_I' to cell 'BSCANE2' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:287]
+INFO: [Synth 8-256] done synthesizing module 'MB_BSCANE2' (19#1) [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:277]
+	Parameter C_TARGET bound to: 1'b0 
+INFO: [Synth 8-3491] module 'MB_BUFG' declared at 'c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:315' bound to instance 'BUFG_DRCK' of component 'MB_BUFG' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:15827]
+INFO: [Synth 8-638] synthesizing module 'MB_BUFG' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:328]
+	Parameter C_TARGET bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'Native' to cell 'BUFG' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:338]
+INFO: [Synth 8-256] done synthesizing module 'MB_BUFG' (20#1) [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:328]
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter C_JTAG_CHAIN bound to: 2 - type: integer 
+	Parameter C_USE_BSCAN bound to: 0 - type: integer 
+	Parameter C_USE_CONFIG_RESET bound to: 0 - type: integer 
+	Parameter C_USE_SRL16 bound to: yes - type: string 
+	Parameter C_DEBUG_INTERFACE bound to: 0 - type: integer 
+	Parameter C_MB_DBG_PORTS bound to: 1 - type: integer 
+	Parameter C_EN_WIDTH bound to: 1 - type: integer 
+	Parameter C_DBG_REG_ACCESS bound to: 0 - type: integer 
+	Parameter C_REG_NUM_CE bound to: 4 - type: integer 
+	Parameter C_REG_DATA_WIDTH bound to: 8 - type: integer 
+	Parameter C_DBG_MEM_ACCESS bound to: 0 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+	Parameter C_S_AXI_ACLK_FREQ_HZ bound to: 100000000 - type: integer 
+	Parameter C_M_AXI_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_USE_CROSS_TRIGGER bound to: 0 - type: integer 
+	Parameter C_EXT_TRIG_RESET_VALUE bound to: 20'b11110001001000110100 
+	Parameter C_USE_UART bound to: 0 - type: integer 
+	Parameter C_UART_WIDTH bound to: 8 - type: integer 
+	Parameter C_TRACE_OUTPUT bound to: 0 - type: integer 
+	Parameter C_TRACE_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_TRACE_ASYNC_RESET bound to: 0 - type: integer 
+	Parameter C_TRACE_CLK_FREQ_HZ bound to: 200000000 - type: integer 
+	Parameter C_TRACE_CLK_OUT_PHASE bound to: 90 - type: integer 
+	Parameter C_TRACE_PROTOCOL bound to: 1 - type: integer 
+	Parameter C_TRACE_ID bound to: 110 - type: integer 
+	Parameter C_M_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXIS_ID_WIDTH bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'MDM_Core' declared at 'c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:5431' bound to instance 'MDM_Core_I1' of component 'MDM_Core' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:15911]
+INFO: [Synth 8-638] synthesizing module 'MDM_Core' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:6668]
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter C_JTAG_CHAIN bound to: 2 - type: integer 
+	Parameter C_USE_BSCAN bound to: 0 - type: integer 
+	Parameter C_USE_CONFIG_RESET bound to: 0 - type: integer 
+	Parameter C_USE_SRL16 bound to: yes - type: string 
+	Parameter C_DEBUG_INTERFACE bound to: 0 - type: integer 
+	Parameter C_MB_DBG_PORTS bound to: 1 - type: integer 
+	Parameter C_EN_WIDTH bound to: 1 - type: integer 
+	Parameter C_DBG_REG_ACCESS bound to: 0 - type: integer 
+	Parameter C_REG_NUM_CE bound to: 4 - type: integer 
+	Parameter C_REG_DATA_WIDTH bound to: 8 - type: integer 
+	Parameter C_DBG_MEM_ACCESS bound to: 0 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+	Parameter C_S_AXI_ACLK_FREQ_HZ bound to: 100000000 - type: integer 
+	Parameter C_M_AXI_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_USE_CROSS_TRIGGER bound to: 0 - type: integer 
+	Parameter C_EXT_TRIG_RESET_VALUE bound to: 20'b11110001001000110100 
+	Parameter C_USE_UART bound to: 0 - type: integer 
+	Parameter C_UART_WIDTH bound to: 8 - type: integer 
+	Parameter C_TRACE_OUTPUT bound to: 0 - type: integer 
+	Parameter C_TRACE_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_TRACE_ASYNC_RESET bound to: 0 - type: integer 
+	Parameter C_TRACE_CLK_FREQ_HZ bound to: 200000000 - type: integer 
+	Parameter C_TRACE_CLK_OUT_PHASE bound to: 90 - type: integer 
+	Parameter C_TRACE_PROTOCOL bound to: 1 - type: integer 
+	Parameter C_TRACE_ID bound to: 110 - type: integer 
+	Parameter C_M_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXIS_ID_WIDTH bound to: 7 - type: integer 
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter C_USE_BSCAN bound to: 0 - type: integer 
+	Parameter C_MB_DBG_PORTS bound to: 1 - type: integer 
+	Parameter C_USE_CONFIG_RESET bound to: 0 - type: integer 
+	Parameter C_USE_SRL16 bound to: yes - type: string 
+	Parameter C_DEBUG_INTERFACE bound to: 0 - type: integer 
+	Parameter C_DBG_REG_ACCESS bound to: 0 - type: integer 
+	Parameter C_DBG_MEM_ACCESS bound to: 0 - type: integer 
+	Parameter C_M_AXI_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_USE_CROSS_TRIGGER bound to: 0 - type: integer 
+	Parameter C_EXT_TRIG_RESET_VALUE bound to: 20'b11110001001000110100 
+	Parameter C_USE_UART bound to: 0 - type: integer 
+	Parameter C_UART_WIDTH bound to: 8 - type: integer 
+	Parameter C_TRACE_OUTPUT bound to: 0 - type: integer 
+	Parameter C_TRACE_PROTOCOL bound to: 1 - type: integer 
+	Parameter C_EN_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'JTAG_CONTROL' declared at 'c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:2846' bound to instance 'JTAG_CONTROL_I' of component 'JTAG_CONTROL' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:10026]
+INFO: [Synth 8-638] synthesizing module 'JTAG_CONTROL' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:3118]
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter C_USE_BSCAN bound to: 0 - type: integer 
+	Parameter C_MB_DBG_PORTS bound to: 1 - type: integer 
+	Parameter C_USE_CONFIG_RESET bound to: 0 - type: integer 
+	Parameter C_USE_SRL16 bound to: yes - type: string 
+	Parameter C_DEBUG_INTERFACE bound to: 0 - type: integer 
+	Parameter C_DBG_REG_ACCESS bound to: 0 - type: integer 
+	Parameter C_DBG_MEM_ACCESS bound to: 0 - type: integer 
+	Parameter C_M_AXI_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_USE_CROSS_TRIGGER bound to: 0 - type: integer 
+	Parameter C_EXT_TRIG_RESET_VALUE bound to: 20'b11110001001000110100 
+	Parameter C_USE_UART bound to: 0 - type: integer 
+	Parameter C_UART_WIDTH bound to: 8 - type: integer 
+	Parameter C_TRACE_OUTPUT bound to: 0 - type: integer 
+	Parameter C_TRACE_PROTOCOL bound to: 1 - type: integer 
+	Parameter C_EN_WIDTH bound to: 1 - type: integer 
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-3491] module 'MB_FDC_1' declared at 'c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:614' bound to instance 'FDC_I' of component 'MB_FDC_1' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:3473]
+INFO: [Synth 8-638] synthesizing module 'MB_FDC_1' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:630]
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'Native' to cell 'FDC_1' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:651]
+INFO: [Synth 8-256] done synthesizing module 'MB_FDC_1' (21#1) [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:630]
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-3491] module 'MB_FDRE_1' declared at 'c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:673' bound to instance 'SYNC_FDRE' of component 'MB_FDRE_1' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:3483]
+INFO: [Synth 8-638] synthesizing module 'MB_FDRE_1' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:690]
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'Native' to cell 'FDRE_1' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:713]
+INFO: [Synth 8-256] done synthesizing module 'MB_FDRE_1' (22#1) [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:690]
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter C_STATIC bound to: 1 - type: bool 
+	Parameter C_USE_SRL16 bound to: yes - type: string 
+	Parameter INIT bound to: 16'b0000000101100111 
+INFO: [Synth 8-3491] module 'MB_SRL16E' declared at 'c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:736' bound to instance 'SRL16E_1' of component 'MB_SRL16E' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:3629]
+INFO: [Synth 8-638] synthesizing module 'mdm_v3_2_14_MB_SRL16E' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:759]
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter C_STATIC bound to: 1 - type: bool 
+	Parameter C_USE_SRL16 bound to: yes - type: string 
+	Parameter INIT bound to: 16'b0000000101100111 
+	Parameter INIT bound to: 16'b0000000101100111 
+	Parameter IS_CLK_INVERTED bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'MB_SRL16E_I1' to cell 'SRL16E' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:763]
+INFO: [Synth 8-256] done synthesizing module 'mdm_v3_2_14_MB_SRL16E' (23#1) [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:759]
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter C_STATIC bound to: 1 - type: bool 
+	Parameter C_USE_SRL16 bound to: yes - type: string 
+	Parameter INIT bound to: 16'b0100001010000111 
+INFO: [Synth 8-3491] module 'MB_SRL16E' declared at 'c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:736' bound to instance 'SRL16E_2' of component 'MB_SRL16E' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:3646]
+INFO: [Synth 8-638] synthesizing module 'mdm_v3_2_14_MB_SRL16E__parameterized0' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:759]
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter C_STATIC bound to: 1 - type: bool 
+	Parameter C_USE_SRL16 bound to: yes - type: string 
+	Parameter INIT bound to: 16'b0100001010000111 
+	Parameter INIT bound to: 16'b0100001010000111 
+	Parameter IS_CLK_INVERTED bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'MB_SRL16E_I1' to cell 'SRL16E' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:763]
+INFO: [Synth 8-256] done synthesizing module 'mdm_v3_2_14_MB_SRL16E__parameterized0' (23#1) [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:759]
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter C_STATIC bound to: 1 - type: bool 
+	Parameter C_USE_SRL16 bound to: yes - type: string 
+	Parameter INIT bound to: 16'b0100010001000011 
+INFO: [Synth 8-3491] module 'MB_SRL16E' declared at 'c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:736' bound to instance 'SRL16E_ID_1' of component 'MB_SRL16E' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:3715]
+INFO: [Synth 8-638] synthesizing module 'mdm_v3_2_14_MB_SRL16E__parameterized1' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:759]
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter C_STATIC bound to: 1 - type: bool 
+	Parameter C_USE_SRL16 bound to: yes - type: string 
+	Parameter INIT bound to: 16'b0100010001000011 
+	Parameter INIT bound to: 16'b0100010001000011 
+	Parameter IS_CLK_INVERTED bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'MB_SRL16E_I1' to cell 'SRL16E' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:763]
+INFO: [Synth 8-256] done synthesizing module 'mdm_v3_2_14_MB_SRL16E__parameterized1' (23#1) [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:759]
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter C_STATIC bound to: 1 - type: bool 
+	Parameter C_USE_SRL16 bound to: yes - type: string 
+	Parameter INIT bound to: 16'b0101100001001101 
+INFO: [Synth 8-3491] module 'MB_SRL16E' declared at 'c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:736' bound to instance 'SRL16E_ID_2' of component 'MB_SRL16E' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:3732]
+INFO: [Synth 8-638] synthesizing module 'mdm_v3_2_14_MB_SRL16E__parameterized2' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:759]
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter C_STATIC bound to: 1 - type: bool 
+	Parameter C_USE_SRL16 bound to: yes - type: string 
+	Parameter INIT bound to: 16'b0101100001001101 
+	Parameter INIT bound to: 16'b0101100001001101 
+	Parameter IS_CLK_INVERTED bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'MB_SRL16E_I1' to cell 'SRL16E' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:763]
+INFO: [Synth 8-256] done synthesizing module 'mdm_v3_2_14_MB_SRL16E__parameterized2' (23#1) [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:759]
+INFO: [Synth 8-5534] Detected attribute (* async_reg = "TRUE" *) [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:3891]
+WARNING: [Synth 8-6014] Unused sequential element set_Ext_BRK_reg was removed.  [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:3819]
+INFO: [Synth 8-256] done synthesizing module 'JTAG_CONTROL' (24#1) [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:3118]
+INFO: [Synth 8-256] done synthesizing module 'MDM_Core' (25#1) [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:6668]
+INFO: [Synth 8-256] done synthesizing module 'MDM' (26#1) [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/5125/hdl/mdm_v3_2_vh_rfs.vhd:14056]
+INFO: [Synth 8-256] done synthesizing module 'top_xz_mdm_1_0' (27#1) [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ip/top_xz_mdm_1_0/synth/top_xz_mdm_1_0.vhd:74]
+INFO: [Synth 8-638] synthesizing module 'top_xz_microblaze_0_0' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ip/top_xz_microblaze_0_0/synth/top_xz_microblaze_0_0.vhd:116]
+	Parameter C_SCO bound to: 0 - type: integer 
+	Parameter C_FREQ bound to: 100000000 - type: integer 
+	Parameter C_USE_CONFIG_RESET bound to: 0 - type: integer 
+	Parameter C_NUM_SYNC_FF_CLK bound to: 2 - type: integer 
+	Parameter C_NUM_SYNC_FF_CLK_IRQ bound to: 1 - type: integer 
+	Parameter C_NUM_SYNC_FF_CLK_DEBUG bound to: 2 - type: integer 
+	Parameter C_NUM_SYNC_FF_DBG_CLK bound to: 1 - type: integer 
+	Parameter C_NUM_SYNC_FF_DBG_TRACE_CLK bound to: 2 - type: integer 
+	Parameter C_FAULT_TOLERANT bound to: 0 - type: integer 
+	Parameter C_ECC_USE_CE_EXCEPTION bound to: 0 - type: integer 
+	Parameter C_LOCKSTEP_SLAVE bound to: 0 - type: integer 
+	Parameter C_LOCKSTEP_MASTER bound to: 0 - type: integer 
+	Parameter C_ENDIANNESS bound to: 1 - type: integer 
+	Parameter C_FAMILY bound to: virtex7 - type: string 
+	Parameter C_DATA_SIZE bound to: 32 - type: integer 
+	Parameter C_INSTR_SIZE bound to: 32 - type: integer 
+	Parameter C_IADDR_SIZE bound to: 32 - type: integer 
+	Parameter C_PIADDR_SIZE bound to: 32 - type: integer 
+	Parameter C_DADDR_SIZE bound to: 32 - type: integer 
+	Parameter C_INSTANCE bound to: top_xz_microblaze_0_0 - type: string 
+	Parameter C_AVOID_PRIMITIVES bound to: 0 - type: integer 
+	Parameter C_AREA_OPTIMIZED bound to: 0 - type: integer 
+	Parameter C_OPTIMIZATION bound to: 0 - type: integer 
+	Parameter C_INTERCONNECT bound to: 2 - type: integer 
+	Parameter C_BASE_VECTORS bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter C_M_AXI_DP_THREAD_ID_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_DP_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_DP_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_DP_EXCLUSIVE_ACCESS bound to: 0 - type: integer 
+	Parameter C_M_AXI_D_BUS_EXCEPTION bound to: 0 - type: integer 
+	Parameter C_M_AXI_IP_THREAD_ID_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_IP_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_IP_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_I_BUS_EXCEPTION bound to: 0 - type: integer 
+	Parameter C_D_LMB bound to: 1 - type: integer 
+	Parameter C_D_AXI bound to: 1 - type: integer 
+	Parameter C_I_LMB bound to: 1 - type: integer 
+	Parameter C_I_AXI bound to: 0 - type: integer 
+	Parameter C_USE_MSR_INSTR bound to: 0 - type: integer 
+	Parameter C_USE_PCMP_INSTR bound to: 0 - type: integer 
+	Parameter C_USE_BARREL bound to: 0 - type: integer 
+	Parameter C_USE_DIV bound to: 0 - type: integer 
+	Parameter C_USE_HW_MUL bound to: 0 - type: integer 
+	Parameter C_USE_FPU bound to: 0 - type: integer 
+	Parameter C_USE_REORDER_INSTR bound to: 1 - type: integer 
+	Parameter C_UNALIGNED_EXCEPTIONS bound to: 0 - type: integer 
+	Parameter C_ILL_OPCODE_EXCEPTION bound to: 0 - type: integer 
+	Parameter C_DIV_ZERO_EXCEPTION bound to: 0 - type: integer 
+	Parameter C_FPU_EXCEPTION bound to: 0 - type: integer 
+	Parameter C_FSL_LINKS bound to: 0 - type: integer 
+	Parameter C_USE_EXTENDED_FSL_INSTR bound to: 0 - type: integer 
+	Parameter C_FSL_EXCEPTION bound to: 0 - type: integer 
+	Parameter C_USE_STACK_PROTECTION bound to: 0 - type: integer 
+	Parameter C_IMPRECISE_EXCEPTIONS bound to: 0 - type: integer 
+	Parameter C_USE_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_USE_EXT_BRK bound to: 0 - type: integer 
+	Parameter C_USE_EXT_NM_BRK bound to: 0 - type: integer 
+	Parameter C_USE_NON_SECURE bound to: 0 - type: integer 
+	Parameter C_USE_MMU bound to: 0 - type: integer 
+	Parameter C_MMU_DTLB_SIZE bound to: 4 - type: integer 
+	Parameter C_MMU_ITLB_SIZE bound to: 2 - type: integer 
+	Parameter C_MMU_TLB_ACCESS bound to: 3 - type: integer 
+	Parameter C_MMU_ZONES bound to: 16 - type: integer 
+	Parameter C_MMU_PRIVILEGED_INSTR bound to: 0 - type: integer 
+	Parameter C_USE_BRANCH_TARGET_CACHE bound to: 0 - type: integer 
+	Parameter C_BRANCH_TARGET_CACHE_SIZE bound to: 0 - type: integer 
+	Parameter C_PC_WIDTH bound to: 32 - type: integer 
+	Parameter C_PVR bound to: 0 - type: integer 
+	Parameter C_PVR_USER1 bound to: 8'b00000000 
+	Parameter C_PVR_USER2 bound to: 32'b00000000000000000000000000000000 
+	Parameter C_DYNAMIC_BUS_SIZING bound to: 0 - type: integer 
+	Parameter C_RESET_MSR bound to: 32'b00000000000000000000000000000000 
+	Parameter C_OPCODE_0x0_ILLEGAL bound to: 0 - type: integer 
+	Parameter C_DEBUG_ENABLED bound to: 1 - type: integer 
+	Parameter C_DEBUG_INTERFACE bound to: 0 - type: integer 
+	Parameter C_NUMBER_OF_PC_BRK bound to: 1 - type: integer 
+	Parameter C_NUMBER_OF_RD_ADDR_BRK bound to: 0 - type: integer 
+	Parameter C_NUMBER_OF_WR_ADDR_BRK bound to: 0 - type: integer 
+	Parameter C_DEBUG_EVENT_COUNTERS bound to: 5 - type: integer 
+	Parameter C_DEBUG_LATENCY_COUNTERS bound to: 1 - type: integer 
+	Parameter C_DEBUG_COUNTER_WIDTH bound to: 32 - type: integer 
+	Parameter C_DEBUG_TRACE_SIZE bound to: 8192 - type: integer 
+	Parameter C_DEBUG_EXTERNAL_TRACE bound to: 0 - type: integer 
+	Parameter C_DEBUG_TRACE_ASYNC_RESET bound to: 0 - type: integer 
+	Parameter C_DEBUG_PROFILE_SIZE bound to: 0 - type: integer 
+	Parameter C_INTERRUPT_IS_EDGE bound to: 0 - type: integer 
+	Parameter C_EDGE_IS_POSITIVE bound to: 1 - type: integer 
+	Parameter C_ASYNC_INTERRUPT bound to: 1 - type: integer 
+	Parameter C_ASYNC_WAKEUP bound to: 3 - type: integer 
+	Parameter C_M0_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S0_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M1_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S1_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M2_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S2_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M3_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S3_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M4_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S4_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M5_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S5_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M6_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S6_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M7_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S7_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M8_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S8_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M9_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S9_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M10_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S10_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M11_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S11_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M12_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S12_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M13_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S13_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M14_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S14_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M15_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S15_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_ICACHE_BASEADDR bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter C_ICACHE_HIGHADDR bound to: 64'b0000000000000000000000000000000000111111111111111111111111111111 
+	Parameter C_USE_ICACHE bound to: 0 - type: integer 
+	Parameter C_ALLOW_ICACHE_WR bound to: 1 - type: integer 
+	Parameter C_ADDR_TAG_BITS bound to: 17 - type: integer 
+	Parameter C_CACHE_BYTE_SIZE bound to: 8192 - type: integer 
+	Parameter C_ICACHE_LINE_LEN bound to: 4 - type: integer 
+	Parameter C_ICACHE_ALWAYS_USED bound to: 0 - type: integer 
+	Parameter C_ICACHE_STREAMS bound to: 0 - type: integer 
+	Parameter C_ICACHE_VICTIMS bound to: 0 - type: integer 
+	Parameter C_ICACHE_FORCE_TAG_LUTRAM bound to: 0 - type: integer 
+	Parameter C_ICACHE_DATA_WIDTH bound to: 0 - type: integer 
+	Parameter C_M_AXI_IC_THREAD_ID_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_IC_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_IC_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_IC_USER_VALUE bound to: 31 - type: integer 
+	Parameter C_M_AXI_IC_AWUSER_WIDTH bound to: 5 - type: integer 
+	Parameter C_M_AXI_IC_ARUSER_WIDTH bound to: 5 - type: integer 
+	Parameter C_M_AXI_IC_WUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_IC_RUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_IC_BUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_DCACHE_BASEADDR bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter C_DCACHE_HIGHADDR bound to: 64'b0000000000000000000000000000000000111111111111111111111111111111 
+	Parameter C_USE_DCACHE bound to: 0 - type: integer 
+	Parameter C_ALLOW_DCACHE_WR bound to: 1 - type: integer 
+	Parameter C_DCACHE_ADDR_TAG bound to: 17 - type: integer 
+	Parameter C_DCACHE_BYTE_SIZE bound to: 8192 - type: integer 
+	Parameter C_DCACHE_LINE_LEN bound to: 4 - type: integer 
+	Parameter C_DCACHE_ALWAYS_USED bound to: 0 - type: integer 
+	Parameter C_DCACHE_USE_WRITEBACK bound to: 0 - type: integer 
+	Parameter C_DCACHE_VICTIMS bound to: 0 - type: integer 
+	Parameter C_DCACHE_FORCE_TAG_LUTRAM bound to: 0 - type: integer 
+	Parameter C_DCACHE_DATA_WIDTH bound to: 0 - type: integer 
+	Parameter C_M_AXI_DC_THREAD_ID_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_DC_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_DC_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_DC_EXCLUSIVE_ACCESS bound to: 0 - type: integer 
+	Parameter C_M_AXI_DC_USER_VALUE bound to: 31 - type: integer 
+	Parameter C_M_AXI_DC_AWUSER_WIDTH bound to: 5 - type: integer 
+	Parameter C_M_AXI_DC_ARUSER_WIDTH bound to: 5 - type: integer 
+	Parameter C_M_AXI_DC_WUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_DC_RUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_DC_BUSER_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'MicroBlaze' declared at 'c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/b649/hdl/microblaze_v10_0_vh_rfs.vhd:157121' bound to instance 'U0' of component 'MicroBlaze' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ip/top_xz_microblaze_0_0/synth/top_xz_microblaze_0_0.vhd:806]
+INFO: [Synth 8-256] done synthesizing module 'top_xz_microblaze_0_0' (79#1) [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ip/top_xz_microblaze_0_0/synth/top_xz_microblaze_0_0.vhd:116]
+WARNING: [Synth 8-350] instance 'microblaze_0' of module 'top_xz_microblaze_0_0' requires 52 connections, but only 51 given [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/synth/top_xz.v:1055]
+INFO: [Synth 8-6157] synthesizing module 'top_xz_microblaze_0_axi_periph_0' [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/synth/top_xz.v:1226]
+INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_LPB094' [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/synth/top_xz.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_LPB094' (80#1) [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/synth/top_xz.v:12]
+INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_1Q8M849' [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/synth/top_xz.v:158]
+INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_1Q8M849' (81#1) [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/synth/top_xz.v:158]
+INFO: [Synth 8-6157] synthesizing module 'm02_couplers_imp_1JXO3U3' [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/synth/top_xz.v:304]
+INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_1JXO3U3' (82#1) [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/synth/top_xz.v:304]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_XRQXZT' [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/synth/top_xz.v:670]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_XRQXZT' (83#1) [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/synth/top_xz.v:670]
+INFO: [Synth 8-6157] synthesizing module 'top_xz_xbar_0' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ip/top_xz_xbar_0/synth/top_xz_xbar_0.v:59]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_18_axi_crossbar' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/15a3/hdl/axi_crossbar_v2_1_vl_rfs.v:4884]
+	Parameter C_FAMILY bound to: virtex7 - type: string 
+	Parameter C_NUM_SLAVE_SLOTS bound to: 1 - type: integer 
+	Parameter C_NUM_MASTER_SLOTS bound to: 3 - type: integer 
+	Parameter C_AXI_ID_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXI_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_AXI_PROTOCOL bound to: 2 - type: integer 
+	Parameter C_NUM_ADDR_RANGES bound to: 1 - type: integer 
+	Parameter C_M_AXI_BASE_ADDR bound to: 192'b000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000010001001010000100000000000000000000000000000000000000000000000001000100101000000000000000000000 
+	Parameter C_M_AXI_ADDR_WIDTH bound to: 96'b000000000000000000000000000100000000000000000000000000000001000000000000000000000000000000010000 
+	Parameter C_S_AXI_BASE_ID bound to: 0 - type: integer 
+	Parameter C_S_AXI_THREAD_ID_WIDTH bound to: 0 - type: integer 
+	Parameter C_AXI_SUPPORTS_USER_SIGNALS bound to: 0 - type: integer 
+	Parameter C_AXI_AWUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXI_ARUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXI_WUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXI_RUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXI_BUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_WRITE_CONNECTIVITY bound to: 96'b000000000000000000000000000000010000000000000000000000000000000100000000000000000000000000000001 
+	Parameter C_M_AXI_READ_CONNECTIVITY bound to: 96'b000000000000000000000000000000010000000000000000000000000000000100000000000000000000000000000001 
+	Parameter C_R_REGISTER bound to: 1 - type: integer 
+	Parameter C_S_AXI_SINGLE_THREAD bound to: 1 - type: integer 
+	Parameter C_S_AXI_WRITE_ACCEPTANCE bound to: 1 - type: integer 
+	Parameter C_S_AXI_READ_ACCEPTANCE bound to: 1 - type: integer 
+	Parameter C_M_AXI_WRITE_ISSUING bound to: 96'b000000000000000000000000000000010000000000000000000000000000000100000000000000000000000000000001 
+	Parameter C_M_AXI_READ_ISSUING bound to: 96'b000000000000000000000000000000010000000000000000000000000000000100000000000000000000000000000001 
+	Parameter C_S_AXI_ARB_PRIORITY bound to: 0 - type: integer 
+	Parameter C_M_AXI_SECURE bound to: 96'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter C_CONNECTIVITY_MODE bound to: 0 - type: integer 
+	Parameter P_ONES bound to: 65'b11111111111111111111111111111111111111111111111111111111111111111 
+	Parameter P_S_AXI_BASE_ID bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter P_S_AXI_HIGH_ID bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter P_AXI4 bound to: 0 - type: integer 
+	Parameter P_AXI3 bound to: 1 - type: integer 
+	Parameter P_AXILITE bound to: 2 - type: integer 
+	Parameter P_AXILITE_SIZE bound to: 3'b010 
+	Parameter P_INCR bound to: 2'b01 
+	Parameter P_M_AXI_SUPPORTS_WRITE bound to: 3'b111 
+	Parameter P_M_AXI_SUPPORTS_READ bound to: 3'b111 
+	Parameter P_S_AXI_SUPPORTS_WRITE bound to: 1'b1 
+	Parameter P_S_AXI_SUPPORTS_READ bound to: 1'b1 
+	Parameter C_DEBUG bound to: 1 - type: integer 
+	Parameter P_RANGE_CHECK bound to: 1 - type: integer 
+	Parameter P_ADDR_DECODE bound to: 1 - type: integer 
+	Parameter P_M_AXI_ERR_MODE bound to: 96'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter P_LEN bound to: 8 - type: integer 
+	Parameter P_LOCK bound to: 1 - type: integer 
+	Parameter P_FAMILY bound to: virtex7 - type: string 
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_18_crossbar_sasd' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/15a3/hdl/axi_crossbar_v2_1_vl_rfs.v:1240]
+	Parameter C_FAMILY bound to: virtex7 - type: string 
+	Parameter C_NUM_SLAVE_SLOTS bound to: 1 - type: integer 
+	Parameter C_NUM_MASTER_SLOTS bound to: 3 - type: integer 
+	Parameter C_NUM_ADDR_RANGES bound to: 1 - type: integer 
+	Parameter C_AXI_ID_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXI_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_AXI_PROTOCOL bound to: 2 - type: integer 
+	Parameter C_M_AXI_BASE_ADDR bound to: 192'b000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000010001001010000100000000000000000000000000000000000000000000000001000100101000000000000000000000 
+	Parameter C_M_AXI_HIGH_ADDR bound to: 192'b000000000000000000000000000000000100000000000000111111111111111100000000000000000000000000000000010001001010000111111111111111110000000000000000000000000000000001000100101000001111111111111111 
+	Parameter C_S_AXI_BASE_ID bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter C_S_AXI_HIGH_ID bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter C_AXI_SUPPORTS_USER_SIGNALS bound to: 0 - type: integer 
+	Parameter C_AXI_AWUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXI_ARUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXI_WUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXI_RUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXI_BUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_S_AXI_SUPPORTS_WRITE bound to: 1'b1 
+	Parameter C_S_AXI_SUPPORTS_READ bound to: 1'b1 
+	Parameter C_M_AXI_SUPPORTS_WRITE bound to: 3'b111 
+	Parameter C_M_AXI_SUPPORTS_READ bound to: 3'b111 
+	Parameter C_S_AXI_ARB_PRIORITY bound to: 0 - type: integer 
+	Parameter C_M_AXI_SECURE bound to: 96'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter C_M_AXI_ERR_MODE bound to: 96'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter C_R_REGISTER bound to: 1 - type: integer 
+	Parameter C_RANGE_CHECK bound to: 1 - type: integer 
+	Parameter C_ADDR_DECODE bound to: 1 - type: integer 
+	Parameter C_DEBUG bound to: 1 - type: integer 
+	Parameter P_AXI4 bound to: 0 - type: integer 
+	Parameter P_AXI3 bound to: 1 - type: integer 
+	Parameter P_AXILITE bound to: 2 - type: integer 
+	Parameter P_NUM_MASTER_SLOTS_DE bound to: 4 - type: integer 
+	Parameter P_NUM_MASTER_SLOTS_LOG bound to: 2 - type: integer 
+	Parameter P_NUM_MASTER_SLOTS_DE_LOG bound to: 2 - type: integer 
+	Parameter P_NUM_SLAVE_SLOTS_LOG bound to: 1 - type: integer 
+	Parameter P_AXI_AUSER_WIDTH bound to: 1 - type: integer 
+	Parameter P_AXI_WID_WIDTH bound to: 1 - type: integer 
+	Parameter P_AMESG_WIDTH bound to: 64 - type: integer 
+	Parameter P_BMESG_WIDTH bound to: 3 - type: integer 
+	Parameter P_RMESG_WIDTH bound to: 36 - type: integer 
+	Parameter P_WMESG_WIDTH bound to: 39 - type: integer 
+	Parameter P_AXILITE_ERRMODE bound to: 1 - type: integer 
+	Parameter P_NONSECURE_BIT bound to: 1 - type: integer 
+	Parameter P_M_SECURE_MASK bound to: 3'b000 
+	Parameter P_M_AXILITE_MASK bound to: 3'b000 
+	Parameter P_FIXED bound to: 2'b00 
+	Parameter P_BYPASS bound to: 0 - type: integer 
+	Parameter P_LIGHTWT bound to: 7 - type: integer 
+	Parameter P_FULLY_REG bound to: 1 - type: integer 
+	Parameter P_R_REG_CONFIG bound to: 1 - type: integer 
+	Parameter P_DECERR bound to: 2'b11 
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_18_addr_decoder' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/15a3/hdl/axi_crossbar_v2_1_vl_rfs.v:794]
+	Parameter C_FAMILY bound to: virtex7 - type: string 
+	Parameter C_NUM_TARGETS bound to: 3 - type: integer 
+	Parameter C_NUM_TARGETS_LOG bound to: 2 - type: integer 
+	Parameter C_NUM_RANGES bound to: 1 - type: integer 
+	Parameter C_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_TARGET_ENC bound to: 1 - type: integer 
+	Parameter C_TARGET_HOT bound to: 1 - type: integer 
+	Parameter C_REGION_ENC bound to: 1 - type: integer 
+	Parameter C_BASE_ADDR bound to: 192'b000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000010001001010000100000000000000000000000000000000000000000000000001000100101000000000000000000000 
+	Parameter C_HIGH_ADDR bound to: 192'b000000000000000000000000000000000100000000000000111111111111111100000000000000000000000000000000010001001010000111111111111111110000000000000000000000000000000001000100101000001111111111111111 
+	Parameter C_TARGET_QUAL bound to: 4'b0111 
+	Parameter C_RESOLUTION bound to: 2 - type: integer 
+	Parameter C_COMPARATOR_THRESHOLD bound to: 6 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_comparator_static' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2133]
+	Parameter C_FAMILY bound to: rtl - type: string 
+	Parameter C_VALUE bound to: 30'b010001001010000000000000000000 
+	Parameter C_DATA_WIDTH bound to: 30 - type: integer 
+	Parameter C_BITS_PER_LUT bound to: 6 - type: integer 
+	Parameter C_NUM_LUT bound to: 5 - type: integer 
+	Parameter C_FIX_DATA_WIDTH bound to: 30 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_carry_and' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:62]
+	Parameter C_FAMILY bound to: rtl - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_carry_and' (84#1) [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:62]
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_comparator_static' (85#1) [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2133]
+INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_comparator_static__parameterized0' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2133]
+	Parameter C_FAMILY bound to: rtl - type: string 
+	Parameter C_VALUE bound to: 30'b010001001010000100000000000000 
+	Parameter C_DATA_WIDTH bound to: 30 - type: integer 
+	Parameter C_BITS_PER_LUT bound to: 6 - type: integer 
+	Parameter C_NUM_LUT bound to: 5 - type: integer 
+	Parameter C_FIX_DATA_WIDTH bound to: 30 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_comparator_static__parameterized0' (85#1) [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2133]
+INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_comparator_static__parameterized1' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2133]
+	Parameter C_FAMILY bound to: rtl - type: string 
+	Parameter C_VALUE bound to: 30'b010000000000000000000000000000 
+	Parameter C_DATA_WIDTH bound to: 30 - type: integer 
+	Parameter C_BITS_PER_LUT bound to: 6 - type: integer 
+	Parameter C_NUM_LUT bound to: 5 - type: integer 
+	Parameter C_FIX_DATA_WIDTH bound to: 30 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_comparator_static__parameterized1' (85#1) [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2133]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_18_addr_decoder' (86#1) [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/15a3/hdl/axi_crossbar_v2_1_vl_rfs.v:794]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_18_decerr_slave' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/15a3/hdl/axi_crossbar_v2_1_vl_rfs.v:3501]
+	Parameter C_AXI_ID_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_AXI_BUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXI_RUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXI_PROTOCOL bound to: 2 - type: integer 
+	Parameter C_RESP bound to: 3 - type: integer 
+	Parameter P_WRITE_IDLE bound to: 2'b00 
+	Parameter P_WRITE_DATA bound to: 2'b01 
+	Parameter P_WRITE_RESP bound to: 2'b10 
+	Parameter P_READ_IDLE bound to: 1'b0 
+	Parameter P_READ_DATA bound to: 1'b1 
+	Parameter P_AXI4 bound to: 0 - type: integer 
+	Parameter P_AXI3 bound to: 1 - type: integer 
+	Parameter P_AXILITE bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_18_decerr_slave' (87#1) [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/15a3/hdl/axi_crossbar_v2_1_vl_rfs.v:3501]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_18_addr_arbiter_sasd' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/15a3/hdl/axi_crossbar_v2_1_vl_rfs.v:65]
+	Parameter C_FAMILY bound to: virtex7 - type: string 
+	Parameter C_NUM_S bound to: 1 - type: integer 
+	Parameter C_NUM_S_LOG bound to: 1 - type: integer 
+	Parameter C_AMESG_WIDTH bound to: 64 - type: integer 
+	Parameter C_GRANT_ENC bound to: 1 - type: integer 
+	Parameter C_ARB_PRIORITY bound to: 0 - type: integer 
+	Parameter P_PRIO_MASK bound to: 1'b0 
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_18_addr_arbiter_sasd' (88#1) [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/15a3/hdl/axi_crossbar_v2_1_vl_rfs.v:65]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_18_splitter' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/15a3/hdl/axi_crossbar_v2_1_vl_rfs.v:4461]
+	Parameter C_NUM_M bound to: 3 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_18_splitter' (89#1) [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/15a3/hdl/axi_crossbar_v2_1_vl_rfs.v:4461]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_18_splitter__parameterized0' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/15a3/hdl/axi_crossbar_v2_1_vl_rfs.v:4461]
+	Parameter C_NUM_M bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_18_splitter__parameterized0' (89#1) [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/15a3/hdl/axi_crossbar_v2_1_vl_rfs.v:4461]
+INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_mux_enc' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2452]
+	Parameter C_FAMILY bound to: rtl - type: string 
+	Parameter C_RATIO bound to: 4 - type: integer 
+	Parameter C_SEL_WIDTH bound to: 2 - type: integer 
+	Parameter C_DATA_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_mux_enc' (90#1) [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2452]
+INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized0' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2452]
+	Parameter C_FAMILY bound to: rtl - type: string 
+	Parameter C_RATIO bound to: 1 - type: integer 
+	Parameter C_SEL_WIDTH bound to: 1 - type: integer 
+	Parameter C_DATA_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized0' (90#1) [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2452]
+INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized1' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2452]
+	Parameter C_FAMILY bound to: rtl - type: string 
+	Parameter C_RATIO bound to: 4 - type: integer 
+	Parameter C_SEL_WIDTH bound to: 2 - type: integer 
+	Parameter C_DATA_WIDTH bound to: 36 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized1' (90#1) [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2452]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_17_axic_register_slice' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/6020/hdl/axi_register_slice_v2_1_vl_rfs.v:189]
+	Parameter C_FAMILY bound to: virtex7 - type: string 
+	Parameter C_DATA_WIDTH bound to: 36 - type: integer 
+	Parameter C_REG_CONFIG bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_17_axic_register_slice' (91#1) [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/6020/hdl/axi_register_slice_v2_1_vl_rfs.v:189]
+INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized2' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2452]
+	Parameter C_FAMILY bound to: rtl - type: string 
+	Parameter C_RATIO bound to: 4 - type: integer 
+	Parameter C_SEL_WIDTH bound to: 2 - type: integer 
+	Parameter C_DATA_WIDTH bound to: 3 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized2' (91#1) [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2452]
+WARNING: [Synth 8-6014] Unused sequential element gen_debug_trans_seq.debug_aw_trans_seq_i_reg was removed.  [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/15a3/hdl/axi_crossbar_v2_1_vl_rfs.v:2056]
+WARNING: [Synth 8-6014] Unused sequential element gen_debug_trans_seq.debug_ar_trans_seq_i_reg was removed.  [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/15a3/hdl/axi_crossbar_v2_1_vl_rfs.v:2067]
+WARNING: [Synth 8-6014] Unused sequential element gen_debug_trans_seq.debug_w_beat_cnt_i_reg was removed.  [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/15a3/hdl/axi_crossbar_v2_1_vl_rfs.v:2078]
+WARNING: [Synth 8-6014] Unused sequential element gen_debug_trans_seq.debug_r_beat_cnt_i_reg was removed.  [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/15a3/hdl/axi_crossbar_v2_1_vl_rfs.v:2091]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_18_crossbar_sasd' (92#1) [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/15a3/hdl/axi_crossbar_v2_1_vl_rfs.v:1240]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_18_axi_crossbar' (93#1) [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/15a3/hdl/axi_crossbar_v2_1_vl_rfs.v:4884]
+INFO: [Synth 8-6155] done synthesizing module 'top_xz_xbar_0' (94#1) [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ip/top_xz_xbar_0/synth/top_xz_xbar_0.v:59]
+WARNING: [Synth 8-689] width (6) of port connection 'm_axi_arprot' does not match port width (9) of module 'top_xz_xbar_0' [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/synth/top_xz.v:1811]
+WARNING: [Synth 8-689] width (6) of port connection 'm_axi_awprot' does not match port width (9) of module 'top_xz_xbar_0' [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/synth/top_xz.v:1815]
+INFO: [Synth 8-6155] done synthesizing module 'top_xz_microblaze_0_axi_periph_0' (95#1) [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/synth/top_xz.v:1226]
+INFO: [Synth 8-6157] synthesizing module 'microblaze_0_local_memory_imp_1UR3MGA' [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/synth/top_xz.v:436]
+INFO: [Synth 8-638] synthesizing module 'top_xz_dlmb_bram_if_cntlr_0' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ip/top_xz_dlmb_bram_if_cntlr_0/synth/top_xz_dlmb_bram_if_cntlr_0.vhd:84]
+	Parameter C_FAMILY bound to: virtex7 - type: string 
+	Parameter C_HIGHADDR bound to: 64'b0000000000000000000000000000000000000000000000001111111111111111 
+	Parameter C_BASEADDR bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter C_NUM_LMB bound to: 1 - type: integer 
+	Parameter C_MASK bound to: 64'b0000000000000000000000000000000001000000000000000000000000000000 
+	Parameter C_MASK1 bound to: 64'b0000000000000000000000000000000000000000100000000000000000000000 
+	Parameter C_MASK2 bound to: 64'b0000000000000000000000000000000000000000100000000000000000000000 
+	Parameter C_MASK3 bound to: 64'b0000000000000000000000000000000000000000100000000000000000000000 
+	Parameter C_LMB_AWIDTH bound to: 32 - type: integer 
+	Parameter C_LMB_DWIDTH bound to: 32 - type: integer 
+	Parameter C_ECC bound to: 0 - type: integer 
+	Parameter C_INTERCONNECT bound to: 0 - type: integer 
+	Parameter C_FAULT_INJECT bound to: 0 - type: integer 
+	Parameter C_CE_FAILING_REGISTERS bound to: 0 - type: integer 
+	Parameter C_UE_FAILING_REGISTERS bound to: 0 - type: integer 
+	Parameter C_ECC_STATUS_REGISTERS bound to: 0 - type: integer 
+	Parameter C_ECC_ONOFF_REGISTER bound to: 0 - type: integer 
+	Parameter C_ECC_ONOFF_RESET_VALUE bound to: 1 - type: integer 
+	Parameter C_CE_COUNTER_WIDTH bound to: 0 - type: integer 
+	Parameter C_WRITE_ACCESS bound to: 2 - type: integer 
+	Parameter C_BRAM_AWIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_CTRL_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_CTRL_DATA_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'lmb_bram_if_cntlr' declared at 'c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:3116' bound to instance 'U0' of component 'lmb_bram_if_cntlr' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ip/top_xz_dlmb_bram_if_cntlr_0/synth/top_xz_dlmb_bram_if_cntlr_0.vhd:225]
+INFO: [Synth 8-638] synthesizing module 'lmb_bram_if_cntlr' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:3240]
+	Parameter C_FAMILY bound to: virtex7 - type: string 
+	Parameter C_HIGHADDR bound to: 64'b0000000000000000000000000000000000000000000000001111111111111111 
+	Parameter C_BASEADDR bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter C_MASK bound to: 64'b0000000000000000000000000000000001000000000000000000000000000000 
+	Parameter C_MASK1 bound to: 64'b0000000000000000000000000000000000000000100000000000000000000000 
+	Parameter C_MASK2 bound to: 64'b0000000000000000000000000000000000000000100000000000000000000000 
+	Parameter C_MASK3 bound to: 64'b0000000000000000000000000000000000000000100000000000000000000000 
+	Parameter C_LMB_AWIDTH bound to: 32 - type: integer 
+	Parameter C_LMB_DWIDTH bound to: 32 - type: integer 
+	Parameter C_ECC bound to: 0 - type: integer 
+	Parameter C_INTERCONNECT bound to: 0 - type: integer 
+	Parameter C_FAULT_INJECT bound to: 0 - type: integer 
+	Parameter C_CE_FAILING_REGISTERS bound to: 0 - type: integer 
+	Parameter C_UE_FAILING_REGISTERS bound to: 0 - type: integer 
+	Parameter C_ECC_STATUS_REGISTERS bound to: 0 - type: integer 
+	Parameter C_ECC_ONOFF_REGISTER bound to: 0 - type: integer 
+	Parameter C_ECC_ONOFF_RESET_VALUE bound to: 1 - type: integer 
+	Parameter C_CE_COUNTER_WIDTH bound to: 0 - type: integer 
+	Parameter C_WRITE_ACCESS bound to: 2 - type: integer 
+	Parameter C_NUM_LMB bound to: 1 - type: integer 
+	Parameter C_BRAM_AWIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_CTRL_BASEADDR bound to: 32'b11111111111111111111111111111111 
+	Parameter C_S_AXI_CTRL_HIGHADDR bound to: 32'b00000000000000000000000000000000 
+	Parameter C_S_AXI_CTRL_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_CTRL_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_TARGET bound to: 0 - type: integer 
+	Parameter C_BASEADDR bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter C_MASK bound to: 64'b0000000000000000000000000000000001000000000000000000000000000000 
+	Parameter C_MASK1 bound to: 64'b0000000000000000000000000000000000000000100000000000000000000000 
+	Parameter C_MASK2 bound to: 64'b0000000000000000000000000000000000000000100000000000000000000000 
+	Parameter C_MASK3 bound to: 64'b0000000000000000000000000000000000000000100000000000000000000000 
+	Parameter C_LMB_AWIDTH bound to: 32 - type: integer 
+	Parameter C_LMB_DWIDTH bound to: 32 - type: integer 
+	Parameter C_ECC bound to: 0 - type: integer 
+	Parameter C_NUM_LMB bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'lmb_mux' declared at 'c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:2524' bound to instance 'lmb_mux_I' of component 'lmb_mux' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:3463]
+INFO: [Synth 8-638] synthesizing module 'lmb_mux' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:2610]
+	Parameter C_TARGET bound to: 0 - type: integer 
+	Parameter C_BASEADDR bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter C_MASK bound to: 64'b0000000000000000000000000000000001000000000000000000000000000000 
+	Parameter C_MASK1 bound to: 64'b0000000000000000000000000000000000000000100000000000000000000000 
+	Parameter C_MASK2 bound to: 64'b0000000000000000000000000000000000000000100000000000000000000000 
+	Parameter C_MASK3 bound to: 64'b0000000000000000000000000000000000000000100000000000000000000000 
+	Parameter C_LMB_AWIDTH bound to: 32 - type: integer 
+	Parameter C_LMB_DWIDTH bound to: 32 - type: integer 
+	Parameter C_ECC bound to: 0 - type: integer 
+	Parameter C_NUM_LMB bound to: 1 - type: integer 
+	Parameter C_AW bound to: 32 - type: integer 
+	Parameter C_BAR bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter C_MASK bound to: 64'b0000000000000000000000000000000001000000000000000000000000000000 
+INFO: [Synth 8-3491] module 'pselect_mask' declared at 'c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:2107' bound to instance 'pselect_mask_lmb' of component 'pselect_mask' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:2678]
+INFO: [Synth 8-638] synthesizing module 'pselect_mask' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:2122]
+	Parameter C_AW bound to: 32 - type: integer 
+	Parameter C_BAR bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter C_MASK bound to: 64'b0000000000000000000000000000000001000000000000000000000000000000 
+INFO: [Synth 8-256] done synthesizing module 'pselect_mask' (96#1) [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:2122]
+INFO: [Synth 8-256] done synthesizing module 'lmb_mux' (97#1) [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:2610]
+INFO: [Synth 8-256] done synthesizing module 'lmb_bram_if_cntlr' (98#1) [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:3240]
+INFO: [Synth 8-256] done synthesizing module 'top_xz_dlmb_bram_if_cntlr_0' (99#1) [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ip/top_xz_dlmb_bram_if_cntlr_0/synth/top_xz_dlmb_bram_if_cntlr_0.vhd:84]
+INFO: [Synth 8-638] synthesizing module 'top_xz_dlmb_v10_0' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ip/top_xz_dlmb_v10_0/synth/top_xz_dlmb_v10_0.vhd:89]
+	Parameter C_LMB_NUM_SLAVES bound to: 1 - type: integer 
+	Parameter C_LMB_DWIDTH bound to: 32 - type: integer 
+	Parameter C_LMB_AWIDTH bound to: 32 - type: integer 
+	Parameter C_EXT_RESET_HIGH bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'lmb_v10' declared at 'c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/78eb/hdl/lmb_v10_v3_0_vh_rfs.vhd:92' bound to instance 'U0' of component 'lmb_v10' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ip/top_xz_dlmb_v10_0/synth/top_xz_dlmb_v10_0.vhd:164]
+INFO: [Synth 8-638] synthesizing module 'lmb_v10' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/78eb/hdl/lmb_v10_v3_0_vh_rfs.vhd:140]
+	Parameter C_LMB_NUM_SLAVES bound to: 1 - type: integer 
+	Parameter C_LMB_DWIDTH bound to: 32 - type: integer 
+	Parameter C_LMB_AWIDTH bound to: 32 - type: integer 
+	Parameter C_EXT_RESET_HIGH bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'FDS' declared at 'C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:4089' bound to instance 'POR_FF_I' of component 'FDS' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/78eb/hdl/lmb_v10_v3_0_vh_rfs.vhd:169]
+INFO: [Synth 8-6157] synthesizing module 'FDS' [C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:4089]
+	Parameter INIT bound to: 1'b1 
+INFO: [Synth 8-6155] done synthesizing module 'FDS' (100#1) [C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:4089]
+INFO: [Synth 8-256] done synthesizing module 'lmb_v10' (101#1) [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/78eb/hdl/lmb_v10_v3_0_vh_rfs.vhd:140]
+INFO: [Synth 8-256] done synthesizing module 'top_xz_dlmb_v10_0' (102#1) [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ip/top_xz_dlmb_v10_0/synth/top_xz_dlmb_v10_0.vhd:89]
+WARNING: [Synth 8-350] instance 'dlmb_v10' of module 'top_xz_dlmb_v10_0' requires 25 connections, but only 24 given [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/synth/top_xz.v:582]
+INFO: [Synth 8-638] synthesizing module 'top_xz_ilmb_bram_if_cntlr_0' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ip/top_xz_ilmb_bram_if_cntlr_0/synth/top_xz_ilmb_bram_if_cntlr_0.vhd:84]
+	Parameter C_FAMILY bound to: virtex7 - type: string 
+	Parameter C_HIGHADDR bound to: 64'b0000000000000000000000000000000000000000000000001111111111111111 
+	Parameter C_BASEADDR bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter C_NUM_LMB bound to: 1 - type: integer 
+	Parameter C_MASK bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter C_MASK1 bound to: 64'b0000000000000000000000000000000000000000100000000000000000000000 
+	Parameter C_MASK2 bound to: 64'b0000000000000000000000000000000000000000100000000000000000000000 
+	Parameter C_MASK3 bound to: 64'b0000000000000000000000000000000000000000100000000000000000000000 
+	Parameter C_LMB_AWIDTH bound to: 32 - type: integer 
+	Parameter C_LMB_DWIDTH bound to: 32 - type: integer 
+	Parameter C_ECC bound to: 0 - type: integer 
+	Parameter C_INTERCONNECT bound to: 0 - type: integer 
+	Parameter C_FAULT_INJECT bound to: 0 - type: integer 
+	Parameter C_CE_FAILING_REGISTERS bound to: 0 - type: integer 
+	Parameter C_UE_FAILING_REGISTERS bound to: 0 - type: integer 
+	Parameter C_ECC_STATUS_REGISTERS bound to: 0 - type: integer 
+	Parameter C_ECC_ONOFF_REGISTER bound to: 0 - type: integer 
+	Parameter C_ECC_ONOFF_RESET_VALUE bound to: 1 - type: integer 
+	Parameter C_CE_COUNTER_WIDTH bound to: 0 - type: integer 
+	Parameter C_WRITE_ACCESS bound to: 2 - type: integer 
+	Parameter C_BRAM_AWIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_CTRL_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_CTRL_DATA_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'lmb_bram_if_cntlr' declared at 'c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:3116' bound to instance 'U0' of component 'lmb_bram_if_cntlr' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ip/top_xz_ilmb_bram_if_cntlr_0/synth/top_xz_ilmb_bram_if_cntlr_0.vhd:225]
+INFO: [Synth 8-638] synthesizing module 'lmb_bram_if_cntlr__parameterized1' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:3240]
+	Parameter C_FAMILY bound to: virtex7 - type: string 
+	Parameter C_HIGHADDR bound to: 64'b0000000000000000000000000000000000000000000000001111111111111111 
+	Parameter C_BASEADDR bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter C_MASK bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter C_MASK1 bound to: 64'b0000000000000000000000000000000000000000100000000000000000000000 
+	Parameter C_MASK2 bound to: 64'b0000000000000000000000000000000000000000100000000000000000000000 
+	Parameter C_MASK3 bound to: 64'b0000000000000000000000000000000000000000100000000000000000000000 
+	Parameter C_LMB_AWIDTH bound to: 32 - type: integer 
+	Parameter C_LMB_DWIDTH bound to: 32 - type: integer 
+	Parameter C_ECC bound to: 0 - type: integer 
+	Parameter C_INTERCONNECT bound to: 0 - type: integer 
+	Parameter C_FAULT_INJECT bound to: 0 - type: integer 
+	Parameter C_CE_FAILING_REGISTERS bound to: 0 - type: integer 
+	Parameter C_UE_FAILING_REGISTERS bound to: 0 - type: integer 
+	Parameter C_ECC_STATUS_REGISTERS bound to: 0 - type: integer 
+	Parameter C_ECC_ONOFF_REGISTER bound to: 0 - type: integer 
+	Parameter C_ECC_ONOFF_RESET_VALUE bound to: 1 - type: integer 
+	Parameter C_CE_COUNTER_WIDTH bound to: 0 - type: integer 
+	Parameter C_WRITE_ACCESS bound to: 2 - type: integer 
+	Parameter C_NUM_LMB bound to: 1 - type: integer 
+	Parameter C_BRAM_AWIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_CTRL_BASEADDR bound to: 32'b11111111111111111111111111111111 
+	Parameter C_S_AXI_CTRL_HIGHADDR bound to: 32'b00000000000000000000000000000000 
+	Parameter C_S_AXI_CTRL_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_CTRL_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_TARGET bound to: 0 - type: integer 
+	Parameter C_BASEADDR bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter C_MASK bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter C_MASK1 bound to: 64'b0000000000000000000000000000000000000000100000000000000000000000 
+	Parameter C_MASK2 bound to: 64'b0000000000000000000000000000000000000000100000000000000000000000 
+	Parameter C_MASK3 bound to: 64'b0000000000000000000000000000000000000000100000000000000000000000 
+	Parameter C_LMB_AWIDTH bound to: 32 - type: integer 
+	Parameter C_LMB_DWIDTH bound to: 32 - type: integer 
+	Parameter C_ECC bound to: 0 - type: integer 
+	Parameter C_NUM_LMB bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'lmb_mux' declared at 'c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:2524' bound to instance 'lmb_mux_I' of component 'lmb_mux' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:3463]
+INFO: [Synth 8-638] synthesizing module 'lmb_mux__parameterized1' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:2610]
+	Parameter C_TARGET bound to: 0 - type: integer 
+	Parameter C_BASEADDR bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter C_MASK bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter C_MASK1 bound to: 64'b0000000000000000000000000000000000000000100000000000000000000000 
+	Parameter C_MASK2 bound to: 64'b0000000000000000000000000000000000000000100000000000000000000000 
+	Parameter C_MASK3 bound to: 64'b0000000000000000000000000000000000000000100000000000000000000000 
+	Parameter C_LMB_AWIDTH bound to: 32 - type: integer 
+	Parameter C_LMB_DWIDTH bound to: 32 - type: integer 
+	Parameter C_ECC bound to: 0 - type: integer 
+	Parameter C_NUM_LMB bound to: 1 - type: integer 
+	Parameter C_AW bound to: 32 - type: integer 
+	Parameter C_BAR bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter C_MASK bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+INFO: [Synth 8-3491] module 'pselect_mask' declared at 'c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:2107' bound to instance 'pselect_mask_lmb' of component 'pselect_mask' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:2678]
+INFO: [Synth 8-638] synthesizing module 'pselect_mask__parameterized1' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:2122]
+	Parameter C_AW bound to: 32 - type: integer 
+	Parameter C_BAR bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter C_MASK bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+INFO: [Synth 8-256] done synthesizing module 'pselect_mask__parameterized1' (102#1) [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:2122]
+INFO: [Synth 8-256] done synthesizing module 'lmb_mux__parameterized1' (102#1) [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:2610]
+INFO: [Synth 8-256] done synthesizing module 'lmb_bram_if_cntlr__parameterized1' (102#1) [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/92fd/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:3240]
+INFO: [Synth 8-256] done synthesizing module 'top_xz_ilmb_bram_if_cntlr_0' (103#1) [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ip/top_xz_ilmb_bram_if_cntlr_0/synth/top_xz_ilmb_bram_if_cntlr_0.vhd:84]
+INFO: [Synth 8-638] synthesizing module 'top_xz_ilmb_v10_0' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ip/top_xz_ilmb_v10_0/synth/top_xz_ilmb_v10_0.vhd:89]
+	Parameter C_LMB_NUM_SLAVES bound to: 1 - type: integer 
+	Parameter C_LMB_DWIDTH bound to: 32 - type: integer 
+	Parameter C_LMB_AWIDTH bound to: 32 - type: integer 
+	Parameter C_EXT_RESET_HIGH bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'lmb_v10' declared at 'c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/78eb/hdl/lmb_v10_v3_0_vh_rfs.vhd:92' bound to instance 'U0' of component 'lmb_v10' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ip/top_xz_ilmb_v10_0/synth/top_xz_ilmb_v10_0.vhd:164]
+INFO: [Synth 8-256] done synthesizing module 'top_xz_ilmb_v10_0' (104#1) [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ip/top_xz_ilmb_v10_0/synth/top_xz_ilmb_v10_0.vhd:89]
+WARNING: [Synth 8-350] instance 'ilmb_v10' of module 'top_xz_ilmb_v10_0' requires 25 connections, but only 24 given [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/synth/top_xz.v:628]
+INFO: [Synth 8-638] synthesizing module 'top_xz_lmb_bram_0' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ip/top_xz_lmb_bram_0/synth/top_xz_lmb_bram_0.vhd:80]
+	Parameter C_FAMILY bound to: virtex7 - type: string 
+	Parameter C_XDEVICEFAMILY bound to: virtex7 - type: string 
+	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
+	Parameter C_INTERFACE_TYPE bound to: 0 - type: integer 
+	Parameter C_AXI_TYPE bound to: 1 - type: integer 
+	Parameter C_AXI_SLAVE_TYPE bound to: 0 - type: integer 
+	Parameter C_USE_BRAM_BLOCK bound to: 1 - type: integer 
+	Parameter C_ENABLE_32BIT_ADDRESS bound to: 1 - type: integer 
+	Parameter C_CTRL_ECC_ALGO bound to: NONE - type: string 
+	Parameter C_HAS_AXI_ID bound to: 0 - type: integer 
+	Parameter C_AXI_ID_WIDTH bound to: 4 - type: integer 
+	Parameter C_MEM_TYPE bound to: 2 - type: integer 
+	Parameter C_BYTE_SIZE bound to: 8 - type: integer 
+	Parameter C_ALGORITHM bound to: 1 - type: integer 
+	Parameter C_PRIM_TYPE bound to: 1 - type: integer 
+	Parameter C_LOAD_INIT_FILE bound to: 0 - type: integer 
+	Parameter C_INIT_FILE_NAME bound to: no_coe_file_loaded - type: string 
+	Parameter C_INIT_FILE bound to: top_xz_lmb_bram_0.mem - type: string 
+	Parameter C_USE_DEFAULT_DATA bound to: 0 - type: integer 
+	Parameter C_DEFAULT_DATA bound to: 0 - type: string 
+	Parameter C_HAS_RSTA bound to: 1 - type: integer 
+	Parameter C_RST_PRIORITY_A bound to: CE - type: string 
+	Parameter C_RSTRAM_A bound to: 0 - type: integer 
+	Parameter C_INITA_VAL bound to: 0 - type: string 
+	Parameter C_HAS_ENA bound to: 1 - type: integer 
+	Parameter C_HAS_REGCEA bound to: 0 - type: integer 
+	Parameter C_USE_BYTE_WEA bound to: 1 - type: integer 
+	Parameter C_WEA_WIDTH bound to: 4 - type: integer 
+	Parameter C_WRITE_MODE_A bound to: WRITE_FIRST - type: string 
+	Parameter C_WRITE_WIDTH_A bound to: 32 - type: integer 
+	Parameter C_READ_WIDTH_A bound to: 32 - type: integer 
+	Parameter C_WRITE_DEPTH_A bound to: 16384 - type: integer 
+	Parameter C_READ_DEPTH_A bound to: 16384 - type: integer 
+	Parameter C_ADDRA_WIDTH bound to: 32 - type: integer 
+	Parameter C_HAS_RSTB bound to: 1 - type: integer 
+	Parameter C_RST_PRIORITY_B bound to: CE - type: string 
+	Parameter C_RSTRAM_B bound to: 0 - type: integer 
+	Parameter C_INITB_VAL bound to: 0 - type: string 
+	Parameter C_HAS_ENB bound to: 1 - type: integer 
+	Parameter C_HAS_REGCEB bound to: 0 - type: integer 
+	Parameter C_USE_BYTE_WEB bound to: 1 - type: integer 
+	Parameter C_WEB_WIDTH bound to: 4 - type: integer 
+	Parameter C_WRITE_MODE_B bound to: WRITE_FIRST - type: string 
+	Parameter C_WRITE_WIDTH_B bound to: 32 - type: integer 
+	Parameter C_READ_WIDTH_B bound to: 32 - type: integer 
+	Parameter C_WRITE_DEPTH_B bound to: 16384 - type: integer 
+	Parameter C_READ_DEPTH_B bound to: 16384 - type: integer 
+	Parameter C_ADDRB_WIDTH bound to: 32 - type: integer 
+	Parameter C_HAS_MEM_OUTPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_MEM_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_HAS_MUX_OUTPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_MUX_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_MUX_PIPELINE_STAGES bound to: 0 - type: integer 
+	Parameter C_HAS_SOFTECC_INPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_SOFTECC_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_USE_SOFTECC bound to: 0 - type: integer 
+	Parameter C_USE_ECC bound to: 0 - type: integer 
+	Parameter C_EN_ECC_PIPE bound to: 0 - type: integer 
+	Parameter C_HAS_INJECTERR bound to: 0 - type: integer 
+	Parameter C_SIM_COLLISION_CHECK bound to: ALL - type: string 
+	Parameter C_COMMON_CLK bound to: 0 - type: integer 
+	Parameter C_DISABLE_WARN_BHV_COLL bound to: 0 - type: integer 
+	Parameter C_EN_SLEEP_PIN bound to: 0 - type: integer 
+	Parameter C_USE_URAM bound to: 0 - type: integer 
+	Parameter C_EN_RDADDRA_CHG bound to: 0 - type: integer 
+	Parameter C_EN_RDADDRB_CHG bound to: 0 - type: integer 
+	Parameter C_EN_DEEPSLEEP_PIN bound to: 0 - type: integer 
+	Parameter C_EN_SHUTDOWN_PIN bound to: 0 - type: integer 
+	Parameter C_EN_SAFETY_CKT bound to: 1 - type: integer 
+	Parameter C_DISABLE_WARN_BHV_RANGE bound to: 0 - type: integer 
+	Parameter C_COUNT_36K_BRAM bound to: 16 - type: string 
+	Parameter C_COUNT_18K_BRAM bound to: 0 - type: string 
+	Parameter C_EST_POWER_SUMMARY bound to: Estimated Power for IP     :     20.388 mW - type: string 
+INFO: [Synth 8-3491] module 'blk_mem_gen_v8_4_1' declared at 'c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/67d8/hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd:195313' bound to instance 'U0' of component 'blk_mem_gen_v8_4_1' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ip/top_xz_lmb_bram_0/synth/top_xz_lmb_bram_0.vhd:253]
+INFO: [Synth 8-256] done synthesizing module 'top_xz_lmb_bram_0' (115#1) [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ip/top_xz_lmb_bram_0/synth/top_xz_lmb_bram_0.vhd:80]
+WARNING: [Synth 8-350] instance 'lmb_bram' of module 'top_xz_lmb_bram_0' requires 16 connections, but only 14 given [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/synth/top_xz.v:653]
+INFO: [Synth 8-6155] done synthesizing module 'microblaze_0_local_memory_imp_1UR3MGA' (116#1) [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/synth/top_xz.v:436]
+INFO: [Synth 8-638] synthesizing module 'top_xz_rst_clk_wiz_1_100M_0' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ip/top_xz_rst_clk_wiz_1_100M_0/synth/top_xz_rst_clk_wiz_1_100M_0.vhd:74]
+	Parameter C_FAMILY bound to: virtex7 - type: string 
+	Parameter C_EXT_RST_WIDTH bound to: 4 - type: integer 
+	Parameter C_AUX_RST_WIDTH bound to: 4 - type: integer 
+	Parameter C_EXT_RESET_HIGH bound to: 1'b0 
+	Parameter C_AUX_RESET_HIGH bound to: 1'b0 
+	Parameter C_NUM_BUS_RST bound to: 1 - type: integer 
+	Parameter C_NUM_PERP_RST bound to: 1 - type: integer 
+	Parameter C_NUM_INTERCONNECT_ARESETN bound to: 1 - type: integer 
+	Parameter C_NUM_PERP_ARESETN bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'proc_sys_reset' declared at 'c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1264' bound to instance 'U0' of component 'proc_sys_reset' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ip/top_xz_rst_clk_wiz_1_100M_0/synth/top_xz_rst_clk_wiz_1_100M_0.vhd:129]
+INFO: [Synth 8-638] synthesizing module 'proc_sys_reset' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1323]
+	Parameter C_FAMILY bound to: virtex7 - type: string 
+	Parameter C_EXT_RST_WIDTH bound to: 4 - type: integer 
+	Parameter C_AUX_RST_WIDTH bound to: 4 - type: integer 
+	Parameter C_EXT_RESET_HIGH bound to: 1'b0 
+	Parameter C_AUX_RESET_HIGH bound to: 1'b0 
+	Parameter C_NUM_BUS_RST bound to: 1 - type: integer 
+	Parameter C_NUM_PERP_RST bound to: 1 - type: integer 
+	Parameter C_NUM_INTERCONNECT_ARESETN bound to: 1 - type: integer 
+	Parameter C_NUM_PERP_ARESETN bound to: 1 - type: integer 
+	Parameter INIT bound to: 1'b1 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'FDRE_inst' to cell 'FDRE' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1392]
+	Parameter INIT bound to: 1'b1 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'FDRE_BSR' to cell 'FDRE' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1408]
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'FDRE_BSR_N' to cell 'FDRE' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1434]
+	Parameter INIT bound to: 1'b1 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'FDRE_PER' to cell 'FDRE' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1457]
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'FDRE_PER_N' to cell 'FDRE' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1481]
+INFO: [Synth 8-638] synthesizing module 'lpf' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:816]
+	Parameter C_EXT_RST_WIDTH bound to: 4 - type: integer 
+	Parameter C_AUX_RST_WIDTH bound to: 4 - type: integer 
+	Parameter C_EXT_RESET_HIGH bound to: 1'b0 
+	Parameter C_AUX_RESET_HIGH bound to: 1'b0 
+INFO: [Synth 8-3491] module 'SRL16' declared at 'C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:50695' bound to instance 'POR_SRL_I' of component 'SRL16' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:868]
+INFO: [Synth 8-6157] synthesizing module 'SRL16' [C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:50695]
+	Parameter INIT bound to: 16'b0000000000000000 
+INFO: [Synth 8-6155] done synthesizing module 'SRL16' (117#1) [C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:50695]
+INFO: [Synth 8-638] synthesizing module 'cdc_sync__parameterized0' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
+	Parameter C_CDC_TYPE bound to: 1 - type: integer 
+	Parameter C_RESET_STATE bound to: 0 - type: integer 
+	Parameter C_SINGLE_BIT bound to: 1 - type: integer 
+	Parameter C_FLOP_INPUT bound to: 0 - type: integer 
+	Parameter C_VECTOR_WIDTH bound to: 2 - type: integer 
+	Parameter C_MTBF_STAGES bound to: 4 - type: integer 
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:514]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2' to cell 'FDR' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:545]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3' to cell 'FDR' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:554]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4' to cell 'FDR' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:564]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5' to cell 'FDR' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:574]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6' to cell 'FDR' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:584]
+INFO: [Synth 8-256] done synthesizing module 'cdc_sync__parameterized0' (117#1) [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
+INFO: [Synth 8-256] done synthesizing module 'lpf' (118#1) [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:816]
+INFO: [Synth 8-638] synthesizing module 'sequence_psr' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:301]
+INFO: [Synth 8-638] synthesizing module 'upcnt_n' [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:125]
+	Parameter C_SIZE bound to: 6 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'upcnt_n' (119#1) [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:125]
+INFO: [Synth 8-256] done synthesizing module 'sequence_psr' (120#1) [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:301]
+INFO: [Synth 8-256] done synthesizing module 'proc_sys_reset' (121#1) [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ipshared/f86a/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1323]
+INFO: [Synth 8-256] done synthesizing module 'top_xz_rst_clk_wiz_1_100M_0' (122#1) [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ip/top_xz_rst_clk_wiz_1_100M_0/synth/top_xz_rst_clk_wiz_1_100M_0.vhd:74]
+WARNING: [Synth 8-350] instance 'rst_clk_wiz_1_100M' of module 'top_xz_rst_clk_wiz_1_100M_0' requires 10 connections, but only 9 given [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/synth/top_xz.v:1214]
+INFO: [Synth 8-6155] done synthesizing module 'top_xz' (123#1) [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/synth/top_xz.v:817]
+INFO: [Synth 8-6157] synthesizing module 'ASYNC_EMIF_SLAVE_0' [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/synth/ASYNC_EMIF_SLAVE_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'async_emif_slave' [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/src/async_emif_slave.v:22]
+	Parameter WR_SAMPLING_LOC bound to: 5 - type: integer 
+	Parameter RD_SAMPLING_LOC bound to: 2 - type: integer 
+	Parameter RD_VILD_LOC bound to: 11 - type: integer 
+	Parameter ADDR_WIDTH bound to: 5 - type: integer 
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+	Parameter FPGA_SERIES bound to: 7SERIRE - type: string 
+	Parameter PHYSICS_MODE bound to: DIFF - type: string 
+	Parameter IOSTANDARD bound to: BLVDS_25 - type: string 
+	Parameter DRIVE bound to: 12 - type: integer 
+	Parameter SLEW bound to: SLOW - type: string 
+	Parameter DIFF_TERM bound to: FALSE - type: string 
+	Parameter IBUF_LOW_PWR bound to: FALSE - type: string 
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+INFO: [Synth 8-6157] synthesizing module 'async_emif_slave_driver' [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/src/async_emif_slave_driver.v:22]
+	Parameter WR_SAMPLING_LOC bound to: 5 - type: integer 
+	Parameter RD_SAMPLING_LOC bound to: 2 - type: integer 
+	Parameter RD_VILD_LOC bound to: 11 - type: integer 
+	Parameter ADDR_WIDTH bound to: 5 - type: integer 
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'async_emif_slave_driver' (124#1) [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/src/async_emif_slave_driver.v:22]
+INFO: [Synth 8-6157] synthesizing module 'x_ibuf' [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/src/x_ibuf.v:22]
+	Parameter DATA_WIDTH bound to: 1 - type: integer 
+	Parameter FPGA_SERIES bound to: 7SERIRE - type: string 
+	Parameter PHYSICS_MODE bound to: DIFF - type: string 
+	Parameter IOSTANDARD bound to: BLVDS_25 - type: string 
+	Parameter DIFF_TERM bound to: FALSE - type: string 
+	Parameter IBUF_LOW_PWR bound to: FALSE - type: string 
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+INFO: [Synth 8-6157] synthesizing module 'IBUFDS' [C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:19488]
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter DIFF_TERM bound to: FALSE - type: string 
+	Parameter DQS_BIAS bound to: FALSE - type: string 
+	Parameter IBUF_DELAY_VALUE bound to: 0 - type: string 
+	Parameter IBUF_LOW_PWR bound to: FALSE - type: string 
+	Parameter IFD_DELAY_VALUE bound to: AUTO - type: string 
+	Parameter IOSTANDARD bound to: BLVDS_25 - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'IBUFDS' (125#1) [C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:19488]
+INFO: [Synth 8-6155] done synthesizing module 'x_ibuf' (126#1) [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/src/x_ibuf.v:22]
+INFO: [Synth 8-6157] synthesizing module 'x_ibuf__parameterized0' [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/src/x_ibuf.v:22]
+	Parameter DATA_WIDTH bound to: 5 - type: integer 
+	Parameter FPGA_SERIES bound to: 7SERIRE - type: string 
+	Parameter PHYSICS_MODE bound to: DIFF - type: string 
+	Parameter IOSTANDARD bound to: BLVDS_25 - type: string 
+	Parameter DIFF_TERM bound to: FALSE - type: string 
+	Parameter IBUF_LOW_PWR bound to: FALSE - type: string 
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'x_ibuf__parameterized0' (126#1) [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/src/x_ibuf.v:22]
+INFO: [Synth 8-6157] synthesizing module 'x_iobuf' [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/src/x_iobuf.v:21]
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+	Parameter FPGA_SERIES bound to: 7SERIRE - type: string 
+	Parameter PHYSICS_MODE bound to: DIFF - type: string 
+	Parameter IOSTANDARD bound to: BLVDS_25 - type: string 
+	Parameter SLEW bound to: SLOW - type: string 
+	Parameter DRIVE bound to: 12 - type: integer 
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter DIFF_TERM bound to: FALSE - type: string 
+	Parameter IBUF_LOW_PWR bound to: FALSE - type: string 
+INFO: [Synth 8-6157] synthesizing module 'IOBUFDS' [C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:22677]
+	Parameter DIFF_TERM bound to: FALSE - type: string 
+	Parameter DQS_BIAS bound to: FALSE - type: string 
+	Parameter IBUF_LOW_PWR bound to: FALSE - type: string 
+	Parameter IOSTANDARD bound to: BLVDS_25 - type: string 
+	Parameter SLEW bound to: SLOW - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'IOBUFDS' (127#1) [C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:22677]
+INFO: [Synth 8-6155] done synthesizing module 'x_iobuf' (128#1) [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/src/x_iobuf.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'async_emif_slave' (129#1) [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/src/async_emif_slave.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'ASYNC_EMIF_SLAVE_0' (130#1) [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/synth/ASYNC_EMIF_SLAVE_0.v:57]
+WARNING: [Synth 8-6104] Input port 'async_emif_data_p' has an internal driver [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/hdl/top_xz_wrapper.v:141]
+WARNING: [Synth 8-6104] Input port 'async_emif_data_n' has an internal driver [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/hdl/top_xz_wrapper.v:142]
+INFO: [Synth 8-6157] synthesizing module 'reg_block' [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/new/reg_block.v:23]
+	Parameter ADDR_WIDTH bound to: 5 - type: integer 
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+WARNING: [Synth 8-3848] Net rd_reg1 in module/entity reg_block does not have driver. [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/new/reg_block.v:60]
+WARNING: [Synth 8-3848] Net rd_reg2 in module/entity reg_block does not have driver. [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/new/reg_block.v:61]
+WARNING: [Synth 8-3848] Net rd_reg3 in module/entity reg_block does not have driver. [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/new/reg_block.v:62]
+INFO: [Synth 8-6155] done synthesizing module 'reg_block' (131#1) [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/new/reg_block.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'top_xz_wrapper' (132#1) [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/hdl/top_xz_wrapper.v:12]
+WARNING: [Synth 8-3331] design reg_block has unconnected port user_wr_vild
+WARNING: [Synth 8-3331] design reg_block has unconnected port user_rd_vild
+WARNING: [Synth 8-3331] design cdc_sync__parameterized0 has unconnected port prmry_aclk
+WARNING: [Synth 8-3331] design cdc_sync__parameterized0 has unconnected port prmry_resetn
+WARNING: [Synth 8-3331] design cdc_sync__parameterized0 has unconnected port prmry_vect_in[1]
+WARNING: [Synth 8-3331] design cdc_sync__parameterized0 has unconnected port prmry_vect_in[0]
+WARNING: [Synth 8-3331] design cdc_sync__parameterized0 has unconnected port scndry_resetn
+WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port MUX_RST[0]
+WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port MEM_LAT_RST
+WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port MEM_REG_RST
+WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port MUX_REGCE[0]
+WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port MEM_REGCE
+WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port WE
+WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port ADDR_IN[13]
+WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port ADDR_IN[12]
+WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port ADDR_IN[11]
+WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port ADDR_IN[10]
+WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port ADDR_IN[9]
+WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port ADDR_IN[8]
+WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port ADDR_IN[7]
+WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port ADDR_IN[6]
+WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port ADDR_IN[5]
+WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port ADDR_IN[4]
+WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port ADDR_IN[3]
+WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port ADDR_IN[2]
+WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port ADDR_IN[1]
+WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port ADDR_IN[0]
+WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[31]
+WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[30]
+WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[29]
+WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[28]
+WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[27]
+WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[26]
+WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[25]
+WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[24]
+WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[23]
+WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[22]
+WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[21]
+WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[20]
+WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[19]
+WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[18]
+WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[17]
+WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[16]
+WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[15]
+WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[14]
+WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[13]
+WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[12]
+WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[11]
+WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[10]
+WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[9]
+WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[8]
+WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[7]
+WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[6]
+WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[5]
+WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[4]
+WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[3]
+WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[2]
+WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[1]
+WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[0]
+WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port DBITERRIN[31]
+WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port DBITERRIN[30]
+WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port DBITERRIN[29]
+WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port DBITERRIN[28]
+WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port DBITERRIN[27]
+WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port DBITERRIN[26]
+WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port DBITERRIN[25]
+WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port DBITERRIN[24]
+WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port DBITERRIN[23]
+WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port DBITERRIN[22]
+WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port DBITERRIN[21]
+WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port DBITERRIN[20]
+WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port DBITERRIN[19]
+WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port DBITERRIN[18]
+WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port DBITERRIN[17]
+WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port DBITERRIN[16]
+WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port DBITERRIN[15]
+WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port DBITERRIN[14]
+WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port DBITERRIN[13]
+WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port DBITERRIN[12]
+WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port DBITERRIN[11]
+WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port DBITERRIN[10]
+WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port DBITERRIN[9]
+WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port DBITERRIN[8]
+WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port DBITERRIN[7]
+WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port DBITERRIN[6]
+WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port DBITERRIN[5]
+WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port DBITERRIN[4]
+WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port DBITERRIN[3]
+WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port DBITERRIN[2]
+WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port DBITERRIN[1]
+WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port DBITERRIN[0]
+WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port ECCPIPECE
+WARNING: [Synth 8-3331] design blk_mem_gen_mux has unconnected port MUX_RST[0]
+WARNING: [Synth 8-3331] design blk_mem_gen_mux has unconnected port MEM_LAT_RST
+WARNING: [Synth 8-3331] design blk_mem_gen_mux has unconnected port MEM_REG_RST
+WARNING: [Synth 8-3331] design blk_mem_gen_mux has unconnected port MUX_REGCE[0]
+WARNING: [Synth 8-3331] design blk_mem_gen_mux has unconnected port MEM_REGCE
+WARNING: [Synth 8-3331] design blk_mem_gen_mux has unconnected port WE
+WARNING: [Synth 8-3331] design blk_mem_gen_mux has unconnected port ADDR_IN[13]
+WARNING: [Synth 8-3331] design blk_mem_gen_mux has unconnected port ADDR_IN[12]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:01:05 ; elapsed = 00:01:07 . Memory (MB): peak = 2154.281 ; gain = 540.559
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:06 ; elapsed = 00:01:07 . Memory (MB): peak = 2154.281 ; gain = 540.559
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:01:06 ; elapsed = 00:01:07 . Memory (MB): peak = 2154.281 ; gain = 540.559
+---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 683 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ip/top_xz_microblaze_0_0/top_xz_microblaze_0_0.xdc] for cell 'U2/microblaze_0/U0'
+Finished Parsing XDC File [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ip/top_xz_microblaze_0_0/top_xz_microblaze_0_0.xdc] for cell 'U2/microblaze_0/U0'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ip/top_xz_microblaze_0_0/top_xz_microblaze_0_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_xz_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_xz_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ip/top_xz_mdm_1_0/top_xz_mdm_1_0.xdc] for cell 'U2/mdm_1/U0'
+Finished Parsing XDC File [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ip/top_xz_mdm_1_0/top_xz_mdm_1_0.xdc] for cell 'U2/mdm_1/U0'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ip/top_xz_mdm_1_0/top_xz_mdm_1_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_xz_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_xz_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ip/top_xz_rst_clk_wiz_1_100M_0/top_xz_rst_clk_wiz_1_100M_0_board.xdc] for cell 'U2/rst_clk_wiz_1_100M/U0'
+Finished Parsing XDC File [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ip/top_xz_rst_clk_wiz_1_100M_0/top_xz_rst_clk_wiz_1_100M_0_board.xdc] for cell 'U2/rst_clk_wiz_1_100M/U0'
+Parsing XDC File [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ip/top_xz_rst_clk_wiz_1_100M_0/top_xz_rst_clk_wiz_1_100M_0.xdc] for cell 'U2/rst_clk_wiz_1_100M/U0'
+Finished Parsing XDC File [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ip/top_xz_rst_clk_wiz_1_100M_0/top_xz_rst_clk_wiz_1_100M_0.xdc] for cell 'U2/rst_clk_wiz_1_100M/U0'
+Parsing XDC File [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ip/top_xz_dlmb_v10_0/top_xz_dlmb_v10_0.xdc] for cell 'U2/microblaze_0_local_memory/dlmb_v10/U0'
+Finished Parsing XDC File [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ip/top_xz_dlmb_v10_0/top_xz_dlmb_v10_0.xdc] for cell 'U2/microblaze_0_local_memory/dlmb_v10/U0'
+Parsing XDC File [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ip/top_xz_ilmb_v10_0/top_xz_ilmb_v10_0.xdc] for cell 'U2/microblaze_0_local_memory/ilmb_v10/U0'
+Finished Parsing XDC File [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ip/top_xz_ilmb_v10_0/top_xz_ilmb_v10_0.xdc] for cell 'U2/microblaze_0_local_memory/ilmb_v10/U0'
+Parsing XDC File [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ip/top_xz_axi_gpio_0_0/top_xz_axi_gpio_0_0_board.xdc] for cell 'U2/axi_gpio_0/U0'
+Finished Parsing XDC File [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ip/top_xz_axi_gpio_0_0/top_xz_axi_gpio_0_0_board.xdc] for cell 'U2/axi_gpio_0/U0'
+Parsing XDC File [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ip/top_xz_axi_gpio_0_0/top_xz_axi_gpio_0_0.xdc] for cell 'U2/axi_gpio_0/U0'
+Finished Parsing XDC File [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/bd/top_xz/ip/top_xz_axi_gpio_0_0/top_xz_axi_gpio_0_0.xdc] for cell 'U2/axi_gpio_0/U0'
+Parsing XDC File [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'U1/inst'
+Finished Parsing XDC File [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'U1/inst'
+Parsing XDC File [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'U1/inst'
+Finished Parsing XDC File [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'U1/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_xz_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_xz_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 374 instances were transformed.
+  (MUXCY,XORCY) => CARRY4: 57 instances
+  FDC_1 => FDCE (inverted pins: C): 1 instances
+  FDE => FDRE: 32 instances
+  FDR => FDRE: 150 instances
+  FDRE_1 => FDRE (inverted pins: C): 1 instances
+  FDS => FDSE: 3 instances
+  IOBUFDS => IOBUFDS (IBUFDS, INV, OBUFTDS, OBUFTDS): 16 instances
+  LUT6_2 => LUT6_2 (LUT5, LUT6): 96 instances
+  MULT_AND => LUT2: 1 instances
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 16 instances
+  SRL16 => SRL16E: 1 instances
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:01:29 ; elapsed = 00:01:25 . Memory (MB): peak = 2263.188 ; gain = 649.465
+248 Infos, 120 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:29 ; elapsed = 00:01:25 . Memory (MB): peak = 2263.188 ; gain = 649.465
+set_property -dict [list CONFIG.ADDR_WIDTH {8}] [get_ips ASYNC_EMIF_SLAVE_0]
+generate_target all [get_files  C:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'ASYNC_EMIF_SLAVE_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'ASYNC_EMIF_SLAVE_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'ASYNC_EMIF_SLAVE_0'...
+export_ip_user_files -of_objects [get_files C:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.xci] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files C:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.xci] -directory C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.ip_user_files -ipstatic_source_dir C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.cache/compile_simlib/modelsim} {questa=C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.cache/compile_simlib/questa} {riviera=C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.cache/compile_simlib/riviera} {activehdl=C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs synth_1 -jobs 16
+[Mon Aug 28 14:49:50 2023] Launched synth_1...
+Run output will be captured here: C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.2/Microblaze_xz.runs/synth_1/runme.log
+set_property package_pin "" [get_ports [list  clk_in1]]
+place_ports clk_in1 AV23
+place_ports csb_0 AT33
+place_ports sclk_0 AP31
+place_ports sdio_0 AP32
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Aug 28 15:20:17 2023...

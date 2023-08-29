@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="top_xz_dlmb_bram_if_cntlr_0_synth_1" LaunchDir="C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.1/Microblaze_xz.runs/top_xz_dlmb_bram_if_cntlr_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="top_xz_xbar_0_synth_1" LaunchDir="C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.1/Microblaze_xz.runs/top_xz_xbar_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="top_xz_axi_gpio_0_0_synth_1" LaunchDir="C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.1/Microblaze_xz.runs/top_xz_axi_gpio_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="synth_1" LaunchDir="C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.1/Microblaze_xz.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="top_xz_dlmb_bram_if_cntlr_0_synth_1"/>
+		<Parent Id="top_xz_xbar_0_synth_1"/>
+		<Parent Id="top_xz_axi_gpio_0_0_synth_1"/>
+	</Run>
+</Runs>
+
