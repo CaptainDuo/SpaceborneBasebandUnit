@@ -420,19 +420,15 @@ static void HAL_FSMC_MspInit(void){
   PD15   ------> FSMC_DA1
   PD0   ------> FSMC_DA2
   PD1   ------> FSMC_DA3
-  PD3   ------> FSMC_CLK
   PD4   ------> FSMC_NOE
   PD5   ------> FSMC_NWE
-  PD6   ------> FSMC_NWAIT
   PD7   ------> FSMC_NE1
   PB7   ------> FSMC_NL
-  PE0   ------> FSMC_NBL0
-  PE1   ------> FSMC_NBL1
   */
   GPIO_InitStruct.Pin = GPIO_PIN_2|GPIO_PIN_3|GPIO_PIN_4|GPIO_PIN_5
                           |GPIO_PIN_6|GPIO_PIN_7|GPIO_PIN_8|GPIO_PIN_9
                           |GPIO_PIN_10|GPIO_PIN_11|GPIO_PIN_12|GPIO_PIN_13
-                          |GPIO_PIN_14|GPIO_PIN_15|GPIO_PIN_0|GPIO_PIN_1;
+                          |GPIO_PIN_14|GPIO_PIN_15;
   GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
@@ -441,8 +437,8 @@ static void HAL_FSMC_MspInit(void){
 
   GPIO_InitStruct.Pin = GPIO_PIN_8|GPIO_PIN_9|GPIO_PIN_10|GPIO_PIN_11
                           |GPIO_PIN_12|GPIO_PIN_13|GPIO_PIN_14|GPIO_PIN_15
-                          |GPIO_PIN_0|GPIO_PIN_1|GPIO_PIN_3|GPIO_PIN_4
-                          |GPIO_PIN_5|GPIO_PIN_6|GPIO_PIN_7;
+                          |GPIO_PIN_0|GPIO_PIN_1|GPIO_PIN_4|GPIO_PIN_5
+                          |GPIO_PIN_7;
   GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
@@ -461,14 +457,14 @@ static void HAL_FSMC_MspInit(void){
   /* USER CODE END FSMC_MspInit 1 */
 }
 
-void HAL_SRAM_MspInit(SRAM_HandleTypeDef* hsram){
-  /* USER CODE BEGIN SRAM_MspInit 0 */
+void HAL_NOR_MspInit(NOR_HandleTypeDef* hnor){
+  /* USER CODE BEGIN NOR_MspInit 0 */
 
-  /* USER CODE END SRAM_MspInit 0 */
+  /* USER CODE END NOR_MspInit 0 */
   HAL_FSMC_MspInit();
-  /* USER CODE BEGIN SRAM_MspInit 1 */
+  /* USER CODE BEGIN NOR_MspInit 1 */
 
-  /* USER CODE END SRAM_MspInit 1 */
+  /* USER CODE END NOR_MspInit 1 */
 }
 
 static uint32_t FSMC_DeInitialized = 0;
@@ -509,24 +505,20 @@ static void HAL_FSMC_MspDeInit(void){
   PD15   ------> FSMC_DA1
   PD0   ------> FSMC_DA2
   PD1   ------> FSMC_DA3
-  PD3   ------> FSMC_CLK
   PD4   ------> FSMC_NOE
   PD5   ------> FSMC_NWE
-  PD6   ------> FSMC_NWAIT
   PD7   ------> FSMC_NE1
   PB7   ------> FSMC_NL
-  PE0   ------> FSMC_NBL0
-  PE1   ------> FSMC_NBL1
   */
   HAL_GPIO_DeInit(GPIOE, GPIO_PIN_2|GPIO_PIN_3|GPIO_PIN_4|GPIO_PIN_5
                           |GPIO_PIN_6|GPIO_PIN_7|GPIO_PIN_8|GPIO_PIN_9
                           |GPIO_PIN_10|GPIO_PIN_11|GPIO_PIN_12|GPIO_PIN_13
-                          |GPIO_PIN_14|GPIO_PIN_15|GPIO_PIN_0|GPIO_PIN_1);
+                          |GPIO_PIN_14|GPIO_PIN_15);
 
   HAL_GPIO_DeInit(GPIOD, GPIO_PIN_8|GPIO_PIN_9|GPIO_PIN_10|GPIO_PIN_11
                           |GPIO_PIN_12|GPIO_PIN_13|GPIO_PIN_14|GPIO_PIN_15
-                          |GPIO_PIN_0|GPIO_PIN_1|GPIO_PIN_3|GPIO_PIN_4
-                          |GPIO_PIN_5|GPIO_PIN_6|GPIO_PIN_7);
+                          |GPIO_PIN_0|GPIO_PIN_1|GPIO_PIN_4|GPIO_PIN_5
+                          |GPIO_PIN_7);
 
   HAL_GPIO_DeInit(GPIOB, GPIO_PIN_7);
 
@@ -535,14 +527,14 @@ static void HAL_FSMC_MspDeInit(void){
   /* USER CODE END FSMC_MspDeInit 1 */
 }
 
-void HAL_SRAM_MspDeInit(SRAM_HandleTypeDef* hsram){
-  /* USER CODE BEGIN SRAM_MspDeInit 0 */
+void HAL_NOR_MspDeInit(NOR_HandleTypeDef* hnor){
+  /* USER CODE BEGIN NOR_MspDeInit 0 */
 
-  /* USER CODE END SRAM_MspDeInit 0 */
+  /* USER CODE END NOR_MspDeInit 0 */
   HAL_FSMC_MspDeInit();
-  /* USER CODE BEGIN SRAM_MspDeInit 1 */
+  /* USER CODE BEGIN NOR_MspDeInit 1 */
 
-  /* USER CODE END SRAM_MspDeInit 1 */
+  /* USER CODE END NOR_MspDeInit 1 */
 }
 
 /* USER CODE BEGIN 1 */
