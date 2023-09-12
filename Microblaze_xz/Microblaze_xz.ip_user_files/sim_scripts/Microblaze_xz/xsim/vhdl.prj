@@ -1,0 +1,12 @@
+vhdl xil_defaultlib  \
+"../../../../Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/ip/Microblaze_xz_microblaze_0_0/sim/Microblaze_xz_microblaze_0_0.vhd" \
+"../../../../Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/ip/Microblaze_xz_axi_gpio_0_0/sim/Microblaze_xz_axi_gpio_0_0.vhd" \
+"../../../../Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/ip/Microblaze_xz_axi_gpio_1_0/sim/Microblaze_xz_axi_gpio_1_0.vhd" \
+"../../../../Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/ip/Microblaze_xz_mdm_1_1/sim/Microblaze_xz_mdm_1_1.vhd" \
+"../../../../Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/ip/Microblaze_xz_rst_Clk_100M_0/sim/Microblaze_xz_rst_Clk_100M_0.vhd" \
+"../../../../Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/ip/Microblaze_xz_dlmb_v10_1/sim/Microblaze_xz_dlmb_v10_1.vhd" \
+"../../../../Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/ip/Microblaze_xz_ilmb_v10_1/sim/Microblaze_xz_ilmb_v10_1.vhd" \
+"../../../../Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/ip/Microblaze_xz_dlmb_bram_if_cntlr_1/sim/Microblaze_xz_dlmb_bram_if_cntlr_1.vhd" \
+"../../../../Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/ip/Microblaze_xz_ilmb_bram_if_cntlr_1/sim/Microblaze_xz_ilmb_bram_if_cntlr_1.vhd" \
+
+nosort

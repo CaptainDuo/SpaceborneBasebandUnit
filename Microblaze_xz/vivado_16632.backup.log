@@ -1,0 +1,470 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Mon Sep 11 09:04:26 2023
+# Process ID: 16632
+# Current directory: C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent6196 C:\Users\86183\Desktop\Microblaze_xzjddy\Microblaze_xz_1.4\Microblaze_xz\Microblaze_xz.xpr
+# Log file: C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/vivado.log
+# Journal file: C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.ip_user_files'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
+open_project: Time (s): cpu = 00:00:13 ; elapsed = 00:00:09 . Memory (MB): peak = 951.031 ; gain = 214.062
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 16
+[Mon Sep 11 09:47:42 2023] Launched synth_1...
+Run output will be captured here: C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.runs/synth_1/runme.log
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/Microblaze_xz.bd]
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7vx690tffg1927-3
+Top: Microblaze_xz_wrapper
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1102.523 ; gain = 109.555
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'Microblaze_xz_wrapper' [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/imports/hdl/Microblaze_xz_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/.Xil/Vivado-16632-LAPTOP-DG1UIM4L/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (1#1) [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/.Xil/Vivado-16632-LAPTOP-DG1UIM4L/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_1' [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/.Xil/Vivado-16632-LAPTOP-DG1UIM4L/realtime/clk_wiz_1_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_1' (2#1) [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/.Xil/Vivado-16632-LAPTOP-DG1UIM4L/realtime/clk_wiz_1_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'Microblaze_xz' [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/synth/Microblaze_xz.v:13]
+INFO: [Synth 8-6157] synthesizing module 'Microblaze_xz_AXI4_ADI_SPI_15_8BIT_0_0' [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/.Xil/Vivado-16632-LAPTOP-DG1UIM4L/realtime/Microblaze_xz_AXI4_ADI_SPI_15_8BIT_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Microblaze_xz_AXI4_ADI_SPI_15_8BIT_0_0' (3#1) [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/.Xil/Vivado-16632-LAPTOP-DG1UIM4L/realtime/Microblaze_xz_AXI4_ADI_SPI_15_8BIT_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'Microblaze_xz_AXI4_ADI_SPI_7_8BIT_0_0' [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/.Xil/Vivado-16632-LAPTOP-DG1UIM4L/realtime/Microblaze_xz_AXI4_ADI_SPI_7_8BIT_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Microblaze_xz_AXI4_ADI_SPI_7_8BIT_0_0' (4#1) [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/.Xil/Vivado-16632-LAPTOP-DG1UIM4L/realtime/Microblaze_xz_AXI4_ADI_SPI_7_8BIT_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'Microblaze_xz_axi_gpio_0_0' [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/.Xil/Vivado-16632-LAPTOP-DG1UIM4L/realtime/Microblaze_xz_axi_gpio_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Microblaze_xz_axi_gpio_0_0' (5#1) [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/.Xil/Vivado-16632-LAPTOP-DG1UIM4L/realtime/Microblaze_xz_axi_gpio_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'Microblaze_xz_axi_gpio_1_0' [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/.Xil/Vivado-16632-LAPTOP-DG1UIM4L/realtime/Microblaze_xz_axi_gpio_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Microblaze_xz_axi_gpio_1_0' (6#1) [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/.Xil/Vivado-16632-LAPTOP-DG1UIM4L/realtime/Microblaze_xz_axi_gpio_1_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'Microblaze_xz_mdm_1_1' [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/.Xil/Vivado-16632-LAPTOP-DG1UIM4L/realtime/Microblaze_xz_mdm_1_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Microblaze_xz_mdm_1_1' (7#1) [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/.Xil/Vivado-16632-LAPTOP-DG1UIM4L/realtime/Microblaze_xz_mdm_1_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'Microblaze_xz_microblaze_0_0' [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/.Xil/Vivado-16632-LAPTOP-DG1UIM4L/realtime/Microblaze_xz_microblaze_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Microblaze_xz_microblaze_0_0' (8#1) [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/.Xil/Vivado-16632-LAPTOP-DG1UIM4L/realtime/Microblaze_xz_microblaze_0_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'microblaze_0' of module 'Microblaze_xz_microblaze_0_0' requires 52 connections, but only 51 given [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/synth/Microblaze_xz.v:308]
+INFO: [Synth 8-6157] synthesizing module 'Microblaze_xz_microblaze_0_axi_periph_0' [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/synth/Microblaze_xz.v:498]
+INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_JY6PMD' [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/synth/Microblaze_xz.v:1254]
+INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_JY6PMD' (9#1) [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/synth/Microblaze_xz.v:1254]
+INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_1P7D0PT' [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/synth/Microblaze_xz.v:1400]
+INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_1P7D0PT' (10#1) [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/synth/Microblaze_xz.v:1400]
+INFO: [Synth 8-6157] synthesizing module 'm02_couplers_imp_1BAH1B0' [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/synth/Microblaze_xz.v:1546]
+INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_1BAH1B0' (11#1) [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/synth/Microblaze_xz.v:1546]
+INFO: [Synth 8-6157] synthesizing module 'm03_couplers_imp_DLKWSO' [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/synth/Microblaze_xz.v:1678]
+INFO: [Synth 8-6155] done synthesizing module 'm03_couplers_imp_DLKWSO' (12#1) [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/synth/Microblaze_xz.v:1678]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_OGBEBU' [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/synth/Microblaze_xz.v:2044]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_OGBEBU' (13#1) [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/synth/Microblaze_xz.v:2044]
+INFO: [Synth 8-6157] synthesizing module 'Microblaze_xz_xbar_0' [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/.Xil/Vivado-16632-LAPTOP-DG1UIM4L/realtime/Microblaze_xz_xbar_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Microblaze_xz_xbar_0' (14#1) [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/.Xil/Vivado-16632-LAPTOP-DG1UIM4L/realtime/Microblaze_xz_xbar_0_stub.v:6]
+WARNING: [Synth 8-689] width (6) of port connection 'm_axi_arprot' does not match port width (12) of module 'Microblaze_xz_xbar_0' [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/synth/Microblaze_xz.v:1215]
+WARNING: [Synth 8-689] width (6) of port connection 'm_axi_awprot' does not match port width (12) of module 'Microblaze_xz_xbar_0' [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/synth/Microblaze_xz.v:1219]
+INFO: [Synth 8-6155] done synthesizing module 'Microblaze_xz_microblaze_0_axi_periph_0' (15#1) [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/synth/Microblaze_xz.v:498]
+INFO: [Synth 8-6157] synthesizing module 'microblaze_0_local_memory_imp_16RA5MM' [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/synth/Microblaze_xz.v:1810]
+INFO: [Synth 8-6157] synthesizing module 'Microblaze_xz_dlmb_bram_if_cntlr_1' [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/.Xil/Vivado-16632-LAPTOP-DG1UIM4L/realtime/Microblaze_xz_dlmb_bram_if_cntlr_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Microblaze_xz_dlmb_bram_if_cntlr_1' (16#1) [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/.Xil/Vivado-16632-LAPTOP-DG1UIM4L/realtime/Microblaze_xz_dlmb_bram_if_cntlr_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'Microblaze_xz_dlmb_v10_1' [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/.Xil/Vivado-16632-LAPTOP-DG1UIM4L/realtime/Microblaze_xz_dlmb_v10_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Microblaze_xz_dlmb_v10_1' (17#1) [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/.Xil/Vivado-16632-LAPTOP-DG1UIM4L/realtime/Microblaze_xz_dlmb_v10_1_stub.v:6]
+WARNING: [Synth 8-350] instance 'dlmb_v10' of module 'Microblaze_xz_dlmb_v10_1' requires 25 connections, but only 24 given [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/synth/Microblaze_xz.v:1956]
+INFO: [Synth 8-6157] synthesizing module 'Microblaze_xz_ilmb_bram_if_cntlr_1' [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/.Xil/Vivado-16632-LAPTOP-DG1UIM4L/realtime/Microblaze_xz_ilmb_bram_if_cntlr_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Microblaze_xz_ilmb_bram_if_cntlr_1' (18#1) [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/.Xil/Vivado-16632-LAPTOP-DG1UIM4L/realtime/Microblaze_xz_ilmb_bram_if_cntlr_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'Microblaze_xz_ilmb_v10_1' [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/.Xil/Vivado-16632-LAPTOP-DG1UIM4L/realtime/Microblaze_xz_ilmb_v10_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Microblaze_xz_ilmb_v10_1' (19#1) [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/.Xil/Vivado-16632-LAPTOP-DG1UIM4L/realtime/Microblaze_xz_ilmb_v10_1_stub.v:6]
+WARNING: [Synth 8-350] instance 'ilmb_v10' of module 'Microblaze_xz_ilmb_v10_1' requires 25 connections, but only 24 given [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/synth/Microblaze_xz.v:2002]
+INFO: [Synth 8-6157] synthesizing module 'Microblaze_xz_lmb_bram_1' [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/.Xil/Vivado-16632-LAPTOP-DG1UIM4L/realtime/Microblaze_xz_lmb_bram_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Microblaze_xz_lmb_bram_1' (20#1) [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/.Xil/Vivado-16632-LAPTOP-DG1UIM4L/realtime/Microblaze_xz_lmb_bram_1_stub.v:6]
+WARNING: [Synth 8-350] instance 'lmb_bram' of module 'Microblaze_xz_lmb_bram_1' requires 16 connections, but only 14 given [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/synth/Microblaze_xz.v:2027]
+INFO: [Synth 8-6155] done synthesizing module 'microblaze_0_local_memory_imp_16RA5MM' (21#1) [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/synth/Microblaze_xz.v:1810]
+INFO: [Synth 8-6157] synthesizing module 'Microblaze_xz_rst_Clk_100M_0' [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/.Xil/Vivado-16632-LAPTOP-DG1UIM4L/realtime/Microblaze_xz_rst_Clk_100M_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Microblaze_xz_rst_Clk_100M_0' (22#1) [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/.Xil/Vivado-16632-LAPTOP-DG1UIM4L/realtime/Microblaze_xz_rst_Clk_100M_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'rst_Clk_100M' of module 'Microblaze_xz_rst_Clk_100M_0' requires 10 connections, but only 9 given [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/synth/Microblaze_xz.v:486]
+INFO: [Synth 8-6155] done synthesizing module 'Microblaze_xz' (23#1) [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/synth/Microblaze_xz.v:13]
+INFO: [Synth 8-6157] synthesizing module 'ASYNC_EMIF_SLAVE_0' [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/.Xil/Vivado-16632-LAPTOP-DG1UIM4L/realtime/ASYNC_EMIF_SLAVE_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ASYNC_EMIF_SLAVE_0' (24#1) [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/.Xil/Vivado-16632-LAPTOP-DG1UIM4L/realtime/ASYNC_EMIF_SLAVE_0_stub.v:6]
+WARNING: [Synth 8-689] width (32) of port connection 'user_wr_addr' does not match port width (8) of module 'ASYNC_EMIF_SLAVE_0' [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/imports/hdl/Microblaze_xz_wrapper.v:109]
+WARNING: [Synth 8-689] width (32) of port connection 'user_rd_addr' does not match port width (8) of module 'ASYNC_EMIF_SLAVE_0' [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/imports/hdl/Microblaze_xz_wrapper.v:112]
+WARNING: [Synth 8-350] instance 'U4' of module 'ASYNC_EMIF_SLAVE_0' requires 20 connections, but only 15 given [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/imports/hdl/Microblaze_xz_wrapper.v:104]
+INFO: [Synth 8-6157] synthesizing module 'reg_block' [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/new/reg_block.v:23]
+	Parameter ADDR_WIDTH bound to: 8 - type: integer 
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+WARNING: [Synth 8-3848] Net rd_reg0 in module/entity reg_block does not have driver. [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/new/reg_block.v:59]
+WARNING: [Synth 8-3848] Net rd_reg1 in module/entity reg_block does not have driver. [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/new/reg_block.v:60]
+WARNING: [Synth 8-3848] Net rd_reg2 in module/entity reg_block does not have driver. [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/new/reg_block.v:61]
+WARNING: [Synth 8-3848] Net rd_reg3 in module/entity reg_block does not have driver. [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/new/reg_block.v:62]
+INFO: [Synth 8-6155] done synthesizing module 'reg_block' (25#1) [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/new/reg_block.v:23]
+WARNING: [Synth 8-689] width (32) of port connection 'user_wr_addr' does not match port width (8) of module 'reg_block' [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/imports/hdl/Microblaze_xz_wrapper.v:139]
+WARNING: [Synth 8-689] width (32) of port connection 'user_rd_addr' does not match port width (8) of module 'reg_block' [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/imports/hdl/Microblaze_xz_wrapper.v:142]
+WARNING: [Synth 8-3848] Net dci_ad9781_p in module/entity Microblaze_xz_wrapper does not have driver. [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/imports/hdl/Microblaze_xz_wrapper.v:46]
+WARNING: [Synth 8-3848] Net dci_ad9781_n in module/entity Microblaze_xz_wrapper does not have driver. [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/imports/hdl/Microblaze_xz_wrapper.v:47]
+WARNING: [Synth 8-3848] Net data_ad9781_p in module/entity Microblaze_xz_wrapper does not have driver. [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/imports/hdl/Microblaze_xz_wrapper.v:48]
+WARNING: [Synth 8-3848] Net data_ad9781_n in module/entity Microblaze_xz_wrapper does not have driver. [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/imports/hdl/Microblaze_xz_wrapper.v:49]
+INFO: [Synth 8-6155] done synthesizing module 'Microblaze_xz_wrapper' (26#1) [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/imports/hdl/Microblaze_xz_wrapper.v:12]
+WARNING: [Synth 8-3331] design reg_block has unconnected port user_wr_vild
+WARNING: [Synth 8-3331] design reg_block has unconnected port user_rd_vild
+WARNING: [Synth 8-3331] design s00_couplers_imp_OGBEBU has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design s00_couplers_imp_OGBEBU has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design s00_couplers_imp_OGBEBU has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design s00_couplers_imp_OGBEBU has unconnected port S_ARESETN
+WARNING: [Synth 8-3331] design m03_couplers_imp_DLKWSO has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design m03_couplers_imp_DLKWSO has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m03_couplers_imp_DLKWSO has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design m03_couplers_imp_DLKWSO has unconnected port S_ARESETN
+WARNING: [Synth 8-3331] design m02_couplers_imp_1BAH1B0 has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design m02_couplers_imp_1BAH1B0 has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m02_couplers_imp_1BAH1B0 has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design m02_couplers_imp_1BAH1B0 has unconnected port S_ARESETN
+WARNING: [Synth 8-3331] design m01_couplers_imp_1P7D0PT has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design m01_couplers_imp_1P7D0PT has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m01_couplers_imp_1P7D0PT has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design m01_couplers_imp_1P7D0PT has unconnected port S_ARESETN
+WARNING: [Synth 8-3331] design m00_couplers_imp_JY6PMD has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design m00_couplers_imp_JY6PMD has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m00_couplers_imp_JY6PMD has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design m00_couplers_imp_JY6PMD has unconnected port S_ARESETN
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port dci_ad9781_p
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port dci_ad9781_n
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port data_ad9781_p[13]
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port data_ad9781_p[12]
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port data_ad9781_p[11]
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port data_ad9781_p[10]
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port data_ad9781_p[9]
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port data_ad9781_p[8]
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port data_ad9781_p[7]
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port data_ad9781_p[6]
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port data_ad9781_p[5]
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port data_ad9781_p[4]
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port data_ad9781_p[3]
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port data_ad9781_p[2]
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port data_ad9781_p[1]
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port data_ad9781_p[0]
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port data_ad9781_n[13]
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port data_ad9781_n[12]
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port data_ad9781_n[11]
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port data_ad9781_n[10]
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port data_ad9781_n[9]
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port data_ad9781_n[8]
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port data_ad9781_n[7]
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port data_ad9781_n[6]
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port data_ad9781_n[5]
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port data_ad9781_n[4]
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port data_ad9781_n[3]
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port data_ad9781_n[2]
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port data_ad9781_n[1]
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port data_ad9781_n[0]
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port data_ad9649[13]
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port data_ad9649[12]
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port data_ad9649[11]
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port data_ad9649[10]
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port data_ad9649[9]
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port data_ad9649[8]
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port data_ad9649[7]
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port data_ad9649[6]
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port data_ad9649[5]
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port data_ad9649[4]
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port data_ad9649[3]
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port data_ad9649[2]
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port data_ad9649[1]
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port data_ad9649[0]
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port dco_ad9781_p
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port dco_ad9781_n
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1149.305 ; gain = 156.336
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1149.305 ; gain = 156.336
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1149.305 ; gain = 156.336
+---------------------------------------------------------------------------------
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/86183/Desktop/Microblaze_xzjddy/clk_wiz_0_1/clk_wiz_0.dcp' for cell 'U1'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/86183/Desktop/Microblaze_xzjddy/clk_wiz_1/clk_wiz_1.dcp' for cell 'U2'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.dcp' for cell 'U4'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/ip/Microblaze_xz_AXI4_ADI_SPI_15_8BIT_0_0/Microblaze_xz_AXI4_ADI_SPI_15_8BIT_0_0.dcp' for cell 'U3/Driver_9649'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/ip/Microblaze_xz_AXI4_ADI_SPI_7_8BIT_0_0/Microblaze_xz_AXI4_ADI_SPI_7_8BIT_0_0.dcp' for cell 'U3/Driver_9781'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/ip/Microblaze_xz_axi_gpio_0_0/Microblaze_xz_axi_gpio_0_0.dcp' for cell 'U3/axi_gpio_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/ip/Microblaze_xz_axi_gpio_1_0/Microblaze_xz_axi_gpio_1_0.dcp' for cell 'U3/axi_gpio_1'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/ip/Microblaze_xz_mdm_1_1/Microblaze_xz_mdm_1_1.dcp' for cell 'U3/mdm_1'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/ip/Microblaze_xz_microblaze_0_0/Microblaze_xz_microblaze_0_0.dcp' for cell 'U3/microblaze_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/ip/Microblaze_xz_rst_Clk_100M_0/Microblaze_xz_rst_Clk_100M_0.dcp' for cell 'U3/rst_Clk_100M'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/ip/Microblaze_xz_xbar_0/Microblaze_xz_xbar_0.dcp' for cell 'U3/microblaze_0_axi_periph/xbar'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/ip/Microblaze_xz_dlmb_bram_if_cntlr_1/Microblaze_xz_dlmb_bram_if_cntlr_1.dcp' for cell 'U3/microblaze_0_local_memory/dlmb_bram_if_cntlr'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/ip/Microblaze_xz_dlmb_v10_1/Microblaze_xz_dlmb_v10_1.dcp' for cell 'U3/microblaze_0_local_memory/dlmb_v10'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/ip/Microblaze_xz_ilmb_bram_if_cntlr_1/Microblaze_xz_ilmb_bram_if_cntlr_1.dcp' for cell 'U3/microblaze_0_local_memory/ilmb_bram_if_cntlr'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/ip/Microblaze_xz_ilmb_v10_1/Microblaze_xz_ilmb_v10_1.dcp' for cell 'U3/microblaze_0_local_memory/ilmb_v10'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/ip/Microblaze_xz_lmb_bram_1/Microblaze_xz_lmb_bram_1.dcp' for cell 'U3/microblaze_0_local_memory/lmb_bram'
+INFO: [Netlist 29-17] Analyzing 310 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.2
+INFO: [Device 21-403] Loading part xc7vx690tffg1927-3
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-141] Inserted 8 OBUFs to IO ports without IO buffers.
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'U4/user_rd_data[0]' is not directly connected to top level port. Synthesis is ignored for c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf but preserved for implementation. [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf:3215]
+WARNING: [Constraints 18-550] Could not create 'DRIVE' constraint because net 'U4/user_rd_data[0]' is not directly connected to top level port. Synthesis is ignored for c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf but preserved for implementation. [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf:3216]
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'U4/user_rd_data[0]' is not directly connected to top level port. Synthesis is ignored for c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf but preserved for implementation. [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf:3217]
+WARNING: [Constraints 18-550] Could not create 'IOSTANDARD' constraint because net 'U4/user_rd_data[0]' is not directly connected to top level port. Synthesis is ignored for c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf but preserved for implementation. [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf:3218]
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'U4/user_rd_data[10]' is not directly connected to top level port. Synthesis is ignored for c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf but preserved for implementation. [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf:3315]
+WARNING: [Constraints 18-550] Could not create 'DRIVE' constraint because net 'U4/user_rd_data[10]' is not directly connected to top level port. Synthesis is ignored for c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf but preserved for implementation. [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf:3316]
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'U4/user_rd_data[10]' is not directly connected to top level port. Synthesis is ignored for c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf but preserved for implementation. [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf:3317]
+WARNING: [Constraints 18-550] Could not create 'IOSTANDARD' constraint because net 'U4/user_rd_data[10]' is not directly connected to top level port. Synthesis is ignored for c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf but preserved for implementation. [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf:3318]
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'U4/user_rd_data[11]' is not directly connected to top level port. Synthesis is ignored for c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf but preserved for implementation. [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf:3325]
+WARNING: [Constraints 18-550] Could not create 'DRIVE' constraint because net 'U4/user_rd_data[11]' is not directly connected to top level port. Synthesis is ignored for c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf but preserved for implementation. [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf:3326]
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'U4/user_rd_data[11]' is not directly connected to top level port. Synthesis is ignored for c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf but preserved for implementation. [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf:3327]
+WARNING: [Constraints 18-550] Could not create 'IOSTANDARD' constraint because net 'U4/user_rd_data[11]' is not directly connected to top level port. Synthesis is ignored for c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf but preserved for implementation. [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf:3328]
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'U4/user_rd_data[12]' is not directly connected to top level port. Synthesis is ignored for c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf but preserved for implementation. [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf:3335]
+WARNING: [Constraints 18-550] Could not create 'DRIVE' constraint because net 'U4/user_rd_data[12]' is not directly connected to top level port. Synthesis is ignored for c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf but preserved for implementation. [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf:3336]
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'U4/user_rd_data[12]' is not directly connected to top level port. Synthesis is ignored for c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf but preserved for implementation. [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf:3337]
+WARNING: [Constraints 18-550] Could not create 'IOSTANDARD' constraint because net 'U4/user_rd_data[12]' is not directly connected to top level port. Synthesis is ignored for c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf but preserved for implementation. [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf:3338]
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'U4/user_rd_data[13]' is not directly connected to top level port. Synthesis is ignored for c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf but preserved for implementation. [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf:3345]
+WARNING: [Constraints 18-550] Could not create 'DRIVE' constraint because net 'U4/user_rd_data[13]' is not directly connected to top level port. Synthesis is ignored for c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf but preserved for implementation. [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf:3346]
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'U4/user_rd_data[13]' is not directly connected to top level port. Synthesis is ignored for c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf but preserved for implementation. [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf:3347]
+WARNING: [Constraints 18-550] Could not create 'IOSTANDARD' constraint because net 'U4/user_rd_data[13]' is not directly connected to top level port. Synthesis is ignored for c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf but preserved for implementation. [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf:3348]
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'U4/user_rd_data[14]' is not directly connected to top level port. Synthesis is ignored for c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf but preserved for implementation. [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf:3355]
+WARNING: [Constraints 18-550] Could not create 'DRIVE' constraint because net 'U4/user_rd_data[14]' is not directly connected to top level port. Synthesis is ignored for c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf but preserved for implementation. [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf:3356]
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'U4/user_rd_data[14]' is not directly connected to top level port. Synthesis is ignored for c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf but preserved for implementation. [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf:3357]
+WARNING: [Constraints 18-550] Could not create 'IOSTANDARD' constraint because net 'U4/user_rd_data[14]' is not directly connected to top level port. Synthesis is ignored for c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf but preserved for implementation. [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf:3358]
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'U4/user_rd_data[15]' is not directly connected to top level port. Synthesis is ignored for c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf but preserved for implementation. [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf:3365]
+WARNING: [Constraints 18-550] Could not create 'DRIVE' constraint because net 'U4/user_rd_data[15]' is not directly connected to top level port. Synthesis is ignored for c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf but preserved for implementation. [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf:3366]
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'U4/user_rd_data[15]' is not directly connected to top level port. Synthesis is ignored for c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf but preserved for implementation. [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf:3367]
+WARNING: [Constraints 18-550] Could not create 'IOSTANDARD' constraint because net 'U4/user_rd_data[15]' is not directly connected to top level port. Synthesis is ignored for c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf but preserved for implementation. [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf:3368]
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'U4/user_rd_data[1]' is not directly connected to top level port. Synthesis is ignored for c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf but preserved for implementation. [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf:3225]
+WARNING: [Constraints 18-550] Could not create 'DRIVE' constraint because net 'U4/user_rd_data[1]' is not directly connected to top level port. Synthesis is ignored for c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf but preserved for implementation. [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf:3226]
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'U4/user_rd_data[1]' is not directly connected to top level port. Synthesis is ignored for c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf but preserved for implementation. [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf:3227]
+WARNING: [Constraints 18-550] Could not create 'IOSTANDARD' constraint because net 'U4/user_rd_data[1]' is not directly connected to top level port. Synthesis is ignored for c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf but preserved for implementation. [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf:3228]
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'U4/user_rd_data[2]' is not directly connected to top level port. Synthesis is ignored for c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf but preserved for implementation. [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf:3235]
+WARNING: [Constraints 18-550] Could not create 'DRIVE' constraint because net 'U4/user_rd_data[2]' is not directly connected to top level port. Synthesis is ignored for c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf but preserved for implementation. [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf:3236]
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'U4/user_rd_data[2]' is not directly connected to top level port. Synthesis is ignored for c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf but preserved for implementation. [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf:3237]
+WARNING: [Constraints 18-550] Could not create 'IOSTANDARD' constraint because net 'U4/user_rd_data[2]' is not directly connected to top level port. Synthesis is ignored for c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf but preserved for implementation. [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf:3238]
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'U4/user_rd_data[3]' is not directly connected to top level port. Synthesis is ignored for c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf but preserved for implementation. [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf:3245]
+WARNING: [Constraints 18-550] Could not create 'DRIVE' constraint because net 'U4/user_rd_data[3]' is not directly connected to top level port. Synthesis is ignored for c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf but preserved for implementation. [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf:3246]
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'U4/user_rd_data[3]' is not directly connected to top level port. Synthesis is ignored for c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf but preserved for implementation. [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf:3247]
+WARNING: [Constraints 18-550] Could not create 'IOSTANDARD' constraint because net 'U4/user_rd_data[3]' is not directly connected to top level port. Synthesis is ignored for c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf but preserved for implementation. [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf:3248]
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'U4/user_rd_data[4]' is not directly connected to top level port. Synthesis is ignored for c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf but preserved for implementation. [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf:3255]
+WARNING: [Constraints 18-550] Could not create 'DRIVE' constraint because net 'U4/user_rd_data[4]' is not directly connected to top level port. Synthesis is ignored for c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf but preserved for implementation. [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf:3256]
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'U4/user_rd_data[4]' is not directly connected to top level port. Synthesis is ignored for c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf but preserved for implementation. [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf:3257]
+WARNING: [Constraints 18-550] Could not create 'IOSTANDARD' constraint because net 'U4/user_rd_data[4]' is not directly connected to top level port. Synthesis is ignored for c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf but preserved for implementation. [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf:3258]
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'U4/user_rd_data[5]' is not directly connected to top level port. Synthesis is ignored for c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf but preserved for implementation. [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf:3265]
+WARNING: [Constraints 18-550] Could not create 'DRIVE' constraint because net 'U4/user_rd_data[5]' is not directly connected to top level port. Synthesis is ignored for c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf but preserved for implementation. [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf:3266]
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'U4/user_rd_data[5]' is not directly connected to top level port. Synthesis is ignored for c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf but preserved for implementation. [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf:3267]
+WARNING: [Constraints 18-550] Could not create 'IOSTANDARD' constraint because net 'U4/user_rd_data[5]' is not directly connected to top level port. Synthesis is ignored for c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf but preserved for implementation. [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf:3268]
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'U4/user_rd_data[6]' is not directly connected to top level port. Synthesis is ignored for c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf but preserved for implementation. [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf:3275]
+WARNING: [Constraints 18-550] Could not create 'DRIVE' constraint because net 'U4/user_rd_data[6]' is not directly connected to top level port. Synthesis is ignored for c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf but preserved for implementation. [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf:3276]
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'U4/user_rd_data[6]' is not directly connected to top level port. Synthesis is ignored for c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf but preserved for implementation. [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf:3277]
+WARNING: [Constraints 18-550] Could not create 'IOSTANDARD' constraint because net 'U4/user_rd_data[6]' is not directly connected to top level port. Synthesis is ignored for c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf but preserved for implementation. [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf:3278]
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'U4/user_rd_data[7]' is not directly connected to top level port. Synthesis is ignored for c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf but preserved for implementation. [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf:3285]
+WARNING: [Constraints 18-550] Could not create 'DRIVE' constraint because net 'U4/user_rd_data[7]' is not directly connected to top level port. Synthesis is ignored for c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf but preserved for implementation. [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf:3286]
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'U4/user_rd_data[7]' is not directly connected to top level port. Synthesis is ignored for c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf but preserved for implementation. [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf:3287]
+WARNING: [Constraints 18-550] Could not create 'IOSTANDARD' constraint because net 'U4/user_rd_data[7]' is not directly connected to top level port. Synthesis is ignored for c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf but preserved for implementation. [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf:3288]
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'U4/user_rd_data[8]' is not directly connected to top level port. Synthesis is ignored for c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf but preserved for implementation. [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf:3295]
+WARNING: [Constraints 18-550] Could not create 'DRIVE' constraint because net 'U4/user_rd_data[8]' is not directly connected to top level port. Synthesis is ignored for c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf but preserved for implementation. [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf:3296]
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'U4/user_rd_data[8]' is not directly connected to top level port. Synthesis is ignored for c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf but preserved for implementation. [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf:3297]
+WARNING: [Constraints 18-550] Could not create 'IOSTANDARD' constraint because net 'U4/user_rd_data[8]' is not directly connected to top level port. Synthesis is ignored for c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf but preserved for implementation. [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf:3298]
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'U4/user_rd_data[9]' is not directly connected to top level port. Synthesis is ignored for c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf but preserved for implementation. [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf:3305]
+WARNING: [Constraints 18-550] Could not create 'DRIVE' constraint because net 'U4/user_rd_data[9]' is not directly connected to top level port. Synthesis is ignored for c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf but preserved for implementation. [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf:3306]
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'U4/user_rd_data[9]' is not directly connected to top level port. Synthesis is ignored for c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf but preserved for implementation. [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf:3307]
+WARNING: [Constraints 18-550] Could not create 'IOSTANDARD' constraint because net 'U4/user_rd_data[9]' is not directly connected to top level port. Synthesis is ignored for c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf but preserved for implementation. [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf:3308]
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/ip/Microblaze_xz_microblaze_0_0/Microblaze_xz_microblaze_0_0.xdc] for cell 'U3/microblaze_0/U0'
+Finished Parsing XDC File [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/ip/Microblaze_xz_microblaze_0_0/Microblaze_xz_microblaze_0_0.xdc] for cell 'U3/microblaze_0/U0'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/ip/Microblaze_xz_microblaze_0_0/Microblaze_xz_microblaze_0_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Microblaze_xz_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/Microblaze_xz_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/ip/Microblaze_xz_axi_gpio_0_0/Microblaze_xz_axi_gpio_0_0_board.xdc] for cell 'U3/axi_gpio_0/U0'
+Finished Parsing XDC File [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/ip/Microblaze_xz_axi_gpio_0_0/Microblaze_xz_axi_gpio_0_0_board.xdc] for cell 'U3/axi_gpio_0/U0'
+Parsing XDC File [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/ip/Microblaze_xz_axi_gpio_0_0/Microblaze_xz_axi_gpio_0_0.xdc] for cell 'U3/axi_gpio_0/U0'
+Finished Parsing XDC File [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/ip/Microblaze_xz_axi_gpio_0_0/Microblaze_xz_axi_gpio_0_0.xdc] for cell 'U3/axi_gpio_0/U0'
+Parsing XDC File [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/ip/Microblaze_xz_axi_gpio_1_0/Microblaze_xz_axi_gpio_1_0_board.xdc] for cell 'U3/axi_gpio_1/U0'
+Finished Parsing XDC File [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/ip/Microblaze_xz_axi_gpio_1_0/Microblaze_xz_axi_gpio_1_0_board.xdc] for cell 'U3/axi_gpio_1/U0'
+Parsing XDC File [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/ip/Microblaze_xz_axi_gpio_1_0/Microblaze_xz_axi_gpio_1_0.xdc] for cell 'U3/axi_gpio_1/U0'
+Finished Parsing XDC File [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/ip/Microblaze_xz_axi_gpio_1_0/Microblaze_xz_axi_gpio_1_0.xdc] for cell 'U3/axi_gpio_1/U0'
+Parsing XDC File [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/ip/Microblaze_xz_mdm_1_1/Microblaze_xz_mdm_1_1.xdc] for cell 'U3/mdm_1/U0'
+Finished Parsing XDC File [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/ip/Microblaze_xz_mdm_1_1/Microblaze_xz_mdm_1_1.xdc] for cell 'U3/mdm_1/U0'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/ip/Microblaze_xz_mdm_1_1/Microblaze_xz_mdm_1_1.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Microblaze_xz_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/Microblaze_xz_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/ip/Microblaze_xz_rst_Clk_100M_0/Microblaze_xz_rst_Clk_100M_0_board.xdc] for cell 'U3/rst_Clk_100M/U0'
+Finished Parsing XDC File [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/ip/Microblaze_xz_rst_Clk_100M_0/Microblaze_xz_rst_Clk_100M_0_board.xdc] for cell 'U3/rst_Clk_100M/U0'
+Parsing XDC File [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/ip/Microblaze_xz_rst_Clk_100M_0/Microblaze_xz_rst_Clk_100M_0.xdc] for cell 'U3/rst_Clk_100M/U0'
+Finished Parsing XDC File [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/ip/Microblaze_xz_rst_Clk_100M_0/Microblaze_xz_rst_Clk_100M_0.xdc] for cell 'U3/rst_Clk_100M/U0'
+Parsing XDC File [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/ip/Microblaze_xz_dlmb_v10_1/Microblaze_xz_dlmb_v10_1.xdc] for cell 'U3/microblaze_0_local_memory/dlmb_v10/U0'
+Finished Parsing XDC File [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/ip/Microblaze_xz_dlmb_v10_1/Microblaze_xz_dlmb_v10_1.xdc] for cell 'U3/microblaze_0_local_memory/dlmb_v10/U0'
+Parsing XDC File [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/ip/Microblaze_xz_ilmb_v10_1/Microblaze_xz_ilmb_v10_1.xdc] for cell 'U3/microblaze_0_local_memory/ilmb_v10/U0'
+Finished Parsing XDC File [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/ip/Microblaze_xz_ilmb_v10_1/Microblaze_xz_ilmb_v10_1.xdc] for cell 'U3/microblaze_0_local_memory/ilmb_v10/U0'
+Parsing XDC File [c:/Users/86183/Desktop/Microblaze_xzjddy/clk_wiz_0_1/clk_wiz_0_board.xdc] for cell 'U1/inst'
+Finished Parsing XDC File [c:/Users/86183/Desktop/Microblaze_xzjddy/clk_wiz_0_1/clk_wiz_0_board.xdc] for cell 'U1/inst'
+Parsing XDC File [c:/Users/86183/Desktop/Microblaze_xzjddy/clk_wiz_0_1/clk_wiz_0.xdc] for cell 'U1/inst'
+Finished Parsing XDC File [c:/Users/86183/Desktop/Microblaze_xzjddy/clk_wiz_0_1/clk_wiz_0.xdc] for cell 'U1/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Users/86183/Desktop/Microblaze_xzjddy/clk_wiz_0_1/clk_wiz_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Microblaze_xz_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/Microblaze_xz_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [c:/Users/86183/Desktop/Microblaze_xzjddy/clk_wiz_1/clk_wiz_1_board.xdc] for cell 'U2/inst'
+Finished Parsing XDC File [c:/Users/86183/Desktop/Microblaze_xzjddy/clk_wiz_1/clk_wiz_1_board.xdc] for cell 'U2/inst'
+Parsing XDC File [c:/Users/86183/Desktop/Microblaze_xzjddy/clk_wiz_1/clk_wiz_1.xdc] for cell 'U2/inst'
+Finished Parsing XDC File [c:/Users/86183/Desktop/Microblaze_xzjddy/clk_wiz_1/clk_wiz_1.xdc] for cell 'U2/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Users/86183/Desktop/Microblaze_xzjddy/clk_wiz_1/clk_wiz_1.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Microblaze_xz_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/Microblaze_xz_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+Parsing XDC File [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/constrs_1/new/Top.xdc]
+Finished Parsing XDC File [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/constrs_1/new/Top.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 112 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 16 instances
+  LUT6_2 => LUT6_2 (LUT5, LUT6): 80 instances
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 16 instances
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:36 ; elapsed = 00:00:32 . Memory (MB): peak = 1855.242 ; gain = 862.273
+81 Infos, 152 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:36 ; elapsed = 00:00:32 . Memory (MB): peak = 1855.242 ; gain = 863.812
+set_property IOSTANDARD LVCMOS18 [get_ports [list {gpio_rtl_0_tri_o[0]}]]
+set_property IOSTANDARD LVCMOS18 [get_ports [list {gpio_rtl_1_tri_o[0]}]]
+set_property IOSTANDARD LVCMOS15 [get_ports [list {data_ad9649[13]} {data_ad9649[12]} {data_ad9649[11]} {data_ad9649[10]} {data_ad9649[9]} {data_ad9649[8]} {data_ad9649[7]} {data_ad9649[6]} {data_ad9649[5]} {data_ad9649[4]} {data_ad9649[3]} {data_ad9649[2]} {data_ad9649[1]} {data_ad9649[0]}]]
+set_property IOSTANDARD LVCMOS18 [get_ports [list {data_ad9649[13]} {data_ad9649[12]} {data_ad9649[11]} {data_ad9649[10]} {data_ad9649[9]} {data_ad9649[8]} {data_ad9649[7]} {data_ad9649[6]} {data_ad9649[5]} {data_ad9649[4]} {data_ad9649[3]} {data_ad9649[2]} {data_ad9649[1]} {data_ad9649[0]}]]
+set_property IOSTANDARD LVCMOS18 [get_ports [list {data_ad9781_n[13]} {data_ad9781_n[12]} {data_ad9781_n[11]} {data_ad9781_n[10]} {data_ad9781_n[9]} {data_ad9781_n[8]} {data_ad9781_n[7]} {data_ad9781_n[6]} {data_ad9781_n[5]} {data_ad9781_n[4]} {data_ad9781_n[3]} {data_ad9781_n[2]} {data_ad9781_n[1]} {data_ad9781_n[0]}]]
+set_property IOSTANDARD LVCMOS18 [get_ports [list {data_ad9781_p[13]} {data_ad9781_p[12]} {data_ad9781_p[11]} {data_ad9781_p[10]} {data_ad9781_p[9]} {data_ad9781_p[8]} {data_ad9781_p[7]} {data_ad9781_p[6]} {data_ad9781_p[5]} {data_ad9781_p[4]} {data_ad9781_p[3]} {data_ad9781_p[2]} {data_ad9781_p[1]} {data_ad9781_p[0]}]]
+set_property IOSTANDARD LVCMOS18 [get_ports [list csb_1]]
+set_property IOSTANDARD LVCMOS18 [get_ports [list dci_ad9781_n]]
+set_property IOSTANDARD LVCMOS18 [get_ports [list dci_ad9781_p]]
+set_property IOSTANDARD LVCMOS18 [get_ports [list dco_ad9649]]
+set_property IOSTANDARD LVCMOS18 [get_ports [list dco_ad9781_n]]
+set_property IOSTANDARD LVCMOS18 [get_ports [list dco_ad9781_p]]
+set_property IOSTANDARD LVCMOS18 [get_ports [list sclk_0]]
+set_property IOSTANDARD LVCMOS18 [get_ports [list sclk_1]]
+set_property IOSTANDARD LVCMOS18 [get_ports [list sdio_0]]
+set_property IOSTANDARD LVCMOS18 [get_ports [list sdio_1]]
+save_constraints
+launch_runs impl_1 -jobs 16
+[Mon Sep 11 10:02:33 2023] Launched impl_1...
+Run output will be captured here: C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.runs/impl_1/runme.log
+open_run impl_1
+INFO: [Netlist 29-17] Analyzing 302 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'U4/user_rd_data[0]' is not directly connected to top level port. Synthesis is ignored for c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf but preserved for implementation. [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf:3215]
+WARNING: [Constraints 18-550] Could not create 'DRIVE' constraint because net 'U4/user_rd_data[0]' is not directly connected to top level port. Synthesis is ignored for c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf but preserved for implementation. [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf:3216]
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'U4/user_rd_data[0]' is not directly connected to top level port. Synthesis is ignored for c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf but preserved for implementation. [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf:3217]
+WARNING: [Constraints 18-550] Could not create 'IOSTANDARD' constraint because net 'U4/user_rd_data[0]' is not directly connected to top level port. Synthesis is ignored for c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf but preserved for implementation. [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf:3218]
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'U4/user_rd_data[10]' is not directly connected to top level port. Synthesis is ignored for c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf but preserved for implementation. [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf:3315]
+WARNING: [Constraints 18-550] Could not create 'DRIVE' constraint because net 'U4/user_rd_data[10]' is not directly connected to top level port. Synthesis is ignored for c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf but preserved for implementation. [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf:3316]
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'U4/user_rd_data[10]' is not directly connected to top level port. Synthesis is ignored for c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf but preserved for implementation. [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf:3317]
+WARNING: [Constraints 18-550] Could not create 'IOSTANDARD' constraint because net 'U4/user_rd_data[10]' is not directly connected to top level port. Synthesis is ignored for c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf but preserved for implementation. [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf:3318]
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'U4/user_rd_data[11]' is not directly connected to top level port. Synthesis is ignored for c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf but preserved for implementation. [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf:3325]
+WARNING: [Constraints 18-550] Could not create 'DRIVE' constraint because net 'U4/user_rd_data[11]' is not directly connected to top level port. Synthesis is ignored for c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf but preserved for implementation. [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf:3326]
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'U4/user_rd_data[11]' is not directly connected to top level port. Synthesis is ignored for c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf but preserved for implementation. [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf:3327]
+WARNING: [Constraints 18-550] Could not create 'IOSTANDARD' constraint because net 'U4/user_rd_data[11]' is not directly connected to top level port. Synthesis is ignored for c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf but preserved for implementation. [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf:3328]
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'U4/user_rd_data[12]' is not directly connected to top level port. Synthesis is ignored for c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf but preserved for implementation. [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf:3335]
+WARNING: [Constraints 18-550] Could not create 'DRIVE' constraint because net 'U4/user_rd_data[12]' is not directly connected to top level port. Synthesis is ignored for c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf but preserved for implementation. [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf:3336]
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'U4/user_rd_data[12]' is not directly connected to top level port. Synthesis is ignored for c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf but preserved for implementation. [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf:3337]
+WARNING: [Constraints 18-550] Could not create 'IOSTANDARD' constraint because net 'U4/user_rd_data[12]' is not directly connected to top level port. Synthesis is ignored for c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf but preserved for implementation. [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf:3338]
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'U4/user_rd_data[13]' is not directly connected to top level port. Synthesis is ignored for c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf but preserved for implementation. [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf:3345]
+WARNING: [Constraints 18-550] Could not create 'DRIVE' constraint because net 'U4/user_rd_data[13]' is not directly connected to top level port. Synthesis is ignored for c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf but preserved for implementation. [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf:3346]
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'U4/user_rd_data[13]' is not directly connected to top level port. Synthesis is ignored for c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf but preserved for implementation. [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf:3347]
+WARNING: [Constraints 18-550] Could not create 'IOSTANDARD' constraint because net 'U4/user_rd_data[13]' is not directly connected to top level port. Synthesis is ignored for c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf but preserved for implementation. [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf:3348]
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'U4/user_rd_data[14]' is not directly connected to top level port. Synthesis is ignored for c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf but preserved for implementation. [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf:3355]
+WARNING: [Constraints 18-550] Could not create 'DRIVE' constraint because net 'U4/user_rd_data[14]' is not directly connected to top level port. Synthesis is ignored for c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf but preserved for implementation. [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf:3356]
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'U4/user_rd_data[14]' is not directly connected to top level port. Synthesis is ignored for c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf but preserved for implementation. [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf:3357]
+WARNING: [Constraints 18-550] Could not create 'IOSTANDARD' constraint because net 'U4/user_rd_data[14]' is not directly connected to top level port. Synthesis is ignored for c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf but preserved for implementation. [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf:3358]
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'U4/user_rd_data[15]' is not directly connected to top level port. Synthesis is ignored for c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf but preserved for implementation. [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf:3365]
+WARNING: [Constraints 18-550] Could not create 'DRIVE' constraint because net 'U4/user_rd_data[15]' is not directly connected to top level port. Synthesis is ignored for c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf but preserved for implementation. [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf:3366]
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'U4/user_rd_data[15]' is not directly connected to top level port. Synthesis is ignored for c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf but preserved for implementation. [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf:3367]
+WARNING: [Constraints 18-550] Could not create 'IOSTANDARD' constraint because net 'U4/user_rd_data[15]' is not directly connected to top level port. Synthesis is ignored for c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf but preserved for implementation. [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf:3368]
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'U4/user_rd_data[1]' is not directly connected to top level port. Synthesis is ignored for c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf but preserved for implementation. [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf:3225]
+WARNING: [Constraints 18-550] Could not create 'DRIVE' constraint because net 'U4/user_rd_data[1]' is not directly connected to top level port. Synthesis is ignored for c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf but preserved for implementation. [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf:3226]
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'U4/user_rd_data[1]' is not directly connected to top level port. Synthesis is ignored for c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf but preserved for implementation. [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf:3227]
+WARNING: [Constraints 18-550] Could not create 'IOSTANDARD' constraint because net 'U4/user_rd_data[1]' is not directly connected to top level port. Synthesis is ignored for c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf but preserved for implementation. [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf:3228]
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'U4/user_rd_data[2]' is not directly connected to top level port. Synthesis is ignored for c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf but preserved for implementation. [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf:3235]
+WARNING: [Constraints 18-550] Could not create 'DRIVE' constraint because net 'U4/user_rd_data[2]' is not directly connected to top level port. Synthesis is ignored for c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf but preserved for implementation. [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf:3236]
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'U4/user_rd_data[2]' is not directly connected to top level port. Synthesis is ignored for c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf but preserved for implementation. [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf:3237]
+WARNING: [Constraints 18-550] Could not create 'IOSTANDARD' constraint because net 'U4/user_rd_data[2]' is not directly connected to top level port. Synthesis is ignored for c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf but preserved for implementation. [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.edf:3238]
+INFO: [Common 17-14] Message 'Constraints 18-550' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.438 . Memory (MB): peak = 2772.750 ; gain = 0.000
+Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.439 . Memory (MB): peak = 2772.750 ; gain = 0.000
+Generating merged BMM file for the design top 'Microblaze_xz_wrapper'...
+INFO: [Memdata 28-144] Successfully populated the BRAM INIT strings from the following elf files: c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/ip/Microblaze_xz_microblaze_0_0/data/mb_bootloop_le.elf 
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 112 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 16 instances
+  LUT6_2 => LUT6_2 (LUT5, LUT6): 79 instances
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 16 instances
+  SRLC16E => SRL16E: 1 instances
+
+open_run: Time (s): cpu = 00:00:25 ; elapsed = 00:00:23 . Memory (MB): peak = 2919.070 ; gain = 952.539
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+report_clock_networks -name {primaryclock}
+set_property -dict [list CONFIG.PRIM_IN_FREQ {80.000} CONFIG.CLKIN1_JITTER_PS {125.0} CONFIG.MMCM_DIVCLK_DIVIDE {1} CONFIG.MMCM_CLKFBOUT_MULT_F {12.500} CONFIG.MMCM_CLKIN1_PERIOD {12.500} CONFIG.CLKOUT1_JITTER {136.213} CONFIG.CLKOUT1_PHASE_ERROR {100.585}] [get_ips clk_wiz_0]
+generate_target all [get_files  C:/Users/86183/Desktop/Microblaze_xzjddy/clk_wiz_0_1/clk_wiz_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'clk_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'clk_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'clk_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'clk_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'clk_wiz_0'...
+catch { config_ip_cache -export [get_ips -all clk_wiz_0] }
+export_ip_user_files -of_objects [get_files C:/Users/86183/Desktop/Microblaze_xzjddy/clk_wiz_0_1/clk_wiz_0.xci] -no_script -sync -force -quiet
+reset_run clk_wiz_0_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.runs/clk_wiz_0_synth_1
+
+launch_runs -jobs 16 clk_wiz_0_synth_1
+[Mon Sep 11 10:47:02 2023] Launched clk_wiz_0_synth_1...
+Run output will be captured here: C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.runs/clk_wiz_0_synth_1/runme.log
+export_simulation -of_objects [get_files C:/Users/86183/Desktop/Microblaze_xzjddy/clk_wiz_0_1/clk_wiz_0.xci] -directory C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.ip_user_files -ipstatic_source_dir C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.cache/compile_simlib/modelsim} {questa=C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.cache/compile_simlib/questa} {riviera=C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.cache/compile_simlib/riviera} {activehdl=C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.runs/synth_1
+
+launch_runs impl_1 -jobs 16
+[Mon Sep 11 10:52:59 2023] Launched synth_1...
+Run output will be captured here: C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.runs/synth_1/runme.log
+[Mon Sep 11 10:52:59 2023] Launched impl_1...
+Run output will be captured here: C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.runs/impl_1/runme.log
+close_design
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+[Mon Sep 11 10:58:54 2023] Launched impl_1...
+Run output will be captured here: C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.runs/impl_1/runme.log
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Sep 11 11:05:40 2023...

@@ -1,0 +1,137 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Fri Sep  8 09:08:31 2023
+# Process ID: 9212
+# Current directory: C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent10872 C:\Users\86183\Desktop\Microblaze_xzjddy\Microblaze_xz_1.4\Microblaze_xz\Microblaze_xz.xpr
+# Log file: C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/vivado.log
+# Journal file: C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.xpr
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 16
+wait_on_run synth_1
+launch_runs impl_1 -jobs 16
+wait_on_run impl_1
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/Microblaze_xz.bd]
+synth_design -rtl -name rtl_1
+set_property -dict [list CONFIG.IOSTANDARD {LVCMOS18}] [get_ips ASYNC_EMIF_SLAVE_0]
+generate_target all [get_files  C:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.xci]
+catch { config_ip_cache -export [get_ips -all ASYNC_EMIF_SLAVE_0] }
+export_ip_user_files -of_objects [get_files C:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.xci] -no_script -sync -force -quiet
+reset_run ASYNC_EMIF_SLAVE_0_synth_1
+launch_runs -jobs 16 ASYNC_EMIF_SLAVE_0_synth_1
+export_simulation -of_objects [get_files C:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.xci] -directory C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.ip_user_files -ipstatic_source_dir C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.cache/compile_simlib/modelsim} {questa=C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.cache/compile_simlib/questa} {riviera=C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.cache/compile_simlib/riviera} {activehdl=C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs synth_1 -jobs 16
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 16
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 16
+wait_on_run synth_1
+launch_runs impl_1 -jobs 16
+wait_on_run impl_1
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/Microblaze_xz.bd]
+refresh_design
+place_ports {async_emif_addr_p[7]} AY12
+place_ports {async_emif_addr_p[6]} BA13
+place_ports {async_emif_addr_p[5]} AY13
+place_ports {async_emif_addr_p[4]} AW10
+place_ports {async_emif_addr_p[3]} AW11
+place_ports {async_emif_addr_p[2]} AW14
+place_ports {async_emif_addr_p[1]} AV14
+place_ports {async_emif_addr_p[0]} AV13
+place_ports {async_emif_data_p[15]} AU13
+place_ports {async_emif_data_p[14]} AW12
+place_ports {async_emif_data_p[13]} AV12
+place_ports {async_emif_data_p[12]} AV10
+place_ports {async_emif_data_p[11]} AU10
+place_ports {async_emif_data_p[10]} AT13
+place_ports {async_emif_data_p[9]} AT14
+place_ports {async_emif_data_p[8]} AU11
+place_ports {async_emif_data_p[7]} AU12
+place_ports {async_emif_data_p[6]} AR12
+place_ports {async_emif_data_p[5]} AR13
+place_ports {async_emif_data_p[4]} AP14
+place_ports {async_emif_data_p[3]} AN14
+place_ports {async_emif_data_p[2]} AL13
+place_ports {async_emif_data_p[1]} AL14
+place_ports {async_emif_data_p[0]} AN12
+place_ports {data_ad9649[13]} AN33
+place_ports {data_ad9649[12]} AN32
+place_ports {data_ad9649[11]} AM33
+place_ports {data_ad9649[10]} AM32
+place_ports {data_ad9649[9]} AM31
+place_ports {data_ad9649[8]} AL30
+place_ports {data_ad9649[7]} AK32
+place_ports {data_ad9649[6]} AJ32
+place_ports {data_ad9649[5]} AL31
+place_ports {data_ad9649[4]} AK31
+place_ports {data_ad9649[3]} AJ31
+place_ports {data_ad9649[2]} AJ30
+place_ports {data_ad9649[1]} AL33
+place_ports {data_ad9649[0]} AK33
+place_ports {data_ad9781_p[13]} U23
+place_ports {data_ad9781_p[12]} B23
+place_ports {data_ad9781_p[11]} A24
+place_ports {data_ad9781_p[10]} T26
+place_ports {data_ad9781_p[9]} U25
+place_ports {data_ad9781_p[8]} P25
+place_ports {data_ad9781_p[7]} N23
+place_ports {data_ad9781_p[6]} M23
+place_ports {data_ad9781_p[5]} L24
+place_ports {data_ad9781_p[4]} E23
+place_ports {data_ad9781_p[3]} C25
+place_ports {data_ad9781_p[2]} D24
+place_ports {data_ad9781_p[1]} C23
+place_ports {data_ad9781_p[0]} T24
+place_ports {data_ad9781_n[0]} T25
+set_property package_pin "" [get_ports [list  {data_ad9781_n[1]}]]
+place_ports {data_ad9781_n[13]} T23
+place_ports {data_ad9781_n[12]} A23
+place_ports {data_ad9781_n[11]} A25
+place_ports {data_ad9781_n[10]} R26
+place_ports {data_ad9781_n[9]} U26
+place_ports {data_ad9781_n[8]} P26
+place_ports {data_ad9781_n[7]} N24
+place_ports {data_ad9781_n[6]} L23
+place_ports {data_ad9781_n[5]} L25
+place_ports {data_ad9781_n[4]} E24
+place_ports {data_ad9781_n[3]} B25
+place_ports {data_ad9781_n[2]} D25
+place_ports {data_ad9781_n[1]} C24
+save_constraints
+set_property package_pin "" [get_ports [list  async_emif_cs_n_p]]
+place_ports clk_in1 AV23
+place_ports csb_0 AT33
+place_ports dco_ad9649 AU33
+place_ports sclk_0 AP31
+place_ports sdio_0 AP32
+place_ports csb_1 G23
+place_ports sclk_1 F23
+place_ports sdio_1 F24
+set_property package_pin "" [get_ports [list  dco_ad9781_n]]
+place_ports dco_ad9781_p J25
+place_ports dco_ad9781_n J26
+place_ports async_emif_cs_n_p AP12
+place_ports async_emif_wr_n_p AK12
+place_ports async_emif_rd_n_p AK13
+save_constraints
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/Microblaze_xz.bd]
+refresh_design
+place_ports dco_ad9781_p K23
+place_ports dco_ad9781_n K24
+place_ports dci_ad9781_p J25
+place_ports dci_ad9781_n J26
+set_property IOSTANDARD LVCMOS15 [get_ports [list clk_in1]]
+set_property IOSTANDARD LVCMOS18 [get_ports [list csb_0]]
+set_property IOSTANDARD LVCMOS18 [get_ports [list clk_in1]]
+set_property IOSTANDARD LVCMOS18 [get_ports [list csb_0]]
+set_property IOSTANDARD LVCMOS18 [get_ports [list clk_in1]]
+save_constraints

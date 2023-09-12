@@ -1,0 +1,10 @@
+verilog xil_defaultlib  \
+"../../../../../../ASYNC_EMIF_SLAVE_0/src/async_emif_slave_driver.v" \
+"../../../../../../ASYNC_EMIF_SLAVE_0/src/x_ibuf.v" \
+"../../../../../../ASYNC_EMIF_SLAVE_0/src/x_iobuf.v" \
+"../../../../../../ASYNC_EMIF_SLAVE_0/src/async_emif_slave.v" \
+"../../../../../../ASYNC_EMIF_SLAVE_0/sim/ASYNC_EMIF_SLAVE_0.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort

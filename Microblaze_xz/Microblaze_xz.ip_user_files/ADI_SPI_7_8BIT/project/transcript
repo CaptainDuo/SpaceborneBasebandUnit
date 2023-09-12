@@ -1,0 +1,45 @@
+# Reading D:/modeltech64_10.0c/tcl/vsim/pref.tcl 
+# //  ModelSim SE-64 10.0c Jul 21 2011 
+# //
+# //  Copyright 1991-2011 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# do {adi_spi_driver_7_8bit_test.fdo} 
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim SE-64 vlog 10.0c Compiler 2011.07 Jul 21 2011
+# -- Compiling module adi_spi_driver_7_8bit
+# 
+# Top level modules:
+# 	adi_spi_driver_7_8bit
+# Model Technology ModelSim SE-64 vlog 10.0c Compiler 2011.07 Jul 21 2011
+# -- Compiling module adi_spi_driver_7_8bit_test
+# 
+# Top level modules:
+# 	adi_spi_driver_7_8bit_test
+# Model Technology ModelSim SE-64 vlog 10.0c Compiler 2011.07 Jul 21 2011
+# -- Compiling module glbl
+# 
+# Top level modules:
+# 	glbl
+# vsim -L xilinxcorelib_ver -L unisims_ver -L unimacro_ver -L secureip -lib work -voptargs=\"+acc\" -t 1ps work.adi_spi_driver_7_8bit_test glbl 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading work.adi_spi_driver_7_8bit_test(fast)
+# Loading work.adi_spi_driver_7_8bit(fast)
+# Loading work.glbl(fast)
+# ---------test finish--------------
+# Break in Module adi_spi_driver_7_8bit_test at adi_spi_driver_7_8bit_test.v line 122
+# Simulation Breakpoint: Break in Module adi_spi_driver_7_8bit_test at adi_spi_driver_7_8bit_test.v line 122
+# MACRO ./adi_spi_driver_7_8bit_test_wave.fdo PAUSED at line 12
+add wave  \
+sim:/adi_spi_driver_7_8bit_test/dir
+restart
+# Loading work.adi_spi_driver_7_8bit_test(fast)
+# Loading work.adi_spi_driver_7_8bit(fast)
+# Loading work.glbl(fast)
+run -all
+# ---------test finish--------------
+# Break in Module adi_spi_driver_7_8bit_test at adi_spi_driver_7_8bit_test.v line 122

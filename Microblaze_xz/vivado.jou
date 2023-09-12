@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Tue Sep 12 09:29:47 2023
+# Process ID: 94968
+# Current directory: E:/FPGA_workspace/Microblaze_xz_1.4/Microblaze_xz
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent15476 E:\FPGA_workspace\Microblaze_xz_1.4\Microblaze_xz\Microblaze_xz.xpr
+# Log file: E:/FPGA_workspace/Microblaze_xz_1.4/Microblaze_xz/vivado.log
+# Journal file: E:/FPGA_workspace/Microblaze_xz_1.4/Microblaze_xz\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/FPGA_workspace/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.xpr
+update_compile_order -fileset sources_1
+launch_sdk -workspace E:/FPGA_workspace/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.sdk -hwspec E:/FPGA_workspace/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.sdk/Microblaze_xz_wrapper.hdf

@@ -1,0 +1,622 @@
+
+*** Running vivado
+    with args -log Microblaze_xz_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Microblaze_xz_wrapper.tcl
+
+
+****** Vivado v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source Microblaze_xz_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.ip_user_files'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
+Command: synth_design -top Microblaze_xz_wrapper -part xc7vx690tffg1927-3
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7vx690t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7vx690t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 9032 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 481.629 ; gain = 105.238
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'Microblaze_xz_wrapper' [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/imports/hdl/Microblaze_xz_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.runs/synth_1/.Xil/Vivado-9520-LAPTOP-DG1UIM4L/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (1#1) [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.runs/synth_1/.Xil/Vivado-9520-LAPTOP-DG1UIM4L/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_1' [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.runs/synth_1/.Xil/Vivado-9520-LAPTOP-DG1UIM4L/realtime/clk_wiz_1_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_1' (2#1) [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.runs/synth_1/.Xil/Vivado-9520-LAPTOP-DG1UIM4L/realtime/clk_wiz_1_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'Microblaze_xz' [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/synth/Microblaze_xz.v:13]
+INFO: [Synth 8-6157] synthesizing module 'Microblaze_xz_AXI4_ADI_SPI_15_8BIT_0_0' [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.runs/synth_1/.Xil/Vivado-9520-LAPTOP-DG1UIM4L/realtime/Microblaze_xz_AXI4_ADI_SPI_15_8BIT_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Microblaze_xz_AXI4_ADI_SPI_15_8BIT_0_0' (3#1) [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.runs/synth_1/.Xil/Vivado-9520-LAPTOP-DG1UIM4L/realtime/Microblaze_xz_AXI4_ADI_SPI_15_8BIT_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'Microblaze_xz_AXI4_ADI_SPI_7_8BIT_0_0' [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.runs/synth_1/.Xil/Vivado-9520-LAPTOP-DG1UIM4L/realtime/Microblaze_xz_AXI4_ADI_SPI_7_8BIT_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Microblaze_xz_AXI4_ADI_SPI_7_8BIT_0_0' (4#1) [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.runs/synth_1/.Xil/Vivado-9520-LAPTOP-DG1UIM4L/realtime/Microblaze_xz_AXI4_ADI_SPI_7_8BIT_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'Microblaze_xz_axi_gpio_0_0' [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.runs/synth_1/.Xil/Vivado-9520-LAPTOP-DG1UIM4L/realtime/Microblaze_xz_axi_gpio_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Microblaze_xz_axi_gpio_0_0' (5#1) [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.runs/synth_1/.Xil/Vivado-9520-LAPTOP-DG1UIM4L/realtime/Microblaze_xz_axi_gpio_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'Microblaze_xz_axi_gpio_1_0' [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.runs/synth_1/.Xil/Vivado-9520-LAPTOP-DG1UIM4L/realtime/Microblaze_xz_axi_gpio_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Microblaze_xz_axi_gpio_1_0' (6#1) [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.runs/synth_1/.Xil/Vivado-9520-LAPTOP-DG1UIM4L/realtime/Microblaze_xz_axi_gpio_1_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'Microblaze_xz_mdm_1_1' [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.runs/synth_1/.Xil/Vivado-9520-LAPTOP-DG1UIM4L/realtime/Microblaze_xz_mdm_1_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Microblaze_xz_mdm_1_1' (7#1) [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.runs/synth_1/.Xil/Vivado-9520-LAPTOP-DG1UIM4L/realtime/Microblaze_xz_mdm_1_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'Microblaze_xz_microblaze_0_0' [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.runs/synth_1/.Xil/Vivado-9520-LAPTOP-DG1UIM4L/realtime/Microblaze_xz_microblaze_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Microblaze_xz_microblaze_0_0' (8#1) [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.runs/synth_1/.Xil/Vivado-9520-LAPTOP-DG1UIM4L/realtime/Microblaze_xz_microblaze_0_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'microblaze_0' of module 'Microblaze_xz_microblaze_0_0' requires 52 connections, but only 51 given [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/synth/Microblaze_xz.v:308]
+INFO: [Synth 8-6157] synthesizing module 'Microblaze_xz_microblaze_0_axi_periph_0' [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/synth/Microblaze_xz.v:498]
+INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_JY6PMD' [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/synth/Microblaze_xz.v:1254]
+INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_JY6PMD' (9#1) [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/synth/Microblaze_xz.v:1254]
+INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_1P7D0PT' [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/synth/Microblaze_xz.v:1400]
+INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_1P7D0PT' (10#1) [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/synth/Microblaze_xz.v:1400]
+INFO: [Synth 8-6157] synthesizing module 'm02_couplers_imp_1BAH1B0' [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/synth/Microblaze_xz.v:1546]
+INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_1BAH1B0' (11#1) [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/synth/Microblaze_xz.v:1546]
+INFO: [Synth 8-6157] synthesizing module 'm03_couplers_imp_DLKWSO' [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/synth/Microblaze_xz.v:1678]
+INFO: [Synth 8-6155] done synthesizing module 'm03_couplers_imp_DLKWSO' (12#1) [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/synth/Microblaze_xz.v:1678]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_OGBEBU' [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/synth/Microblaze_xz.v:2044]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_OGBEBU' (13#1) [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/synth/Microblaze_xz.v:2044]
+INFO: [Synth 8-6157] synthesizing module 'Microblaze_xz_xbar_0' [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.runs/synth_1/.Xil/Vivado-9520-LAPTOP-DG1UIM4L/realtime/Microblaze_xz_xbar_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Microblaze_xz_xbar_0' (14#1) [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.runs/synth_1/.Xil/Vivado-9520-LAPTOP-DG1UIM4L/realtime/Microblaze_xz_xbar_0_stub.v:6]
+WARNING: [Synth 8-689] width (6) of port connection 'm_axi_arprot' does not match port width (12) of module 'Microblaze_xz_xbar_0' [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/synth/Microblaze_xz.v:1215]
+WARNING: [Synth 8-689] width (6) of port connection 'm_axi_awprot' does not match port width (12) of module 'Microblaze_xz_xbar_0' [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/synth/Microblaze_xz.v:1219]
+INFO: [Synth 8-6155] done synthesizing module 'Microblaze_xz_microblaze_0_axi_periph_0' (15#1) [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/synth/Microblaze_xz.v:498]
+INFO: [Synth 8-6157] synthesizing module 'microblaze_0_local_memory_imp_16RA5MM' [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/synth/Microblaze_xz.v:1810]
+INFO: [Synth 8-6157] synthesizing module 'Microblaze_xz_dlmb_bram_if_cntlr_1' [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.runs/synth_1/.Xil/Vivado-9520-LAPTOP-DG1UIM4L/realtime/Microblaze_xz_dlmb_bram_if_cntlr_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Microblaze_xz_dlmb_bram_if_cntlr_1' (16#1) [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.runs/synth_1/.Xil/Vivado-9520-LAPTOP-DG1UIM4L/realtime/Microblaze_xz_dlmb_bram_if_cntlr_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'Microblaze_xz_dlmb_v10_1' [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.runs/synth_1/.Xil/Vivado-9520-LAPTOP-DG1UIM4L/realtime/Microblaze_xz_dlmb_v10_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Microblaze_xz_dlmb_v10_1' (17#1) [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.runs/synth_1/.Xil/Vivado-9520-LAPTOP-DG1UIM4L/realtime/Microblaze_xz_dlmb_v10_1_stub.v:6]
+WARNING: [Synth 8-350] instance 'dlmb_v10' of module 'Microblaze_xz_dlmb_v10_1' requires 25 connections, but only 24 given [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/synth/Microblaze_xz.v:1956]
+INFO: [Synth 8-6157] synthesizing module 'Microblaze_xz_ilmb_bram_if_cntlr_1' [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.runs/synth_1/.Xil/Vivado-9520-LAPTOP-DG1UIM4L/realtime/Microblaze_xz_ilmb_bram_if_cntlr_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Microblaze_xz_ilmb_bram_if_cntlr_1' (18#1) [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.runs/synth_1/.Xil/Vivado-9520-LAPTOP-DG1UIM4L/realtime/Microblaze_xz_ilmb_bram_if_cntlr_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'Microblaze_xz_ilmb_v10_1' [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.runs/synth_1/.Xil/Vivado-9520-LAPTOP-DG1UIM4L/realtime/Microblaze_xz_ilmb_v10_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Microblaze_xz_ilmb_v10_1' (19#1) [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.runs/synth_1/.Xil/Vivado-9520-LAPTOP-DG1UIM4L/realtime/Microblaze_xz_ilmb_v10_1_stub.v:6]
+WARNING: [Synth 8-350] instance 'ilmb_v10' of module 'Microblaze_xz_ilmb_v10_1' requires 25 connections, but only 24 given [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/synth/Microblaze_xz.v:2002]
+INFO: [Synth 8-6157] synthesizing module 'Microblaze_xz_lmb_bram_1' [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.runs/synth_1/.Xil/Vivado-9520-LAPTOP-DG1UIM4L/realtime/Microblaze_xz_lmb_bram_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Microblaze_xz_lmb_bram_1' (20#1) [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.runs/synth_1/.Xil/Vivado-9520-LAPTOP-DG1UIM4L/realtime/Microblaze_xz_lmb_bram_1_stub.v:6]
+WARNING: [Synth 8-350] instance 'lmb_bram' of module 'Microblaze_xz_lmb_bram_1' requires 16 connections, but only 14 given [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/synth/Microblaze_xz.v:2027]
+INFO: [Synth 8-6155] done synthesizing module 'microblaze_0_local_memory_imp_16RA5MM' (21#1) [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/synth/Microblaze_xz.v:1810]
+INFO: [Synth 8-6157] synthesizing module 'Microblaze_xz_rst_Clk_100M_0' [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.runs/synth_1/.Xil/Vivado-9520-LAPTOP-DG1UIM4L/realtime/Microblaze_xz_rst_Clk_100M_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Microblaze_xz_rst_Clk_100M_0' (22#1) [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.runs/synth_1/.Xil/Vivado-9520-LAPTOP-DG1UIM4L/realtime/Microblaze_xz_rst_Clk_100M_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'rst_Clk_100M' of module 'Microblaze_xz_rst_Clk_100M_0' requires 10 connections, but only 9 given [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/synth/Microblaze_xz.v:486]
+INFO: [Synth 8-6155] done synthesizing module 'Microblaze_xz' (23#1) [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/synth/Microblaze_xz.v:13]
+INFO: [Synth 8-6157] synthesizing module 'ASYNC_EMIF_SLAVE_0' [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.runs/synth_1/.Xil/Vivado-9520-LAPTOP-DG1UIM4L/realtime/ASYNC_EMIF_SLAVE_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ASYNC_EMIF_SLAVE_0' (24#1) [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.runs/synth_1/.Xil/Vivado-9520-LAPTOP-DG1UIM4L/realtime/ASYNC_EMIF_SLAVE_0_stub.v:6]
+WARNING: [Synth 8-689] width (32) of port connection 'user_wr_addr' does not match port width (8) of module 'ASYNC_EMIF_SLAVE_0' [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/imports/hdl/Microblaze_xz_wrapper.v:109]
+WARNING: [Synth 8-689] width (32) of port connection 'user_rd_addr' does not match port width (8) of module 'ASYNC_EMIF_SLAVE_0' [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/imports/hdl/Microblaze_xz_wrapper.v:112]
+WARNING: [Synth 8-350] instance 'U4' of module 'ASYNC_EMIF_SLAVE_0' requires 20 connections, but only 15 given [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/imports/hdl/Microblaze_xz_wrapper.v:104]
+INFO: [Synth 8-6157] synthesizing module 'reg_block' [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/new/reg_block.v:23]
+	Parameter ADDR_WIDTH bound to: 8 - type: integer 
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+WARNING: [Synth 8-3848] Net rd_reg0 in module/entity reg_block does not have driver. [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/new/reg_block.v:59]
+WARNING: [Synth 8-3848] Net rd_reg1 in module/entity reg_block does not have driver. [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/new/reg_block.v:60]
+WARNING: [Synth 8-3848] Net rd_reg2 in module/entity reg_block does not have driver. [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/new/reg_block.v:61]
+WARNING: [Synth 8-3848] Net rd_reg3 in module/entity reg_block does not have driver. [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/new/reg_block.v:62]
+INFO: [Synth 8-6155] done synthesizing module 'reg_block' (25#1) [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/new/reg_block.v:23]
+WARNING: [Synth 8-689] width (32) of port connection 'user_wr_addr' does not match port width (8) of module 'reg_block' [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/imports/hdl/Microblaze_xz_wrapper.v:139]
+WARNING: [Synth 8-689] width (32) of port connection 'user_rd_addr' does not match port width (8) of module 'reg_block' [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/imports/hdl/Microblaze_xz_wrapper.v:142]
+WARNING: [Synth 8-3848] Net dci_ad9781_p in module/entity Microblaze_xz_wrapper does not have driver. [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/imports/hdl/Microblaze_xz_wrapper.v:46]
+WARNING: [Synth 8-3848] Net dci_ad9781_n in module/entity Microblaze_xz_wrapper does not have driver. [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/imports/hdl/Microblaze_xz_wrapper.v:47]
+WARNING: [Synth 8-3848] Net data_ad9781_p in module/entity Microblaze_xz_wrapper does not have driver. [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/imports/hdl/Microblaze_xz_wrapper.v:48]
+WARNING: [Synth 8-3848] Net data_ad9781_n in module/entity Microblaze_xz_wrapper does not have driver. [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/imports/hdl/Microblaze_xz_wrapper.v:49]
+INFO: [Synth 8-6155] done synthesizing module 'Microblaze_xz_wrapper' (26#1) [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/imports/hdl/Microblaze_xz_wrapper.v:12]
+WARNING: [Synth 8-3331] design reg_block has unconnected port user_wr_vild
+WARNING: [Synth 8-3331] design reg_block has unconnected port user_rd_vild
+WARNING: [Synth 8-3331] design s00_couplers_imp_OGBEBU has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design s00_couplers_imp_OGBEBU has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design s00_couplers_imp_OGBEBU has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design s00_couplers_imp_OGBEBU has unconnected port S_ARESETN
+WARNING: [Synth 8-3331] design m03_couplers_imp_DLKWSO has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design m03_couplers_imp_DLKWSO has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m03_couplers_imp_DLKWSO has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design m03_couplers_imp_DLKWSO has unconnected port S_ARESETN
+WARNING: [Synth 8-3331] design m02_couplers_imp_1BAH1B0 has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design m02_couplers_imp_1BAH1B0 has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m02_couplers_imp_1BAH1B0 has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design m02_couplers_imp_1BAH1B0 has unconnected port S_ARESETN
+WARNING: [Synth 8-3331] design m01_couplers_imp_1P7D0PT has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design m01_couplers_imp_1P7D0PT has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m01_couplers_imp_1P7D0PT has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design m01_couplers_imp_1P7D0PT has unconnected port S_ARESETN
+WARNING: [Synth 8-3331] design m00_couplers_imp_JY6PMD has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design m00_couplers_imp_JY6PMD has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m00_couplers_imp_JY6PMD has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design m00_couplers_imp_JY6PMD has unconnected port S_ARESETN
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port dci_ad9781_p
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port dci_ad9781_n
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port data_ad9781_p[13]
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port data_ad9781_p[12]
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port data_ad9781_p[11]
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port data_ad9781_p[10]
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port data_ad9781_p[9]
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port data_ad9781_p[8]
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port data_ad9781_p[7]
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port data_ad9781_p[6]
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port data_ad9781_p[5]
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port data_ad9781_p[4]
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port data_ad9781_p[3]
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port data_ad9781_p[2]
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port data_ad9781_p[1]
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port data_ad9781_p[0]
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port data_ad9781_n[13]
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port data_ad9781_n[12]
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port data_ad9781_n[11]
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port data_ad9781_n[10]
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port data_ad9781_n[9]
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port data_ad9781_n[8]
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port data_ad9781_n[7]
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port data_ad9781_n[6]
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port data_ad9781_n[5]
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port data_ad9781_n[4]
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port data_ad9781_n[3]
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port data_ad9781_n[2]
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port data_ad9781_n[1]
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port data_ad9781_n[0]
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port data_ad9649[13]
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port data_ad9649[12]
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port data_ad9649[11]
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port data_ad9649[10]
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port data_ad9649[9]
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port data_ad9649[8]
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port data_ad9649[7]
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port data_ad9649[6]
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port data_ad9649[5]
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port data_ad9649[4]
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port data_ad9649[3]
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port data_ad9649[2]
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port data_ad9649[1]
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port data_ad9649[0]
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port dco_ad9781_p
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port dco_ad9781_n
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 536.465 ; gain = 160.074
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 536.465 ; gain = 160.074
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 536.465 ; gain = 160.074
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7vx690tffg1927-3
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/ip/Microblaze_xz_microblaze_0_0/Microblaze_xz_microblaze_0_0/Microblaze_xz_microblaze_0_0_in_context.xdc] for cell 'U3/microblaze_0'
+Finished Parsing XDC File [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/ip/Microblaze_xz_microblaze_0_0/Microblaze_xz_microblaze_0_0/Microblaze_xz_microblaze_0_0_in_context.xdc] for cell 'U3/microblaze_0'
+Parsing XDC File [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/ip/Microblaze_xz_AXI4_ADI_SPI_15_8BIT_0_0/Microblaze_xz_AXI4_ADI_SPI_15_8BIT_0_0/Microblaze_xz_AXI4_ADI_SPI_15_8BIT_0_0_in_context.xdc] for cell 'U3/Driver_9649'
+Finished Parsing XDC File [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/ip/Microblaze_xz_AXI4_ADI_SPI_15_8BIT_0_0/Microblaze_xz_AXI4_ADI_SPI_15_8BIT_0_0/Microblaze_xz_AXI4_ADI_SPI_15_8BIT_0_0_in_context.xdc] for cell 'U3/Driver_9649'
+Parsing XDC File [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/ip/Microblaze_xz_axi_gpio_0_0/Microblaze_xz_axi_gpio_0_0/Microblaze_xz_axi_gpio_0_0_in_context.xdc] for cell 'U3/axi_gpio_0'
+Finished Parsing XDC File [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/ip/Microblaze_xz_axi_gpio_0_0/Microblaze_xz_axi_gpio_0_0/Microblaze_xz_axi_gpio_0_0_in_context.xdc] for cell 'U3/axi_gpio_0'
+Parsing XDC File [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/ip/Microblaze_xz_axi_gpio_1_0/Microblaze_xz_axi_gpio_1_0/Microblaze_xz_axi_gpio_0_0_in_context.xdc] for cell 'U3/axi_gpio_1'
+Finished Parsing XDC File [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/ip/Microblaze_xz_axi_gpio_1_0/Microblaze_xz_axi_gpio_1_0/Microblaze_xz_axi_gpio_0_0_in_context.xdc] for cell 'U3/axi_gpio_1'
+Parsing XDC File [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/ip/Microblaze_xz_mdm_1_1/Microblaze_xz_mdm_1_1/Microblaze_xz_mdm_1_1_in_context.xdc] for cell 'U3/mdm_1'
+Finished Parsing XDC File [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/ip/Microblaze_xz_mdm_1_1/Microblaze_xz_mdm_1_1/Microblaze_xz_mdm_1_1_in_context.xdc] for cell 'U3/mdm_1'
+Parsing XDC File [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/ip/Microblaze_xz_rst_Clk_100M_0/Microblaze_xz_rst_Clk_100M_0/Microblaze_xz_rst_Clk_100M_0_in_context.xdc] for cell 'U3/rst_Clk_100M'
+Finished Parsing XDC File [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/ip/Microblaze_xz_rst_Clk_100M_0/Microblaze_xz_rst_Clk_100M_0/Microblaze_xz_rst_Clk_100M_0_in_context.xdc] for cell 'U3/rst_Clk_100M'
+Parsing XDC File [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/ip/Microblaze_xz_xbar_0/Microblaze_xz_xbar_0/Microblaze_xz_xbar_0_in_context.xdc] for cell 'U3/microblaze_0_axi_periph/xbar'
+Finished Parsing XDC File [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/ip/Microblaze_xz_xbar_0/Microblaze_xz_xbar_0/Microblaze_xz_xbar_0_in_context.xdc] for cell 'U3/microblaze_0_axi_periph/xbar'
+Parsing XDC File [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/ip/Microblaze_xz_dlmb_v10_1/Microblaze_xz_dlmb_v10_1/Microblaze_xz_dlmb_v10_1_in_context.xdc] for cell 'U3/microblaze_0_local_memory/dlmb_v10'
+Finished Parsing XDC File [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/ip/Microblaze_xz_dlmb_v10_1/Microblaze_xz_dlmb_v10_1/Microblaze_xz_dlmb_v10_1_in_context.xdc] for cell 'U3/microblaze_0_local_memory/dlmb_v10'
+Parsing XDC File [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/ip/Microblaze_xz_ilmb_v10_1/Microblaze_xz_ilmb_v10_1/Microblaze_xz_dlmb_v10_1_in_context.xdc] for cell 'U3/microblaze_0_local_memory/ilmb_v10'
+Finished Parsing XDC File [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/ip/Microblaze_xz_ilmb_v10_1/Microblaze_xz_ilmb_v10_1/Microblaze_xz_dlmb_v10_1_in_context.xdc] for cell 'U3/microblaze_0_local_memory/ilmb_v10'
+Parsing XDC File [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/ip/Microblaze_xz_dlmb_bram_if_cntlr_1/Microblaze_xz_dlmb_bram_if_cntlr_1/Microblaze_xz_dlmb_bram_if_cntlr_1_in_context.xdc] for cell 'U3/microblaze_0_local_memory/dlmb_bram_if_cntlr'
+Finished Parsing XDC File [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/ip/Microblaze_xz_dlmb_bram_if_cntlr_1/Microblaze_xz_dlmb_bram_if_cntlr_1/Microblaze_xz_dlmb_bram_if_cntlr_1_in_context.xdc] for cell 'U3/microblaze_0_local_memory/dlmb_bram_if_cntlr'
+Parsing XDC File [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/ip/Microblaze_xz_ilmb_bram_if_cntlr_1/Microblaze_xz_ilmb_bram_if_cntlr_1/Microblaze_xz_ilmb_bram_if_cntlr_1_in_context.xdc] for cell 'U3/microblaze_0_local_memory/ilmb_bram_if_cntlr'
+Finished Parsing XDC File [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/ip/Microblaze_xz_ilmb_bram_if_cntlr_1/Microblaze_xz_ilmb_bram_if_cntlr_1/Microblaze_xz_ilmb_bram_if_cntlr_1_in_context.xdc] for cell 'U3/microblaze_0_local_memory/ilmb_bram_if_cntlr'
+Parsing XDC File [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/ip/Microblaze_xz_lmb_bram_1/Microblaze_xz_lmb_bram_1/Microblaze_xz_lmb_bram_1_in_context.xdc] for cell 'U3/microblaze_0_local_memory/lmb_bram'
+Finished Parsing XDC File [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/ip/Microblaze_xz_lmb_bram_1/Microblaze_xz_lmb_bram_1/Microblaze_xz_lmb_bram_1_in_context.xdc] for cell 'U3/microblaze_0_local_memory/lmb_bram'
+Parsing XDC File [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/ip/Microblaze_xz_AXI4_ADI_SPI_7_8BIT_0_0/Microblaze_xz_AXI4_ADI_SPI_7_8BIT_0_0/Microblaze_xz_AXI4_ADI_SPI_7_8BIT_0_0_in_context.xdc] for cell 'U3/Driver_9781'
+Finished Parsing XDC File [c:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/ip/Microblaze_xz_AXI4_ADI_SPI_7_8BIT_0_0/Microblaze_xz_AXI4_ADI_SPI_7_8BIT_0_0/Microblaze_xz_AXI4_ADI_SPI_7_8BIT_0_0_in_context.xdc] for cell 'U3/Driver_9781'
+Parsing XDC File [c:/Users/86183/Desktop/Microblaze_xzjddy/clk_wiz_0_1/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'U1'
+Finished Parsing XDC File [c:/Users/86183/Desktop/Microblaze_xzjddy/clk_wiz_0_1/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'U1'
+Parsing XDC File [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0_in_context.xdc] for cell 'U4'
+Finished Parsing XDC File [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0_in_context.xdc] for cell 'U4'
+Parsing XDC File [c:/Users/86183/Desktop/Microblaze_xzjddy/clk_wiz_1/clk_wiz_1/clk_wiz_1_in_context.xdc] for cell 'U2'
+Finished Parsing XDC File [c:/Users/86183/Desktop/Microblaze_xzjddy/clk_wiz_1/clk_wiz_1/clk_wiz_1_in_context.xdc] for cell 'U2'
+Parsing XDC File [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/constrs_1/new/Top.xdc]
+Finished Parsing XDC File [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/constrs_1/new/Top.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/constrs_1/new/Top.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Microblaze_xz_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/Microblaze_xz_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1075.566 ; gain = 0.000
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'U3/microblaze_0_local_memory/lmb_bram' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 1075.566 ; gain = 699.176
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7vx690tffg1927-3
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 1075.566 ; gain = 699.176
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for clk_in1. (constraint file  c:/Users/86183/Desktop/Microblaze_xzjddy/clk_wiz_0_1/clk_wiz_0/clk_wiz_0_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for clk_in1. (constraint file  c:/Users/86183/Desktop/Microblaze_xzjddy/clk_wiz_0_1/clk_wiz_0/clk_wiz_0_in_context.xdc, line 4).
+Applied set_property IO_BUFFER_TYPE = NONE for async_emif_addr_p[0]. (constraint file  c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0_in_context.xdc, line 1).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for async_emif_addr_p[0]. (constraint file  c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0_in_context.xdc, line 2).
+Applied set_property IO_BUFFER_TYPE = NONE for async_emif_addr_p[1]. (constraint file  c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for async_emif_addr_p[1]. (constraint file  c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0_in_context.xdc, line 4).
+Applied set_property IO_BUFFER_TYPE = NONE for async_emif_addr_p[2]. (constraint file  c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0_in_context.xdc, line 5).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for async_emif_addr_p[2]. (constraint file  c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0_in_context.xdc, line 6).
+Applied set_property IO_BUFFER_TYPE = NONE for async_emif_addr_p[3]. (constraint file  c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0_in_context.xdc, line 7).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for async_emif_addr_p[3]. (constraint file  c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0_in_context.xdc, line 8).
+Applied set_property IO_BUFFER_TYPE = NONE for async_emif_addr_p[4]. (constraint file  c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0_in_context.xdc, line 9).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for async_emif_addr_p[4]. (constraint file  c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0_in_context.xdc, line 10).
+Applied set_property IO_BUFFER_TYPE = NONE for async_emif_addr_p[5]. (constraint file  c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0_in_context.xdc, line 11).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for async_emif_addr_p[5]. (constraint file  c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0_in_context.xdc, line 12).
+Applied set_property IO_BUFFER_TYPE = NONE for async_emif_addr_p[6]. (constraint file  c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0_in_context.xdc, line 13).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for async_emif_addr_p[6]. (constraint file  c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0_in_context.xdc, line 14).
+Applied set_property IO_BUFFER_TYPE = NONE for async_emif_addr_p[7]. (constraint file  c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0_in_context.xdc, line 15).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for async_emif_addr_p[7]. (constraint file  c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0_in_context.xdc, line 16).
+Applied set_property IO_BUFFER_TYPE = NONE for async_emif_cs_n_p. (constraint file  c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0_in_context.xdc, line 17).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for async_emif_cs_n_p. (constraint file  c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0_in_context.xdc, line 18).
+Applied set_property IO_BUFFER_TYPE = NONE for async_emif_data_p[0]. (constraint file  c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0_in_context.xdc, line 19).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for async_emif_data_p[0]. (constraint file  c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0_in_context.xdc, line 20).
+Applied set_property IO_BUFFER_TYPE = NONE for async_emif_data_p[10]. (constraint file  c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0_in_context.xdc, line 21).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for async_emif_data_p[10]. (constraint file  c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0_in_context.xdc, line 22).
+Applied set_property IO_BUFFER_TYPE = NONE for async_emif_data_p[11]. (constraint file  c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0_in_context.xdc, line 23).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for async_emif_data_p[11]. (constraint file  c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0_in_context.xdc, line 24).
+Applied set_property IO_BUFFER_TYPE = NONE for async_emif_data_p[12]. (constraint file  c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0_in_context.xdc, line 25).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for async_emif_data_p[12]. (constraint file  c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0_in_context.xdc, line 26).
+Applied set_property IO_BUFFER_TYPE = NONE for async_emif_data_p[13]. (constraint file  c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0_in_context.xdc, line 27).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for async_emif_data_p[13]. (constraint file  c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0_in_context.xdc, line 28).
+Applied set_property IO_BUFFER_TYPE = NONE for async_emif_data_p[14]. (constraint file  c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0_in_context.xdc, line 29).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for async_emif_data_p[14]. (constraint file  c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0_in_context.xdc, line 30).
+Applied set_property IO_BUFFER_TYPE = NONE for async_emif_data_p[15]. (constraint file  c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0_in_context.xdc, line 31).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for async_emif_data_p[15]. (constraint file  c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0_in_context.xdc, line 32).
+Applied set_property IO_BUFFER_TYPE = NONE for async_emif_data_p[1]. (constraint file  c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0_in_context.xdc, line 33).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for async_emif_data_p[1]. (constraint file  c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0_in_context.xdc, line 34).
+Applied set_property IO_BUFFER_TYPE = NONE for async_emif_data_p[2]. (constraint file  c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0_in_context.xdc, line 35).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for async_emif_data_p[2]. (constraint file  c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0_in_context.xdc, line 36).
+Applied set_property IO_BUFFER_TYPE = NONE for async_emif_data_p[3]. (constraint file  c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0_in_context.xdc, line 37).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for async_emif_data_p[3]. (constraint file  c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0_in_context.xdc, line 38).
+Applied set_property IO_BUFFER_TYPE = NONE for async_emif_data_p[4]. (constraint file  c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0_in_context.xdc, line 39).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for async_emif_data_p[4]. (constraint file  c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0_in_context.xdc, line 40).
+Applied set_property IO_BUFFER_TYPE = NONE for async_emif_data_p[5]. (constraint file  c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0_in_context.xdc, line 41).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for async_emif_data_p[5]. (constraint file  c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0_in_context.xdc, line 42).
+Applied set_property IO_BUFFER_TYPE = NONE for async_emif_data_p[6]. (constraint file  c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0_in_context.xdc, line 43).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for async_emif_data_p[6]. (constraint file  c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0_in_context.xdc, line 44).
+Applied set_property IO_BUFFER_TYPE = NONE for async_emif_data_p[7]. (constraint file  c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0_in_context.xdc, line 45).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for async_emif_data_p[7]. (constraint file  c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0_in_context.xdc, line 46).
+Applied set_property IO_BUFFER_TYPE = NONE for async_emif_data_p[8]. (constraint file  c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0_in_context.xdc, line 47).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for async_emif_data_p[8]. (constraint file  c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0_in_context.xdc, line 48).
+Applied set_property IO_BUFFER_TYPE = NONE for async_emif_data_p[9]. (constraint file  c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0_in_context.xdc, line 49).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for async_emif_data_p[9]. (constraint file  c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0_in_context.xdc, line 50).
+Applied set_property IO_BUFFER_TYPE = NONE for async_emif_rd_n_p. (constraint file  c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0_in_context.xdc, line 51).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for async_emif_rd_n_p. (constraint file  c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0_in_context.xdc, line 52).
+Applied set_property IO_BUFFER_TYPE = NONE for async_emif_wr_n_p. (constraint file  c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0_in_context.xdc, line 53).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for async_emif_wr_n_p. (constraint file  c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0_in_context.xdc, line 54).
+Applied set_property IO_BUFFER_TYPE = NONE for dco_ad9649. (constraint file  c:/Users/86183/Desktop/Microblaze_xzjddy/clk_wiz_1/clk_wiz_1/clk_wiz_1_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for dco_ad9649. (constraint file  c:/Users/86183/Desktop/Microblaze_xzjddy/clk_wiz_1/clk_wiz_1/clk_wiz_1_in_context.xdc, line 4).
+Applied set_property DONT_TOUCH = true for U3. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for U3/microblaze_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for U3/Driver_9649. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for U3/axi_gpio_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for U3/axi_gpio_1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for U3/mdm_1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for U3/rst_Clk_100M. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for U3/microblaze_0_axi_periph. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for U3/microblaze_0_axi_periph/xbar. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for U3/microblaze_0_local_memory/dlmb_v10. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for U3/microblaze_0_local_memory/ilmb_v10. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for U3/microblaze_0_local_memory/dlmb_bram_if_cntlr. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for U3/microblaze_0_local_memory/ilmb_bram_if_cntlr. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for U3/microblaze_0_local_memory/lmb_bram. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for U3/Driver_9781. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for U1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for U4. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for U2. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 1075.566 ; gain = 699.176
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "test_reg5" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "test_regA" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "wr_reg0" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "wr_reg1" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "wr_reg2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "wr_reg3" won't be mapped to RAM because it is too sparse
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 1075.566 ; gain = 699.176
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 7     
++---Muxes : 
+	  11 Input     16 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 6     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module reg_block 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 7     
++---Muxes : 
+	  11 Input     16 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 6     
+	   7 Input      1 Bit        Muxes := 6     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 3600 (col length:200)
+BRAMs: 2940 (col length: RAMB18 200 RAMB36 100)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-3331] design Microblaze_xz_microblaze_0_axi_periph_0 has unconnected port M00_ACLK
+WARNING: [Synth 8-3331] design Microblaze_xz_microblaze_0_axi_periph_0 has unconnected port M00_ARESETN
+WARNING: [Synth 8-3331] design Microblaze_xz_microblaze_0_axi_periph_0 has unconnected port M01_ACLK
+WARNING: [Synth 8-3331] design Microblaze_xz_microblaze_0_axi_periph_0 has unconnected port M01_ARESETN
+WARNING: [Synth 8-3331] design Microblaze_xz_microblaze_0_axi_periph_0 has unconnected port M02_ACLK
+WARNING: [Synth 8-3331] design Microblaze_xz_microblaze_0_axi_periph_0 has unconnected port M02_ARESETN
+WARNING: [Synth 8-3331] design Microblaze_xz_microblaze_0_axi_periph_0 has unconnected port M03_ACLK
+WARNING: [Synth 8-3331] design Microblaze_xz_microblaze_0_axi_periph_0 has unconnected port M03_ARESETN
+WARNING: [Synth 8-3331] design Microblaze_xz_microblaze_0_axi_periph_0 has unconnected port S00_ACLK
+WARNING: [Synth 8-3331] design Microblaze_xz_microblaze_0_axi_periph_0 has unconnected port S00_ARESETN
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port dci_ad9781_p
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port dci_ad9781_n
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port data_ad9781_p[13]
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port data_ad9781_p[12]
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port data_ad9781_p[11]
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port data_ad9781_p[10]
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port data_ad9781_p[9]
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port data_ad9781_p[8]
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port data_ad9781_p[7]
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port data_ad9781_p[6]
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port data_ad9781_p[5]
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port data_ad9781_p[4]
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port data_ad9781_p[3]
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port data_ad9781_p[2]
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port data_ad9781_p[1]
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port data_ad9781_p[0]
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port data_ad9781_n[13]
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port data_ad9781_n[12]
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port data_ad9781_n[11]
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port data_ad9781_n[10]
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port data_ad9781_n[9]
+WARNING: [Synth 8-3331] design Microblaze_xz_wrapper has unconnected port data_ad9781_n[8]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 1075.566 ; gain = 699.176
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5578] Moved timing constraint from pin 'U3/mdm_1/Dbg_Clk_0' to pin 'U3/mdm_1/bbstub_Dbg_Clk_0/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'U3/mdm_1/Dbg_Update_0' to pin 'U3/mdm_1/bbstub_Dbg_Update_0/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'U3/microblaze_0_local_memory/dlmb_bram_if_cntlr/BRAM_Clk_A' to pin 'U3/microblaze_0_local_memory/dlmb_bram_if_cntlr/bbstub_BRAM_Clk_A/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'U3/microblaze_0_local_memory/ilmb_bram_if_cntlr/BRAM_Clk_A' to pin 'U3/microblaze_0_local_memory/ilmb_bram_if_cntlr/bbstub_BRAM_Clk_A/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'U1/clk_out1' to pin 'U1/bbstub_clk_out1/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'U2/clk_out1' to pin 'U2/bbstub_clk_out1/O'
+INFO: [Synth 8-5819] Moved 6 constraints on hierarchical pins to their respective driving/loading pins
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:27 ; elapsed = 00:00:33 . Memory (MB): peak = 1075.566 ; gain = 699.176
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:33 . Memory (MB): peak = 1090.441 ; gain = 714.051
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:28 ; elapsed = 00:00:33 . Memory (MB): peak = 1090.441 ; gain = 714.051
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-4442] BlackBox module U4 has unconnected pin async_emif_cs_n_n
+CRITICAL WARNING: [Synth 8-4442] BlackBox module U4 has unconnected pin async_emif_wr_n_n
+CRITICAL WARNING: [Synth 8-4442] BlackBox module U4 has unconnected pin async_emif_rd_n_n
+CRITICAL WARNING: [Synth 8-4442] BlackBox module U4 has unconnected pin async_emif_addr_n[7]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module U4 has unconnected pin async_emif_addr_n[6]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module U4 has unconnected pin async_emif_addr_n[5]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module U4 has unconnected pin async_emif_addr_n[4]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module U4 has unconnected pin async_emif_addr_n[3]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module U4 has unconnected pin async_emif_addr_n[2]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module U4 has unconnected pin async_emif_addr_n[1]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module U4 has unconnected pin async_emif_addr_n[0]
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:28 ; elapsed = 00:00:34 . Memory (MB): peak = 1090.441 ; gain = 714.051
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:28 ; elapsed = 00:00:34 . Memory (MB): peak = 1090.441 ; gain = 714.051
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:28 ; elapsed = 00:00:34 . Memory (MB): peak = 1090.441 ; gain = 714.051
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:28 ; elapsed = 00:00:34 . Memory (MB): peak = 1090.441 ; gain = 714.051
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:28 ; elapsed = 00:00:34 . Memory (MB): peak = 1090.441 ; gain = 714.051
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:28 ; elapsed = 00:00:34 . Memory (MB): peak = 1090.441 ; gain = 714.051
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+---------------------------------------+----------+
+|      |BlackBox name                          |Instances |
++------+---------------------------------------+----------+
+|1     |Microblaze_xz_xbar_0                   |         1|
+|2     |Microblaze_xz_AXI4_ADI_SPI_15_8BIT_0_0 |         1|
+|3     |Microblaze_xz_AXI4_ADI_SPI_7_8BIT_0_0  |         1|
+|4     |Microblaze_xz_axi_gpio_0_0             |         1|
+|5     |Microblaze_xz_axi_gpio_1_0             |         1|
+|6     |Microblaze_xz_mdm_1_1                  |         1|
+|7     |Microblaze_xz_microblaze_0_0           |         1|
+|8     |Microblaze_xz_rst_Clk_100M_0           |         1|
+|9     |Microblaze_xz_dlmb_bram_if_cntlr_1     |         1|
+|10    |Microblaze_xz_dlmb_v10_1               |         1|
+|11    |Microblaze_xz_ilmb_bram_if_cntlr_1     |         1|
+|12    |Microblaze_xz_ilmb_v10_1               |         1|
+|13    |Microblaze_xz_lmb_bram_1               |         1|
+|14    |clk_wiz_0                              |         1|
+|15    |clk_wiz_1                              |         1|
+|16    |ASYNC_EMIF_SLAVE_0                     |         1|
++------+---------------------------------------+----------+
+
+Report Cell Usage: 
++------+---------------------------------------+------+
+|      |Cell                                   |Count |
++------+---------------------------------------+------+
+|1     |ASYNC_EMIF_SLAVE_0                     |     1|
+|2     |Microblaze_xz_AXI4_ADI_SPI_15_8BIT_0_0 |     1|
+|3     |Microblaze_xz_AXI4_ADI_SPI_7_8BIT_0_0  |     1|
+|4     |Microblaze_xz_axi_gpio_0_0             |     1|
+|5     |Microblaze_xz_axi_gpio_1_0             |     1|
+|6     |Microblaze_xz_dlmb_bram_if_cntlr_1     |     1|
+|7     |Microblaze_xz_dlmb_v10_1               |     1|
+|8     |Microblaze_xz_ilmb_bram_if_cntlr_1     |     1|
+|9     |Microblaze_xz_ilmb_v10_1               |     1|
+|10    |Microblaze_xz_lmb_bram_1               |     1|
+|11    |Microblaze_xz_mdm_1_1                  |     1|
+|12    |Microblaze_xz_microblaze_0_0           |     1|
+|13    |Microblaze_xz_rst_Clk_100M_0           |     1|
+|14    |Microblaze_xz_xbar_0                   |     1|
+|15    |clk_wiz_0                              |     1|
+|16    |clk_wiz_1                              |     1|
+|17    |LUT1                                   |     1|
+|18    |LUT3                                   |     1|
+|19    |LUT4                                   |    39|
+|20    |LUT5                                   |    16|
+|21    |LUT6                                   |    17|
+|22    |FDCE                                   |   112|
+|23    |OBUF                                   |     6|
+|24    |OBUFT                                  |    30|
++------+---------------------------------------+------+
+
+Report Instance Areas: 
++------+------------------------------+----------------------------------------+------+
+|      |Instance                      |Module                                  |Cells |
++------+------------------------------+----------------------------------------+------+
+|1     |top                           |                                        |  1658|
+|2     |  U3                          |Microblaze_xz                           |  1396|
+|3     |    microblaze_0_axi_periph   |Microblaze_xz_microblaze_0_axi_periph_0 |   485|
+|4     |    microblaze_0_local_memory |microblaze_0_local_memory_imp_16RA5MM   |   496|
+|5     |  U5                          |reg_block                               |   186|
++------+------------------------------+----------------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:28 ; elapsed = 00:00:34 . Memory (MB): peak = 1090.441 ; gain = 714.051
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 11 critical warnings and 56 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:10 ; elapsed = 00:00:15 . Memory (MB): peak = 1090.441 ; gain = 174.949
+Synthesis Optimization Complete : Time (s): cpu = 00:00:28 ; elapsed = 00:00:34 . Memory (MB): peak = 1090.441 ; gain = 714.051
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+79 Infos, 121 Warnings, 11 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:32 ; elapsed = 00:00:39 . Memory (MB): peak = 1111.094 ; gain = 742.316
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.runs/synth_1/Microblaze_xz_wrapper.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file Microblaze_xz_wrapper_utilization_synth.rpt -pb Microblaze_xz_wrapper_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.589 . Memory (MB): peak = 1111.094 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Mon Sep 11 10:53:54 2023...

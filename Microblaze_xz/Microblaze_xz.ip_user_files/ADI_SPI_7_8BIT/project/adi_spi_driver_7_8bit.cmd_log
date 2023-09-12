@@ -1,0 +1,21 @@
+xst -intstyle ise -ifn "F:/Project/platfrom/ADI_SPI_DRIVER_7_8BIT/project/adi_spi_driver_7_8bit.xst" -ofn "F:/Project/platfrom/ADI_SPI_DRIVER_7_8BIT/project/adi_spi_driver_7_8bit.syr" 
+xst -intstyle ise -ifn "F:/Project/platfrom/ADI_SPI_DRIVER_7_8BIT/project/adi_spi_driver_7_8bit.xst" -ofn "F:/Project/platfrom/ADI_SPI_DRIVER_7_8BIT/project/adi_spi_driver_7_8bit.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc5vsx95t-ff1136-2 adi_spi_driver_7_8bit.ngc adi_spi_driver_7_8bit.ngd  
+map -intstyle ise -p xc5vsx95t-ff1136-2 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o adi_spi_driver_7_8bit_map.ncd adi_spi_driver_7_8bit.ngd adi_spi_driver_7_8bit.pcf 
+par -w -intstyle ise -ol high -mt off adi_spi_driver_7_8bit_map.ncd adi_spi_driver_7_8bit.ncd adi_spi_driver_7_8bit.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml adi_spi_driver_7_8bit.twx adi_spi_driver_7_8bit.ncd -o adi_spi_driver_7_8bit.twr adi_spi_driver_7_8bit.pcf 
+xst -intstyle ise -ifn "F:/Project/platfrom/ADI_SPI_DRIVER_7_8BIT/project/adi_spi_driver_7_8bit.xst" -ofn "F:/Project/platfrom/ADI_SPI_DRIVER_7_8BIT/project/adi_spi_driver_7_8bit.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc5vsx95t-ff1136-2 adi_spi_driver_7_8bit.ngc adi_spi_driver_7_8bit.ngd  
+map -intstyle ise -p xc5vsx95t-ff1136-2 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o adi_spi_driver_7_8bit_map.ncd adi_spi_driver_7_8bit.ngd adi_spi_driver_7_8bit.pcf 
+par -w -intstyle ise -ol high -mt off adi_spi_driver_7_8bit_map.ncd adi_spi_driver_7_8bit.ncd adi_spi_driver_7_8bit.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml adi_spi_driver_7_8bit.twx adi_spi_driver_7_8bit.ncd -o adi_spi_driver_7_8bit.twr adi_spi_driver_7_8bit.pcf 
+xst -intstyle ise -ifn "F:/Project/platfrom/ADI_SPI_DRIVER_7_8BIT/project/adi_spi_driver_7_8bit.xst" -ofn "F:/Project/platfrom/ADI_SPI_DRIVER_7_8BIT/project/adi_spi_driver_7_8bit.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc5vsx95t-ff1136-2 adi_spi_driver_7_8bit.ngc adi_spi_driver_7_8bit.ngd  
+map -intstyle ise -p xc5vsx95t-ff1136-2 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o adi_spi_driver_7_8bit_map.ncd adi_spi_driver_7_8bit.ngd adi_spi_driver_7_8bit.pcf 
+par -w -intstyle ise -ol high -mt off adi_spi_driver_7_8bit_map.ncd adi_spi_driver_7_8bit.ncd adi_spi_driver_7_8bit.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml adi_spi_driver_7_8bit.twx adi_spi_driver_7_8bit.ncd -o adi_spi_driver_7_8bit.twr adi_spi_driver_7_8bit.pcf 
+xst -intstyle ise -ifn "C:/Users/zhouys/Desktop/ADI_SPI_7_8BIT/project/adi_spi_driver_7_8bit.xst" -ofn "C:/Users/zhouys/Desktop/ADI_SPI_7_8BIT/project/adi_spi_driver_7_8bit.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc5vsx95t-ff1136-2 adi_spi_driver_7_8bit.ngc adi_spi_driver_7_8bit.ngd  
+map -intstyle ise -p xc5vsx95t-ff1136-2 -w -logic_opt off -ol high -t 1 -register_duplication off -global_opt off -mt off -cm area -ir off -pr off -lc off -power off -o adi_spi_driver_7_8bit_map.ncd adi_spi_driver_7_8bit.ngd adi_spi_driver_7_8bit.pcf 
+par -w -intstyle ise -ol high -mt off adi_spi_driver_7_8bit_map.ncd adi_spi_driver_7_8bit.ncd adi_spi_driver_7_8bit.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml adi_spi_driver_7_8bit.twx adi_spi_driver_7_8bit.ncd -o adi_spi_driver_7_8bit.twr adi_spi_driver_7_8bit.pcf 

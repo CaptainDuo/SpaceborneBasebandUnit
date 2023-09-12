@@ -1,0 +1,53 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Mon Sep 11 09:04:26 2023
+# Process ID: 16632
+# Current directory: C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent6196 C:\Users\86183\Desktop\Microblaze_xzjddy\Microblaze_xz_1.4\Microblaze_xz\Microblaze_xz.xpr
+# Log file: C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/vivado.log
+# Journal file: C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.xpr
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 16
+wait_on_run synth_1
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.srcs/sources_1/bd/Microblaze_xz/Microblaze_xz.bd]
+synth_design -rtl -name rtl_1
+set_property IOSTANDARD LVCMOS18 [get_ports [list {gpio_rtl_0_tri_o[0]}]]
+set_property IOSTANDARD LVCMOS18 [get_ports [list {gpio_rtl_1_tri_o[0]}]]
+set_property IOSTANDARD LVCMOS15 [get_ports [list {data_ad9649[13]} {data_ad9649[12]} {data_ad9649[11]} {data_ad9649[10]} {data_ad9649[9]} {data_ad9649[8]} {data_ad9649[7]} {data_ad9649[6]} {data_ad9649[5]} {data_ad9649[4]} {data_ad9649[3]} {data_ad9649[2]} {data_ad9649[1]} {data_ad9649[0]}]]
+set_property IOSTANDARD LVCMOS18 [get_ports [list {data_ad9649[13]} {data_ad9649[12]} {data_ad9649[11]} {data_ad9649[10]} {data_ad9649[9]} {data_ad9649[8]} {data_ad9649[7]} {data_ad9649[6]} {data_ad9649[5]} {data_ad9649[4]} {data_ad9649[3]} {data_ad9649[2]} {data_ad9649[1]} {data_ad9649[0]}]]
+set_property IOSTANDARD LVCMOS18 [get_ports [list {data_ad9781_n[13]} {data_ad9781_n[12]} {data_ad9781_n[11]} {data_ad9781_n[10]} {data_ad9781_n[9]} {data_ad9781_n[8]} {data_ad9781_n[7]} {data_ad9781_n[6]} {data_ad9781_n[5]} {data_ad9781_n[4]} {data_ad9781_n[3]} {data_ad9781_n[2]} {data_ad9781_n[1]} {data_ad9781_n[0]}]]
+set_property IOSTANDARD LVCMOS18 [get_ports [list {data_ad9781_p[13]} {data_ad9781_p[12]} {data_ad9781_p[11]} {data_ad9781_p[10]} {data_ad9781_p[9]} {data_ad9781_p[8]} {data_ad9781_p[7]} {data_ad9781_p[6]} {data_ad9781_p[5]} {data_ad9781_p[4]} {data_ad9781_p[3]} {data_ad9781_p[2]} {data_ad9781_p[1]} {data_ad9781_p[0]}]]
+set_property IOSTANDARD LVCMOS18 [get_ports [list csb_1]]
+set_property IOSTANDARD LVCMOS18 [get_ports [list dci_ad9781_n]]
+set_property IOSTANDARD LVCMOS18 [get_ports [list dci_ad9781_p]]
+set_property IOSTANDARD LVCMOS18 [get_ports [list dco_ad9649]]
+set_property IOSTANDARD LVCMOS18 [get_ports [list dco_ad9781_n]]
+set_property IOSTANDARD LVCMOS18 [get_ports [list dco_ad9781_p]]
+set_property IOSTANDARD LVCMOS18 [get_ports [list sclk_0]]
+set_property IOSTANDARD LVCMOS18 [get_ports [list sclk_1]]
+set_property IOSTANDARD LVCMOS18 [get_ports [list sdio_0]]
+set_property IOSTANDARD LVCMOS18 [get_ports [list sdio_1]]
+save_constraints
+launch_runs impl_1 -jobs 16
+wait_on_run impl_1
+open_run impl_1
+report_clock_networks -name {primaryclock}
+set_property -dict [list CONFIG.PRIM_IN_FREQ {80.000} CONFIG.CLKIN1_JITTER_PS {125.0} CONFIG.MMCM_DIVCLK_DIVIDE {1} CONFIG.MMCM_CLKFBOUT_MULT_F {12.500} CONFIG.MMCM_CLKIN1_PERIOD {12.500} CONFIG.CLKOUT1_JITTER {136.213} CONFIG.CLKOUT1_PHASE_ERROR {100.585}] [get_ips clk_wiz_0]
+generate_target all [get_files  C:/Users/86183/Desktop/Microblaze_xzjddy/clk_wiz_0_1/clk_wiz_0.xci]
+catch { config_ip_cache -export [get_ips -all clk_wiz_0] }
+export_ip_user_files -of_objects [get_files C:/Users/86183/Desktop/Microblaze_xzjddy/clk_wiz_0_1/clk_wiz_0.xci] -no_script -sync -force -quiet
+reset_run clk_wiz_0_synth_1
+launch_runs -jobs 16 clk_wiz_0_synth_1
+export_simulation -of_objects [get_files C:/Users/86183/Desktop/Microblaze_xzjddy/clk_wiz_0_1/clk_wiz_0.xci] -directory C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.ip_user_files -ipstatic_source_dir C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.cache/compile_simlib/modelsim} {questa=C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.cache/compile_simlib/questa} {riviera=C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.cache/compile_simlib/riviera} {activehdl=C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs impl_1 -jobs 16
+wait_on_run impl_1
+close_design
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1

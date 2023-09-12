@@ -1,0 +1,406 @@
+
+*** Running vivado
+    with args -log ASYNC_EMIF_SLAVE_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source ASYNC_EMIF_SLAVE_0.tcl
+
+
+****** Vivado v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source ASYNC_EMIF_SLAVE_0.tcl -notrace
+Command: synth_design -top ASYNC_EMIF_SLAVE_0 -part xc7vx690tffg1927-3 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7vx690t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7vx690t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 8196 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 453.008 ; gain = 99.652
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'ASYNC_EMIF_SLAVE_0' [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/synth/ASYNC_EMIF_SLAVE_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'async_emif_slave' [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/src/async_emif_slave.v:22]
+	Parameter WR_SAMPLING_LOC bound to: 5 - type: integer 
+	Parameter RD_SAMPLING_LOC bound to: 2 - type: integer 
+	Parameter RD_VILD_LOC bound to: 11 - type: integer 
+	Parameter ADDR_WIDTH bound to: 8 - type: integer 
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+	Parameter FPGA_SERIES bound to: 7SERIRE - type: string 
+	Parameter PHYSICS_MODE bound to: SINGLE - type: string 
+	Parameter IOSTANDARD bound to: LVCMOS18 - type: string 
+	Parameter DRIVE bound to: 12 - type: integer 
+	Parameter SLEW bound to: SLOW - type: string 
+	Parameter DIFF_TERM bound to: FALSE - type: string 
+	Parameter IBUF_LOW_PWR bound to: FALSE - type: string 
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+INFO: [Synth 8-6157] synthesizing module 'async_emif_slave_driver' [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/src/async_emif_slave_driver.v:22]
+	Parameter WR_SAMPLING_LOC bound to: 5 - type: integer 
+	Parameter RD_SAMPLING_LOC bound to: 2 - type: integer 
+	Parameter RD_VILD_LOC bound to: 11 - type: integer 
+	Parameter ADDR_WIDTH bound to: 8 - type: integer 
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'async_emif_slave_driver' (1#1) [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/src/async_emif_slave_driver.v:22]
+INFO: [Synth 8-6157] synthesizing module 'x_ibuf' [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/src/x_ibuf.v:22]
+	Parameter DATA_WIDTH bound to: 1 - type: integer 
+	Parameter FPGA_SERIES bound to: 7SERIRE - type: string 
+	Parameter PHYSICS_MODE bound to: SINGLE - type: string 
+	Parameter IOSTANDARD bound to: LVCMOS18 - type: string 
+	Parameter DIFF_TERM bound to: FALSE - type: string 
+	Parameter IBUF_LOW_PWR bound to: FALSE - type: string 
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+INFO: [Synth 8-6157] synthesizing module 'IBUF' [C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:19473]
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter IBUF_DELAY_VALUE bound to: 0 - type: string 
+	Parameter IBUF_LOW_PWR bound to: FALSE - type: string 
+	Parameter IFD_DELAY_VALUE bound to: AUTO - type: string 
+	Parameter IOSTANDARD bound to: LVCMOS18 - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'IBUF' (2#1) [C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:19473]
+INFO: [Synth 8-6155] done synthesizing module 'x_ibuf' (3#1) [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/src/x_ibuf.v:22]
+INFO: [Synth 8-6157] synthesizing module 'x_ibuf__parameterized0' [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/src/x_ibuf.v:22]
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter FPGA_SERIES bound to: 7SERIRE - type: string 
+	Parameter PHYSICS_MODE bound to: SINGLE - type: string 
+	Parameter IOSTANDARD bound to: LVCMOS18 - type: string 
+	Parameter DIFF_TERM bound to: FALSE - type: string 
+	Parameter IBUF_LOW_PWR bound to: FALSE - type: string 
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'x_ibuf__parameterized0' (3#1) [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/src/x_ibuf.v:22]
+INFO: [Synth 8-6157] synthesizing module 'x_iobuf' [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/src/x_iobuf.v:21]
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+	Parameter FPGA_SERIES bound to: 7SERIRE - type: string 
+	Parameter PHYSICS_MODE bound to: SINGLE - type: string 
+	Parameter IOSTANDARD bound to: LVCMOS18 - type: string 
+	Parameter SLEW bound to: SLOW - type: string 
+	Parameter DRIVE bound to: 12 - type: integer 
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter DIFF_TERM bound to: FALSE - type: string 
+	Parameter IBUF_LOW_PWR bound to: FALSE - type: string 
+INFO: [Synth 8-6157] synthesizing module 'IOBUF' [C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:22660]
+	Parameter DRIVE bound to: 12 - type: integer 
+	Parameter IBUF_LOW_PWR bound to: FALSE - type: string 
+	Parameter IOSTANDARD bound to: LVCMOS18 - type: string 
+	Parameter SLEW bound to: SLOW - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'IOBUF' (4#1) [C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:22660]
+INFO: [Synth 8-6155] done synthesizing module 'x_iobuf' (5#1) [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/src/x_iobuf.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'async_emif_slave' (6#1) [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/src/async_emif_slave.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'ASYNC_EMIF_SLAVE_0' (7#1) [c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/synth/ASYNC_EMIF_SLAVE_0.v:57]
+WARNING: [Synth 8-3331] design x_iobuf has unconnected port data_n[15]
+WARNING: [Synth 8-3331] design x_iobuf has unconnected port data_n[14]
+WARNING: [Synth 8-3331] design x_iobuf has unconnected port data_n[13]
+WARNING: [Synth 8-3331] design x_iobuf has unconnected port data_n[12]
+WARNING: [Synth 8-3331] design x_iobuf has unconnected port data_n[11]
+WARNING: [Synth 8-3331] design x_iobuf has unconnected port data_n[10]
+WARNING: [Synth 8-3331] design x_iobuf has unconnected port data_n[9]
+WARNING: [Synth 8-3331] design x_iobuf has unconnected port data_n[8]
+WARNING: [Synth 8-3331] design x_iobuf has unconnected port data_n[7]
+WARNING: [Synth 8-3331] design x_iobuf has unconnected port data_n[6]
+WARNING: [Synth 8-3331] design x_iobuf has unconnected port data_n[5]
+WARNING: [Synth 8-3331] design x_iobuf has unconnected port data_n[4]
+WARNING: [Synth 8-3331] design x_iobuf has unconnected port data_n[3]
+WARNING: [Synth 8-3331] design x_iobuf has unconnected port data_n[2]
+WARNING: [Synth 8-3331] design x_iobuf has unconnected port data_n[1]
+WARNING: [Synth 8-3331] design x_iobuf has unconnected port data_n[0]
+WARNING: [Synth 8-3331] design x_ibuf__parameterized0 has unconnected port data_n[7]
+WARNING: [Synth 8-3331] design x_ibuf__parameterized0 has unconnected port data_n[6]
+WARNING: [Synth 8-3331] design x_ibuf__parameterized0 has unconnected port data_n[5]
+WARNING: [Synth 8-3331] design x_ibuf__parameterized0 has unconnected port data_n[4]
+WARNING: [Synth 8-3331] design x_ibuf__parameterized0 has unconnected port data_n[3]
+WARNING: [Synth 8-3331] design x_ibuf__parameterized0 has unconnected port data_n[2]
+WARNING: [Synth 8-3331] design x_ibuf__parameterized0 has unconnected port data_n[1]
+WARNING: [Synth 8-3331] design x_ibuf__parameterized0 has unconnected port data_n[0]
+WARNING: [Synth 8-3331] design x_ibuf has unconnected port data_n[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 508.172 ; gain = 154.816
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 508.172 ; gain = 154.816
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 508.172 ; gain = 154.816
+---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 27 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Device 21-403] Loading part xc7vx690tffg1927-3
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 16 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 16 instances
+
+WARNING: [Constraints 18-5210] No constraint will be written out.
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.044 . Memory (MB): peak = 1040.820 ; gain = 1.793
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 1040.820 ; gain = 687.465
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7vx690tffg1927-3
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 1040.820 ; gain = 687.465
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 1040.820 ; gain = 687.465
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 1040.820 ; gain = 687.465
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 1     
+	                8 Bit    Registers := 2     
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module async_emif_slave_driver 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 1     
+	                8 Bit    Registers := 2     
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 3600 (col length:200)
+BRAMs: 2940 (col length: RAMB18 200 RAMB36 100)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-3331] design ASYNC_EMIF_SLAVE_0 has unconnected port async_emif_data_n[15]
+WARNING: [Synth 8-3331] design ASYNC_EMIF_SLAVE_0 has unconnected port async_emif_data_n[14]
+WARNING: [Synth 8-3331] design ASYNC_EMIF_SLAVE_0 has unconnected port async_emif_data_n[13]
+WARNING: [Synth 8-3331] design ASYNC_EMIF_SLAVE_0 has unconnected port async_emif_data_n[12]
+WARNING: [Synth 8-3331] design ASYNC_EMIF_SLAVE_0 has unconnected port async_emif_data_n[11]
+WARNING: [Synth 8-3331] design ASYNC_EMIF_SLAVE_0 has unconnected port async_emif_data_n[10]
+WARNING: [Synth 8-3331] design ASYNC_EMIF_SLAVE_0 has unconnected port async_emif_data_n[9]
+WARNING: [Synth 8-3331] design ASYNC_EMIF_SLAVE_0 has unconnected port async_emif_data_n[8]
+WARNING: [Synth 8-3331] design ASYNC_EMIF_SLAVE_0 has unconnected port async_emif_data_n[7]
+WARNING: [Synth 8-3331] design ASYNC_EMIF_SLAVE_0 has unconnected port async_emif_data_n[6]
+WARNING: [Synth 8-3331] design ASYNC_EMIF_SLAVE_0 has unconnected port async_emif_data_n[5]
+WARNING: [Synth 8-3331] design ASYNC_EMIF_SLAVE_0 has unconnected port async_emif_data_n[4]
+WARNING: [Synth 8-3331] design ASYNC_EMIF_SLAVE_0 has unconnected port async_emif_data_n[3]
+WARNING: [Synth 8-3331] design ASYNC_EMIF_SLAVE_0 has unconnected port async_emif_data_n[2]
+WARNING: [Synth 8-3331] design ASYNC_EMIF_SLAVE_0 has unconnected port async_emif_data_n[1]
+WARNING: [Synth 8-3331] design ASYNC_EMIF_SLAVE_0 has unconnected port async_emif_data_n[0]
+WARNING: [Synth 8-3331] design ASYNC_EMIF_SLAVE_0 has unconnected port async_emif_cs_n_n
+WARNING: [Synth 8-3331] design ASYNC_EMIF_SLAVE_0 has unconnected port async_emif_wr_n_n
+WARNING: [Synth 8-3331] design ASYNC_EMIF_SLAVE_0 has unconnected port async_emif_rd_n_n
+WARNING: [Synth 8-3331] design ASYNC_EMIF_SLAVE_0 has unconnected port async_emif_addr_n[7]
+WARNING: [Synth 8-3331] design ASYNC_EMIF_SLAVE_0 has unconnected port async_emif_addr_n[6]
+WARNING: [Synth 8-3331] design ASYNC_EMIF_SLAVE_0 has unconnected port async_emif_addr_n[5]
+WARNING: [Synth 8-3331] design ASYNC_EMIF_SLAVE_0 has unconnected port async_emif_addr_n[4]
+WARNING: [Synth 8-3331] design ASYNC_EMIF_SLAVE_0 has unconnected port async_emif_addr_n[3]
+WARNING: [Synth 8-3331] design ASYNC_EMIF_SLAVE_0 has unconnected port async_emif_addr_n[2]
+WARNING: [Synth 8-3331] design ASYNC_EMIF_SLAVE_0 has unconnected port async_emif_addr_n[1]
+WARNING: [Synth 8-3331] design ASYNC_EMIF_SLAVE_0 has unconnected port async_emif_addr_n[0]
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 1040.820 ; gain = 687.465
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 1040.820 ; gain = 687.465
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 1040.820 ; gain = 687.465
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 1040.820 ; gain = 687.465
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:21 ; elapsed = 00:00:26 . Memory (MB): peak = 1040.820 ; gain = 687.465
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:21 ; elapsed = 00:00:26 . Memory (MB): peak = 1040.820 ; gain = 687.465
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:21 ; elapsed = 00:00:26 . Memory (MB): peak = 1040.820 ; gain = 687.465
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:21 ; elapsed = 00:00:26 . Memory (MB): peak = 1040.820 ; gain = 687.465
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:26 . Memory (MB): peak = 1040.820 ; gain = 687.465
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:21 ; elapsed = 00:00:26 . Memory (MB): peak = 1040.820 ; gain = 687.465
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |CARRY4 |     4|
+|2     |LUT1   |     1|
+|3     |LUT2   |    17|
+|4     |LUT3   |     1|
+|5     |LUT4   |     7|
+|6     |LUT5   |     3|
+|7     |FDCE   |    53|
+|8     |IBUF   |    11|
+|9     |IOBUF  |    16|
++------+-------+------+
+
+Report Instance Areas: 
++------+-------------------------+------------------------+------+
+|      |Instance                 |Module                  |Cells |
++------+-------------------------+------------------------+------+
+|1     |top                      |                        |   113|
+|2     |  inst                   |async_emif_slave        |   113|
+|3     |    async_emif_master_U6 |x_iobuf                 |    16|
+|4     |    async_emif_slave_U1  |async_emif_slave_driver |    84|
+|5     |    async_emif_slave_U2  |x_ibuf                  |     2|
+|6     |    async_emif_slave_U3  |x_ibuf_0                |     1|
+|7     |    async_emif_slave_U4  |x_ibuf_1                |     2|
+|8     |    async_emif_slave_U5  |x_ibuf__parameterized0  |     8|
++------+-------------------------+------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:21 ; elapsed = 00:00:26 . Memory (MB): peak = 1040.820 ; gain = 687.465
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 27 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 1040.820 ; gain = 154.816
+Synthesis Optimization Complete : Time (s): cpu = 00:00:21 ; elapsed = 00:00:26 . Memory (MB): peak = 1040.820 ; gain = 687.465
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 31 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 16 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 16 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+29 Infos, 53 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:29 . Memory (MB): peak = 1066.754 ; gain = 724.906
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.runs/ASYNC_EMIF_SLAVE_0_synth_1/ASYNC_EMIF_SLAVE_0.dcp' has been generated.
+INFO: [Coretcl 2-1482] Added synthesis output to IP cache for IP c:/Users/86183/Desktop/Microblaze_xzjddy/ASYNC_EMIF_SLAVE_0/ASYNC_EMIF_SLAVE_0.xci
+INFO: [Coretcl 2-1174] Renamed 7 cell refs.
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/86183/Desktop/Microblaze_xzjddy/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.runs/ASYNC_EMIF_SLAVE_0_synth_1/ASYNC_EMIF_SLAVE_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file ASYNC_EMIF_SLAVE_0_utilization_synth.rpt -pb ASYNC_EMIF_SLAVE_0_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.474 . Memory (MB): peak = 1066.754 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Fri Sep  8 09:45:38 2023...

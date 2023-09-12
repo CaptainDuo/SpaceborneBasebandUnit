@@ -1,0 +1,6 @@
+09:32:07 INFO  : Registering command handlers for SDK TCF services
+09:32:07 INFO  : Launching XSCT server: xsct.bat -interactive E:\FPGA_workspace\Microblaze_xz_1.4\Microblaze_xz\Microblaze_xz.sdk\temp_xsdb_launch_script.tcl
+09:32:09 INFO  : XSCT server has started successfully.
+09:32:09 INFO  : Successfully done setting XSCT server connection channel  
+09:32:10 INFO  : Successfully done setting SDK workspace  
+09:32:10 INFO  : Processing command line option -hwspec E:/FPGA_workspace/Microblaze_xz_1.4/Microblaze_xz/Microblaze_xz.sdk/Microblaze_xz_wrapper.hdf.

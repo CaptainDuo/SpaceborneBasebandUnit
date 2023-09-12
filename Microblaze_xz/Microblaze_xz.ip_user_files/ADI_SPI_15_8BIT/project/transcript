@@ -1,0 +1,62 @@
+# Reading D:/modeltech64_10.0c/tcl/vsim/pref.tcl 
+# //  ModelSim SE-64 10.0c Jul 21 2011 
+# //
+# //  Copyright 1991-2011 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# do {spi_driver_common_test.fdo} 
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim SE-64 vlog 10.0c Compiler 2011.07 Jul 21 2011
+# -- Compiling module adi_spi_driver_15_8bit
+# 
+# Top level modules:
+# 	adi_spi_driver_15_8bit
+# Model Technology ModelSim SE-64 vlog 10.0c Compiler 2011.07 Jul 21 2011
+# -- Compiling module spi_driver_common_test
+# 
+# Top level modules:
+# 	spi_driver_common_test
+# Model Technology ModelSim SE-64 vlog 10.0c Compiler 2011.07 Jul 21 2011
+# -- Compiling module glbl
+# 
+# Top level modules:
+# 	glbl
+# vsim -L xilinxcorelib_ver -L unisims_ver -L unimacro_ver -L secureip -lib work -voptargs=\"+acc\" -t 1ps work.spi_driver_common_test glbl 
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by:   Hostname:   ProcessID: 3
+#           Attempting to use alternate WLF file "./wlft57e73i".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft57e73i
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading work.spi_driver_common_test(fast)
+# Loading work.adi_spi_driver_15_8bit(fast)
+# Loading work.glbl(fast)
+# ** Error: (vish-4014) No objects found matching '/spi_driver_common_test/uut/SLCK_FER_PARAM'.
+# Executing ONERROR command at macro ./wave.do line 18
+# ---------test finish--------------
+# Break in Module spi_driver_common_test at spi_driver_common_test.v line 117
+# Simulation Breakpoint: Break in Module spi_driver_common_test at spi_driver_common_test.v line 117
+# MACRO ./spi_driver_common_test_wave.fdo PAUSED at line 12
+add wave  \
+sim:/spi_driver_common_test/dir
+restart
+# Loading work.spi_driver_common_test(fast)
+# Loading work.adi_spi_driver_15_8bit(fast)
+# Loading work.glbl(fast)
+run -all
+# ---------test finish--------------
+# Break in Module spi_driver_common_test at spi_driver_common_test.v line 117
+add wave  \
+sim:/spi_driver_common_test/csb
+restart
+# Loading work.spi_driver_common_test(fast)
+# Loading work.adi_spi_driver_15_8bit(fast)
+# Loading work.glbl(fast)
+run -all
+# ---------test finish--------------
+# Break in Module spi_driver_common_test at spi_driver_common_test.v line 117
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/Users/zhouys/Desktop/ADI_SPI_15_8BIT/project/wave.do
