@@ -51,6 +51,9 @@ SPI_HandleTypeDef hspi2;
 DMA_HandleTypeDef hdma_spi1_rx;
 DMA_HandleTypeDef hdma_spi2_rx;
 
+UART_HandleTypeDef huart3;
+DMA_HandleTypeDef hdma_usart3_rx;
+
 NOR_HandleTypeDef hnor1;
 
 /* USER CODE BEGIN PV */
@@ -92,6 +95,7 @@ static void MX_CAN2_Init(void);
 static void MX_FSMC_Init(void);
 static void MX_SPI1_Init(void);
 static void MX_SPI2_Init(void);
+static void MX_USART3_UART_Init(void);
 static void MX_NVIC_Init(void);
 /* USER CODE BEGIN PFP */
 /*! AD9516 paramters initialization */
@@ -145,6 +149,7 @@ int main(void)
   MX_FSMC_Init();
   MX_SPI1_Init();
   MX_SPI2_Init();
+  MX_USART3_UART_Init();
 
   /* Initialize interrupts */
   MX_NVIC_Init();
@@ -179,14 +184,14 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  res = CAN_Send_Msg(&hcan1,&CAN1TxHeader,CAN1TxData,8);//CAN1发送8个字节 
-  res = CAN_Send_Msg(&hcan2,&CAN2TxHeader,CAN2TxData,8);//CAN2发送8个字节 
+	res = CAN_Send_Msg(&hcan1,&CAN1TxHeader,CAN1TxData,8);//CAN1发送8个字节 
+	res = CAN_Send_Msg(&hcan2,&CAN2TxHeader,CAN2TxData,8);//CAN2发送8个字节 
 
-  CS25WQXX_Init(&hspi1);    //FLASH初始化
-  id = CS25WQXX_ReadID(&hspi1);    //读取ID
+	CS25WQXX_Init(&hspi1);    //FLASH初始化
+	id = CS25WQXX_ReadID(&hspi1);    //读取ID
 
-  CS25WQXX_Write(&hspi1,(u8*)TEXT_Buffer,FLASH_SIZE-100,Buffer_SIZE);		//从倒数第100个地址处开始,写入SIZE长度的数据
-  CS25WQXX_Read(&hspi1,datatemp,FLASH_SIZE-100,Buffer_SIZE);   //读取FLASH
+	CS25WQXX_Write(&hspi1,(u8*)TEXT_Buffer,FLASH_SIZE-100,Buffer_SIZE);		//从倒数第100个地址处开始,写入SIZE长度的数据
+	CS25WQXX_Read(&hspi1,datatemp,FLASH_SIZE-100,Buffer_SIZE);   //读取FLASH
   while (1)
   {
     /* USER CODE END WHILE */
@@ -412,6 +417,39 @@ static void MX_SPI2_Init(void)
 }
 
 /**
+  * @brief USART3 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_USART3_UART_Init(void)
+{
+
+  /* USER CODE BEGIN USART3_Init 0 */
+
+  /* USER CODE END USART3_Init 0 */
+
+  /* USER CODE BEGIN USART3_Init 1 */
+
+  /* USER CODE END USART3_Init 1 */
+  huart3.Instance = USART3;
+  huart3.Init.BaudRate = 115200;
+  huart3.Init.WordLength = UART_WORDLENGTH_8B;
+  huart3.Init.StopBits = UART_STOPBITS_1;
+  huart3.Init.Parity = UART_PARITY_NONE;
+  huart3.Init.Mode = UART_MODE_TX_RX;
+  huart3.Init.HwFlowCtl = UART_HWCONTROL_NONE;
+  huart3.Init.OverSampling = UART_OVERSAMPLING_16;
+  if (HAL_UART_Init(&huart3) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN USART3_Init 2 */
+
+  /* USER CODE END USART3_Init 2 */
+
+}
+
+/**
   * Enable DMA controller clock
   */
 static void MX_DMA_Init(void)
@@ -420,6 +458,11 @@ static void MX_DMA_Init(void)
   /* DMA controller clock enable */
   __HAL_RCC_DMA1_CLK_ENABLE();
   __HAL_RCC_DMA2_CLK_ENABLE();
+
+  /* DMA interrupt init */
+  /* DMA1_Stream1_IRQn interrupt configuration */
+  HAL_NVIC_SetPriority(DMA1_Stream1_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(DMA1_Stream1_IRQn);
 
 }
 

@@ -315,6 +315,19 @@
       <Focus>0</Focus>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
+      <PathWithFileName>..\Core\Usr\fpga_fsmc.c</PathWithFileName>
+      <FilenameWithoutPath>fpga_fsmc.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
+    <File>
+      <GroupNumber>3</GroupNumber>
+      <FileNumber>8</FileNumber>
+      <FileType>1</FileType>
+      <tvExp>0</tvExp>
+      <Focus>0</Focus>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <bDave2>0</bDave2>
       <PathWithFileName>../Core/Src/main.c</PathWithFileName>
       <FilenameWithoutPath>main.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
@@ -322,7 +335,7 @@
     </File>
     <File>
       <GroupNumber>3</GroupNumber>
-      <FileNumber>8</FileNumber>
+      <FileNumber>9</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
@@ -335,7 +348,7 @@
     </File>
     <File>
       <GroupNumber>3</GroupNumber>
-      <FileNumber>9</FileNumber>
+      <FileNumber>10</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
@@ -343,19 +356,6 @@
       <bDave2>0</bDave2>
       <PathWithFileName>../Core/Src/stm32f4xx_hal_msp.c</PathWithFileName>
       <FilenameWithoutPath>stm32f4xx_hal_msp.c</FilenameWithoutPath>
-      <RteFlg>0</RteFlg>
-      <bShared>0</bShared>
-    </File>
-    <File>
-      <GroupNumber>3</GroupNumber>
-      <FileNumber>10</FileNumber>
-      <FileType>1</FileType>
-      <tvExp>0</tvExp>
-      <Focus>0</Focus>
-      <tvExpOptDlg>0</tvExpOptDlg>
-      <bDave2>0</bDave2>
-      <PathWithFileName>..\Core\Usr\fpga_fsmc.c</PathWithFileName>
-      <FilenameWithoutPath>fpga_fsmc.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -614,6 +614,19 @@
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
+    <File>
+      <GroupNumber>4</GroupNumber>
+      <FileNumber>30</FileNumber>
+      <FileType>1</FileType>
+      <tvExp>0</tvExp>
+      <Focus>0</Focus>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <bDave2>0</bDave2>
+      <PathWithFileName>../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c</PathWithFileName>
+      <FilenameWithoutPath>stm32f4xx_hal_uart.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
   </Group>
 
   <Group>
@@ -624,7 +637,7 @@
     <RteFlg>0</RteFlg>
     <File>
       <GroupNumber>5</GroupNumber>
-      <FileNumber>30</FileNumber>
+      <FileNumber>31</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>

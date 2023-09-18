@@ -33,3 +33,4 @@ spacebornebasebandunit\delay.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll
 spacebornebasebandunit\delay.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h
 spacebornebasebandunit\delay.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
 spacebornebasebandunit\delay.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h
+spacebornebasebandunit\delay.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
