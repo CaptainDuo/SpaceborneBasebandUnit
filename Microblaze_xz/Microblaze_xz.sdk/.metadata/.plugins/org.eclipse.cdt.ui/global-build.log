@@ -1,92 +1,116 @@
-09:33:38 **** Build of project Space_bsp ****
-make -k all 
-"Running Make include in microblaze_0/libsrc/AXI4_ADI_SPI_15_8BIT_v1_0/src"
-make -C microblaze_0/libsrc/AXI4_ADI_SPI_15_8BIT_v1_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Running Make include in microblaze_0/libsrc/AXI4_ADI_SPI_7_8BIT_v1_0/src"
-make -C microblaze_0/libsrc/AXI4_ADI_SPI_7_8BIT_v1_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Running Make include in microblaze_0/libsrc/bram_v4_2/src"
-make -C microblaze_0/libsrc/bram_v4_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Running Make include in microblaze_0/libsrc/cpu_v2_8/src"
-make -C microblaze_0/libsrc/cpu_v2_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Running Make include in microblaze_0/libsrc/gpio_v4_3/src"
-make -C microblaze_0/libsrc/gpio_v4_3/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Running Make include in microblaze_0/libsrc/standalone_v6_8/src"
-make -C microblaze_0/libsrc/standalone_v6_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Running Make libs in microblaze_0/libsrc/AXI4_ADI_SPI_15_8BIT_v1_0/src"
-make -C microblaze_0/libsrc/AXI4_ADI_SPI_15_8BIT_v1_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Compiling AXI4_ADI_SPI_15_8BIT..."
-AXI4_ADI_SPI_15_8BIT_selftest.c: In function 'AXI4_ADI_SPI_15_8BIT_Reg_SelfTest':
-AXI4_ADI_SPI_15_8BIT_selftest.c:52:69: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-    if ( AXI4_ADI_SPI_15_8BIT_mReadReg (baseaddr, read_loop_index*4) != (read_loop_index+1)*READ_WRITE_MUL_FACTOR){
-                                                                     ^~
-AXI4_ADI_SPI_15_8BIT_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
-  int Index;
-      ^~~~~
-mb-ar: creating ../../../lib/libxil.a
-"Running Make libs in microblaze_0/libsrc/AXI4_ADI_SPI_7_8BIT_v1_0/src"
-make -C microblaze_0/libsrc/AXI4_ADI_SPI_7_8BIT_v1_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Compiling AXI4_ADI_SPI_7_8BIT..."
-AXI4_ADI_SPI_7_8BIT_selftest.c: In function 'AXI4_ADI_SPI_7_8BIT_Reg_SelfTest':
-AXI4_ADI_SPI_7_8BIT_selftest.c:52:68: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-    if ( AXI4_ADI_SPI_7_8BIT_mReadReg (baseaddr, read_loop_index*4) != (read_loop_index+1)*READ_WRITE_MUL_FACTOR){
-                                                                    ^~
-AXI4_ADI_SPI_7_8BIT_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
-  int Index;
-      ^~~~~
-"Running Make libs in microblaze_0/libsrc/bram_v4_2/src"
-make -C microblaze_0/libsrc/bram_v4_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Compiling bram"
-"Running Make libs in microblaze_0/libsrc/cpu_v2_8/src"
-make -C microblaze_0/libsrc/cpu_v2_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Compiling cpu"
-"Running Make libs in microblaze_0/libsrc/gpio_v4_3/src"
-make -C microblaze_0/libsrc/gpio_v4_3/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Compiling gpio"
-"Running Make libs in microblaze_0/libsrc/standalone_v6_8/src"
-make -C microblaze_0/libsrc/standalone_v6_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Compiling standalone";
-inbyte.c: In function 'inbyte':
-inbyte.c:11:1: warning: control reaches end of non-void function [-Wreturn-type]
- }
- ^
-outbyte.c: In function 'outbyte':
-outbyte.c:11:19: warning: unused parameter 'c' [-Wunused-parameter]
- void outbyte(char c) {
-                   ^
-microblaze_sleep.c:77:9: note: #pragma message: For the sleep routines, assembly instructions are used
- #pragma message ("For the sleep routines, assembly instructions are used")
-         ^~~~~~~
-'Finished building libraries'
-09:33:41 **** Build of configuration Debug for project Space ****
+16:40:25 **** Incremental Build of configuration Debug for project V7_spaceborneBaseband ****
 make all 
 'Building file: ../src/testperiph.c'
 'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../Space_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
+mb-gcc -Wall -O0 -g3 -I../../V7_spaceborneBaseband_bsp/microblaze_0/include -I"E:\FPGA_workspace\Microblaze_xz_1.4\Microblaze_xz\Microblaze_xz.sdk\V7_spaceborneBaseband\inc" -c -fmessage-length=0 -MT"src/testperiph.o" -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
+../src/testperiph.c:40:1: error: unknown type name 'ad9781_platform_data'; did you mean 'ad9649_platform_data'?
+ ad9781_platform_data ad9781_pdata;
+ ^~~~~~~~~~~~~~~~~~~~
+ ad9649_platform_data
+../src/testperiph.c:41:1: error: unknown type name 'ad9781_reset_pin'; did you mean 'ad9649_mode_pin'?
+ ad9781_reset_pin ad9781_rst_pin;
+ ^~~~~~~~~~~~~~~~
+ ad9649_mode_pin
+../src/testperiph.c:42:1: error: unknown type name 'ad9781_dev'; did you mean 'ad9649_dev'?
+ ad9781_dev ad9781_device;
+ ^~~~~~~~~~
+ ad9649_dev
 ../src/testperiph.c: In function 'main':
-../src/testperiph.c:43:11: warning: variable 'status' set but not used [-Wunused-but-set-variable]
-       int status;
-           ^~~~~~
-../src/testperiph.c:51:11: warning: variable 'status' set but not used [-Wunused-but-set-variable]
-       int status;
-           ^~~~~~
+../src/testperiph.c:67:2: warning: implicit declaration of function 'ad9781_param_init'; did you mean 'ad9649_param_init'? [-Wimplicit-function-declaration]
+  ad9781_param_init(&ad9781_pdata,
+  ^~~~~~~~~~~~~~~~~
+  ad9649_param_init
+../src/testperiph.c:71:11: warning: implicit declaration of function 'ad9781_setup'; did you mean 'ad9649_setup'? [-Wimplicit-function-declaration]
+  status = ad9781_setup(&ad9781_device,
+           ^~~~~~~~~~~~
+           ad9649_setup
+make: *** [src/subdir.mk:26: src/testperiph.o] Error 1
+16:40:50 **** Auto Build of configuration Debug for project V7_spaceborneBaseband ****
+make all 
+'Building file: ../src/testperiph.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -I../../V7_spaceborneBaseband_bsp/microblaze_0/include -I"E:\FPGA_workspace\Microblaze_xz_1.4\Microblaze_xz\Microblaze_xz.sdk\V7_spaceborneBaseband\inc" -c -fmessage-length=0 -MT"src/testperiph.o" -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
 'Finished building: ../src/testperiph.c'
 ' '
-'Building file: ../src/xgpio_tapp_example.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xgpio_tapp_example.o" -I../../Space_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/xgpio_tapp_example.d" -MT"src/xgpio_tapp_example.o" -o "src/xgpio_tapp_example.o" "../src/xgpio_tapp_example.c"
-'Finished building: ../src/xgpio_tapp_example.c'
-' '
-'Building target: Space.elf'
+'Building target: V7_spaceborneBaseband.elf'
 'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Space_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Space.elf"  ./src/testperiph.o ./src/xgpio_tapp_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: Space.elf'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../V7_spaceborneBaseband_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "V7_spaceborneBaseband.elf"  ./usr/ad9649.o ./usr/ad9781.o ./usr/adi_spi_driver.o  ./src/testperiph.o ./src/xgpio_tapp_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./usr/ad9781.o: In function `ad9781_delay':
+E:\FPGA_workspace\Microblaze_xz_1.4\Microblaze_xz\Microblaze_xz.sdk\V7_spaceborneBaseband\Debug/../usr/ad9781.c:139: undefined reference to `delay'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:39: V7_spaceborneBaseband.elf] Error 1
+16:46:29 **** Auto Build of configuration Debug for project V7_spaceborneBaseband ****
+make all 
+'Building file: ../usr/ad9649.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -I../../V7_spaceborneBaseband_bsp/microblaze_0/include -I"E:\FPGA_workspace\Microblaze_xz_1.4\Microblaze_xz\Microblaze_xz.sdk\V7_spaceborneBaseband\inc" -c -fmessage-length=0 -MT"usr/ad9649.o" -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"usr/ad9649.d" -MT"usr/ad9649.o" -o "usr/ad9649.o" "../usr/ad9649.c"
+../usr/ad9649.c: In function 'ad9649_write':
+../usr/ad9649.c:29:8: warning: implicit declaration of function 'app_adi_spi_send' [-Wimplicit-function-declaration]
+  ret = app_adi_spi_send(Baseaddr, WriteAddr, WriteData);
+        ^~~~~~~~~~~~~~~~
+../usr/ad9649.c: In function 'ad9649_read':
+../usr/ad9649.c:41:8: warning: implicit declaration of function 'app_adi_spi_read' [-Wimplicit-function-declaration]
+  ret = app_adi_spi_read(Baseaddr, ReadAddr, data);
+        ^~~~~~~~~~~~~~~~
+../usr/ad9649.c: In function 'ad9649_setup':
+../usr/ad9649.c:68:12: warning: unused variable 'reg_address' [-Wunused-variable]
+  uint16_t  reg_address = 0;
+            ^~~~~~~~~~~
+../usr/ad9649.c:67:11: warning: unused variable 'index' [-Wunused-variable]
+  int8_t   index = 0;
+           ^~~~~
+../usr/ad9649.c: In function 'ad9649_read':
+../usr/ad9649.c:41:6: warning: 'data' is used uninitialized in this function [-Wuninitialized]
+  ret = app_adi_spi_read(Baseaddr, ReadAddr, data);
+  ~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../usr/ad9649.c'
+' '
+'Building file: ../usr/ad9781.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -I../../V7_spaceborneBaseband_bsp/microblaze_0/include -I"E:\FPGA_workspace\Microblaze_xz_1.4\Microblaze_xz\Microblaze_xz.sdk\V7_spaceborneBaseband\inc" -c -fmessage-length=0 -MT"usr/ad9781.o" -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"usr/ad9781.d" -MT"usr/ad9781.o" -o "usr/ad9781.o" "../usr/ad9781.c"
+../usr/ad9781.c: In function 'ad9781_write':
+../usr/ad9781.c:37:8: warning: implicit declaration of function 'app_adi_spi_send' [-Wimplicit-function-declaration]
+  ret = app_adi_spi_send(Baseaddr, WriteAddr, WriteData);
+        ^~~~~~~~~~~~~~~~
+../usr/ad9781.c: In function 'ad9781_read':
+../usr/ad9781.c:49:8: warning: implicit declaration of function 'app_adi_spi_read' [-Wimplicit-function-declaration]
+  ret = app_adi_spi_read(Baseaddr, WriteAddr, data);
+        ^~~~~~~~~~~~~~~~
+../usr/ad9781.c: In function 'ad9781_setup':
+../usr/ad9781.c:112:71: warning: passing argument 3 of 'ad9781_write' makes integer from pointer without a cast [-Wint-conversion]
+  ret = ad9781_write(device->adi_spi_baseaddr, AD9781_REG_SPI_CONTROL, &reg_value);
+                                                                       ^
+../usr/ad9781.c:33:5: note: expected 'uint8_t {aka unsigned char}' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int ad9781_write(uint32_t Baseaddr, uint16_t WriteAddr, uint8_t WriteData)
+     ^~~~~~~~~~~~
+../usr/ad9781.c:95:12: warning: unused variable 'reg_address' [-Wunused-variable]
+  uint16_t  reg_address = 0;
+            ^~~~~~~~~~~
+../usr/ad9781.c:94:11: warning: unused variable 'index' [-Wunused-variable]
+  int8_t   index = 0;
+           ^~~~~
+../usr/ad9781.c:121:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../usr/ad9781.c: In function 'ad9781_read':
+../usr/ad9781.c:49:6: warning: 'data' is used uninitialized in this function [-Wuninitialized]
+  ret = app_adi_spi_read(Baseaddr, WriteAddr, data);
+  ~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../usr/ad9781.c'
+' '
+'Building file: ../src/testperiph.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -I../../V7_spaceborneBaseband_bsp/microblaze_0/include -I"E:\FPGA_workspace\Microblaze_xz_1.4\Microblaze_xz\Microblaze_xz.sdk\V7_spaceborneBaseband\inc" -c -fmessage-length=0 -MT"src/testperiph.o" -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
+'Finished building: ../src/testperiph.c'
+' '
+'Building target: V7_spaceborneBaseband.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../V7_spaceborneBaseband_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "V7_spaceborneBaseband.elf"  ./usr/ad9649.o ./usr/ad9781.o ./usr/adi_spi_driver.o  ./src/testperiph.o ./src/xgpio_tapp_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: V7_spaceborneBaseband.elf'
 ' '
 'Invoking: MicroBlaze Print Size'
-mb-size Space.elf  |tee "Space.elf.size"
+mb-size V7_spaceborneBaseband.elf  |tee "V7_spaceborneBaseband.elf.size"
    text	   data	    bss	    dec	    hex	filename
-   4004	    304	   3148	   7456	   1d20	Space.elf
-'Finished building: Space.elf.size'
+   5864	    304	   3192	   9360	   2490	V7_spaceborneBaseband.elf
+'Finished building: V7_spaceborneBaseband.elf.size'
 ' '
-09:33:43 **** Auto Build of configuration Debug for project Space ****
-make all 
-make: Nothing to be done for 'all'.

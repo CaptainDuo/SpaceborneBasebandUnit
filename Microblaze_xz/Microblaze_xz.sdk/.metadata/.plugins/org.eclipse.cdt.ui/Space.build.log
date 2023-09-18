@@ -1,6 +1,33 @@
-09:33:43 **** Auto Build of configuration Debug for project Space ****
+14:24:40 **** Auto Build of configuration Debug for project Space ****
 make all 
-make: Nothing to be done for 'all'.
+'Building file: ../src/testperiph.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../Space_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
+../src/testperiph.c: In function 'main':
+../src/testperiph.c:43:11: warning: variable 'status' set but not used [-Wunused-but-set-variable]
+       int status;
+           ^~~~~~
+../src/testperiph.c:51:11: warning: variable 'status' set but not used [-Wunused-but-set-variable]
+       int status;
+           ^~~~~~
+'Finished building: ../src/testperiph.c'
+' '
+'Building file: ../src/xgpio_tapp_example.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xgpio_tapp_example.o" -I../../Space_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/xgpio_tapp_example.d" -MT"src/xgpio_tapp_example.o" -o "src/xgpio_tapp_example.o" "../src/xgpio_tapp_example.c"
+'Finished building: ../src/xgpio_tapp_example.c'
+' '
+'Building target: Space.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Space_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Space.elf"  ./src/testperiph.o ./src/xgpio_tapp_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Space.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Space.elf  |tee "Space.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   4004	    304	   3148	   7456	   1d20	Space.elf
+'Finished building: Space.elf.size'
+' '
 
-09:33:43 Build Finished (took 172ms)
+14:24:42 Build Finished (took 1s.698ms)
 

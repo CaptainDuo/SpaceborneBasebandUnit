@@ -1,0 +1,78 @@
+16:46:29 **** Auto Build of configuration Debug for project V7_spaceborneBaseband ****
+make all 
+'Building file: ../usr/ad9649.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -I../../V7_spaceborneBaseband_bsp/microblaze_0/include -I"E:\FPGA_workspace\Microblaze_xz_1.4\Microblaze_xz\Microblaze_xz.sdk\V7_spaceborneBaseband\inc" -c -fmessage-length=0 -MT"usr/ad9649.o" -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"usr/ad9649.d" -MT"usr/ad9649.o" -o "usr/ad9649.o" "../usr/ad9649.c"
+../usr/ad9649.c: In function 'ad9649_write':
+../usr/ad9649.c:29:8: warning: implicit declaration of function 'app_adi_spi_send' [-Wimplicit-function-declaration]
+  ret = app_adi_spi_send(Baseaddr, WriteAddr, WriteData);
+        ^~~~~~~~~~~~~~~~
+../usr/ad9649.c: In function 'ad9649_read':
+../usr/ad9649.c:41:8: warning: implicit declaration of function 'app_adi_spi_read' [-Wimplicit-function-declaration]
+  ret = app_adi_spi_read(Baseaddr, ReadAddr, data);
+        ^~~~~~~~~~~~~~~~
+../usr/ad9649.c: In function 'ad9649_setup':
+../usr/ad9649.c:68:12: warning: unused variable 'reg_address' [-Wunused-variable]
+  uint16_t  reg_address = 0;
+            ^~~~~~~~~~~
+../usr/ad9649.c:67:11: warning: unused variable 'index' [-Wunused-variable]
+  int8_t   index = 0;
+           ^~~~~
+../usr/ad9649.c: In function 'ad9649_read':
+../usr/ad9649.c:41:6: warning: 'data' is used uninitialized in this function [-Wuninitialized]
+  ret = app_adi_spi_read(Baseaddr, ReadAddr, data);
+  ~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../usr/ad9649.c'
+' '
+'Building file: ../usr/ad9781.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -I../../V7_spaceborneBaseband_bsp/microblaze_0/include -I"E:\FPGA_workspace\Microblaze_xz_1.4\Microblaze_xz\Microblaze_xz.sdk\V7_spaceborneBaseband\inc" -c -fmessage-length=0 -MT"usr/ad9781.o" -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"usr/ad9781.d" -MT"usr/ad9781.o" -o "usr/ad9781.o" "../usr/ad9781.c"
+../usr/ad9781.c: In function 'ad9781_write':
+../usr/ad9781.c:37:8: warning: implicit declaration of function 'app_adi_spi_send' [-Wimplicit-function-declaration]
+  ret = app_adi_spi_send(Baseaddr, WriteAddr, WriteData);
+        ^~~~~~~~~~~~~~~~
+../usr/ad9781.c: In function 'ad9781_read':
+../usr/ad9781.c:49:8: warning: implicit declaration of function 'app_adi_spi_read' [-Wimplicit-function-declaration]
+  ret = app_adi_spi_read(Baseaddr, WriteAddr, data);
+        ^~~~~~~~~~~~~~~~
+../usr/ad9781.c: In function 'ad9781_setup':
+../usr/ad9781.c:112:71: warning: passing argument 3 of 'ad9781_write' makes integer from pointer without a cast [-Wint-conversion]
+  ret = ad9781_write(device->adi_spi_baseaddr, AD9781_REG_SPI_CONTROL, &reg_value);
+                                                                       ^
+../usr/ad9781.c:33:5: note: expected 'uint8_t {aka unsigned char}' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int ad9781_write(uint32_t Baseaddr, uint16_t WriteAddr, uint8_t WriteData)
+     ^~~~~~~~~~~~
+../usr/ad9781.c:95:12: warning: unused variable 'reg_address' [-Wunused-variable]
+  uint16_t  reg_address = 0;
+            ^~~~~~~~~~~
+../usr/ad9781.c:94:11: warning: unused variable 'index' [-Wunused-variable]
+  int8_t   index = 0;
+           ^~~~~
+../usr/ad9781.c:121:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../usr/ad9781.c: In function 'ad9781_read':
+../usr/ad9781.c:49:6: warning: 'data' is used uninitialized in this function [-Wuninitialized]
+  ret = app_adi_spi_read(Baseaddr, WriteAddr, data);
+  ~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../usr/ad9781.c'
+' '
+'Building file: ../src/testperiph.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -I../../V7_spaceborneBaseband_bsp/microblaze_0/include -I"E:\FPGA_workspace\Microblaze_xz_1.4\Microblaze_xz\Microblaze_xz.sdk\V7_spaceborneBaseband\inc" -c -fmessage-length=0 -MT"src/testperiph.o" -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
+'Finished building: ../src/testperiph.c'
+' '
+'Building target: V7_spaceborneBaseband.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../V7_spaceborneBaseband_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "V7_spaceborneBaseband.elf"  ./usr/ad9649.o ./usr/ad9781.o ./usr/adi_spi_driver.o  ./src/testperiph.o ./src/xgpio_tapp_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: V7_spaceborneBaseband.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size V7_spaceborneBaseband.elf  |tee "V7_spaceborneBaseband.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   5864	    304	   3192	   9360	   2490	V7_spaceborneBaseband.elf
+'Finished building: V7_spaceborneBaseband.elf.size'
+' '
+
+16:46:31 Build Finished (took 1s.303ms)
+

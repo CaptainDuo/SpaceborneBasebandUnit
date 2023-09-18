@@ -1,4 +1,4 @@
-09:33:38 **** Build of project Space_bsp ****
+14:24:32 **** Auto Build of project Space_bsp ****
 make -k all 
 "Running Make include in microblaze_0/libsrc/AXI4_ADI_SPI_15_8BIT_v1_0/src"
 make -C microblaze_0/libsrc/AXI4_ADI_SPI_15_8BIT_v1_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
@@ -22,7 +22,6 @@ AXI4_ADI_SPI_15_8BIT_selftest.c:52:69: warning: comparison between signed and un
 AXI4_ADI_SPI_15_8BIT_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
   int Index;
       ^~~~~
-mb-ar: creating ../../../lib/libxil.a
 "Running Make libs in microblaze_0/libsrc/AXI4_ADI_SPI_7_8BIT_v1_0/src"
 make -C microblaze_0/libsrc/AXI4_ADI_SPI_7_8BIT_v1_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
 "Compiling AXI4_ADI_SPI_7_8BIT..."
@@ -58,5 +57,5 @@ microblaze_sleep.c:77:9: note: #pragma message: For the sleep routines, assembly
          ^~~~~~~
 'Finished building libraries'
 
-09:33:41 Build Finished (took 3s.526ms)
+14:24:40 Build Finished (took 7s.874ms)
 
