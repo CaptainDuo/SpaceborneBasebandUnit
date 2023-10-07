@@ -1,0 +1,4 @@
+---- channel_num Matches (3 in 2 files) ----
+ad9517_lvpecl_channel_spec in ad9517.h (Usr) : 	uint8_t channel_num;	  // Output channel number.
+ad9517_lvds_cmos_channel_spec in ad9517.h (Usr) : 	uint8_t channel_num;	  // Output channel number.
+ad9156_parameter_initialize in main.c (Src) : 	init_param->ad9517_st.lvds_cmos_channels.channel_num

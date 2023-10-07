@@ -1,0 +1,63 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: μVision V5.14.0.0
+Copyright (C) 2015 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: aaa Captain, aaa, LIC=Z3C6R-KABUA-MS8YP-MC1RK-D7AGT-CAR3T
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Professional  Version: 5.14.0.0
+Toolchain Path:  D:\Work\Keil\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.05 update 1 (build 106)
+Assembler:       Armasm.exe V5.05 update 1 (build 106)
+Linker/Locator:  ArmLink.exe V5.05 update 1 (build 106)
+Library Manager: ArmAr.exe V5.05 update 1 (build 106)
+Hex Converter:   FromElf.exe V5.05 update 1 (build 106)
+CPU DLL:         SARMCM3.DLL V5.14.0.0
+Dialog DLL:      DCM.DLL V1.13.1.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V2.0.14.0_KEIL
+Dialog DLL:      TCM.DLL V1.14.4.0
+ 
+<h2>Project:</h2>
+\\192.168.8.8\Cube_workspace\SpaceborneBasebandUnit\MDK-ARM\SpaceborneBasebandUnit.uvprojx
+Project File Date:  10/07/2023
+
+<h2>Output:</h2>
+Build target 'SpaceborneBasebandUnit'
+compiling main.c...
+../Core/Src/main.c(123): warning:  #550-D: variable "res" was set but never used
+    u32 res;
+../Core/Src/main.c(124): warning:  #550-D: variable "id" was set but never used
+    u16 id = 0;
+../Core/Src/main.c(624): warning:  #69-D: integer conversion resulted in truncation
+        init_pdata->ref_sel_pin = 100000000;    //不使用外部参考引脚
+../Core/Src/main.c(518): warning:  #177-D: function "MX_FSMC_Init" was declared but never referenced
+  static void MX_FSMC_Init(void)
+../Core/Src/main.c: 4 warnings, 0 errors
+linking...
+Program Size: Code=17812 RO-data=500 RW-data=72 ZI-data=6912  
+FromELF: creating hex file...
+"SpaceborneBasebandUnit\SpaceborneBasebandUnit.axf" - 0 Error(s), 4 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.4.2.0.pack
+                ARM::CMSIS:CORE:3.40.0
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 3.40.0
+
+<h2>Collection of Component include folders:</h2>
+  \\192.168.8.8\Cube_workspace\SpaceborneBasebandUnit\MDK-ARM\RTE
+  D:\Work\Keil\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include
+  D:\Work\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.5.0
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:3.40.0
+      Source file:   CMSIS\UserCodeTemplates\ARM\ITM_Retarget.c
+</pre>
+</body>
+</html>
