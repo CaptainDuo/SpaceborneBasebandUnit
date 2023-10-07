@@ -147,7 +147,7 @@ int main(void)
   MX_DMA_Init();
   MX_CAN1_Init();
   MX_CAN2_Init();
-  //MX_FSMC_Init();
+  MX_FSMC_Init();
   MX_SPI1_Init();
   MX_SPI2_Init();
   MX_USART3_UART_Init();
@@ -503,8 +503,11 @@ static void MX_GPIO_Init(void)
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0|GPIO_PIN_1|GPIO_PIN_11, GPIO_PIN_RESET);
 
-  /*Configure GPIO pins : PB0 PB1 PB11 */
-  GPIO_InitStruct.Pin = GPIO_PIN_0|GPIO_PIN_1|GPIO_PIN_11;
+  /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(AD9516_CSB_GPIO_Port, AD9516_CSB_Pin, GPIO_PIN_SET);
+
+  /*Configure GPIO pins : PB0 PB1 PB11 AD9516_CSB_Pin */
+  GPIO_InitStruct.Pin = GPIO_PIN_0|GPIO_PIN_1|GPIO_PIN_11|AD9516_CSB_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;

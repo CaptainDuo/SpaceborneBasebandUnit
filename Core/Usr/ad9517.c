@@ -269,6 +269,8 @@ int32_t ad9517_write( ad9517_dev *dev,
 	uint8_t tx_buffer[3] = {0, 0, 0};
 
 	reg_address = AD9517_WRITE + AD9517_ADDR(reg_addr);
+	/* AD9516_CSBÀ­µÍ */
+	HAL_GPIO_WritePin(AD9516_CSB_GPIO_Port, AD9516_CSB_Pin, GPIO_PIN_RESET);
 	for(i = 0; i < AD9517_TRANSF_LEN(reg_addr); i++) {
 		reg_value    = (reg_val >> ((AD9517_TRANSF_LEN(reg_addr) -
 					     i - 1) * 8)) & 0xFF;
@@ -284,6 +286,7 @@ int32_t ad9517_write( ad9517_dev *dev,
 			return ret;
 		reg_address--;
 	}
+	HAL_GPIO_WritePin(AD9516_CSB_GPIO_Port, AD9516_CSB_Pin, GPIO_PIN_SET);
 
 	return ret;
 }
@@ -310,6 +313,8 @@ int32_t ad9517_read( ad9517_dev *dev,
 	*reg_value = 0;
 
 	reg_address = AD9517_READ + AD9517_ADDR(reg_addr);
+	/* AD9516_CSBÀ­µÍ */
+	HAL_GPIO_WritePin(AD9516_CSB_GPIO_Port, AD9516_CSB_Pin, GPIO_PIN_RESET);
 	for(i = 0; i < AD9517_TRANSF_LEN(reg_addr); i++) {
 		tx_buffer[0] = (reg_address & 0xFF00) >> 8;
 		tx_buffer[1] = reg_address & 0x00FF;
@@ -323,6 +328,7 @@ int32_t ad9517_read( ad9517_dev *dev,
 		*reg_value <<= 8;
 		*reg_value |= rx_buffer[0];
 	}
+	HAL_GPIO_WritePin(AD9516_CSB_GPIO_Port, AD9516_CSB_Pin, GPIO_PIN_SET);
 
 	return ret;
 }
