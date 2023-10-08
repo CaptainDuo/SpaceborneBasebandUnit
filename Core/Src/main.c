@@ -147,7 +147,7 @@ int main(void)
   MX_DMA_Init();
   MX_CAN1_Init();
   MX_CAN2_Init();
-  MX_FSMC_Init();
+//  MX_FSMC_Init();
   MX_SPI1_Init();
   MX_SPI2_Init();
   MX_USART3_UART_Init();
@@ -216,9 +216,16 @@ int main(void)
   {
 		HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, GPIO_PIN_SET);
 		HAL_GPIO_WritePin(GPIOB, GPIO_PIN_1, GPIO_PIN_RESET);
-		delay_ms(10000);
+		for (res = 0; res <500; ++res)
+			{
+			delay_ms(10000);
+			}
 		HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, GPIO_PIN_RESET);
 		HAL_GPIO_WritePin(GPIOB, GPIO_PIN_1, GPIO_PIN_SET);
+		for (res = 0; res <500; ++res)
+			{
+			delay_ms(10000);
+			}
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
