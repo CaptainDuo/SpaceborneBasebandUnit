@@ -11,6 +11,7 @@
 #include "cs25wq256.h"
 #include "spi.h"
 #include "stm32f4xx_hal_gpio.h"
+#include "main.h"
 
 u16 CS25WQXX_TYPE=CS25WQ256;	//Ä¬ÈÏÊÇCS25WQ256
 
