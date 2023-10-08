@@ -147,7 +147,7 @@ int main(void)
   MX_DMA_Init();
   MX_CAN1_Init();
   MX_CAN2_Init();
-  //MX_FSMC_Init();
+  MX_FSMC_Init();
   MX_SPI1_Init();
   MX_SPI2_Init();
   MX_USART3_UART_Init();
@@ -182,12 +182,12 @@ int main(void)
 		}
 	//3.配置VCO
 	res = ad9517_frequency(AD9516_1_DEV, AD9516_channel_0, 62000000);
-	res = ad9517_frequency(AD9516_1_DEV, AD9516_channel_2, 62000000);
+	res = ad9517_frequency(AD9516_1_DEV, AD9516_channel_2, 248000000);
 	res = ad9517_frequency(AD9516_1_DEV, AD9516_channel_6, 248000000);
 	//4.配置通道输出
-	res = ad9517_power_mode(AD9516_1_DEV, AD9516_channel_0, Safe_LVPECL_power_down);
+	res = ad9517_power_mode(AD9516_1_DEV, AD9516_channel_0, Normal_operation);
 	res = ad9517_power_mode(AD9516_1_DEV, AD9516_channel_1, Safe_LVPECL_power_down);
-	res = ad9517_power_mode(AD9516_1_DEV, AD9516_channel_2, Safe_LVPECL_power_down);
+	res = ad9517_power_mode(AD9516_1_DEV, AD9516_channel_2, Normal_operation);
 	res = ad9517_power_mode(AD9516_1_DEV, AD9516_channel_3, Safe_LVPECL_power_down);
 	res = ad9517_power_mode(AD9516_1_DEV, AD9516_channel_4, Safe_LVPECL_power_down);
 	res = ad9517_power_mode(AD9516_1_DEV, AD9516_channel_5, Safe_LVPECL_power_down);
@@ -195,21 +195,30 @@ int main(void)
 	res = ad9517_power_mode(AD9516_1_DEV, AD9516_channel_7, Power_off);
 	res = ad9517_power_mode(AD9516_1_DEV, AD9516_channel_8, Power_off);
 	res = ad9517_power_mode(AD9516_1_DEV, AD9516_channel_9, Power_off);
-
+	//5.更新所有寄存器
+	res = ad9517_update(AD9516_1_DEV);
+	
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-	res = CAN_Send_Msg(&hcan1,&CAN1TxHeader,CAN1TxData,8);//CAN1发送8个字节 
-	res = CAN_Send_Msg(&hcan2,&CAN2TxHeader,CAN2TxData,8);//CAN2发送8个字节 
+
 
 	CS25WQXX_Init(&hspi1);    //FLASH初始化
 	id = CS25WQXX_ReadID(&hspi1);    //读取ID
 
 	CS25WQXX_Write(&hspi1,(u8*)TEXT_Buffer,FLASH_SIZE-100,Buffer_SIZE);		//从倒数第100个地址处开始,写入SIZE长度的数据
 	CS25WQXX_Read(&hspi1,datatemp,FLASH_SIZE-100,Buffer_SIZE);   //读取FLASH
+
+	res = CAN_Send_Msg(&hcan1,&CAN1TxHeader,CAN1TxData,8);//CAN1发送8个字节 
+	res = CAN_Send_Msg(&hcan2,&CAN2TxHeader,CAN2TxData,8);//CAN2发送8个字节 
   while (1)
   {
+		HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, GPIO_PIN_SET);
+		HAL_GPIO_WritePin(GPIOB, GPIO_PIN_1, GPIO_PIN_RESET);
+		delay_ms(10000);
+		HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, GPIO_PIN_RESET);
+		HAL_GPIO_WritePin(GPIOB, GPIO_PIN_1, GPIO_PIN_SET);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -378,7 +387,7 @@ static void MX_SPI1_Init(void)
   hspi1.Init.DataSize = SPI_DATASIZE_8BIT;
   hspi1.Init.CLKPolarity = SPI_POLARITY_HIGH;
   hspi1.Init.CLKPhase = SPI_PHASE_2EDGE;
-  hspi1.Init.NSS = SPI_NSS_HARD_OUTPUT;
+  hspi1.Init.NSS = SPI_NSS_SOFT;
   hspi1.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_4;
   hspi1.Init.FirstBit = SPI_FIRSTBIT_MSB;
   hspi1.Init.TIMode = SPI_TIMODE_DISABLE;
@@ -505,10 +514,20 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOD_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(QSPI_CS_GPIO_Port, QSPI_CS_Pin, GPIO_PIN_SET);
+
+  /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0|GPIO_PIN_1|GPIO_PIN_11, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(AD9516_CSB_GPIO_Port, AD9516_CSB_Pin, GPIO_PIN_SET);
+
+  /*Configure GPIO pin : QSPI_CS_Pin */
+  GPIO_InitStruct.Pin = QSPI_CS_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(QSPI_CS_GPIO_Port, &GPIO_InitStruct);
 
   /*Configure GPIO pins : PB0 PB1 PB11 AD9516_CSB_Pin */
   GPIO_InitStruct.Pin = GPIO_PIN_0|GPIO_PIN_1|GPIO_PIN_11|AD9516_CSB_Pin;

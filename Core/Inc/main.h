@@ -57,6 +57,8 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
+#define QSPI_CS_Pin GPIO_PIN_4
+#define QSPI_CS_GPIO_Port GPIOA
 #define AD9516_CSB_Pin GPIO_PIN_12
 #define AD9516_CSB_GPIO_Port GPIOB
 
