@@ -122,6 +122,7 @@ int32_t ad9517_setup( ad9517_dev **device,
 	ret = ad9517_write(dev,
 			   AD9517_REG_SERIAL_PORT_CONFIG,
 			   AD9517_LONG_INSTRUCTION);
+	ret = ad9517_read(dev, AD9517_REG_SERIAL_PORT_CONFIG, &reg_value);
 	if(ret < 0)
 		return ret;
 	ret = ad9517_update(dev);
@@ -597,7 +598,12 @@ int64_t ad9517_frequency( ad9517_dev *dev,
 		divider = 0;
 	}
 	/* Write the VCO divider value. */
-	ad9517_read(dev, AD9517_REG_INPUT_CLKS, &reg_value);
+	while (reg_value == 0)
+		{
+		ad9517_read(dev, AD9517_REG_INPUT_CLKS, &reg_value);
+		Delay_us(100);
+		}
+
 	if((int32_t)reg_value < 0)
 		return reg_value;
 	if((dev->ad9517_st.vco_divider == 1) &&
