@@ -28,7 +28,7 @@ u8 SPI1_ReadWriteByte(SPI_HandleTypeDef *SPI_Handler , u8 TxData)
 u8 SPI2_ReadWriteByte(SPI_HandleTypeDef *SPI_Handler , u8 *TxData , u8 *RxData )
 {
     u8 status;
-    status = HAL_SPI_TransmitReceive(SPI_Handler,TxData,RxData,1, 1000);       
+    status = HAL_SPI_TransmitReceive(SPI_Handler,TxData,RxData,3, 1000);       
  	return status;          		    //返回收到的数据		
 }
 

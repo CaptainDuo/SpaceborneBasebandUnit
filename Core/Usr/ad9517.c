@@ -47,6 +47,7 @@
 #include "spi.h"
 #include "delay.h"
 #include "ad9517.h"
+#include "main.h"
 
 /***************************************************************************//**
  * @brief Initializes the AD9517.
@@ -95,17 +96,18 @@ int32_t ad9517_setup( ad9517_dev **device,
 	ret = ad9517_read(dev, AD9517_REG_PART_ID, &reg_value);
 	if (ret)
 		return ret;
-#if 0
+#if 1
 	if (reg_value != dev->ad9517_type)
 		return -1;
 #endif
 	/* Configure serial port for long instructions and reset the serial
 	 * interface. */
-	while (1)  //测试代码
+	while (0)  //测试代码
 		{
 		ret = ad9517_write(dev,
 					   AD9517_REG_SERIAL_PORT_CONFIG,
 					   AD9517_SOFT_RESET | AD9517_LONG_INSTRUCTION | AD9517_SDO_ACTIVE);
+			ret = ad9517_read(dev, AD9517_REG_PART_ID, &reg_value);
 		}
 	ret = ad9517_write(dev,
 			   AD9517_REG_SERIAL_PORT_CONFIG,
@@ -322,12 +324,15 @@ int32_t ad9517_read( ad9517_dev *dev,
 
 //		ret = no_os_spi_write_and_read(dev->spi_desc, tx_buffer, 3);
 		//替换为STM32F4的SPI库函数
-		ret = SPI2_ReadWriteByte(dev->spi_desc, tx_buffer, rx_buffer);
+//		ret = HAL_SPI_Receive(dev->spi_desc, tx_buffer, rx_buffer ,3 ,1000);
+		ret = HAL_SPI_Receive(dev->spi_desc, tx_buffer,3 ,1000);
+
 		reg_address--;
 		//将MSB向右移位
 		*reg_value <<= 8;
 		*reg_value |= rx_buffer[0];
 	}
+	*reg_value = tx_buffer[2];
 	HAL_GPIO_WritePin(AD9516_CSB_GPIO_Port, AD9516_CSB_Pin, GPIO_PIN_SET);
 
 	return ret;

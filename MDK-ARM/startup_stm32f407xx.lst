@@ -849,11 +849,11 @@ erwork --depend=spacebornebasebandunit\startup_stm32f407xx.d -ospacebornebaseba
 ARM Macro Assembler    Page 14 
 
 
-ndunit\startup_stm32f407xx.o -I\\192.168.8.8\Cube_workspace\SpaceborneBasebandU
-nit\MDK-ARM\RTE -ID:\Work\Keil\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include -ID:\Work
-\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.5.0 --predefine="__UVISION_VERSION SETA 514
-" --predefine="_RTE_ SETA 1" --predefine="STM32F407xx SETA 1" --list=startup_st
-m32f407xx.lst startup_stm32f407xx.s
+ndunit\startup_stm32f407xx.o -II:\Space_MCU\SpaceborneBasebandUnit\MDK-ARM\RTE 
+-ID:\Work\Keil\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include -ID:\Work\Keil\ARM\PACK\K
+eil\STM32F4xx_DFP\2.5.0 --predefine="__UVISION_VERSION SETA 514" --predefine="_
+RTE_ SETA 1" --predefine="STM32F407xx SETA 1" --list=startup_stm32f407xx.lst st
+artup_stm32f407xx.s
 
 
 
