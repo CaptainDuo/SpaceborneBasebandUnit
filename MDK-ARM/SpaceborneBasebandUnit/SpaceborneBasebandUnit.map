@@ -163,6 +163,7 @@ Section Cross References
     main.o(i.main) refers to ad9517.o(i.ad9517_setup) for ad9517_setup
     main.o(i.main) refers to ad9517.o(i.ad9517_frequency) for ad9517_frequency
     main.o(i.main) refers to ad9517.o(i.ad9517_power_mode) for ad9517_power_mode
+    main.o(i.main) refers to ad9517.o(i.ad9517_update) for ad9517_update
     main.o(i.main) refers to can.o(i.CAN_Send_Msg) for CAN_Send_Msg
     main.o(i.main) refers to cs25wq256.o(i.CS25WQXX_Init) for CS25WQXX_Init
     main.o(i.main) refers to cs25wq256.o(i.CS25WQXX_ReadID) for CS25WQXX_ReadID
@@ -1513,22 +1514,22 @@ Image Symbol Table
     __NVIC_SetPriority                       0x08003ca5   Thumb Code    32  stm32f4xx_hal_cortex.o(i.__NVIC_SetPriority)
     i.ad9156_parameter_initialize            0x08003ccc   Section        0  main.o(i.ad9156_parameter_initialize)
     i.ad9517_frequency                       0x08003ebc   Section        0  ad9517.o(i.ad9517_frequency)
-    i.ad9517_power_mode                      0x08004484   Section        0  ad9517.o(i.ad9517_power_mode)
-    i.ad9517_read                            0x08004604   Section        0  ad9517.o(i.ad9517_read)
-    i.ad9517_setup                           0x08004690   Section        0  ad9517.o(i.ad9517_setup)
-    i.ad9517_update                          0x08004938   Section        0  ad9517.o(i.ad9517_update)
-    i.ad9517_vco_frequency                   0x0800494c   Section        0  ad9517.o(i.ad9517_vco_frequency)
-    i.ad9517_write                           0x08004bc8   Section        0  ad9517.o(i.ad9517_write)
-    i.delay_us                               0x08004c54   Section        0  delay.o(i.delay_us)
-    i.dividers_checker                       0x08004c9c   Section        0  ad9517.o(i.dividers_checker)
-    i.main                                   0x08004ccc   Section        0  main.o(i.main)
-    x$fpl$fpinit                             0x08004e6c   Section       10  fpinit.o(x$fpl$fpinit)
-    $v0                                      0x08004e6c   Number         0  fpinit.o(x$fpl$fpinit)
-    .constdata                               0x08004e78   Section       64  ad9517.o(.constdata)
-    .constdata                               0x08004eb8   Section       44  main.o(.constdata)
-    .constdata                               0x08004ee4   Section        8  stm32f4xx_hal_dma.o(.constdata)
-    flagBitshiftOffset                       0x08004ee4   Data           8  stm32f4xx_hal_dma.o(.constdata)
-    .constdata                               0x08004eec   Section       24  system_stm32f4xx.o(.constdata)
+    i.ad9517_power_mode                      0x08004488   Section        0  ad9517.o(i.ad9517_power_mode)
+    i.ad9517_read                            0x08004608   Section        0  ad9517.o(i.ad9517_read)
+    i.ad9517_setup                           0x08004694   Section        0  ad9517.o(i.ad9517_setup)
+    i.ad9517_update                          0x0800494c   Section        0  ad9517.o(i.ad9517_update)
+    i.ad9517_vco_frequency                   0x08004960   Section        0  ad9517.o(i.ad9517_vco_frequency)
+    i.ad9517_write                           0x08004bdc   Section        0  ad9517.o(i.ad9517_write)
+    i.delay_us                               0x08004c68   Section        0  delay.o(i.delay_us)
+    i.dividers_checker                       0x08004cb0   Section        0  ad9517.o(i.dividers_checker)
+    i.main                                   0x08004ce0   Section        0  main.o(i.main)
+    x$fpl$fpinit                             0x08004e88   Section       10  fpinit.o(x$fpl$fpinit)
+    $v0                                      0x08004e88   Number         0  fpinit.o(x$fpl$fpinit)
+    .constdata                               0x08004e98   Section       64  ad9517.o(.constdata)
+    .constdata                               0x08004ed8   Section       44  main.o(.constdata)
+    .constdata                               0x08004f04   Section        8  stm32f4xx_hal_dma.o(.constdata)
+    flagBitshiftOffset                       0x08004f04   Data           8  stm32f4xx_hal_dma.o(.constdata)
+    .constdata                               0x08004f0c   Section       24  system_stm32f4xx.o(.constdata)
     .data                                    0x20000000   Section        8  cs25wq256.o(.data)
     Fac_us                                   0x20000004   Data           4  cs25wq256.o(.data)
     .data                                    0x20000008   Section       24  ad9517.o(.data)
@@ -1843,24 +1844,24 @@ Image Symbol Table
     USART3_IRQHandler                        0x08003c81   Thumb Code    10  stm32f4xx_it.o(i.USART3_IRQHandler)
     UsageFault_Handler                       0x08003c91   Thumb Code     4  stm32f4xx_it.o(i.UsageFault_Handler)
     ad9156_parameter_initialize              0x08003ccd   Thumb Code   466  main.o(i.ad9156_parameter_initialize)
-    ad9517_frequency                         0x08003ebd   Thumb Code  1476  ad9517.o(i.ad9517_frequency)
-    ad9517_power_mode                        0x08004485   Thumb Code   378  ad9517.o(i.ad9517_power_mode)
-    ad9517_read                              0x08004605   Thumb Code   136  ad9517.o(i.ad9517_read)
-    ad9517_setup                             0x08004691   Thumb Code   666  ad9517.o(i.ad9517_setup)
-    ad9517_update                            0x08004939   Thumb Code    16  ad9517.o(i.ad9517_update)
-    ad9517_vco_frequency                     0x0800494d   Thumb Code   584  ad9517.o(i.ad9517_vco_frequency)
-    ad9517_write                             0x08004bc9   Thumb Code   134  ad9517.o(i.ad9517_write)
-    delay_us                                 0x08004c55   Thumb Code    68  delay.o(i.delay_us)
-    dividers_checker                         0x08004c9d   Thumb Code    48  ad9517.o(i.dividers_checker)
-    main                                     0x08004ccd   Thumb Code   350  main.o(i.main)
-    _fp_init                                 0x08004e6d   Thumb Code    10  fpinit.o(x$fpl$fpinit)
-    __fplib_config_fpu_vfp                   0x08004e75   Thumb Code     0  fpinit.o(x$fpl$fpinit)
-    __fplib_config_pureend_doubles           0x08004e75   Thumb Code     0  fpinit.o(x$fpl$fpinit)
-    TEXT_Buffer                              0x08004eb8   Data          26  main.o(.constdata)
-    AHBPrescTable                            0x08004eec   Data          16  system_stm32f4xx.o(.constdata)
-    APBPrescTable                            0x08004efc   Data           8  system_stm32f4xx.o(.constdata)
-    Region$$Table$$Base                      0x08004f04   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x08004f24   Number         0  anon$$obj.o(Region$$Table)
+    ad9517_frequency                         0x08003ebd   Thumb Code  1480  ad9517.o(i.ad9517_frequency)
+    ad9517_power_mode                        0x08004489   Thumb Code   378  ad9517.o(i.ad9517_power_mode)
+    ad9517_read                              0x08004609   Thumb Code   136  ad9517.o(i.ad9517_read)
+    ad9517_setup                             0x08004695   Thumb Code   684  ad9517.o(i.ad9517_setup)
+    ad9517_update                            0x0800494d   Thumb Code    16  ad9517.o(i.ad9517_update)
+    ad9517_vco_frequency                     0x08004961   Thumb Code   584  ad9517.o(i.ad9517_vco_frequency)
+    ad9517_write                             0x08004bdd   Thumb Code   134  ad9517.o(i.ad9517_write)
+    delay_us                                 0x08004c69   Thumb Code    68  delay.o(i.delay_us)
+    dividers_checker                         0x08004cb1   Thumb Code    48  ad9517.o(i.dividers_checker)
+    main                                     0x08004ce1   Thumb Code   358  main.o(i.main)
+    _fp_init                                 0x08004e89   Thumb Code    10  fpinit.o(x$fpl$fpinit)
+    __fplib_config_fpu_vfp                   0x08004e91   Thumb Code     0  fpinit.o(x$fpl$fpinit)
+    __fplib_config_pureend_doubles           0x08004e91   Thumb Code     0  fpinit.o(x$fpl$fpinit)
+    TEXT_Buffer                              0x08004ed8   Data          26  main.o(.constdata)
+    AHBPrescTable                            0x08004f0c   Data          16  system_stm32f4xx.o(.constdata)
+    APBPrescTable                            0x08004f1c   Data           8  system_stm32f4xx.o(.constdata)
+    Region$$Table$$Base                      0x08004f24   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x08004f44   Number         0  anon$$obj.o(Region$$Table)
     CS25WQXX_TYPE                            0x20000000   Data           2  cs25wq256.o(.data)
     CAN1TxData                               0x20000024   Data           8  main.o(.data)
     CAN2TxData                               0x2000002c   Data           8  main.o(.data)
@@ -1901,9 +1902,9 @@ Memory Map of the image
 
   Image Entry point : 0x08000189
 
-  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00004f88, Max: 0x00100000, ABSOLUTE)
+  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00004fa8, Max: 0x00100000, ABSOLUTE)
 
-    Execution Region ER_IROM1 (Base: 0x08000000, Size: 0x00004f24, Max: 0x00100000, ABSOLUTE)
+    Execution Region ER_IROM1 (Base: 0x08000000, Size: 0x00004f44, Max: 0x00100000, ABSOLUTE)
 
     Base Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -2098,23 +2099,23 @@ Memory Map of the image
     0x08003c94   0x00000010   Code   RO         1855    i.__NVIC_GetPriorityGrouping  stm32f4xx_hal_cortex.o
     0x08003ca4   0x00000028   Code   RO         1856    i.__NVIC_SetPriority  stm32f4xx_hal_cortex.o
     0x08003ccc   0x000001f0   Code   RO          507    i.ad9156_parameter_initialize  main.o
-    0x08003ebc   0x000005c8   Code   RO          309    i.ad9517_frequency  ad9517.o
-    0x08004484   0x00000180   Code   RO          311    i.ad9517_power_mode  ad9517.o
-    0x08004604   0x0000008c   Code   RO          312    i.ad9517_read       ad9517.o
-    0x08004690   0x000002a8   Code   RO          313    i.ad9517_setup      ad9517.o
-    0x08004938   0x00000014   Code   RO          314    i.ad9517_update     ad9517.o
-    0x0800494c   0x0000027c   Code   RO          315    i.ad9517_vco_frequency  ad9517.o
-    0x08004bc8   0x0000008c   Code   RO          316    i.ad9517_write      ad9517.o
-    0x08004c54   0x00000048   Code   RO          400    i.delay_us          delay.o
-    0x08004c9c   0x00000030   Code   RO          317    i.dividers_checker  ad9517.o
-    0x08004ccc   0x000001a0   Code   RO          508    i.main              main.o
-    0x08004e6c   0x0000000a   Code   RO         3535    x$fpl$fpinit        fz_wm.l(fpinit.o)
-    0x08004e76   0x00000002   PAD
-    0x08004e78   0x00000040   Data   RO          318    .constdata          ad9517.o
-    0x08004eb8   0x0000002c   Data   RO          510    .constdata          main.o
-    0x08004ee4   0x00000008   Data   RO         1572    .constdata          stm32f4xx_hal_dma.o
-    0x08004eec   0x00000018   Data   RO         3309    .constdata          system_stm32f4xx.o
-    0x08004f04   0x00000020   Data   RO         3623    Region$$Table       anon$$obj.o
+    0x08003ebc   0x000005cc   Code   RO          309    i.ad9517_frequency  ad9517.o
+    0x08004488   0x00000180   Code   RO          311    i.ad9517_power_mode  ad9517.o
+    0x08004608   0x0000008c   Code   RO          312    i.ad9517_read       ad9517.o
+    0x08004694   0x000002b8   Code   RO          313    i.ad9517_setup      ad9517.o
+    0x0800494c   0x00000014   Code   RO          314    i.ad9517_update     ad9517.o
+    0x08004960   0x0000027c   Code   RO          315    i.ad9517_vco_frequency  ad9517.o
+    0x08004bdc   0x0000008c   Code   RO          316    i.ad9517_write      ad9517.o
+    0x08004c68   0x00000048   Code   RO          400    i.delay_us          delay.o
+    0x08004cb0   0x00000030   Code   RO          317    i.dividers_checker  ad9517.o
+    0x08004ce0   0x000001a8   Code   RO          508    i.main              main.o
+    0x08004e88   0x0000000a   Code   RO         3535    x$fpl$fpinit        fz_wm.l(fpinit.o)
+    0x08004e92   0x00000006   PAD
+    0x08004e98   0x00000040   Data   RO          318    .constdata          ad9517.o
+    0x08004ed8   0x0000002c   Data   RO          510    .constdata          main.o
+    0x08004f04   0x00000008   Data   RO         1572    .constdata          stm32f4xx_hal_dma.o
+    0x08004f0c   0x00000018   Data   RO         3309    .constdata          system_stm32f4xx.o
+    0x08004f24   0x00000020   Data   RO         3623    Region$$Table       anon$$obj.o
 
 
     Execution Region RW_IRAM1 (Base: 0x20000000, Size: 0x00001b68, Max: 0x0001c000, ABSOLUTE)
@@ -2150,11 +2151,11 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
-      3528        116         64         24          0      20449   ad9517.o
+      3548        114         64         24          0      20469   ad9517.o
        188          0          0          0          0     694368   can.o
        986         54          0          8       4096       7397   cs25wq256.o
         72          4          0          4          0       3267   delay.o
-      1858        168         44         36       1182      19942   main.o
+      1866        168         44         36       1182      19946   main.o
         32          0          0          0          0        877   spi.o
         64         26        392          0       1536        844   startup_stm32f407xx.o
        172         32          0          9          0       8733   stm32f4xx_hal.o
@@ -2171,7 +2172,7 @@ Image component sizes
         20          6         24          4          0       1175   system_stm32f4xx.o
 
     ----------------------------------------------------------------------
-     18356        766        564        100       6820    1433290   Object Totals
+     18384        764        564        100       6820    1433314   Object Totals
          0          0         32          0          0          0   (incl. Generated)
         12          0          0          3          6          0   (incl. Padding)
 
@@ -2219,8 +2220,8 @@ Image component sizes
         10          0          0          0          0        116   fpinit.o
 
     ----------------------------------------------------------------------
-      1340         78          0          0         96       2100   Library Totals
-         8          0          0          0          0          0   (incl. Padding)
+      1344         78          0          0         96       2100   Library Totals
+        12          0          0          0          0          0   (incl. Padding)
 
     ----------------------------------------------------------------------
 
@@ -2230,7 +2231,7 @@ Image component sizes
         10          0          0          0          0        116   fz_wm.l
 
     ----------------------------------------------------------------------
-      1340         78          0          0         96       2100   Library Totals
+      1344         78          0          0         96       2100   Library Totals
 
     ----------------------------------------------------------------------
 
@@ -2239,15 +2240,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     19696        844        564        100       6916    1422950   Grand Totals
-     19696        844        564        100       6916    1422950   ELF Image Totals
-     19696        844        564        100          0          0   ROM Totals
+     19728        842        564        100       6916    1422974   Grand Totals
+     19728        842        564        100       6916    1422974   ELF Image Totals
+     19728        842        564        100          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                20260 (  19.79kB)
+    Total RO  Size (Code + RO Data)                20292 (  19.82kB)
     Total RW  Size (RW Data + ZI Data)              7016 (   6.85kB)
-    Total ROM Size (Code + RO Data + RW Data)      20360 (  19.88kB)
+    Total ROM Size (Code + RO Data + RW Data)      20392 (  19.91kB)
 
 ==============================================================================
 

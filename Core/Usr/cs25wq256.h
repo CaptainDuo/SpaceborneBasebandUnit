@@ -19,7 +19,7 @@
 extern u16 CS25WQXX_TYPE;					//定义CS25WQXX芯片型号		   
 
 //CS25QXX的片选信号 PB11
-#define	cs25wqxx_CS(value) 		HAL_GPIO_WritePin(GPIOB, GPIO_PIN_11, value); 
+#define	cs25wqxx_CS(value) 		HAL_GPIO_WritePin(QSPI_CS_GPIO_Port, QSPI_CS_Pin, value)
 ////////////////////////////////////////////////////////////////////////////////// 
 //指令表
 #define CS25WQX_WriteEnable			0x06 

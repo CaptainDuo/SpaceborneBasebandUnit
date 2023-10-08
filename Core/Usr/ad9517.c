@@ -121,7 +121,19 @@ int32_t ad9517_setup( ad9517_dev **device,
 	/* Clear AD9517_SOFT_RESET bit to complete reset operation. */
 	ret = ad9517_write(dev,
 			   AD9517_REG_SERIAL_PORT_CONFIG,
+<<<<<<< HEAD
 			   AD9517_LONG_INSTRUCTION);
+=======
+			   AD9517_LONG_INSTRUCTION | AD9517_SDO_ACTIVE);
+	while(0)
+	{
+		ret = ad9517_write(dev,
+			   AD9517_REG_SERIAL_PORT_CONFIG,
+			   AD9517_LONG_INSTRUCTION | AD9517_SDO_ACTIVE);
+		ret = ad9517_read(dev, AD9517_REG_SERIAL_PORT_CONFIG, &reg_value);
+		delay_us(88);
+	}
+>>>>>>> c1ec2e510616b9fd675dfb6215b41cd66b71a651
 	ret = ad9517_read(dev, AD9517_REG_SERIAL_PORT_CONFIG, &reg_value);
 	if(ret < 0)
 		return ret;
@@ -598,12 +610,21 @@ int64_t ad9517_frequency( ad9517_dev *dev,
 		divider = 0;
 	}
 	/* Write the VCO divider value. */
+<<<<<<< HEAD
 	while (reg_value == 0)
+=======
+//	while (reg_value == 0)
+	while (0)
+>>>>>>> c1ec2e510616b9fd675dfb6215b41cd66b71a651
 		{
 		ad9517_read(dev, AD9517_REG_INPUT_CLKS, &reg_value);
 		Delay_us(100);
 		}
+<<<<<<< HEAD
 
+=======
+	ad9517_read(dev, AD9517_REG_INPUT_CLKS, &reg_value);
+>>>>>>> c1ec2e510616b9fd675dfb6215b41cd66b71a651
 	if((int32_t)reg_value < 0)
 		return reg_value;
 	if((dev->ad9517_st.vco_divider == 1) &&
