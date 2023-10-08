@@ -93,13 +93,6 @@ int32_t ad9517_setup( ad9517_dev **device,
 //	if (ret)
 //		return ret;
 
-	ret = ad9517_read(dev, AD9517_REG_PART_ID, &reg_value);
-	if (ret)
-		return ret;
-#if 1
-	if (reg_value != dev->ad9517_type)
-		return -1;
-#endif
 	/* Configure serial port for long instructions and reset the serial
 	 * interface. */
 	while (0)  //≤‚ ‘¥˙¬Î
@@ -107,13 +100,21 @@ int32_t ad9517_setup( ad9517_dev **device,
 		ret = ad9517_write(dev,
 					   AD9517_REG_SERIAL_PORT_CONFIG,
 					   AD9517_SOFT_RESET | AD9517_LONG_INSTRUCTION | AD9517_SDO_ACTIVE);
-			ret = ad9517_read(dev, AD9517_REG_PART_ID, &reg_value);
+		ret = ad9517_read(dev, AD9517_REG_PART_ID, &reg_value);
 		}
-	ret = ad9517_write(dev,
-			   AD9517_REG_SERIAL_PORT_CONFIG,
-			   AD9517_SOFT_RESET | AD9517_LONG_INSTRUCTION | AD9517_SDO_ACTIVE);
-	if(ret < 0)
+
+	while (reg_value == 0)
+	{
+		ret = ad9517_write(dev,
+				   AD9517_REG_SERIAL_PORT_CONFIG,
+				   AD9517_SOFT_RESET | AD9517_LONG_INSTRUCTION | AD9517_SDO_ACTIVE);
+		ret = ad9517_read(dev, AD9517_REG_PART_ID, &reg_value);
+		delay_us(88);
+	}
+	if (ret)
 		return ret;
+	if (reg_value != dev->ad9517_type)
+		return -1;
 	ret = ad9517_update(dev);
 	if(ret < 0)
 		return ret;

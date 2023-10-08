@@ -176,6 +176,10 @@ int main(void)
 	res = ad9156_parameter_initialize(&hspi2, &ad9516_param, &ad9516_pdata, ad9516_lvpecl_channel, ad9516_lvds_channel);
 	//2.´«µİ²ÎÊı
 	res = ad9517_setup( &AD9516_1_DEV, ad9516_param);
+	if (res != 0)
+		{
+		return -1;
+		}
 	//3.ÅäÖÃVCO
 	res = ad9517_frequency(AD9516_1_DEV, AD9516_channel_0, 62000000);
 	res = ad9517_frequency(AD9516_1_DEV, AD9516_channel_2, 62000000);
