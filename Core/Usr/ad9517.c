@@ -202,7 +202,7 @@ int32_t ad9517_setup( ad9517_dev **device,
 		/* Activate PLL */
 		reg_value = AD9517_PLL_POWER_DOWN(0x0) |
 			    AD9517_CP_MODE (0x3) |
-			    AD9517_CP_CURRENT (0x7) |
+			    AD9517_CP_CURRENT (0x3) |
 			    0 * AD9517_PFD_POLARITY;
 		ret = ad9517_write(dev, AD9517_REG_PFD_CHARGE_PUMP, reg_value);
 		if(ret < 0)
@@ -433,7 +433,7 @@ int64_t ad9517_vco_frequency( ad9517_dev *dev,
 	dev->ad9517_st.r_counter = 1;
 	pfd_freq = ref_freq / dev->ad9517_st.r_counter;
 //	while(pfd_freq > AD9517_MAX_PFD_FREQ) {
-	while(pfd_freq != 1000000) {
+	while(pfd_freq != 10000000) {
 		dev->ad9517_st.r_counter++;
 		pfd_freq = ref_freq / dev->ad9517_st.r_counter;
 	}
