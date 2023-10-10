@@ -527,4 +527,11 @@ int32_t ad9517_power_mode( ad9517_dev *dev,
 			  int32_t channel,
 			  int32_t mode);
 
+/*! AD9516 paramters initialization */
+int8_t ad9156_parameter_initialize(SPI_HandleTypeDef *hspi,
+								 ad9517_init_param *init_param,
+								 ad9517_platform_data *init_pdata,
+								 ad9517_lvpecl_channel_spec *init_lvpecl, 
+								 ad9517_lvds_cmos_channel_spec *init_lvds);
+
 #endif // __AD9517_H__

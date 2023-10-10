@@ -1194,3 +1194,100 @@ int32_t ad9517_power_mode( ad9517_dev *dev, int32_t channel, int32_t mode)
 		}
 	}
 }
+
+
+/***************************************************************************//**
+ * @brief AD9156_1 Parameters Initialization
+ *
+ * @param hspi - STM32F4系列SPI参数结构体
+ * @param init_param - The structure that contains the device initial
+ * 		       parameters.
+ * @param init_pdata - ad9517_platform_data结构体的地址
+ * @param init_lvpecl - ad9517_lvpecl_channel_spec结构体数组的地址，
+ *  			存放lvpecl所有通道的初始化值
+ * @param init_lvds - ad9517_lvds_cmos_channel_spec结构体数组的地址，
+ * 				存放lvds所有通道的初始化值
+ * @return Returns 0 in case of success or negative error code.
+*******************************************************************************/
+int8_t ad9156_parameter_initialize(SPI_HandleTypeDef *hspi,
+								 ad9517_init_param *init_param,
+								 ad9517_platform_data *init_pdata,
+								 ad9517_lvpecl_channel_spec *init_lvpecl, 
+								 ad9517_lvds_cmos_channel_spec *init_lvds)
+{
+	uint8_t i=0;
+	uint8_t j=0;
+	uint8_t name[16] = {'a', 'd', '9', '5', '1', '6', '_', '1'};
+	uint8_t channel_name[16] = {'a', 'd', '9', '5', '1', '6', '_', 'c', 'h', 'a', 'n', 'n', 'e', 'l', '_', '1'};
+	int8_t res;
+	/* 传递SPI操作结构体 */
+	init_param->spi_init = hspi;  //传递SPI通道结构体
+	init_param->ad9517_type = AD9516_1;  //芯片类型位AD9516_1
+	/* ad9517_st结构体基本参数初始化 */
+	init_param->ad9517_st.antibacklash_pulse_width = 0;  //reg0x17[1:0]
+		/***
+		* 以下参数无需手动写入，ad9517_frequency函数会自动计算并初始化
+		* init_param->ad9517_st.a_counter 
+		* init_param->ad9517_st.b_counter 
+		* init_param->ad9517_st.r_counter
+		* init_param->ad9517_st.vco_divider
+		* init_param->ad9517_st.prescaler_p 
+		*/
+
+	/* ad9517_platform_data结构体参数初始化 */
+	init_pdata->diff_ref_en = 0;   			//reg0x1c[0]
+	init_pdata->ext_clk_freq = 0;   		//不使用外部clk
+	init_pdata->int_vco_freq = 2480000000;	//内部VCO频率2480MHz
+//	init_pdata->name = name;
+	for (i = 0; i < 16; ++i)
+		{
+		init_pdata->name[i] = name[i];
+		}
+	init_pdata->power_down_vco_clk = 0;  	//reg0x1e1[2]
+	init_pdata->ref_1_freq = 100000000;  	//REF1输入时钟为100MHz
+	init_pdata->ref_1_power_on = 1;  		//reg0x1c[1]
+	init_pdata->ref_2_en = 0;  				//reg0x1c[6]
+	init_pdata->ref_2_freq = 100000000;    	//不使用REF2
+	init_pdata->ref_2_power_on = 0;  		//reg0x1c[2]
+	init_pdata->ref_sel_pin = 100000000;	//不使用外部参考引脚
+	init_pdata->ref_sel_pin_en = 0;  		//reg0x1c[5]
+	init_pdata->vco_clk_sel = 1;    		//reg0x1e1[1]
+	/* 传递初始化参数结构体地址 */
+	init_param->ad9517_st.pdata = init_pdata;
+
+	/* ad9517_lvpecl_channel_spec结构体参数初始化 */
+	for (i = 0; i < 6; i++)
+		{
+		init_lvpecl[i].channel_num = i;
+		channel_name[15] = i;
+		//init_lvpecl[i].name = i;
+		for (j = 0; j < 16; ++j)
+			{
+			init_lvpecl[i].name[j] = channel_name[j];
+			}
+		init_lvpecl[i].out_diff_voltage = LVPECL_960mV; //reg0xF0~0xF5[3:2],电流大小
+		init_lvpecl[i].out_invert_en = noninverting;  		//reg0xF0~0xF5[4],输出极性控制
+		}
+	init_param->ad9517_st.lvpecl_channels = init_lvpecl; //将通道结构体传递给上层结构体
+	
+	/* ad9517_lvds_cmos_channel_spec结构体参数初始化 */
+	for (i = 0; i < 4; i++)
+		{
+		init_lvds[i].channel_num = i + 6;
+		init_lvds[i].cmos_b_en = 0;					//reg0x140~0x143[4]
+		init_lvds[i].logic_level = 0;  				//reg0x140~0x143[3],Selects LVDS or CMOS logic levels.
+		channel_name[15] = i + 6;
+		for (j = 0; j < 16; ++j)
+			{
+			init_lvds[i].name[j] = channel_name[j];
+			}
+
+		//init_lvds[i].name = i + 6;
+		init_lvds[i].out_invert = 2; 				//reg0x140~0x143[7:5],output polarity,全部不反转默认值
+		init_lvds[i].out_lvds_current = LVDS_3_5mA;	//reg0x140~0x143[2:1],LVDS output current
+		}
+		init_param->ad9517_st.lvds_cmos_channels = init_lvds; //将地址传递给上层结构体
+	res = 0;
+	return res;
+}
+
