@@ -432,7 +432,8 @@ int64_t ad9517_vco_frequency( ad9517_dev *dev,
 		}
 	dev->ad9517_st.r_counter = 1;
 	pfd_freq = ref_freq / dev->ad9517_st.r_counter;
-	while(pfd_freq > AD9517_MAX_PFD_FREQ) {
+//	while(pfd_freq > AD9517_MAX_PFD_FREQ) {
+	while(pfd_freq != 1000000) {
 		dev->ad9517_st.r_counter++;
 		pfd_freq = ref_freq / dev->ad9517_st.r_counter;
 	}
@@ -450,7 +451,10 @@ int64_t ad9517_vco_frequency( ad9517_dev *dev,
 				if((dev->ad9517_st.b_counter >= 3) &&
 				    ((dev->ad9517_st.b_counter >
 				      dev->ad9517_st.a_counter))) {
+				
 					good_values = 1;
+		
+					
 					break;
 				}
 			}
@@ -467,7 +471,7 @@ int64_t ad9517_vco_frequency( ad9517_dev *dev,
 	ad9517_read(dev, AD9517_REG_PLL_CTRL_1, &reg_value);
 	if((int32_t)reg_value < 0)
 		return reg_value;
-	reg_value &= ~AD9517_PRESCALER_P(0x7);
+	reg_value &= ~ AD9517_PRESCALER_P(0x7);
 	reg_value |= AD9517_PRESCALER_P(prescaler);
 	ad9517_write(dev, AD9517_REG_PLL_CTRL_1, reg_value);
 	ad9517_write(dev,
@@ -484,6 +488,7 @@ int64_t ad9517_vco_frequency( ad9517_dev *dev,
 	vco_freq = (ref_freq / dev->ad9517_st.r_counter) *
 		   (dev->ad9517_st.prescaler_p * dev->ad9517_st.b_counter +
 		    dev->ad9517_st.a_counter);
+
 
 	/* Update vco_freq value. */
 	dev->ad9517_st.pdata->int_vco_freq = vco_freq;

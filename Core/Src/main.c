@@ -169,7 +169,11 @@ int main(void)
 			HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, GPIO_PIN_RESET);
 			HAL_GPIO_WritePin(GPIOB, GPIO_PIN_1, GPIO_PIN_SET);
 		}
-
+	for (res = 0; res <500; ++res)
+		{
+		delay_ms(10000);
+		}
+	res = 0;
 
   /* AD9516_1初始化 */
   	//1.参数初始化
@@ -658,6 +662,21 @@ int8_t ad9156_parameter_initialize(SPI_HandleTypeDef *hspi,
 	init_pdata->ref_sel_pin_en = 0;  		//reg0x1c[5]
 	init_pdata->vco_clk_sel = 1;    		//reg0x1e1[1]
 	init_param->ad9517_st.pdata = init_pdata;
+#if 0
+	init_param->ad9517_st.pdata->diff_ref_en = init_pdata->diff_ref_en;
+	init_param->ad9517_st.pdata->ext_clk_freq = init_pdata->ext_clk_freq;
+	init_param->ad9517_st.pdata->int_vco_freq = init_pdata->int_vco_freq;
+//	init_param->ad9517_st.pdata->name = init_pdata->name;
+	init_param->ad9517_st.pdata->power_down_vco_clk = init_pdata->power_down_vco_clk;
+	init_param->ad9517_st.pdata->ref_1_freq = init_pdata->ref_1_freq;
+	init_param->ad9517_st.pdata->ref_1_power_on = init_pdata->ref_1_power_on;
+	init_param->ad9517_st.pdata->ref_2_en = init_pdata->ref_2_en;
+	init_param->ad9517_st.pdata->ref_2_freq = init_pdata->ref_2_freq;
+	init_param->ad9517_st.pdata->ref_2_power_on = init_pdata->ref_2_power_on;
+	init_param->ad9517_st.pdata->ref_sel_pin = init_pdata->ref_sel_pin;
+	init_param->ad9517_st.pdata->ref_sel_pin_en = init_pdata->ref_sel_pin_en;
+	init_param->ad9517_st.pdata->vco_clk_sel = init_pdata->vco_clk_sel;
+#endif
 
 /*
 	init_param->ad9517_st.pdata.diff_ref_en = 0;   			//reg0x1c[0]
@@ -684,7 +703,7 @@ int8_t ad9156_parameter_initialize(SPI_HandleTypeDef *hspi,
 			{
 			init_lvpecl[i].name[j] = channel_name[j];
 			}
-		init_lvpecl[i].out_diff_voltage = LVPECL_780mV; //reg0xF0~0xF5[3:2],电流大小
+		init_lvpecl[i].out_diff_voltage = LVPECL_960mV; //reg0xF0~0xF5[3:2],电流大小
 		init_lvpecl[i].out_invert_en = noninverting;  		//reg0xF0~0xF5[4],输出极性控制
 		}
 	init_param->ad9517_st.lvpecl_channels = init_lvpecl; //将通道结构体传递给上层结构体
