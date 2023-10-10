@@ -11,6 +11,6 @@
 #define __CAN_H
 #include "sys.h"
 
-void CAN_Config(CAN_HandleTypeDef *hcan,CAN_TxHeaderTypeDef *TxHeader);
+void CAN_Config(CAN_HandleTypeDef *hcan,CAN_TxHeaderTypeDef *TxHeader, u32 Rec_Interrupts);
 u8 CAN_Send_Msg(CAN_HandleTypeDef *hcan,CAN_TxHeaderTypeDef *TxHeader,u8* msg,u8 len);						//·¢ËÍÊý¾Ý
 #endif

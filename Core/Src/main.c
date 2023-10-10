@@ -150,8 +150,8 @@ int main(void)
   /* Initialize interrupts */
   MX_NVIC_Init();
   /* USER CODE BEGIN 2 */
-  CAN_Config(&hcan1,&CAN1TxHeader);
-  CAN_Config(&hcan2,&CAN2TxHeader);
+  CAN_Config(&hcan1,&CAN1TxHeader,CAN_IT_RX_FIFO0_MSG_PENDING);
+  CAN_Config(&hcan2,&CAN2TxHeader,CAN_IT_RX_FIFO1_MSG_PENDING);
   FLASH_SIZE=32*1024*1024;	  //FLASH 大小为32M字节
 
 	/* 增加延时等待AD9516上电过程结束 */
@@ -203,10 +203,11 @@ int main(void)
 	CS25WQXX_Read(&hspi1,datatemp,FLASH_SIZE-100,Buffer_SIZE);   //读取FLASH
 
 	/* CAN读写测试 */
-	res = CAN_Send_Msg(&hcan1,&CAN1TxHeader,CAN1TxData,8);//CAN1发送8个字节 
+	//res = CAN_Send_Msg(&hcan1,&CAN1TxHeader,CAN1TxData,8);//CAN1发送8个字节 
 	res = CAN_Send_Msg(&hcan2,&CAN2TxHeader,CAN2TxData,8);//CAN2发送8个字节 
 	while (1)
 	{
+		res = CAN_Send_Msg(&hcan2,&CAN2TxHeader,CAN2TxData,8);//CAN2发送8个字节 
 
 		//LED状态指示灯闪烁
 		HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, GPIO_PIN_SET);
