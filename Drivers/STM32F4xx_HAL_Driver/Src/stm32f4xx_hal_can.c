@@ -2271,6 +2271,16 @@ __weak void HAL_CAN_RxFifo1MsgPendingCallback(CAN_HandleTypeDef *hcan)
 {
   /* Prevent unused argument(s) compilation warning */
   UNUSED(hcan);
+	  
+	  // CAN数据接收
+	  if (hcan->Instance == hcan2.Instance)
+	  {
+		  if (HAL_CAN_GetRxMessage(hcan, CAN_RX_FIFO0, &packet.hdr, packet.payload) == HAL_OK) 	  // 获得接收到的数据头和数据
+		  if (HAL_CAN_GetRxMessage( hcan, CAN_RX_FIFO0, &CAN2RxHeader, CAN2RxData) == HAL_OK)
+		  {
+			 HAL_CAN_ActivateNotification(hcan, CAN_IT_RX_FIFO0_MSG_PENDING);						  // 再次使能FIFO0接收中断
+		  }
+	  }
 
   /* NOTE : This function Should not be modified, when the callback is needed,
             the HAL_CAN_RxFifo1MsgPendingCallback could be implemented in the
