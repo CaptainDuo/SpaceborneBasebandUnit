@@ -119,6 +119,7 @@ int main(void)
   u16 id = 0;
   u32 FLASH_SIZE;
   u8 datatemp[Buffer_SIZE];
+  u8 index;
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -142,7 +143,7 @@ int main(void)
   MX_DMA_Init();
   MX_CAN1_Init();
   MX_CAN2_Init();
-  MX_FSMC_Init();
+//  MX_FSMC_Init();
   MX_SPI1_Init();
   MX_SPI2_Init();
   MX_USART3_UART_Init();
@@ -150,8 +151,11 @@ int main(void)
   /* Initialize interrupts */
   MX_NVIC_Init();
   /* USER CODE BEGIN 2 */
-  CAN_Config(&hcan1,&CAN1TxHeader,CAN_IT_RX_FIFO0_MSG_PENDING);
-  CAN_Config(&hcan2,&CAN2TxHeader,CAN_IT_RX_FIFO1_MSG_PENDING);
+  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, GPIO_PIN_SET);
+  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_1, GPIO_PIN_SET);
+  //CAN_Config(&hcan1,&CAN1TxHeader,CAN_RX_FIFO0,CAN_IT_RX_FIFO0_MSG_PENDING);
+  CAN1_Config(&hcan1,&CAN1TxHeader,CAN_RX_FIFO0,CAN_IT_RX_FIFO0_MSG_PENDING);
+  CAN2_Config(&hcan2,&CAN2TxHeader,CAN_RX_FIFO1,CAN_IT_RX_FIFO1_MSG_PENDING);
   FLASH_SIZE=32*1024*1024;	  //FLASH 大小为32M字节
 
 	/* 增加延时等待AD9516上电过程结束 */
@@ -203,11 +207,16 @@ int main(void)
 	CS25WQXX_Read(&hspi1,datatemp,FLASH_SIZE-100,Buffer_SIZE);   //读取FLASH
 
 	/* CAN读写测试 */
+	for (index = 0; index < 8; ++index)
+		{
+		CAN2TxData[index] = 0xa + index;
+		}
 	//res = CAN_Send_Msg(&hcan1,&CAN1TxHeader,CAN1TxData,8);//CAN1发送8个字节 
-	res = CAN_Send_Msg(&hcan2,&CAN2TxHeader,CAN2TxData,8);//CAN2发送8个字节 
+	//res = CAN_Send_Msg(&hcan2,&CAN2TxHeader,CAN2TxData,8);//CAN2发送8个字节 
+
 	while (1)
 	{
-		res = CAN_Send_Msg(&hcan2,&CAN2TxHeader,CAN2TxData,8);//CAN2发送8个字节 
+		//res = CAN_Send_Msg(&hcan2,&CAN2TxHeader,CAN2TxData,8);//CAN2发送8个字节 
 
 		//LED状态指示灯闪烁
 		HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, GPIO_PIN_SET);
@@ -289,9 +298,9 @@ static void MX_NVIC_Init(void)
   /* DMA2_Stream0_IRQn interrupt configuration */
   HAL_NVIC_SetPriority(DMA2_Stream0_IRQn, 0, 0);
   HAL_NVIC_EnableIRQ(DMA2_Stream0_IRQn);
-  /* CAN2_RX0_IRQn interrupt configuration */
-  HAL_NVIC_SetPriority(CAN2_RX0_IRQn, 0, 0);
-  HAL_NVIC_EnableIRQ(CAN2_RX0_IRQn);
+  /* CAN2_RX1_IRQn interrupt configuration */
+  HAL_NVIC_SetPriority(CAN2_RX1_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(CAN2_RX1_IRQn);
 }
 
 /**

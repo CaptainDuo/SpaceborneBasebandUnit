@@ -30,7 +30,7 @@
 "spacebornebasebandunit\stm32f4xx_hal_tim_ex.o"
 "spacebornebasebandunit\stm32f4xx_hal_uart.o"
 "spacebornebasebandunit\system_stm32f4xx.o"
---strict --scatter "SpaceborneBasebandUnit\SpaceborneBasebandUnit.sct"
+--library_type=microlib --strict --scatter "SpaceborneBasebandUnit\SpaceborneBasebandUnit.sct"
 --summary_stderr --info summarysizes --map --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers
 --list "SpaceborneBasebandUnit.map" -o SpaceborneBasebandUnit\SpaceborneBasebandUnit.axf
