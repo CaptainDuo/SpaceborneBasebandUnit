@@ -28,7 +28,7 @@ spacebornebasebandunit\cs25wq256.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4x
 spacebornebasebandunit\cs25wq256.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h
 spacebornebasebandunit\cs25wq256.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h
 spacebornebasebandunit\cs25wq256.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h
-spacebornebasebandunit\cs25wq256.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_nor.h
+spacebornebasebandunit\cs25wq256.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_sram.h
 spacebornebasebandunit\cs25wq256.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_fsmc.h
 spacebornebasebandunit\cs25wq256.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h
 spacebornebasebandunit\cs25wq256.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h

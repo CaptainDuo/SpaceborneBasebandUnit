@@ -24,7 +24,7 @@
 "spacebornebasebandunit\stm32f4xx_hal.o"
 "spacebornebasebandunit\stm32f4xx_hal_exti.o"
 "spacebornebasebandunit\stm32f4xx_ll_fsmc.o"
-"spacebornebasebandunit\stm32f4xx_hal_nor.o"
+"spacebornebasebandunit\stm32f4xx_hal_sram.o"
 "spacebornebasebandunit\stm32f4xx_hal_spi.o"
 "spacebornebasebandunit\stm32f4xx_hal_tim.o"
 "spacebornebasebandunit\stm32f4xx_hal_tim_ex.o"

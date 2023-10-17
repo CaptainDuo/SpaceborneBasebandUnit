@@ -21,23 +21,21 @@ Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V2.0.14.0_KEIL
 Dialog DLL:      TCM.DLL V1.14.4.0
  
 <h2>Project:</h2>
-\\192.168.8.8\Cube_workspace\Space_Gtihub\SpaceborneBasebandUnit\MDK-ARM\SpaceborneBasebandUnit.uvprojx
-Project File Date:  10/11/2023
+I:\SpaceborneBasebandUnit\SpaceborneBasebandUnit\MDK-ARM\SpaceborneBasebandUnit.uvprojx
+Project File Date:  10/12/2023
 
 <h2>Output:</h2>
 Build target 'SpaceborneBasebandUnit'
 compiling main.c...
 ../Core/Src/main.c(119): warning:  #550-D: variable "id" was set but never used
     u16 id = 0;
-../Core/Src/main.c(556): warning:  #177-D: function "MX_FSMC_Init" was declared but never referenced
-  static void MX_FSMC_Init(void)
-../Core/Src/main.c: 2 warnings, 0 errors
-compiling stm32f4xx_it.c...
-../Core/Src/stm32f4xx_it.c(260): warning:  #177-D: variable "Status" was declared but never referenced
-        u8 Status;
-../Core/Src/stm32f4xx_it.c: 1 warning, 0 errors
+../Core/Src/main.c(123): warning:  #177-D: variable "data16" was declared but never referenced
+    uint16_t data16 = 0x55aa;
+../Core/Src/main.c(124): warning:  #177-D: variable "dataaddr" was declared but never referenced
+        uint32_t dataaddr = 0x01;
+../Core/Src/main.c: 3 warnings, 0 errors
 linking...
-Program Size: Code=14408 RO-data=564 RW-data=100 ZI-data=6740  
+Program Size: Code=15336 RO-data=564 RW-data=108 ZI-data=6820  
 FromELF: creating hex file...
 "SpaceborneBasebandUnit\SpaceborneBasebandUnit.axf" - 0 Error(s), 3 Warning(s).
 
@@ -50,7 +48,7 @@ Package Vendor: ARM
    * Component: CORE Version: 3.40.0
 
 <h2>Collection of Component include folders:</h2>
-  \\192.168.8.8\Cube_workspace\Space_Gtihub\SpaceborneBasebandUnit\MDK-ARM\RTE
+  I:\SpaceborneBasebandUnit\SpaceborneBasebandUnit\MDK-ARM\RTE
   D:\Work\Keil\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include
   D:\Work\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.5.0
 

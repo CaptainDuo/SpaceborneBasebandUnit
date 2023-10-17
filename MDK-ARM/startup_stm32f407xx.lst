@@ -831,12 +831,11 @@ ARM Macro Assembler    Page 13
               00000000 
 Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M4.fp --apcs=int
 erwork --depend=spacebornebasebandunit\startup_stm32f407xx.d -ospacebornebaseba
-ndunit\startup_stm32f407xx.o -I\\192.168.8.8\Cube_workspace\Space_Gtihub\Spaceb
-orneBasebandUnit\MDK-ARM\RTE -ID:\Work\Keil\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Incl
-ude -ID:\Work\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.5.0 --predefine="__MICROLIB SE
-TA 1" --predefine="__UVISION_VERSION SETA 514" --predefine="_RTE_ SETA 1" --pre
-define="STM32F407xx SETA 1" --list=startup_stm32f407xx.lst startup_stm32f407xx.
-s
+ndunit\startup_stm32f407xx.o -II:\SpaceborneBasebandUnit\SpaceborneBasebandUnit
+\MDK-ARM\RTE -ID:\Work\Keil\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include -ID:\Work\Ke
+il\ARM\PACK\Keil\STM32F4xx_DFP\2.5.0 --predefine="__MICROLIB SETA 1" --predefin
+e="__UVISION_VERSION SETA 514" --predefine="_RTE_ SETA 1" --predefine="STM32F40
+7xx SETA 1" --list=startup_stm32f407xx.lst startup_stm32f407xx.s
 
 
 

@@ -568,14 +568,14 @@ static void HAL_FSMC_MspInit(void){
   /* USER CODE END FSMC_MspInit 1 */
 }
 
-void HAL_NOR_MspInit(NOR_HandleTypeDef* hnor){
-  /* USER CODE BEGIN NOR_MspInit 0 */
+void HAL_SRAM_MspInit(SRAM_HandleTypeDef* hsram){
+  /* USER CODE BEGIN SRAM_MspInit 0 */
 
-  /* USER CODE END NOR_MspInit 0 */
+  /* USER CODE END SRAM_MspInit 0 */
   HAL_FSMC_MspInit();
-  /* USER CODE BEGIN NOR_MspInit 1 */
+  /* USER CODE BEGIN SRAM_MspInit 1 */
 
-  /* USER CODE END NOR_MspInit 1 */
+  /* USER CODE END SRAM_MspInit 1 */
 }
 
 static uint32_t FSMC_DeInitialized = 0;
@@ -638,14 +638,14 @@ static void HAL_FSMC_MspDeInit(void){
   /* USER CODE END FSMC_MspDeInit 1 */
 }
 
-void HAL_NOR_MspDeInit(NOR_HandleTypeDef* hnor){
-  /* USER CODE BEGIN NOR_MspDeInit 0 */
+void HAL_SRAM_MspDeInit(SRAM_HandleTypeDef* hsram){
+  /* USER CODE BEGIN SRAM_MspDeInit 0 */
 
-  /* USER CODE END NOR_MspDeInit 0 */
+  /* USER CODE END SRAM_MspDeInit 0 */
   HAL_FSMC_MspDeInit();
-  /* USER CODE BEGIN NOR_MspDeInit 1 */
+  /* USER CODE BEGIN SRAM_MspDeInit 1 */
 
-  /* USER CODE END NOR_MspDeInit 1 */
+  /* USER CODE END SRAM_MspDeInit 1 */
 }
 
 /* USER CODE BEGIN 1 */

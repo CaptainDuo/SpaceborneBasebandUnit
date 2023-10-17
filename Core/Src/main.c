@@ -55,7 +55,7 @@ UART_HandleTypeDef huart3;
 DMA_HandleTypeDef hdma_usart3_tx;
 DMA_HandleTypeDef hdma_usart3_rx;
 
-NOR_HandleTypeDef hnor1;
+SRAM_HandleTypeDef hsram1;
 
 /* USER CODE BEGIN PV */
 CAN_TxHeaderTypeDef	CAN1TxHeader;      //CAN1发送结构体
@@ -66,7 +66,7 @@ u8	CAN1TxData[8];    //CAN1发送的数据
 u8	CAN2TxData[8];    //CAN2发送的数据
 u8	CAN1RxData[8];    //CAN1接收的数据
 u8	CAN2RxData[8];    //CAN2接收的数据
-
+u16 data16_gl;
 ad9517_dev *AD9516_1_DEV;
 
 ad9517_init_param ad9516_param;
@@ -120,6 +120,8 @@ int main(void)
   u32 FLASH_SIZE;
   u8 datatemp[Buffer_SIZE];
   u8 index;
+  uint16_t data16 = 0x55aa;
+	uint32_t dataaddr = 0x01;
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -210,6 +212,8 @@ int main(void)
 	for (index = 0; index < 8; ++index)
 		{
 		CAN2TxData[index] = 0xa + index;
+		CAN1TxData[index] = 0x5 + index;
+
 		}
 	//res = CAN_Send_Msg(&hcan1,&CAN1TxHeader,CAN1TxData,8);//CAN1发送8个字节 
 	//res = CAN_Send_Msg(&hcan2,&CAN2TxHeader,CAN2TxData,8);//CAN2发送8个字节 
@@ -217,7 +221,19 @@ int main(void)
 	while (1)
 	{
 		//res = CAN_Send_Msg(&hcan2,&CAN2TxHeader,CAN2TxData,8);//CAN2发送8个字节 
-
+		res = CAN_Send_Msg(&hcan1,&CAN1TxHeader,CAN1TxData,8);//CAN2发送8个字节 
+		//res = HAL_SRAM_Write_16b(&hsram1, (0x60000001), &data16, 1);
+		//*((volatile unsigned short int *)(0x60000000 + (dataaddr << 17 ))) = data16;
+		//__ASM("NOP");
+		//		for (res = 0; res <500; ++res)
+		//	{
+		//	delay_ms(10000);
+		//	}
+		//dataaddr = 0x12;
+		//data16 = *((volatile unsigned short int *)(0x60000000 + (dataaddr << 17 )));
+		//__ASM("NOP");
+		//dataaddr = 0x01;
+		//data16_gl = data16;
 		//LED状态指示灯闪烁
 		HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, GPIO_PIN_SET);
 		HAL_GPIO_WritePin(GPIOB, GPIO_PIN_1, GPIO_PIN_RESET);
@@ -566,25 +582,25 @@ static void MX_FSMC_Init(void)
 
   /* USER CODE END FSMC_Init 1 */
 
-  /** Perform the NOR1 memory initialization sequence
+  /** Perform the SRAM1 memory initialization sequence
   */
-  hnor1.Instance = FSMC_NORSRAM_DEVICE;
-  hnor1.Extended = FSMC_NORSRAM_EXTENDED_DEVICE;
-  /* hnor1.Init */
-  hnor1.Init.NSBank = FSMC_NORSRAM_BANK1;
-  hnor1.Init.DataAddressMux = FSMC_DATA_ADDRESS_MUX_ENABLE;
-  hnor1.Init.MemoryType = FSMC_MEMORY_TYPE_NOR;
-  hnor1.Init.MemoryDataWidth = FSMC_NORSRAM_MEM_BUS_WIDTH_16;
-  hnor1.Init.BurstAccessMode = FSMC_BURST_ACCESS_MODE_DISABLE;
-  hnor1.Init.WaitSignalPolarity = FSMC_WAIT_SIGNAL_POLARITY_LOW;
-  hnor1.Init.WrapMode = FSMC_WRAP_MODE_DISABLE;
-  hnor1.Init.WaitSignalActive = FSMC_WAIT_TIMING_BEFORE_WS;
-  hnor1.Init.WriteOperation = FSMC_WRITE_OPERATION_ENABLE;
-  hnor1.Init.WaitSignal = FSMC_WAIT_SIGNAL_DISABLE;
-  hnor1.Init.ExtendedMode = FSMC_EXTENDED_MODE_DISABLE;
-  hnor1.Init.AsynchronousWait = FSMC_ASYNCHRONOUS_WAIT_DISABLE;
-  hnor1.Init.WriteBurst = FSMC_WRITE_BURST_DISABLE;
-  hnor1.Init.PageSize = FSMC_PAGE_SIZE_NONE;
+  hsram1.Instance = FSMC_NORSRAM_DEVICE;
+  hsram1.Extended = FSMC_NORSRAM_EXTENDED_DEVICE;
+  /* hsram1.Init */
+  hsram1.Init.NSBank = FSMC_NORSRAM_BANK1;
+  hsram1.Init.DataAddressMux = FSMC_DATA_ADDRESS_MUX_ENABLE;
+  hsram1.Init.MemoryType = FSMC_MEMORY_TYPE_PSRAM;
+  hsram1.Init.MemoryDataWidth = FSMC_NORSRAM_MEM_BUS_WIDTH_16;
+  hsram1.Init.BurstAccessMode = FSMC_BURST_ACCESS_MODE_DISABLE;
+  hsram1.Init.WaitSignalPolarity = FSMC_WAIT_SIGNAL_POLARITY_LOW;
+  hsram1.Init.WrapMode = FSMC_WRAP_MODE_DISABLE;
+  hsram1.Init.WaitSignalActive = FSMC_WAIT_TIMING_BEFORE_WS;
+  hsram1.Init.WriteOperation = FSMC_WRITE_OPERATION_ENABLE;
+  hsram1.Init.WaitSignal = FSMC_WAIT_SIGNAL_DISABLE;
+  hsram1.Init.ExtendedMode = FSMC_EXTENDED_MODE_DISABLE;
+  hsram1.Init.AsynchronousWait = FSMC_ASYNCHRONOUS_WAIT_DISABLE;
+  hsram1.Init.WriteBurst = FSMC_WRITE_BURST_DISABLE;
+  hsram1.Init.PageSize = FSMC_PAGE_SIZE_NONE;
   /* Timing */
   Timing.AddressSetupTime = 4;
   Timing.AddressHoldTime = 2;
@@ -595,7 +611,7 @@ static void MX_FSMC_Init(void)
   Timing.AccessMode = FSMC_ACCESS_MODE_A;
   /* ExtTiming */
 
-  if (HAL_NOR_Init(&hnor1, &Timing, NULL) != HAL_OK)
+  if (HAL_SRAM_Init(&hsram1, &Timing, NULL) != HAL_OK)
   {
     Error_Handler( );
   }

@@ -26,7 +26,7 @@ spacebornebasebandunit\stm32f4xx_hal_flash_ramfunc.o: ../Drivers/STM32F4xx_HAL_D
 spacebornebasebandunit\stm32f4xx_hal_flash_ramfunc.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h
 spacebornebasebandunit\stm32f4xx_hal_flash_ramfunc.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h
 spacebornebasebandunit\stm32f4xx_hal_flash_ramfunc.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h
-spacebornebasebandunit\stm32f4xx_hal_flash_ramfunc.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_nor.h
+spacebornebasebandunit\stm32f4xx_hal_flash_ramfunc.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_sram.h
 spacebornebasebandunit\stm32f4xx_hal_flash_ramfunc.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_fsmc.h
 spacebornebasebandunit\stm32f4xx_hal_flash_ramfunc.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h
 spacebornebasebandunit\stm32f4xx_hal_flash_ramfunc.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
