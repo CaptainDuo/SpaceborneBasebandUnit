@@ -466,6 +466,11 @@
               <FileType>1</FileType>
               <FilePath>../Core/Src/stm32f4xx_hal_msp.c</FilePath>
             </File>
+            <File>
+              <FileName>gpio_usr.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Core\Usr\gpio_usr.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

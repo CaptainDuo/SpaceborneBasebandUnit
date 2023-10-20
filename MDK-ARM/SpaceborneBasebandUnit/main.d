@@ -39,3 +39,4 @@ spacebornebasebandunit\main.o: ../Core/Usr/cs25wq256.h
 spacebornebasebandunit\main.o: ../Core/Usr/delay.h
 spacebornebasebandunit\main.o: ../Core/Usr/spi.h
 spacebornebasebandunit\main.o: ../Core/Usr/ad9517.h
+spacebornebasebandunit\main.o: ../Core/Usr/fpga_fsmc.h

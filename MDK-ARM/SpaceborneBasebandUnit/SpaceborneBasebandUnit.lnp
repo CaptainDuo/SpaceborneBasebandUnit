@@ -9,6 +9,7 @@
 "spacebornebasebandunit\main.o"
 "spacebornebasebandunit\stm32f4xx_it.o"
 "spacebornebasebandunit\stm32f4xx_hal_msp.o"
+"spacebornebasebandunit\gpio_usr.o"
 "spacebornebasebandunit\stm32f4xx_hal_can.o"
 "spacebornebasebandunit\stm32f4xx_hal_rcc.o"
 "spacebornebasebandunit\stm32f4xx_hal_rcc_ex.o"

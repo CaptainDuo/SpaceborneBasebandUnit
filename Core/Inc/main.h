@@ -57,13 +57,18 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
+#define UART_STATE_Pin GPIO_PIN_13
+#define UART_STATE_GPIO_Port GPIOC
+#define UART_STATE_EXTI_IRQn EXTI15_10_IRQn
 #define QSPI_CS_Pin GPIO_PIN_4
 #define QSPI_CS_GPIO_Port GPIOA
 #define AD9516_CSB_Pin GPIO_PIN_12
 #define AD9516_CSB_GPIO_Port GPIOB
+#define ST32_WDI_Pin GPIO_PIN_9
+#define ST32_WDI_GPIO_Port GPIOC
 
 /* USER CODE BEGIN Private defines */
-
+#define BUF_SIZE 16
 /* USER CODE END Private defines */
 
 #ifdef __cplusplus

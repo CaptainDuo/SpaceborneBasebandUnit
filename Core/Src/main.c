@@ -25,6 +25,7 @@
 #include "cs25wq256.h"
 #include "spi.h"
 #include "ad9517.h"
+#include "fpga_fsmc.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -67,6 +68,9 @@ u8	CAN2TxData[8];    //CAN2发送的数据
 u8	CAN1RxData[8];    //CAN1接收的数据
 u8	CAN2RxData[8];    //CAN2接收的数据
 u16 data16_gl;
+u8 cnt;
+uint8_t rx_buffer[BUF_SIZE];  // BUF_SIZE
+
 ad9517_dev *AD9516_1_DEV;
 
 ad9517_init_param ad9516_param;
@@ -84,6 +88,9 @@ ad9517_lvds_cmos_channel_spec ad9516_lvds_channel[4];
 const u8 TEXT_Buffer[]={"Explorer STM32F4 SPI TEST"};
 #define Buffer_SIZE sizeof(TEXT_Buffer)
 
+int timer_500ms_flag; //滴答定时器500ms计时标志位
+int timer_1s_flag; //滴答定时器1s计时标志位
+int uart_state_flag;  //刷新芯片uart state状态管脚
 
 /* USER CODE END PV */
 
@@ -105,6 +112,15 @@ static void MX_NVIC_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef *huart, uint16_t Size)
+{
+    if (huart->Instance == USART3)
+    {
+        cnt = BUF_SIZE - __HAL_DMA_GET_COUNTER(&hdma_usart3_rx);
+        //HAL_UART_Transmit(&huart1, rx_buffer, cnt, 0xffff);	//?????????????
+        memset(rx_buffer, 0, cnt);
+    }
+}
 
 /* USER CODE END 0 */
 
@@ -121,7 +137,7 @@ int main(void)
   u8 datatemp[Buffer_SIZE];
   u8 index;
   uint16_t data16 = 0x55aa;
-	uint32_t dataaddr = 0x01;
+	uint32_t dataaddr = 0x05a5a5;
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -153,13 +169,12 @@ int main(void)
   /* Initialize interrupts */
   MX_NVIC_Init();
   /* USER CODE BEGIN 2 */
-  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, GPIO_PIN_SET);
-  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_1, GPIO_PIN_SET);
-  //CAN_Config(&hcan1,&CAN1TxHeader,CAN_RX_FIFO0,CAN_IT_RX_FIFO0_MSG_PENDING);
-  CAN1_Config(&hcan1,&CAN1TxHeader,CAN_RX_FIFO0,CAN_IT_RX_FIFO0_MSG_PENDING);
-  CAN2_Config(&hcan2,&CAN2TxHeader,CAN_RX_FIFO1,CAN_IT_RX_FIFO1_MSG_PENDING);
-  FLASH_SIZE=32*1024*1024;	  //FLASH 大小为32M字节
-
+	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, GPIO_PIN_SET);
+	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_1, GPIO_PIN_SET);
+	/* CAN初始化 */
+	CAN1_Config(&hcan1,&CAN1TxHeader,CAN_RX_FIFO0,CAN_IT_RX_FIFO0_MSG_PENDING);
+	CAN2_Config(&hcan2,&CAN2TxHeader,CAN_RX_FIFO1,CAN_IT_RX_FIFO1_MSG_PENDING);
+	FLASH_SIZE=32*1024*1024;	  //FLASH 大小为32M字节
 	/* 增加延时等待AD9516上电过程结束 */
 	for (res = 0; res <500; ++res)
 		{
@@ -198,7 +213,6 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-
 	/* QSPI Flash初始化 */
 	CS25WQXX_Init(&hspi1);
 	/* 读取ID */
@@ -213,39 +227,40 @@ int main(void)
 		{
 		CAN2TxData[index] = 0xa + index;
 		CAN1TxData[index] = 0x5 + index;
-
 		}
 	//res = CAN_Send_Msg(&hcan1,&CAN1TxHeader,CAN1TxData,8);//CAN1发送8个字节 
 	//res = CAN_Send_Msg(&hcan2,&CAN2TxHeader,CAN2TxData,8);//CAN2发送8个字节 
 
 	while (1)
 	{
-		//res = CAN_Send_Msg(&hcan2,&CAN2TxHeader,CAN2TxData,8);//CAN2发送8个字节 
-		res = CAN_Send_Msg(&hcan1,&CAN1TxHeader,CAN1TxData,8);//CAN2发送8个字节 
-		//res = HAL_SRAM_Write_16b(&hsram1, (0x60000001), &data16, 1);
-		//*((volatile unsigned short int *)(0x60000000 + (dataaddr << 17 ))) = data16;
-		//__ASM("NOP");
-		//		for (res = 0; res <500; ++res)
-		//	{
-		//	delay_ms(10000);
-		//	}
-		//dataaddr = 0x12;
-		//data16 = *((volatile unsigned short int *)(0x60000000 + (dataaddr << 17 )));
-		//__ASM("NOP");
-		//dataaddr = 0x01;
-		//data16_gl = data16;
-		//LED状态指示灯闪烁
-		HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, GPIO_PIN_SET);
-		HAL_GPIO_WritePin(GPIOB, GPIO_PIN_1, GPIO_PIN_RESET);
-		for (res = 0; res <500; ++res)
+		if (timer_500ms_flag)
 			{
-			delay_ms(10000);
+			HAL_GPIO_TogglePin(ST32_WDI_GPIO_Port, ST32_WDI_Pin); //1秒喂狗
+			timer_500ms_flag = 0;
 			}
-		HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, GPIO_PIN_RESET);
-		HAL_GPIO_WritePin(GPIOB, GPIO_PIN_1, GPIO_PIN_SET);
-		for (res = 0; res <500; ++res)
+		if (timer_1s_flag)
 			{
-			delay_ms(10000);
+			HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_0); //状态指示灯闪烁
+			HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_1); //状态指示灯闪烁
+			timer_1s_flag = 0;
+			dataaddr = 0x5a5a5;
+			if(data16_gl == 0xaaaa || data16 == 0xaaaa)
+				{
+				data16 = 0xaaaa;
+				wr_fpga_reg(dataaddr, data16);	//fsmc写测试
+				}
+				else
+				{
+				data16 = 0x5555;
+				wr_fpga_reg(dataaddr, data16);	//fsmc写测试
+				}
+			dataaddr = 0xa5a5a;
+			data16_gl = rd_fpga_reg(dataaddr);	//fsmc读测试
+			}
+		if (uart_state_flag)
+			{
+			//刷新芯片uart state引脚输入
+			uart_state_flag = 0;
 			}
     /* USER CODE END WHILE */
 
@@ -317,6 +332,15 @@ static void MX_NVIC_Init(void)
   /* CAN2_RX1_IRQn interrupt configuration */
   HAL_NVIC_SetPriority(CAN2_RX1_IRQn, 0, 0);
   HAL_NVIC_EnableIRQ(CAN2_RX1_IRQn);
+  /* USART3_IRQn interrupt configuration */
+  HAL_NVIC_SetPriority(USART3_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(USART3_IRQn);
+  /* RCC_IRQn interrupt configuration */
+  HAL_NVIC_SetPriority(RCC_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(RCC_IRQn);
+  /* EXTI15_10_IRQn interrupt configuration */
+  HAL_NVIC_SetPriority(EXTI15_10_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(EXTI15_10_IRQn);
 }
 
 /**
@@ -550,6 +574,15 @@ static void MX_GPIO_Init(void)
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(AD9516_CSB_GPIO_Port, AD9516_CSB_Pin, GPIO_PIN_SET);
 
+  /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(ST32_WDI_GPIO_Port, ST32_WDI_Pin, GPIO_PIN_RESET);
+
+  /*Configure GPIO pin : UART_STATE_Pin */
+  GPIO_InitStruct.Pin = UART_STATE_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  HAL_GPIO_Init(UART_STATE_GPIO_Port, &GPIO_InitStruct);
+
   /*Configure GPIO pin : QSPI_CS_Pin */
   GPIO_InitStruct.Pin = QSPI_CS_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
@@ -563,6 +596,13 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+
+  /*Configure GPIO pin : ST32_WDI_Pin */
+  GPIO_InitStruct.Pin = ST32_WDI_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(ST32_WDI_GPIO_Port, &GPIO_InitStruct);
 
 /* USER CODE BEGIN MX_GPIO_Init_2 */
 /* USER CODE END MX_GPIO_Init_2 */

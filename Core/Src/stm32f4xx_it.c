@@ -42,7 +42,9 @@
 
 /* Private variables ---------------------------------------------------------*/
 /* USER CODE BEGIN PV */
-
+extern int timer_500ms_flag;
+extern int timer_1s_flag; //滴答定时器1s计时标志位
+extern uint8_t rx_buffer[BUF_SIZE];  // BUF_SIZE
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -194,7 +196,26 @@ void PendSV_Handler(void)
 void SysTick_Handler(void)
 {
   /* USER CODE BEGIN SysTick_IRQn 0 */
-
+	static int index = 0;
+	static int index1 = 0;
+	if (index >= 500)
+		{
+		timer_500ms_flag = 1;
+		index = 0;
+		if (index1 >= 2 )
+			{
+			timer_1s_flag = 1;
+			index1 = 0;
+			}
+		else
+			{
+			index1++;
+			}
+		}
+	else
+		{
+		index ++;
+		}
   /* USER CODE END SysTick_IRQn 0 */
   HAL_IncTick();
   /* USER CODE BEGIN SysTick_IRQn 1 */
@@ -208,6 +229,19 @@ void SysTick_Handler(void)
 /* For the available peripheral interrupt handler names,                      */
 /* please refer to the startup file (startup_stm32f4xx.s).                    */
 /******************************************************************************/
+
+/**
+  * @brief This function handles RCC global interrupt.
+  */
+void RCC_IRQHandler(void)
+{
+  /* USER CODE BEGIN RCC_IRQn 0 */
+
+  /* USER CODE END RCC_IRQn 0 */
+  /* USER CODE BEGIN RCC_IRQn 1 */
+
+  /* USER CODE END RCC_IRQn 1 */
+}
 
 /**
   * @brief This function handles DMA1 stream1 global interrupt.
@@ -277,8 +311,22 @@ void USART3_IRQHandler(void)
   /* USER CODE END USART3_IRQn 0 */
   HAL_UART_IRQHandler(&huart3);
   /* USER CODE BEGIN USART3_IRQn 1 */
-
+	HAL_UARTEx_ReceiveToIdle_DMA(&huart3, rx_buffer, BUF_SIZE);	//??????????
   /* USER CODE END USART3_IRQn 1 */
+}
+
+/**
+  * @brief This function handles EXTI line[15:10] interrupts.
+  */
+void EXTI15_10_IRQHandler(void)
+{
+  /* USER CODE BEGIN EXTI15_10_IRQn 0 */
+
+  /* USER CODE END EXTI15_10_IRQn 0 */
+  HAL_GPIO_EXTI_IRQHandler(UART_STATE_Pin);
+  /* USER CODE BEGIN EXTI15_10_IRQn 1 */
+	
+  /* USER CODE END EXTI15_10_IRQn 1 */
 }
 
 /**

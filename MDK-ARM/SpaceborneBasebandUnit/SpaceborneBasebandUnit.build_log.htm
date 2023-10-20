@@ -21,23 +21,21 @@ Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V2.0.14.0_KEIL
 Dialog DLL:      TCM.DLL V1.14.4.0
  
 <h2>Project:</h2>
-I:\SpaceborneBasebandUnit\SpaceborneBasebandUnit\MDK-ARM\SpaceborneBasebandUnit.uvprojx
-Project File Date:  10/12/2023
+I:\Space_MCU\SpaceborneBasebandUnit\MDK-ARM\SpaceborneBasebandUnit.uvprojx
+Project File Date:  10/20/2023
 
 <h2>Output:</h2>
 Build target 'SpaceborneBasebandUnit'
 compiling main.c...
-../Core/Src/main.c(119): warning:  #550-D: variable "id" was set but never used
+../Core/Src/main.c(121): warning:  #223-D: function "memset" declared implicitly
+          memset(rx_buffer, 0, cnt);
+../Core/Src/main.c(135): warning:  #550-D: variable "id" was set but never used
     u16 id = 0;
-../Core/Src/main.c(123): warning:  #177-D: variable "data16" was declared but never referenced
-    uint16_t data16 = 0x55aa;
-../Core/Src/main.c(124): warning:  #177-D: variable "dataaddr" was declared but never referenced
-        uint32_t dataaddr = 0x01;
-../Core/Src/main.c: 3 warnings, 0 errors
+../Core/Src/main.c: 2 warnings, 0 errors
 linking...
-Program Size: Code=15336 RO-data=564 RW-data=108 ZI-data=6820  
+Program Size: Code=16032 RO-data=564 RW-data=132 ZI-data=6836  
 FromELF: creating hex file...
-"SpaceborneBasebandUnit\SpaceborneBasebandUnit.axf" - 0 Error(s), 3 Warning(s).
+"SpaceborneBasebandUnit\SpaceborneBasebandUnit.axf" - 0 Error(s), 2 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -48,7 +46,7 @@ Package Vendor: ARM
    * Component: CORE Version: 3.40.0
 
 <h2>Collection of Component include folders:</h2>
-  I:\SpaceborneBasebandUnit\SpaceborneBasebandUnit\MDK-ARM\RTE
+  I:\Space_MCU\SpaceborneBasebandUnit\MDK-ARM\RTE
   D:\Work\Keil\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include
   D:\Work\Keil\ARM\PACK\Keil\STM32F4xx_DFP\2.5.0
 
